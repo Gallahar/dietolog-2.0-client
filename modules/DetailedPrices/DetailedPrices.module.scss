@@ -1,258 +1,104 @@
-@import '@/assets/styles/media.scss';
-
-.section {
-	@apply relative overflow-x-hidden;
-
-	.package {
-		margin-top: 108px;
-
-		@include m-1920 {
-			margin-top: 96px;
-		}
-
-		.info_wrapper {
-			@apply flex;
-			margin-bottom: 72px;
-
-			> div {
-				width: 630px;
-
-				@include m-1920 {
-					width: 552px;
-				}
-			}
-
-			@include m-1920 {
-				margin-bottom: 64px;
-			}
-
-			.description {
-				margin-top: 72px;
-			}
-		}
-		.info_wrapper_right {
-			@apply flex-row-reverse;
-		}
+.detailedPrices {
+	position: relative;
+	overflow-x: hidden;
+	.remark {
+		@apply mt-72;
 	}
+	.link {
+		@apply mt-108 mb-108;
+	}
+	.packageBlock {
+		@apply flex flex-col mt-108;
+		.wrapperDescription {
+			@apply flex flex-row;
+			.description {
+				@apply flex flex-col mb-72;
+				gap: 72px;
+				width: 612px;
+			}
+		}
+		.wrapperEven {
+			@apply flex flex-row-reverse;
+		}
 
-	.table {
-		> thead {
-			@apply primary-gr;
-
-			> tr {
-				@apply flex;
-
+		.table {
+			.filled {
+				@apply primary-gr;
+			}
+			.heading {
+				@apply flex  items-center primary-gr;
+				text-align: center;
 				height: 140px;
-
-				@include m-1920 {
-					height: 123px;
+				> h5 {
+					width: 504px;
 				}
-
-				> th {
-					@apply flex items-center justify-center h-full flex-col;
+				> div {
 					width: 414px;
-
-					&:first-child {
-						width: 504px;
-					}
-
-					@include m-1920 {
-						width: 362px;
-
-						&:first-child {
-							width: 442px;
-						}
-					}
-
-					.sub_heading {
+					> h5:nth-child(even) {
 						@apply text-secondary;
 					}
 				}
 			}
-		}
-
-		> tbody {
-			> tr {
-				@apply flex;
+			.row {
+				@apply flex  items-center;
 				height: 96px;
-
-				@include m-1920 {
-					height: 84px;
+				> div:first-child {
+					width: 504px;
+					padding-left: 30px;
 				}
 
-				&:nth-child(even) {
-					@apply primary-gr;
-				}
-
-				> td {
-					@apply flex items-center justify-center h-full flex-col;
+				p {
 					width: 414px;
-
-					&:first-child {
-						width: 504px;
-					}
-
-					@include m-1920 {
-						width: 362px;
-
-						&:first-child {
-							width: 442px;
-						}
-					}
-
-					.row_title {
-						@apply text-left pl-30;
-						width: calc(100% - 30px);
-						@include m-1920 {
-							@apply pl-26;
-						}
-					}
-
-					.price {
-						@apply text-29 text-secondary;
-
-						@include m-1920 {
-							@apply text-25;
-						}
-					}
+					text-align: center;
 				}
 			}
 		}
 	}
+}
 
-	.remark {
-		@apply text-19;
-		margin-top: 72px;
+.leaf_1 {
+	transform: rotate(-126.55deg);
+	top: -115px;
+	right: -340px;
+}
+.leaf_2 {
+	left: -200px;
+	top: 865px;
+	transform: matrix(-0.02, -1, -1, 0.02, 0, 0);
+}
+.leaf_3 {
+	right: -220px;
+	top: 1770px;
+	transform: rotate(-61.51deg);
+}
+.leaf_4 {
+	bottom: 420px;
+	left: -260px;
+	transform: rotate(118.49deg);
+}
+.ellipse_1 {
+	top: 322px;
+	left: 44px;
+	background: rgba(68, 187, 109, 0.07);
+}
+.ellipse_2 {
+	left: 1171px;
+	top: 680px;
 
-		@include m-1920 {
-			margin-top: 64px;
-		}
-	}
-
-	.link {
-		margin-top: 108px;
-
-		@include m-1920 {
-			margin-top: 96px;
-		}
-	}
-
-	.ellipse {
-		@apply absolute -z-1;
-		width: 600px;
-		height: 600px;
-		filter: blur(75px);
-
-		@include m-1920 {
-			width: 525px;
-			height: 525px;
-		}
-	}
-
-	.ellipse_1 {
-		left: 64px;
-		top: 254px;
-		background: rgba(68, 187, 109, 0.1);
-
-		@include m-1920 {
-			top: 222px;
-			left: 56px;
-		}
-	}
-
-	.ellipse_2 {
-		right: 179px;
-		top: 730px;
-		background: rgba(254, 245, 228, 0.35);
-
-		@include m-1920 {
-			top: 639px;
-			right: 157px;
-		}
-	}
-
-	.ellipse_3 {
-		left: 695px;
-		top: 1894px;
-		background: rgba(68, 187, 109, 0.1);
-
-		@include m-1920 {
-			top: 1657px;
-			left: 608px;
-		}
-	}
-
-	.ellipse_4 {
-		left: -221px;
-		top: 2093px;
-		background: rgba(254, 245, 228, 0.35);
-
-		@include m-1920 {
-			top: 1831px;
-			left: -193px;
-		}
-	}
-
-	.ellipse_5 {
-		right: -200px;
-		top: 3112px;
-		background: rgba(68, 187, 109, 0.1);
-
-		@include m-1920 {
-			top: 2723px;
-			right: -200px;
-		}
-	}
-
-	.background {
-		@apply absolute -z-1;
-		width: 864px;
-		height: 969.64px;
-
-		@include m-1920 {
-			width: 756px;
-			height: 848.43px;
-		}
-	}
-
-	.background_1 {
-		right: -328px;
-		top: -134px;
-		transform: rotate(-126.55deg);
-
-		@include m-1920 {
-			top: -180px;
-		}
-	}
-
-	.background_2 {
-		top: 888px;
-		left: -200px;
-		transform: matrix(-0.02, -1, -1, 0.02, 0, 0);
-
-		@include m-1920 {
-			top: 770px;
-		}
-	}
-
-	.background_3 {
-		top: 1770px;
-		right: -236px;
-		transform: rotate(-61.51deg);
-
-		@include m-1920 {
-			top: 1580px;
-			right: -276px;
-		}
-	}
-
-	.background_4 {
-		left: -250px;
-		top: 2846px;
-		transform: rotate(118.49deg);
-
-		@include m-1920 {
-			top: 2556px;
-		}
-	}
+	background: rgba(254, 245, 228, 0.35);
+}
+.ellipse_3 {
+	left: 695px;
+	top: 1872px;
+	background: rgba(68, 187, 109, 0.07);
+}
+.ellipse_4 {
+	left: -221px;
+	top: 2231px;
+	background: rgba(254, 245, 228, 0.35);
+}
+.ellipse_5 {
+	left: 1520px;
+	top: 3120px;
+	background: rgba(68, 187, 109, 0.07);
 }

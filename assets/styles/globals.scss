@@ -4,6 +4,7 @@
 
 * {
 	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
 }
 
 html {
@@ -55,5 +56,15 @@ button {
 
 	@include m-1920 {
 		@apply text-17;
+	}
+}
+
+.price {
+	@apply text-secondary text-27 uppercase;
+	letter-spacing: 0.02em;
+	line-height: 150%;
+	@include m-1920 {
+		@apply text-22;
+		line-height: 27px;
 	}
 }

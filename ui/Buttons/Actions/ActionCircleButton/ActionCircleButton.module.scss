@@ -1,0 +1,21 @@
+.actionCircleButton {
+	position: relative;
+	width: 270px;
+    
+	&:hover > img {
+		transform: translateX(10px);
+	}
+	.circleButton {
+		@apply bg-secondary;
+
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+	}
+	> img {
+		position: absolute;
+		top: 64px;
+		width: 90px;
+		height: 24px;
+	}
+}

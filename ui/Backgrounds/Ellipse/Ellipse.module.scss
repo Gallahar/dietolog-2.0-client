@@ -1,0 +1,6 @@
+.ellipse {
+	@apply absolute -z-1;
+	width: 600px;
+	height: 600px;
+	filter: blur(75px);
+}

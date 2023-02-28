@@ -1,0 +1,10 @@
+@import '@/assets/styles/media.scss';
+
+.description{
+  line-height: 27px;
+  letter-spacing: 0.02em;
+  font-size:18px;
+  @include m-1920 {
+    font-size: 13px;
+  }
+}

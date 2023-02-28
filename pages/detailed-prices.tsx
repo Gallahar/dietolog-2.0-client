@@ -10,7 +10,7 @@ interface DetailedPricesPageProps {
 const DetailedPricesPage: NextPage<DetailedPricesPageProps> = ({
 	packages,
 }) => {
-	return <DetailedPrices packages={packages || []} />
+	return <DetailedPrices packages={packages ?? []} />
 }
 
 export const getStaticProps: GetStaticProps = async () => {

@@ -1,14 +1,13 @@
-import { FC } from 'react'
+import { FC } from "react";
 import s from './Heading.module.scss'
-import cn from 'classnames'
 
 interface HeadingProps {
-	text: string
-	className?: string
+    className?:string;
+    text:string;
 }
 
-const Heading: FC<HeadingProps> = ({ text, className }) => {
-	return <h3 className={cn(s.heading, className)}>{text}</h3>
-}
 
+const Heading: FC<HeadingProps> = ({className,text}) => {
+	return <h2 className={`${className} ${s.heading}`}>{text}</h2>
+}
 export default Heading

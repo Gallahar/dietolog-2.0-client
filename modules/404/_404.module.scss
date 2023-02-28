@@ -1,9 +1,31 @@
 .section {
+	.leaf{
+		top: -75px;
+		left: -470px;
+		transform: matrix(0.19, -0.98, -0.98, -0.19, 0, 0);
+	}
+
 	.container {
 		@apply flex;
+		gap: 140px;
 
 		> div {
 			width: 486px;
+			display: flex;
+			flex-flow: column;
+			gap: 80px;
+			.link{
+				width: 550px;
+				text-align: left;
+				line-height: 150%;
+				margin-top: 10px;
+				padding-left: 0;
+			}
+			.description{
+				display: flex;
+				flex-flow: column;
+				gap: 18px;
+			}
 
 			.heading {
 				width: 486px;
