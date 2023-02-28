@@ -1,22 +1,23 @@
 import { FC } from 'react'
-import Arrow from '@/assets/icons/arrow-button.svg'
+import Arrow from '@/assets/icons/arrow-right.png'
 import Image from 'next/image'
-import ActionButton, { ActionButtonProps } from '../ActionButton/ActionButton'
 import s from './ActionCircleButton.module.scss'
 
-const ActionCircleButton: FC<ActionButtonProps> = ({
-	locationClass,
+interface ActionCircleButtonProps {
+	className?: string
+	text: string
+}
+
+const ActionCircleButton: FC<ActionCircleButtonProps> = ({
+	text,
 	className,
 	...rest
 }) => {
 	return (
-		<div className={`${s.actionCircleButton} ${locationClass}`}>
-			<ActionButton
-				className={`${s.circleButton} ${className}`}
-				{...rest}
-			/>
+		<button className={`${s.buttonCircle} ${className}`} {...rest}>
 			<Image src={Arrow} alt="arrow" />
-		</div>
+			{text}
+		</button>
 	)
 }
 export default ActionCircleButton

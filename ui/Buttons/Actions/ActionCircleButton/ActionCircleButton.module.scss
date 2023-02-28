@@ -1,21 +1,27 @@
-.actionCircleButton {
-	position: relative;
-	width: 270px;
-    
-	&:hover > img {
+.buttonCircle {
+	@apply relative outline-border-none bg-secondary text-18;
+	color: #fff;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	font-weight: 700;
+	width: 180px;
+	display: block;
+	height: 180px;
+	border-radius: 50%;
+	text-align: center;
+	transition: all 0.2s ease-in-out;
+	&:hover {
+		cursor: pointer;
+		background: #b4e3c4;
+	}
+	&:hover img {
 		transform: translateX(10px);
 	}
-	.circleButton {
-		@apply bg-secondary;
-
-		width: 150px;
-		height: 150px;
-		border-radius: 50%;
-	}
 	> img {
+		transition: transform 0.3s ease;
 		position: absolute;
-		top: 64px;
-		width: 90px;
-		height: 24px;
+		right: -70px;
+		top: 78px;
+		z-index: -1;
 	}
 }
