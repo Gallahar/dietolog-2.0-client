@@ -4,13 +4,12 @@ import s from './ActionButton.module.scss'
 export interface ActionButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	text: string
 	className?: string
-	locationClass?:string
 }
 
-const ActionButton: FC<ActionButtonProps> = ({ text, className,locationClass, ...rest }) => {
+const ActionButton: FC<ActionButtonProps> = ({ text, className, ...rest }) => {
 	return (
 		<button
-			className={`${s.actionButton} ${className} ${locationClass}`}
+			className={`${s.actionButton} ${className}`}
 			{...rest}
 		>
 			{text}

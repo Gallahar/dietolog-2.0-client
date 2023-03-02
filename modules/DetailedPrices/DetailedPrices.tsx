@@ -6,7 +6,7 @@ import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 import Ellipse from '@/ui/Backgrounds/Ellipse/Ellipse'
 import Description from '@/ui/Descriptions/Description/Description'
 import { useLanguage } from '@/hooks/useLanguage'
-import ActionLink from '@/ui/Buttons/Actions/ActionLink/ActionLink'
+import ActionLink from '@/ui/Buttons/Actions/ActionButton/ActionLink'
 
 interface DetailedPricesProps {
 	packages: IPackage[]
@@ -18,8 +18,8 @@ const DetailedPrices: FC<DetailedPricesProps> = ({ packages }) => {
 	const { remark } = detailed_prices
 
 	return (
-		<div className={s.detailedPrices}>
-			<div className={`container`}>
+		<div className={`section ${s.detailedPrices}`}>
+			<div className="container">
 				<Leaf className={s.leaf_1} />
 				<Leaf className={s.leaf_2} />
 				<Leaf className={s.leaf_3} />
@@ -29,15 +29,13 @@ const DetailedPrices: FC<DetailedPricesProps> = ({ packages }) => {
 				<Ellipse className={s.ellipse_3} />
 				<Ellipse className={s.ellipse_4} />
 				<Ellipse className={s.ellipse_5} />
-				{packages.map((_package, index) => (
-					<PackageItem
-						key={_package._id}
-						isOdd={index % 2 !== 0}
-						_package={_package}
-					/>
-				))}
+				<div className={s.packageWrapper}>
+					{packages.map((_package) => (
+						<PackageItem key={_package._id} _package={_package} />
+					))}
+				</div>
 				<Description className={s.remark} text={`* ${remark}`} />
-				<ActionLink locationClass={s.link} text={_return} path="/" />
+				<ActionLink className={s.link} text={_return} path="/" />
 			</div>
 		</div>
 	)

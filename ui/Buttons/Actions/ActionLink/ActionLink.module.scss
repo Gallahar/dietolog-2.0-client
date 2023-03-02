@@ -1,8 +1,0 @@
-@import '@/assets/styles/media.scss';
-
-.actionLink {
-	@apply uppercase underline text-secondary text-32 transition-transform cursor-pointer;
-	&:hover {
-		@apply link-animation;
-	}
-}

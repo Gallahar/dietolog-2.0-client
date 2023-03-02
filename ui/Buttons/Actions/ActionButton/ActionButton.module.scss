@@ -1,5 +1,8 @@
-.actionButton{
-    @apply outline-border-none ;
-    line-height: 150%;
-    letter-spacing: 0.02em;
+.actionButton {
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	@apply outline-border-none uppercase underline text-secondary text-32 transition-transform cursor-pointer;
+	&:hover {
+		@apply link-animation;
+	}
 }

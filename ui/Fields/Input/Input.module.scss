@@ -1,0 +1,19 @@
+.input {
+	position: relative;
+	p {
+		position: absolute;
+		bottom: -20px;
+		color: #ff0009;
+	}
+	> input {
+		@apply outline-border-none primary-gr text-dark;
+		padding: 25px 30px;
+		width: 552px;
+		height: 29px;
+		border-radius: 0 100px 100px 0;
+		font-size: 19px;
+		line-height: 150%;
+		letter-spacing: 0.02em;
+		color: rgba(26, 10, 0, 0.5);
+	}
+}

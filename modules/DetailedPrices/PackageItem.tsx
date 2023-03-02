@@ -8,11 +8,10 @@ import { useLanguage } from '@/hooks/useLanguage'
 import Description from '@/ui/Descriptions/Description/Description'
 
 interface PackageItemProps {
-	isOdd: boolean
 	_package: IPackage
 }
 
-const PackageItem: FC<PackageItemProps> = ({ isOdd, _package }) => {
+const PackageItem: FC<PackageItemProps> = ({ _package }) => {
 	const { package: packageTitle, service_type } =
 		useLanguage().detailed_prices
 
@@ -27,15 +26,13 @@ const PackageItem: FC<PackageItemProps> = ({ isOdd, _package }) => {
 	} = _package
 	return (
 		<div className={s.packageBlock}>
-			<div
-				className={`${s.wrapperDescription} ${
-					isOdd ? s.wrapperEven : ''
-				}`}
-			>
+			<div className={s.wrapperDescription}>
 				<div className={s.description}>
 					<Heading
 						text={`${
-							title.en.startsWith('Re-') ? packageTitle : ''
+							title.ru !== 'Повторные консультации *'
+								? packageTitle
+								: ''
 						} ${currentLanguage(title)}`}
 					/>
 					<Description text={currentLanguage(description)} />
@@ -62,20 +59,17 @@ const PackageItem: FC<PackageItemProps> = ({ isOdd, _package }) => {
 						) : null}
 					</div>
 				</div>
-				{services.map(({ title, price_1, price_2 }, index) => {
-					return (
-						<div
-							key={title.ru}
-							className={`${s.row} ${
-								index % 2 !== 0 ? s.filled : ''
-							}`}
-						>
-							<Description text={currentLanguage(title)} />
-							<p className="price">{price_1} ₴</p>
-							<p className="price">{price_2} ₴</p>
-						</div>
-					)
-				})}
+				<div className={s.rowWrapper}>
+					{services.map(({ title, price_1, price_2 }) => {
+						return (
+							<div key={title.ru} className={s.row}>
+								<Description text={currentLanguage(title)} />
+								<p className="price">{price_1} ₴</p>
+								<p className="price">{price_2} ₴</p>
+							</div>
+						)
+					})}
+				</div>
 			</div>
 		</div>
 	)

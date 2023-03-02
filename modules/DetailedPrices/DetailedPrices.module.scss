@@ -1,12 +1,7 @@
 .detailedPrices {
 	position: relative;
 	overflow-x: hidden;
-	.remark {
-		@apply mt-72;
-	}
-	.link {
-		@apply mt-108 mb-108;
-	}
+
 	.packageBlock {
 		@apply flex flex-col mt-108;
 		.wrapperDescription {
@@ -17,14 +12,7 @@
 				width: 612px;
 			}
 		}
-		.wrapperEven {
-			@apply flex flex-row-reverse;
-		}
-
 		.table {
-			.filled {
-				@apply primary-gr;
-			}
 			.heading {
 				@apply flex  items-center primary-gr;
 				text-align: center;
@@ -39,20 +27,41 @@
 					}
 				}
 			}
-			.row {
-				@apply flex  items-center;
-				height: 96px;
-				> div:first-child {
-					width: 504px;
-					padding-left: 30px;
-				}
+			.rowWrapper {
+				.row {
+					&:nth-child(even) {
+						@apply primary-gr;
+					}
+					@apply flex  items-center;
+					height: 96px;
+					> div:first-child {
+						width: 504px;
+						padding-left: 30px;
+					}
 
-				p {
-					width: 414px;
-					text-align: center;
+					p {
+						width: 414px;
+						text-align: center;
+					}
 				}
 			}
 		}
+	}
+	.packageWrapper {
+		.packageBlock {
+			&:nth-child(even) {
+				.wrapperDescription {
+					@apply flex flex-row-reverse;
+				}
+			}
+		}
+	}
+
+	.remark {
+		@apply mt-72;
+	}
+	.link {
+		@apply mt-108;
 	}
 }
 
