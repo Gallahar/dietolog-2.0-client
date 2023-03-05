@@ -1,34 +1,12 @@
-import { FC, useEffect, useState } from 'react'
+import { FC } from 'react'
 import Logo from '@/ui/Backgrounds/Logo/Logo'
 import s from './Header.module.scss'
 import Nav from './Nav'
-import { useRouter } from 'next/router'
-import { IS_CLIENT } from '@/config/constants'
 import cn from 'classnames'
+import { useWindowScroll } from '@/hooks/useWindowScroll'
 
 const Header: FC = () => {
-	const { pathname } = useRouter()
-	const [isStatic, setIsStatic] = useState(pathname === '/' ? true : false)
-	const [lastScroll, setLastScroll] = useState(0)
-
-	const handleScroll = () => {
-		if (IS_CLIENT) {
-			if (lastScroll > 90 && pathname === '/') {
-				setIsStatic(false)
-			} else if (lastScroll < 90 && pathname === '/') {
-				setIsStatic(true)
-			}
-		}
-		setLastScroll((w) => (w = window.scrollY))
-	}
-
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll)
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll)
-		}
-	}, [lastScroll])
+	const isStatic = useWindowScroll()
 
 	return (
 		<div
