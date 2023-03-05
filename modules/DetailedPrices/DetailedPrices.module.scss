@@ -9,7 +9,6 @@
 			.description {
 				@apply flex flex-col mb-72;
 				gap: 72px;
-				width: 612px;
 			}
 		}
 		.table {
@@ -52,7 +51,7 @@
 	}
 
 	.packageBlock {
-		&:nth-child(even) {
+		&:nth-child(odd) {
 			.wrapperDescription {
 				@apply flex flex-row-reverse;
 			}

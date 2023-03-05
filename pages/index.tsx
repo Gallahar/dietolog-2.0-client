@@ -1,3 +1,4 @@
+import About from '@/modules/Home/About/About'
 import Main from '@/modules/Home/Main'
 import SignForConsult from '@/modules/Home/SignForConsult/SignForConsult'
 
@@ -6,6 +7,7 @@ export default function Home() {
 		<>
 			<Main />
 			<SignForConsult/>
+      <About/>
 		</>
 	)
 }

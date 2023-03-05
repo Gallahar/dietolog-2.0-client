@@ -13,9 +13,9 @@ const Header: FC = () => {
 
 	const handleScroll = () => {
 		if (IS_CLIENT) {
-			if (lastScroll > 40) {
+			if (lastScroll > 90 && pathname === '/') {
 				setIsStatic(false)
-			} else {
+			} else if (lastScroll < 90 && pathname === '/') {
 				setIsStatic(true)
 			}
 		}

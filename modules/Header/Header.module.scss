@@ -42,12 +42,13 @@
 }
 
 .fixed {
-	position: static;
+	position: fixed;
 	background: linear-gradient(
 		64.31deg,
 		#fef5e4 15.51%,
-		rgba(254, 245, 228, 0.5) 88.43%
+		rgba(254, 245, 228, 1) 88.43%
 	);
+	z-index: 3;
 }
 
 .static {
