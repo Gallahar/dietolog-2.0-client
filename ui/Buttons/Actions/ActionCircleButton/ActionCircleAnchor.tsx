@@ -1,21 +1,20 @@
 import s from './ActionCircleButton.module.scss'
-import { FC } from 'react'
+import { AnchorHTMLAttributes, FC } from 'react'
 import Image from 'next/image'
 import Arrow from '@/assets/icons/arrow-right.png'
 
-interface ActionCircleAnchor {
+interface ActionCircleAnchor extends AnchorHTMLAttributes<HTMLAnchorElement> {
 	className?: string
 	text: string
-	href: string
 }
 
 const ActionCircleAnchor: FC<ActionCircleAnchor> = ({
-	href,
 	text,
 	className,
+	...rest
 }) => {
 	return (
-		<a className={`${s.buttonCircle} ${className}`} href={href}>
+		<a className={`${s.buttonCircle} ${className}`} {...rest}>
 			<Image alt="arrow" src={Arrow} />
 			{text}
 		</a>
