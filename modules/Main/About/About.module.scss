@@ -1,0 +1,152 @@
+@font-face {
+	font-family: 'mr_HamiltoneG';
+	src: url('../../../assets/fonts/mr_hamiltoneg.eot');
+	src: url('../../../assets/fonts/mr_hamiltoneg.eot?#iefix')
+			format('embedded-opentype'),
+		url('../../../assets/fonts/mr_hamiltoneg.woff2') format('woff2'),
+		url('../../../assets/fonts/mr_hamiltoneg.woff') format('woff'),
+		url('../../../assets/fonts/mr_hamiltoneg.ttf') format('truetype'),
+		url('../../../assets/fonts/mr_hamiltoneg.svg#mr_hamiltoneg')
+			format('svg');
+}
+
+.aboutWrapper {
+	@apply relative;
+	overflow: hidden;
+	p {
+		font-family: 'mr_HamiltoneG';
+		font-weight: 400;
+		font-size: 360px;
+		line-height: 26px;
+		color: rgba(68, 187, 109, 0.15);
+		position: absolute;
+	}
+
+	.approachWrapper {
+		margin-top: 108px;
+		.approachTextBlock {
+			@apply mt-72 flex;
+
+			gap: 108px;
+		}
+	}
+
+	.forWhoWrapper {
+		@apply flex;
+		.forWhoImageBlock {
+			@apply relative;
+
+			> img {
+				border-radius: 50% 0 0 50%;
+				transform: matrix(-1, 0, 0, 1, 0, 0);
+				position: absolute;
+				top: 40px;
+			}
+			.outline {
+				position: absolute;
+				left: -33px;
+				top: 10px;
+				width: 852px;
+				height: 788px;
+				border-radius: 50% 0 0 50%;
+				border: 1px solid #ecb390;
+				transform: rotate(-180deg);
+			}
+		}
+		.forWhoTextWrapper {
+			margin-left: 1010px;
+			.forWhoTextBlock {
+				@apply mt-72 flex flex-col;
+
+				gap: 39px;
+				.wrapperDescription {
+					position: relative;
+				}
+			}
+		}
+	}
+
+	.bottomSideInfo {
+		@apply flex flex-col;
+
+		gap: 108px;
+		.notSuitableBlock {
+			margin-top: 100px;
+			.notSuitableDescriptionWrapper {
+				@apply flex mt-72;
+
+				gap: 108px;
+				.notSuitableDescription1 {
+					position: relative;
+					> p {
+						left: 73px;
+						top: 68px;
+					}
+				}
+
+				.notSuitableDescription2 {
+					position: relative;
+					> p {
+						left: 130px;
+						top: 0;
+					}
+				}
+			}
+		}
+		.worthBlock {
+			@apply flex flex-col;
+
+			gap: 108px;
+			.worthHeading {
+				@apply flex flex-row-reverse;
+				margin-right: 180px;
+			}
+			.worthDescriptionWrapper {
+				@apply flex;
+
+				gap: 108px;
+				.worthDescription1 {
+					position: relative;
+					> p {
+						left: 212px;
+						top: 0;
+					}
+				}
+
+				.worthDescription2 {
+					position: relative;
+					> p {
+						top: 0;
+						right: 4px;
+					}
+				}
+			}
+		}
+		.actionLinksBlock {
+			@apply flex;
+
+			gap: 499px;
+		}
+	}
+}
+
+.leaf_1 {
+	right: -435px;
+	top: 25px;
+	transform: rotate(-61.51deg);
+}
+.leaf_2 {
+	bottom: 0;
+	left: -445px;
+	transform: rotate(25.95deg);
+}
+.ellipse_1 {
+	background: rgba(254, 245, 228, 0.35);
+	left: 665px;
+	top: 10px;
+}
+.ellipse_2 {
+	background: rgba(254, 245, 228, 0.35);
+	right: -45px;
+	bottom: 625px;
+}

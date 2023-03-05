@@ -1,13 +1,13 @@
-import About from '@/modules/Home/About/About'
-import Main from '@/modules/Home/Main'
-import SignForConsult from '@/modules/Home/SignForConsult/SignForConsult'
+import About from '@/modules/Main/About/About'
+import Main from '@/modules/Main/Main'
+import SignForConsult from '@/modules/Main/SignForConsult/SignForConsult'
 
 export default function Home() {
 	return (
 		<>
 			<Main />
-			<SignForConsult/>
-      <About/>
+			<About />
+			<SignForConsult />
 		</>
 	)
 }

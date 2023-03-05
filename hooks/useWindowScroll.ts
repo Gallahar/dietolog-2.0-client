@@ -35,6 +35,9 @@ export const useWindowScroll = () => {
 		if (pathname === '/') {
 			setIsStatic(true)
 		}
+		return () => {
+			setIsStatic(false)
+		}
 	}, [pathname])
 
 	return isStatic

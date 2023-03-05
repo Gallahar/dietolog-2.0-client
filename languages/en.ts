@@ -69,12 +69,14 @@ export const en: LanguageTemplate = {
 	about: {
 		my_approach: 'My approach',
 		col_1_text_1:
-			'I conduct personal consultations both online and offline, develop flexible meal plans or menu designers individually for each client.',
+			'I conduct personal consultations both online and offline, develop flexible meal plans or menu designers individually for each client. During the support, I answer all questions and provide psychological support.',
 		col_1_text_2:
-			'At the consultation, I give recommendations and help to implement them into your soft life and comfort in order to avoid swings in weight and breakdowns. I will teach you to observe the most important rules during a diet - skill, gradually, constantly.',
-		worth_1: 'years in dietetics',
-		worth_2: 'satisfied customers',
-		worth_3: 'diplomas and certificates',
+			"During consultations, I give recommendations and help you implement them in your life gently and comfortably to avoid constant weight fluctuations and breakdowns.  I teach the rule of the three P's - doable, gradual, permanent.",
+		worth_1: 'some statistics',
+		worth_2:
+			'I have over 10 years of experience in nutrition. I always follow the latest developments in nutrition and always test them on myself. I am constantly improving my skills, as evidenced by the relevant diplomas and certificates.',
+		worth_3:
+			'I work with clients on the principles of trust and support, and do not use the "stick" method. More than 1000 of my clients have been able to achieve the desired result, and some of them come back with new goals.',
 
 		for_who: 'Who it suits',
 		for_who_text_1:
@@ -92,9 +94,9 @@ export const en: LanguageTemplate = {
 
 		not_suitable: "Who I don't work with",
 		not_suitable_text_1:
-			'With those who come only for the "magic pill". I give only tools, and you change yourself! Therefore, to lose weight, change your thinking and lifestyle - this is precisely your merit!',
+			'With those who come only for a "magic pill". I only give you the tools to change your body shape, lifestyle, and well-being, but you change yourself! Therefore, losing weight, changing your mindset and habits is your merit!',
 		not_suitable_text_2:
-			'"I know better what to do." If the client believes that he has more knowledge in this area than a specialist, then he needs to put them into practice, and not waste time on endless disputes.',
+			'"I know better how to do it". If the client believes that he has more knowledge in this area than the specialist, then he needs to implement it, and not waste his and my time on endless arguments.',
 
 		my_education: 'My education',
 		reviews: 'Reviews',

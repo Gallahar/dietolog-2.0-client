@@ -1,7 +1,9 @@
 .actionButton {
+	@apply outline-border-none uppercase underline  text-secondary text-32 transition-transform cursor-pointer;
+
 	line-height: 150%;
 	letter-spacing: 0.02em;
-	@apply outline-border-none uppercase underline text-secondary text-32 transition-transform cursor-pointer;
+text-underline-position: under;
 	&:hover {
 		@apply link-animation;
 	}
