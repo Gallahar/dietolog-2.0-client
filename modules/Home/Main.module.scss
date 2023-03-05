@@ -1,0 +1,76 @@
+@font-face {
+	font-family: 'mr_HamiltoneG';
+	src: url('../../assets/fonts/mr_hamiltoneg.eot');
+	src: url('../../assets/fonts/mr_hamiltoneg.eot?#iefix')
+			format('embedded-opentype'),
+		url('../../assets/fonts/mr_hamiltoneg.woff2') format('woff2'),
+		url('../../assets/fonts/mr_hamiltoneg.woff') format('woff'),
+		url('../../assets/fonts/mr_hamiltoneg.ttf') format('truetype'),
+		url('../../assets/fonts/mr_hamiltoneg.svg#mr_hamiltoneg') format('svg');
+}
+.mainWrapper {
+	height: 100%;
+	background: linear-gradient(
+		64.31deg,
+		#fef5e4 15.51%,
+		rgba(254, 245, 228, 0.5) 88.43%
+	);
+	position: relative;
+	overflow-x: hidden;
+	z-index: 0;
+	.main {
+		> h2 {
+			margin-top: 174.77px;
+			font-size: 125px;
+			font-family: 'mr_HamiltoneG';
+			letter-spacing: 0.02em;
+			line-height: 150%;
+			color: #8f3f09;
+			margin-left: -20px;
+			margin-bottom: -7px;
+		}
+		> h1 {
+			@apply text-29 text-text;
+
+			line-height: 150%;
+			letter-spacing: 0.02em;
+		}
+		.description {
+			@apply text-dark mt-72;
+
+			font-size: 20px;
+			width: 565px;
+		}
+		> a {
+			margin-top: 108px;
+		}
+	}
+}
+
+.imgMain {
+	position: absolute;
+	border-radius: 50%;
+	top: 350px;
+	right: 290px;
+}
+
+.outline {
+	position: absolute;
+	width: 486px;
+	height: 486px;
+	border: 1px solid #ecb390;
+	border-radius: 50%;
+	right: 320px;
+	top: 320px;
+}
+
+.leaf_1 {
+	top: 45px;
+	left: -385px;
+	transform: matrix(-0.57, -0.82, -0.82, 0.57, 0, 0);
+}
+.leaf_2 {
+	top: -460px;
+	right: -285px;
+	transform: rotate(-91.67deg);
+}

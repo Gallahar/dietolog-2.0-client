@@ -3,7 +3,7 @@ import Arrow from '@/assets/icons/arrow-right.png'
 import Image from 'next/image'
 import s from './ActionCircleButton.module.scss'
 
-interface ActionCircleButtonProps
+export interface ActionCircleButtonProps
 	extends ButtonHTMLAttributes<HTMLButtonElement> {
 	className?: string
 	text: string

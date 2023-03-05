@@ -29,11 +29,10 @@ const DetailedPrices: FC<DetailedPricesProps> = ({ packages }) => {
 				<Ellipse className={s.ellipse_3} />
 				<Ellipse className={s.ellipse_4} />
 				<Ellipse className={s.ellipse_5} />
-				<div className={s.packageWrapper}>
-					{packages.map((_package) => (
-						<PackageItem key={_package._id} _package={_package} />
-					))}
-				</div>
+				{packages.map((_package) => (
+					<PackageItem key={_package._id} _package={_package} />
+				))}
+
 				<Description className={s.remark} text={`* ${remark}`} />
 				<ActionLink className={s.link} text={_return} path="/" />
 			</div>

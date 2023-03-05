@@ -15,6 +15,7 @@
 		.table {
 			.heading {
 				@apply flex  items-center primary-gr;
+
 				text-align: center;
 				height: 140px;
 				> h5 {
@@ -29,10 +30,12 @@
 			}
 			.rowWrapper {
 				.row {
+					@apply flex  items-center;
+
 					&:nth-child(even) {
 						@apply primary-gr;
 					}
-					@apply flex  items-center;
+
 					height: 96px;
 					> div:first-child {
 						width: 504px;
@@ -47,12 +50,11 @@
 			}
 		}
 	}
-	.packageWrapper {
-		.packageBlock {
-			&:nth-child(even) {
-				.wrapperDescription {
-					@apply flex flex-row-reverse;
-				}
+
+	.packageBlock {
+		&:nth-child(even) {
+			.wrapperDescription {
+				@apply flex flex-row-reverse;
 			}
 		}
 	}

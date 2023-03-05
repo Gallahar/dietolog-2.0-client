@@ -1,4 +1,3 @@
-import { type } from 'os'
 import { FC } from 'react'
 import s from './Ellipse.module.scss'
 

@@ -1,0 +1,11 @@
+.form {
+	display: flex;
+	flex-flow: column;
+	gap: 36px;
+	> button {
+		margin-top: 36px;
+		&:disabled {
+			background-color: grey;
+		}
+	}
+}

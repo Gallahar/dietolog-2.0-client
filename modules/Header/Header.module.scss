@@ -1,0 +1,57 @@
+.headerWrapper {
+	width: 100%;
+	.header {
+		@apply flex items-center;
+
+		padding-top: 22.23px;
+		gap: 214px;
+		> svg {
+			flex-shrink: 0;
+		}
+		.navWrapper {
+			> nav {
+				font-size: 18px;
+				line-height: 150%;
+				letter-spacing: 0.02em;
+				display: flex;
+				gap: 52px;
+				.default {
+					@apply text-dark;
+
+					transition: 0.15s ease-in;
+					&:hover {
+						@apply text-secondary;
+					}
+				}
+				.filled {
+					@apply text-secondary;
+				}
+				.buttons {
+					display: flex;
+					gap: 10px;
+					> button {
+						@apply uppercase outline-border-none cursor-pointer text-18;
+						padding: 0;
+						line-height: 150%;
+						letter-spacing: 0.02em;
+					}
+				}
+			}
+		}
+	}
+}
+
+.fixed {
+	position: static;
+	background: linear-gradient(
+		64.31deg,
+		#fef5e4 15.51%,
+		rgba(254, 245, 228, 0.5) 88.43%
+	);
+}
+
+.static {
+	position: absolute;
+	background: none;
+	z-index: 1;
+}

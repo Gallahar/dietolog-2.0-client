@@ -2,7 +2,7 @@ import { useLanguage } from '@/hooks/useLanguage'
 import { useState } from 'react'
 import ActionCircleButton from '@/ui/Buttons/Actions/ActionCircleButton/ActionCircleButton'
 import Input from '@/ui/Fields/Input/Input'
-import s from './SignForConsult.module.scss'
+import s from './Form.module.scss'
 import { RecordService } from '@/services/record.service'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { IRecordCreate } from '@/shared/models/record.interface'
@@ -25,15 +25,14 @@ const Form = () => {
 		formState: { errors },
 	} = useForm<IRecordCreate>({ mode: 'onChange', reValidateMode: 'onBlur' })
 
-	const onSubmit: SubmitHandler<IRecordCreate> = async (data, e) => {
+	const onSubmit: SubmitHandler<IRecordCreate> = async (dto, e) => {
 		e?.preventDefault()
 		setLoading(true)
-		const { name, phone, email } = data
 		try {
-			await RecordService.create({ name, phone, email })
-			setLoading(false)
+			await RecordService.create(dto)
 		} catch (err) {
 			console.log(err)
+		} finally {
 			setLoading(false)
 		}
 	}

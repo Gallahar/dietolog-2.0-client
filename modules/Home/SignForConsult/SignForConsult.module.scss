@@ -1,38 +1,28 @@
-.SignForConsult {
+.signForConsultWrapper {
 	position: relative;
-	display: flex;
-	margin-top: 108px;
-	.signWrapper {
+	.outline {
+		border: 1px solid #ecb390;
+		position: absolute;
+		border-radius: 50%;
+		width: 662px;
+		height: 662px;
+		right: 170px;
+		top: -10px;
+	}
+	> img {
+		border-radius: 50%;
+		position: absolute;
+		right: 200px;
+		top: 20px;
+	}
+	.signForConsult {
+		position: relative;
 		display: flex;
-		flex-flow: column;
-		gap: 72px;
-		.form {
+		margin-top: 108px;
+		.signWrapper {
 			display: flex;
 			flex-flow: column;
-			gap: 36px;
-			> button {
-				margin-top: 36px;
-				&:disabled {
-					background-color: grey;
-				}
-			}
-		}
-	}
-	.imageWrapper {
-		position: relative;
-		.Outline {
-			border: 1px solid #ecb390;
-			position: absolute;
-			border-radius: 50%;
-			width: 662px;
-			height: 662px;
-			left: 120px;
-			top: -25px;
-		}
-		img {
-			border-radius: 50%;
-			position: absolute;
-			left: 90px;
+			gap: 72px;
 		}
 	}
 }
@@ -40,5 +30,5 @@
 .leaf {
 	transform: matrix(-0.38, -0.93, -0.93, 0.38, 0, 0);
 	left: -420px;
-	top: 40px;
+	top: -70px;
 }

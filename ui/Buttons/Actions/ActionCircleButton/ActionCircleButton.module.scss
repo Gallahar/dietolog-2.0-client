@@ -1,11 +1,10 @@
 .buttonCircle {
-	@apply relative outline-border-none bg-secondary text-18;
+	@apply relative flex justify-center items-center outline-border-none bg-secondary text-18;
 	color: #fff;
 	line-height: 150%;
 	letter-spacing: 0.02em;
 	font-weight: 700;
 	width: 180px;
-	display: block;
 	height: 180px;
 	border-radius: 50%;
 	text-align: center;
