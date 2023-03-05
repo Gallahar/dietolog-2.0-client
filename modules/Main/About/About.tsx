@@ -30,7 +30,6 @@ const About = () => {
 		reviews,
 	} = useLanguage().about
 
-	const { diplomas_heading, skills_heading } = useLanguage().certificates
 
 	const forWhoData: string[] = [
 		for_who_text_1,
