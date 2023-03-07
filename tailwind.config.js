@@ -138,6 +138,10 @@ module.exports = {
 					background:
 						'linear-gradient(180deg, #FEF5E4 0%, rgba(254, 245, 228, 0.5) 100%)',
 				},
+				'.main-gr': {
+					background:
+						'linear-gradient(64.31deg,#FEF5E4 15.51%,rgba(254, 245, 228, 0.5) 88.43%)',
+				},
 				'.link-animation': {
 					transform: 'scale(1.1)',
 				},

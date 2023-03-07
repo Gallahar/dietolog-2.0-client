@@ -1,13 +1,16 @@
 .headerWrapper {
 	width: 100%;
+
 	.header {
 		@apply flex items-center;
 
 		padding-top: 22.23px;
 		gap: 214px;
+
 		> svg {
 			flex-shrink: 0;
 		}
+
 		.navWrapper {
 			> nav {
 				font-size: 18px;
@@ -15,6 +18,7 @@
 				letter-spacing: 0.02em;
 				display: flex;
 				gap: 52px;
+
 				.default {
 					@apply text-dark;
 
@@ -23,14 +27,18 @@
 						@apply text-secondary;
 					}
 				}
+
 				.filled {
 					@apply text-secondary;
 				}
+
 				.buttons {
 					display: flex;
 					gap: 10px;
+
 					> button {
 						@apply uppercase outline-border-none cursor-pointer text-18;
+
 						padding: 0;
 						line-height: 150%;
 						letter-spacing: 0.02em;
@@ -41,14 +49,21 @@
 	}
 }
 
-.fixed {
-	position: fixed;
-	background: linear-gradient(64.31deg, #fdf5e6 15.51%, #fdf5e6 50.43%);
-	z-index: 3;
+.startAnimation {
+	transform: translateY(-100%);
+	transition: all 0.3s ease-out;
+	opacity: 0;
 }
-
 .static {
 	position: absolute;
 	background: none;
 	z-index: 1;
+}
+
+.fixed {
+	position: fixed;
+	background: linear-gradient(64.31deg, #fdf5e6 15.51%, #fdf5e6 50.43%);
+	z-index: 3;
+	transform: translateY(0);
+	opacity: 1;
 }

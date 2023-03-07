@@ -1,29 +1,10 @@
-@font-face {
-	font-family: 'mr_HamiltoneG';
-	src: url('../../../assets/fonts/mr_hamiltoneg.eot');
-	src: url('../../../assets/fonts/mr_hamiltoneg.eot?#iefix')
-			format('embedded-opentype'),
-		url('../../../assets/fonts/mr_hamiltoneg.woff2') format('woff2'),
-		url('../../../assets/fonts/mr_hamiltoneg.woff') format('woff'),
-		url('../../../assets/fonts/mr_hamiltoneg.ttf') format('truetype'),
-		url('../../../assets/fonts/mr_hamiltoneg.svg#mr_hamiltoneg')
-			format('svg');
-}
-
 .aboutWrapper {
 	@apply relative;
 	overflow: hidden;
-	p {
-		font-family: 'mr_HamiltoneG';
-		font-weight: 400;
-		font-size: 360px;
-		line-height: 26px;
-		color: rgba(68, 187, 109, 0.15);
-		position: absolute;
-	}
 
 	.approachWrapper {
 		margin-top: 108px;
+
 		.approachTextBlock {
 			@apply mt-72 flex;
 
@@ -32,16 +13,20 @@
 	}
 
 	.forWhoWrapper {
-		@apply flex;
+		@apply flex flex-row-reverse relative;
+
+		width: 1622px;
+
 		.forWhoImageBlock {
-			@apply relative;
 
 			> img {
 				border-radius: 50% 0 0 50%;
 				transform: matrix(-1, 0, 0, 1, 0, 0);
 				position: absolute;
 				top: 40px;
+				left: 0px;
 			}
+
 			.outline {
 				position: absolute;
 				left: -33px;
@@ -53,8 +38,8 @@
 				transform: rotate(-180deg);
 			}
 		}
+
 		.forWhoTextWrapper {
-			margin-left: 1010px;
 			.forWhoTextBlock {
 				@apply mt-72 flex flex-col;
 
@@ -70,12 +55,15 @@
 		@apply flex flex-col;
 
 		gap: 108px;
+
 		.notSuitableBlock {
 			margin-top: 100px;
+
 			.notSuitableDescriptionWrapper {
 				@apply flex mt-72;
 
 				gap: 108px;
+
 				.notSuitableDescription1 {
 					position: relative;
 					> p {
@@ -94,30 +82,48 @@
 			}
 		}
 		.worthBlock {
-			@apply flex flex-col;
+			@apply flex;
 
 			gap: 108px;
+
 			.worthHeading {
 				@apply flex flex-row-reverse;
-				margin-right: 180px;
 			}
+
 			.worthDescriptionWrapper {
 				@apply flex;
 
 				gap: 108px;
+
 				.worthDescription1 {
 					position: relative;
+
+					.emptyBlock {
+						min-height: 130.5px;
+					}
+
 					> p {
-						left: 212px;
-						top: 0;
+						left: 225px;
+						top: 130px;
+					}
+
+					.education {
+						margin-top: 108px;
 					}
 				}
 
 				.worthDescription2 {
 					position: relative;
+					> div {
+						margin-top: 72px;
+					}
 					> p {
-						top: 0;
-						right: 4px;
+						top: 130px;
+						right: 3px;
+					}
+
+					.reviews {
+						margin-top: 108px;
 					}
 				}
 			}
@@ -132,11 +138,11 @@
 
 .leaf_1 {
 	right: -435px;
-	top: 25px;
+	top: 30px;
 	transform: rotate(-61.51deg);
 }
 .leaf_2 {
-	bottom: 0;
+	bottom: -110px;
 	left: -445px;
 	transform: rotate(25.95deg);
 }
@@ -148,5 +154,43 @@
 .ellipse_2 {
 	background: rgba(254, 245, 228, 0.35);
 	right: -45px;
-	bottom: 625px;
+	bottom: 500px;
+}
+
+.num_1 {
+	left: 62.83px;
+	top: 10px;
+}
+.num_2 {
+	left: 306px;
+	top: 10px;
+}
+
+.num_3 {
+	left: 127.98px;
+	top: 10px;
+}
+
+.num_4 {
+	left: 416.53px;
+	top: 10px;
+}
+
+.num_5 {
+	left: 59.34px;
+	top: 10px;
+}
+
+.num_6 {
+	left: 299.02px;
+	top: 10px;
+}
+
+.hamilton {
+	font-family: 'mr_HamiltoneG';
+	font-weight: 400;
+	font-size: 360px;
+	line-height: 26px;
+	color: rgba(68, 187, 109, 0.15);
+	position: absolute;
 }

@@ -1,24 +1,12 @@
-@font-face {
-	font-family: 'mr_HamiltoneG';
-	src: url('../../assets/fonts/mr_hamiltoneg.eot');
-	src: url('../../assets/fonts/mr_hamiltoneg.eot?#iefix')
-			format('embedded-opentype'),
-		url('../../assets/fonts/mr_hamiltoneg.woff2') format('woff2'),
-		url('../../assets/fonts/mr_hamiltoneg.woff') format('woff'),
-		url('../../assets/fonts/mr_hamiltoneg.ttf') format('truetype'),
-		url('../../assets/fonts/mr_hamiltoneg.svg#mr_hamiltoneg') format('svg');
-}
 .mainWrapper {
-	height: 100%;
-	background: linear-gradient(
-		64.31deg,
-		#fef5e4 15.51%,
-		rgba(254, 245, 228, 0.5) 88.43%
-	);
+	@apply main-gr;
+
 	position: relative;
 	overflow: hidden;
 	z-index: 0;
+
 	.main {
+
 		> h2 {
 			margin-top: 175.54px;
 			font-size: 125px;
@@ -29,18 +17,21 @@
 			margin-left: -20px;
 			margin-bottom: -7px;
 		}
+
 		> h1 {
 			@apply text-29 text-text;
 
 			line-height: 150%;
 			letter-spacing: 0.02em;
 		}
+
 		.description {
 			@apply text-dark mt-72;
 
 			font-size: 20px;
 			width: 565px;
 		}
+		
 		> a {
 			margin-top: 108px;
 		}

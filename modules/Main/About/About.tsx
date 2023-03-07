@@ -30,7 +30,6 @@ const About = () => {
 		reviews,
 	} = useLanguage().about
 
-
 	const forWhoData: string[] = [
 		for_who_text_1,
 		for_who_text_2,
@@ -41,7 +40,7 @@ const About = () => {
 	]
 
 	return (
-		<div className={`section ${s.aboutWrapper}`}>
+		<section id="about" className={`section ${s.aboutWrapper}`}>
 			<Leaf className={s.leaf_1} />
 			<Leaf className={s.leaf_2} />
 			<Ellipse className={s.ellipse_1} />
@@ -66,7 +65,13 @@ const About = () => {
 								key={description}
 								className={s.wrapperDescription}
 							>
-								<p className={`p${index + 1}`}>{index + 1}</p>
+								<p
+									className={`${s[`num_${index + 1}`]} ${
+										s.hamilton
+									}`}
+								>
+									{index + 1}
+								</p>
 								<Description text={description} />
 							</div>
 						))}
@@ -80,36 +85,41 @@ const About = () => {
 					</div>
 					<div className={s.notSuitableDescriptionWrapper}>
 						<div className={s.notSuitableDescription1}>
-							<p>1</p>
+							<p className={s.hamilton}>1</p>
 							<Description text={not_suitable_text_1} />
 						</div>
 						<div className={s.notSuitableDescription2}>
-							<p>2</p>
+							<p className={s.hamilton}>2</p>
 							<Description text={not_suitable_text_2} />
 						</div>
 					</div>
 				</div>
 				<div className={s.worthBlock}>
-					<div className={s.worthHeading}>
-						<Heading text={worth_1} />
-					</div>
 					<div className={s.worthDescriptionWrapper}>
 						<div className={s.worthDescription1}>
-							<p>10+</p>
+							<div className={s.emptyBlock} />
+							<p className={s.hamilton}>10+</p>
 							<Description text={worth_2} />
+							<ActionLink
+								className={s.education}
+								path="/education"
+								text={my_education}
+							/>
 						</div>
 						<div className={s.worthDescription2}>
-							<p>1000+</p>
+							<Heading text={worth_1} />
+							<p className={s.hamilton}>1000+</p>
 							<Description text={worth_3} />
+							<ActionLink
+								className={s.reviews}
+								path="/reviews"
+								text={reviews}
+							/>
 						</div>
 					</div>
 				</div>
-				<div className={s.actionLinksBlock}>
-					<ActionLink path="/education" text={my_education} />
-					<ActionLink path="/reviews" text={reviews} />
-				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 export default About

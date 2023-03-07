@@ -2,7 +2,7 @@ import { useLanguage } from '@/hooks/useLanguage'
 import { ua } from 'languages/ua'
 import { ru } from 'languages/ru'
 import { en } from 'languages/en'
-import { INavbarItem, ISwitchButton } from './NavDataInterface'
+import { INavbarItem, ISwitchButton } from './data'
 import { useContext, useState } from 'react'
 import s from './Header.module.scss'
 import { LanguageContext } from 'providers/LanguageProvider/LanguageProvider'
@@ -30,7 +30,7 @@ const Nav = () => {
 		<nav>
 			{data.map(({ title, href }: INavbarItem) => (
 				<a
-					className={href === path ? s.filled : s.default}
+					className={s.default}
 					key={href}
 					onClick={() => setPath(href)}
 					href={href}

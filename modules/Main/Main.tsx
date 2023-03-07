@@ -12,7 +12,7 @@ const Main = () => {
 		useLanguage().main
 
 	return (
-		<div className={`section ${s.mainWrapper}`}>
+		<section id="main" className={`section ${s.mainWrapper}`}>
 			<Leaf className={s.leaf_1} />
 			<Leaf className={s.leaf_2} />
 			<Image
@@ -31,7 +31,7 @@ const Main = () => {
 					text={sign_for_consult}
 				/>
 			</div>
-		</div>
+		</section>
 	)
 }
 export default Main

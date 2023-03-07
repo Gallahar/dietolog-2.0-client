@@ -1,5 +1,6 @@
 .signForConsultWrapper {
 	position: relative;
+
 	.outline {
 		border: 1px solid #ecb390;
 		position: absolute;
@@ -9,16 +10,19 @@
 		right: 170px;
 		top: -10px;
 	}
+
 	> img {
 		border-radius: 50%;
 		position: absolute;
 		right: 200px;
 		top: 20px;
 	}
+
 	.signForConsult {
 		position: relative;
 		display: flex;
 		margin-top: 108px;
+
 		.signWrapper {
 			display: flex;
 			flex-flow: column;
