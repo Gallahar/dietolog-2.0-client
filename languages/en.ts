@@ -104,13 +104,13 @@ export const en: LanguageTemplate = {
 	prepared_solutions: {
 		prepared_solutions: 'Prepared solutions',
 		col_1_part_1:
-			'You can also choose and order a //prepared// nutrition program tailored to your goals and needs. This is a ready-made meal plan that will help you lose weight and teach you the basics of a balanced diet.',
+			'<p>You can also choose and order a <b>prepared</b> nutrition program tailored to your goals and needs. This is a ready-made meal plan that will help you lose weight and teach you the basics of a balanced diet.</p>',
 		col_1_part_2:
 			'Suitable for people who do not have acute diseases or severe chronic diseases. In case of illness - only individual consultations.',
 		col_2_part_1:
-			'The program consists of a //menu-builder//, up-to-date lifestyle recommendations (drinking, exercising, sleep, cheat meals, etc.), recipe examples and a list of allowed tasty dishes that are usually prohibited in strict diets.',
+			'<p>The program consists of a <b>menu-builder</b>, up-to-date lifestyle recommendations (drinking, exercising, sleep, cheat meals, etc.), recipe examples and a list of allowed tasty dishes that are usually prohibited in strict diets.</p>',
 		col_2_part_2:
-			'And also you will receive as a //gift// a checklist to choose from: "Antistress" or "Nutrition in conditions of power outage / water / gas" (checklists can also be ordered separately).',
+			'<p>And also you will receive as a <b>gift</b> a checklist to choose from: "Antistress" or "Nutrition in conditions of power outage / water / gas" (checklists can also be ordered separately).</p>',
 
 		constructor_heading: 'Menu-builder\nand its benefits',
 		constructor_1:
@@ -118,14 +118,14 @@ export const en: LanguageTemplate = {
 		constructor_2:
 			'The program is accompanied by a detailed explanation of the use of the designer and an example of compiling a menu for two days.',
 		constructor_3:
-			'The main advantage of the menu-builder compared to the usual static menu is its //flexibility//, because you choose what you want right now (or taking into account the availability of food in the refrigerator), without linking the dish to a specific day.',
+			'<p>The main advantage of the menu-builder compared to the usual static menu is its <b>flexibility</b>, because you choose what you want right now (or taking into account the availability of food in the refrigerator), without linking the dish to a specific day.</p>',
 		constructor_4:
-			'This flexibility allows you to use the program for at least //1 month//, unlike standard ready-made menus that are designed for a certain number of days.',
+			'<p>This flexibility allows you to use the program for at least <b>1 month</b>, unlike standard ready-made menus that are designed for a certain number of days.</p>',
 		constructor_5:
 			'At the same time, your meals will be varied and unique due to combinations of options for breakfast, lunch and other meals.',
 
 		constructor_col_1_part_1:
-			'Another feature of the program is its maximum //adaptation// to the client and his needs.',
+			'<p>Another feature of the program is its maximum <b>adaptation</b> to the client and his needs.</p>',
 		constructor_col_1_part_2:
 			'When compiling a constructor, recommendations and recipes, certain criteria are taken into account that you choose and specify when ordering.',
 		constructor_col_1_part_3:
@@ -134,7 +134,7 @@ export const en: LanguageTemplate = {
 		constructor_col_2_part_1:
 			'In addition, you can order the program in a language convenient for you - Ukrainian, Russian or English.',
 		constructor_col_2_part_2:
-			'If you have achieved certain results after using the program, you can order another one. For example, when changing weight - a program with different calories. Or book a consultation.',
+			'If you achieve certain results after using the program, you can order another one. For example, if you change your weight, you can order a program with a different calorie content or purpose.',
 		constructor_col_2_part_3:
 			'If you have any questions regarding the selection of criteria or the program itself, I will be happy to answer them.',
 
@@ -164,16 +164,16 @@ export const en: LanguageTemplate = {
 		diplomas_heading: 'Diplomas and certificates',
 		skills_heading: 'Sharpening skills',
 		skill_1:
-			'n my work, I follow the saying of A. Lincoln "Whoever you are, be better." In addition to constant work with clients, I try to embody and improve my knowledge and skills in a variety of projects and events.',
+			'In my work, I follow the saying of A. Lincoln "Whoever you are, be better." In addition to constant work with clients, I try to embody and improve my knowledge and skills in a variety of projects and events.',
 		skill_2:
 			'Conducting master classes and seminars, thanks to the feedback from the participants, allows you to track the real problems of people related to nutrition, and the feedback from the audience inspires further development.',
 		skill_3:
-			'A long and fruitful cooperation with the network of fitness clubs //"Sport Life"// helped to increase the level of knowledge in the field of sports nutrition.',
+			'<p>A long and fruitful cooperation with the network of fitness clubs <b>"Sport Life"</b> helped to increase the level of knowledge in the field of sports nutrition.</p>',
 		skill_4:
-			'Repeated interviews in the program "Morning with Ukraine" at the //TRK "Ukraine"// gave impetus to a thorough and in-depth study of the issues raised.',
+			'<p>Repeated interviews in the program "Morning with Ukraine" at the <b>TRK "Ukraine"</b> gave impetus to a thorough and in-depth study of the issues raised.</p>',
 		skill_5:
-			'Collaboration with the Israeli health food delivery company //Foodlabriut// hones the skills of working with menus and cooking schemes. And also this is another plus in the treasury of knowledge of the national cuisines of the world.',
+			'<p>Collaboration with the Israeli health food delivery company <b>Foodlabriut</b> hones the skills of working with menus and cooking schemes. And also this is another plus in the treasury of knowledge of the national cuisines of the world.</p>',
 		skill_6:
-			'Drawing lessons in the art workshop //"ART-COSMOS"// with the artist //Alena DZYUBA-PANASYUK// help develop creative abilities. Still, compiling a menu for customers is also a creative process.',
+			'<p>Drawing lessons in the art workshop <b>"ART-COSMOS"</b> with the artist <b>Alena DZYUBA-PANASYUK</b> help develop creative abilities. Still, compiling a menu for customers is also a creative process.</p>',
 	},
 }

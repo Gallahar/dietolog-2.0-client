@@ -142,6 +142,10 @@ module.exports = {
 					background:
 						'linear-gradient(64.31deg,#FEF5E4 15.51%,rgba(254, 245, 228, 0.5) 88.43%)',
 				},
+				'.prepared-gr': {
+					background:
+						'linear-gradient(110.72deg, #FEF5E4 1.51%, rgba(254, 245, 228, 0.5) 98.47%);',
+				},
 				'.link-animation': {
 					transform: 'scale(1.1)',
 				},

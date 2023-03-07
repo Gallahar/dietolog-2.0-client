@@ -1,10 +1,11 @@
 @import '@/assets/styles/media.scss';
 
 .description {
-	max-width: 612px;
-	line-height: 27px;
+	width: 612px;
+	line-height: 150%;
 	letter-spacing: 0.02em;
 	font-size: 18px;
+
 	@include m-1920 {
 		font-size: 13px;
 	}

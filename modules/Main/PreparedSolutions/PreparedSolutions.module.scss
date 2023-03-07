@@ -1,0 +1,106 @@
+.preparedSolutionsWrapper {
+	@apply prepared-gr overflow-hidden relative;
+
+	z-index: -1;
+
+	.readyMadeWrapper {
+		@apply flex flex-col;
+
+		padding-top: 108px;
+		gap: 72px;
+
+		.descriptionWrapper {
+			display: flex;
+			gap: 108px;
+
+			.descLeft {
+				@apply flex flex-col gap-3;
+
+				p {
+					width: 550px;
+				}
+			}
+			.descRight {
+				@apply flex flex-col gap-3;
+
+				> div {
+					width: 660px;
+				}
+			}
+		}
+	}
+
+	.constructorMenuWrapper {
+		@apply flex flex-row-reverse relative;
+
+		width: 1620px;
+
+		.constructorImageWrapper {
+			> img {
+				border-radius: 0 50% 50% 0;
+				position: absolute;
+				left: 0;
+			}
+
+			.outline {
+				border-radius: 0 50% 50% 0;
+				border: 1px solid #ecb390;
+				width: 852px;
+				height: 788px;
+				position: absolute;
+				top: -30px;
+				left: -30px;
+			}
+		}
+
+		.constructorTextWrapper {
+			> h2 {
+				width: 600px;
+			}
+
+			.constructorDescriptionWrapper {
+				@apply flex flex-col gap-5 mt-72;
+			}
+		}
+	}
+
+	.constructorBottomWrapper {
+		@apply flex;
+
+		gap: 108px;
+
+		.leftBlock {
+			@apply flex flex-col;
+
+			gap: 10px;
+		}
+		.rightBlock {
+			@apply flex flex-col;
+
+			gap: 10px;
+		}
+	}
+
+	.programCheckListWrapper {
+		.sliderWrapper {
+			height: 564px;
+			margin-top: 72px;
+		}
+
+		.actionLink {
+			margin-top: 108px;
+		}
+	}
+}
+
+.leaf_1 {
+	transform: rotate(-91.67deg);
+	top: -90px;
+	right: -420px;
+}
+
+.leaf_2 {
+	transform: rotate(-118.54deg);
+	bottom: 140px;
+	right: -530px;
+}
