@@ -9,7 +9,7 @@ import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 const SignForConsult = () => {
 	const { sign_for_consult } = useLanguage().sign_for_consult
 	return (
-		<div
+		<section
 			id="sign-for-consult"
 			className={`section ${s.signForConsultWrapper}`}
 		>
@@ -24,7 +24,7 @@ const SignForConsult = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 export default SignForConsult

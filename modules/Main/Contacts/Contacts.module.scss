@@ -44,6 +44,18 @@
 				@apply flex items-center;
 
 				gap: 75px;
+
+				svg {
+					opacity: 0.7;
+					transition: all 0.2s ease-in-out;
+
+					&:hover {
+						opacity: 1;
+						filter: drop-shadow(
+							0.22rem 0.23rem 0.5rem rgba(68, 187, 109, 0.4)
+						);
+					}
+				}
 			}
 		}
 
