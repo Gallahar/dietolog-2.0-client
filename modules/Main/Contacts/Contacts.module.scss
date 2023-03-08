@@ -1,0 +1,104 @@
+.contactsWrapper {
+	@apply relative overflow-hidden;
+
+	.heading {
+		margin-top: 108px;
+	}
+
+	.contactsContainer {
+		@apply flex;
+
+		margin-top: 72px;
+		gap: 160px;
+
+		.contacts {
+			@apply flex flex-col;
+
+			gap: 36px;
+
+			p {
+				font-size: 23px;
+				line-height: 150%;
+				letter-spacing: 0.02em;
+			}
+
+			.phones {
+				@apply flex flex-col;
+
+				gap: 15px;
+			}
+
+			.email {
+				@apply text-secondary;
+
+				font-size: 23px;
+			}
+
+			.address {
+				@apply flex flex-col;
+
+				gap: 15px;
+			}
+
+			.icons {
+				@apply flex items-center;
+
+				gap: 75px;
+			}
+		}
+
+		.avatarWrapper {
+			.outline {
+				@apply flex items-center justify-around;
+
+				width: 600px;
+				height: 240px;
+				border-radius: 120px;
+				border: 1px solid #ecb390;
+
+				> img {
+					border-radius: 50%;
+				}
+
+				.nameBlock {
+					@apply flex flex-col;
+
+					padding-right: 60px;
+					gap: 24px;
+
+					> h4 {
+						@apply text-text uppercase;
+
+						font-size: 20px;
+					}
+
+					> p {
+						font-style: italic;
+						font-size: 18px;
+						line-height: 150%;
+						letter-spacing: 0.02em;
+						width: 167px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.leaf_1 {
+	top: -360px;
+	left: -450px;
+	transform: rotate(158.13deg);
+}
+
+.leaf_2 {
+	transform: matrix(-0.66, 0.75, 0.75, 0.66, 0, 0);
+	right: -280px;
+	bottom: -380px;
+}
+
+.ellipse_1 {
+	background: rgba(254, 245, 228, 0.35);
+	bottom: 10px;
+	left: 540px;
+}

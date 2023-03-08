@@ -16,7 +16,7 @@
 			.descLeft {
 				@apply flex flex-col gap-3;
 
-				p {
+				> div {
 					width: 550px;
 				}
 			}

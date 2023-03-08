@@ -1,4 +1,5 @@
 import About from '@/modules/Main/About/About'
+import Contacts from '@/modules/Main/Contacts/Contacts'
 import Main from '@/modules/Main/Main'
 import PreparedSolutions from '@/modules/Main/PreparedSolutions/PreparedSolutions'
 import SignForConsult from '@/modules/Main/SignForConsult/SignForConsult'
@@ -9,7 +10,8 @@ export default function Home() {
 			<Main />
 			<About />
 			<SignForConsult />
-			<PreparedSolutions/>
+			<PreparedSolutions />
+			<Contacts />
 		</>
 	)
 }
