@@ -11,7 +11,7 @@ interface CardProgramProps extends HTMLAttributes<HTMLDivElement> {
 const CardProgram: FC<CardProgramProps> = ({ currentWidthX }) => {
 	return (
 		<div
-			style={{ transform: `translateX(${currentWidthX}px)` }}
+			style={{ transform: `translate3d(${currentWidthX}px,0 , 0)` }}
 			className={s.card}
 		>
 			<div className={s.cardBlock}>
