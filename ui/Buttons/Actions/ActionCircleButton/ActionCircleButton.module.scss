@@ -11,12 +11,12 @@
 	transition: all 0.2s ease-in-out;
 	&:hover {
 		cursor: pointer;
-		background: #b4e3c4;
+		background: #63c485;
 	}
-	&:hover img {
+	&:hover svg {
 		transform: translateX(10px);
 	}
-	> img {
+	> svg {
 		transition: transform 0.3s ease;
 		position: absolute;
 		right: -70px;

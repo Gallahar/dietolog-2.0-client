@@ -1,0 +1,31 @@
+.card {
+	@apply flex flex-col justify-between relative;
+
+	width: 396px;
+	height: 564px;
+	background-color: #fff;
+	filter: drop-shadow(3px 5px 15px rgba(148, 180, 159, 0.2));
+
+	> p {
+		@apply p-30 text-18 text-secondary;
+
+		line-height: 150%;
+		letter-spacing: 0.02em;
+	}
+
+	> img {
+		border-radius: 0 100% 0 0;
+	}
+	.arrowWrapper {
+		@apply flex items-center justify-center;
+
+		bottom: 30px;
+		left: 30px;
+		width: 120px;
+		height: 120px;
+		position: absolute;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.35);
+		backdrop-filter: blur(10px);
+	}
+}

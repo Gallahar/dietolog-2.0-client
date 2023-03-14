@@ -5,6 +5,7 @@
 	line-height: 150%;
 	letter-spacing: 0.02em;
 	font-size: 18px;
+	white-space: break-spaces;
 
 	@include m-1920 {
 		font-size: 13px;

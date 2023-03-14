@@ -1,0 +1,46 @@
+.card {
+	@apply flex flex-col p-30;
+
+	gap: 32px;
+	width: 420px;
+	height: 826px;
+	background: rgba(255, 255, 255, 0.88);
+	backdrop-filter: blur(10px);
+	border-radius: 0px 0px 360px 360px;
+	white-space: break-spaces;
+
+	.cardHeading {
+		@apply uppercase text-center;
+
+		letter-spacing: 0.02em;
+		line-height: 150%;
+		font-size: 24px;
+
+		.tittle {
+			@apply text-text;
+		}
+
+		.type {
+			@apply text-secondary;
+		}
+	}
+	.optionsWrapper {
+		@apply flex flex-col text-17;
+		padding: 0 30px;
+		list-style: disc;
+		line-height: 150%;
+		letter-spacing: 0.02em;
+		gap: 5px;
+
+		li::marker {
+			font-size: 12px;
+		}
+	}
+
+	.price {
+		@apply text-secondary uppercase text-center text-27;
+
+		line-height: 150%;
+		letter-spacing: 0.02em;
+	}
+}

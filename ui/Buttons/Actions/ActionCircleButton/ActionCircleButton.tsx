@@ -1,7 +1,6 @@
 import { ButtonHTMLAttributes, FC } from 'react'
-import Arrow from '@/assets/icons/arrow-right.png'
-import Image from 'next/image'
 import s from './ActionCircleButton.module.scss'
+import ArrowRight from '@/assets/icons/ArrowRight'
 
 export interface ActionCircleButtonProps
 	extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -16,7 +15,7 @@ const ActionCircleButton: FC<ActionCircleButtonProps> = ({
 }) => {
 	return (
 		<button className={`${s.buttonCircle} ${className}`} {...rest}>
-			<Image src={Arrow} alt="arrow" />
+			<ArrowRight/>
 			{text}
 		</button>
 	)

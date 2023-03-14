@@ -8,12 +8,14 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 	ref?: Ref<HTMLInputElement>
 }
 
-const Input: FC<InputProps> = forwardRef(({ className,error, ...rest }, ref) => {
-	return (
-		<div className={`${s.input} ${className}`}>
-			<input ref={ref} {...rest} />
-			{error&& <p>{error}</p>}
-		</div>
-	)
-})
+const Input: FC<InputProps> = forwardRef(
+	({ className, error, ...rest }, ref) => {
+		return (
+			<div className={`${s.input} ${className}`}>
+				<input ref={ref} {...rest} />
+				{error && <p>{error}</p>}
+			</div>
+		)
+	}
+)
 export default Input

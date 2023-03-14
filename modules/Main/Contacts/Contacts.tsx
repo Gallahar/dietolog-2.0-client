@@ -3,7 +3,7 @@ import Heading from '@/ui/Headings/Heading/Heading'
 import avatar from '@/assets/contacts/contact-avatar.png'
 import Image from 'next/image'
 import s from './Contacts.module.scss'
-import FaceBook from './Icons/Facebook'
+import FaceBook from './Icons/FaceBook'
 import Telegram from './Icons/Telegram'
 import Instagram from './Icons/Instagram'
 import WhatsApp from './Icons/WhatsApp'
@@ -41,9 +41,7 @@ const Contacts = () => {
 							<Instagram />
 							<WhatsApp />
 							<Telegram />
-							<a href="/" target="blank">
-								<FaceBook />
-							</a>
+							<FaceBook />
 						</div>
 					</div>
 					<div className={s.avatarWrapper}>

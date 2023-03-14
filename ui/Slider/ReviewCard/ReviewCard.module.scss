@@ -1,0 +1,33 @@
+.card {
+	width: 420px;
+	height: 728px;
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 3px 5px 15px rgba(148, 180, 159, 0.2);
+	backdrop-filter: blur(10px);
+	border-radius: 0 0 300px 300px;
+	transition: all 250ms ease-in-out;
+
+	line-height: 150%;
+
+	letter-spacing: 0.02em;
+
+	.cardTextWrapper {
+		@apply flex flex-col;
+
+		padding: 36px;
+		gap: 36px;
+
+		> h2 {
+			@apply text-text text-25;
+		}
+
+		> p {
+			font-size: 18px;
+		}
+		> span {
+			@apply text-secondary;
+
+			font-size: 20px;
+		}
+	}
+}

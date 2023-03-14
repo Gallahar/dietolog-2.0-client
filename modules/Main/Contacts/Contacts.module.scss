@@ -6,10 +6,9 @@
 	}
 
 	.contactsContainer {
-		@apply flex;
+		@apply flex justify-between;
 
 		margin-top: 72px;
-		gap: 160px;
 
 		.contacts {
 			@apply flex flex-col;

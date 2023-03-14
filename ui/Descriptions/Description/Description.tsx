@@ -1,9 +1,9 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import s from './Description.module.scss'
 import cn from 'classnames'
 
 interface DescriptionProps {
-	text: string | JSX.Element | JSX.Element[]
+	text: string | ReactNode
 	className?: string
 }
 

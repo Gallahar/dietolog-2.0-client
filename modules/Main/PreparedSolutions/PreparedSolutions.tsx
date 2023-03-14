@@ -8,8 +8,35 @@ import s from './PreparedSolutions.module.scss'
 import cn from 'classnames'
 import ActionLink from '@/ui/Buttons/Actions/ActionButton/ActionLink'
 import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
+import Slider from '@/ui/Slider/Slider'
+import CardProgram from '@/ui/Slider/CardProgram/CardProgram'
+import { IProgram } from '@/shared/models/program.interface'
+import { FC, useState } from 'react'
+import DiplomaCard from '@/ui/Slider/DiplomaCard/DiplomCard'
+import ReviewCard from '@/ui/Slider/ReviewCard/ReviewCard'
+import ConsultCard from '@/ui/Slider/ConsultCard/ConsultCard'
 
-const PreparedSolutions = () => {
+interface PreparedSolutionsProps {
+	programs: IProgram[]
+}
+
+const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
+	const [currentIndex, setCurrentIndex] = useState(0)
+	const [currentWidthX, setCurrentWidthX] = useState(0)
+
+	const handleNext = () => {
+		if (currentIndex < 10 - 3) {
+			setCurrentIndex(currentIndex + 1)
+			setCurrentWidthX((prev) => prev - 475)
+		}
+	}
+	const handlePrev = () => {
+		if (currentIndex > 0) {
+			setCurrentIndex(currentIndex - 1)
+			setCurrentWidthX((prev) => prev + 475)
+		}
+	}
+
 	const {
 		prepared_solutions,
 		col_1_part_1,
@@ -108,10 +135,23 @@ const PreparedSolutions = () => {
 					<Description text={constructor_col_2_part_3} />
 				</div>
 			</div>
-			<div className={`container ${s.programCheckListWrapper}`}>
+			<div className="container">
 				<Heading text={programs_and_checks} />
-				<div className={s.sliderWrapper}></div>
-				<ActionLink path="openPopup" text={help_to_pick} />
+			</div>
+			<Slider setNext={handleNext} setPrev={handlePrev}>
+				{Array.from({ length: 10 }, (_, i) => (
+					<CardProgram key={i} currentWidthX={currentWidthX} />
+					// <DiplomaCard />
+					// <ReviewCard />
+					// <ConsultCard />
+				))}
+			</Slider>
+			<div className="container">
+				<ActionLink
+					className={s.actionLink}
+					path="openPopup"
+					text={help_to_pick}
+				/>
 			</div>
 		</section>
 	)
