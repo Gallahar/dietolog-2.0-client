@@ -1,4 +1,5 @@
 import AdminButton from '@/ui/Buttons/AdminButton/AdminButton'
+import dayjs from 'dayjs'
 import { FC } from 'react'
 import {
 	Control,
@@ -80,7 +81,7 @@ const AdminEditRadioItem: FC<AdminEditRadioItemProps> = ({
 							index={String(i)}
 							errors={errors}
 							register={register}
-							key={o.answer.en + i}
+							key={i * 2}
 						/>
 					)
 				})}

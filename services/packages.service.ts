@@ -4,7 +4,7 @@ import { getPackagesUrl } from '../config/api'
 
 export const packageService = {
 	async getAll() {
-		return await defaultAxios.get(getPackagesUrl(''))
+		return await defaultAxios.get<IPackage[]>(getPackagesUrl(''))
 	},
 
 	// Admin
