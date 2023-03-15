@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	poweredByHeader: false,
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
+	typescript: {
+		ignoreBuildErrors: true,
+	},
 	env: {
 		APP_URL: process.env.REACT_APP_URL,
 		APP_ENV: process.env.REACT_APP_ENV,

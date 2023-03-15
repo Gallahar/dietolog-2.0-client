@@ -24,7 +24,7 @@ const AdminEditRadioItem: FC<AdminEditRadioItemProps> = ({
 	removeHandler,
 	register,
 	errors,
-	control
+	control,
 }) => {
 	const {
 		append: appendOption,
