@@ -1,0 +1,14 @@
+.closePopUp {
+	@apply absolute flex justify-center items-center bg-white cursor-pointer;
+
+	top: 24px;
+	right: 24px;
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	transition: all 0.3s ease-in;
+
+	&:hover {
+		transform: scale(1.3);
+	}
+}

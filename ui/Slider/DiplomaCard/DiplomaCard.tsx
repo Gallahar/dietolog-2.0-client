@@ -12,7 +12,7 @@ const DiplomaCard = () => {
 				Національний університет фізичного виховання і спорту України за
 				спеціалізацією “Спортивна дієтологія”
 			</p>
-			<Image src={DiplomaImg} alt="diploma" />
+			<Image draggable={false} src={DiplomaImg} alt="diploma" />
 			<div className={s.arrowWrapper}>
 				<ArrowSvg />
 			</div>

@@ -1,0 +1,21 @@
+.textArea {
+	position: relative;
+	font-size: 19px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	box-sizing: border-box;
+	p {
+		position: absolute;
+		color: #ff0009;
+	}
+	> textarea {
+		@apply outline-border-none primary-gr text-dark;
+
+		padding: 24px 30px;
+		width: 100%;
+		height: 251px;
+		font-size: 19px;
+		line-height: 150%;
+		letter-spacing: 0.02em;
+	}
+}

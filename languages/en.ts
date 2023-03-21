@@ -43,7 +43,7 @@ export const en: LanguageTemplate = {
 			'Thank you! I will call or text you as soon as possible to discuss all details.',
 		field_is_required: 'This field is required',
 		invalid_phone: 'Invalid number',
-		invalid_email: 'Ivalid Email',
+		invalid_email: 'Invalid Email',
 	},
 	reviews: {
 		heading: 'Reviews',
@@ -141,6 +141,23 @@ export const en: LanguageTemplate = {
 		programs_and_checks: 'Programs and checklists',
 		help_to_pick: 'Help in choosing a program',
 	},
+	help_to_pick: {
+		help_to_pick: 'Help in choosing a program',
+		your_name: 'Your name',
+		phone: 'Phone',
+		email: 'Email',
+		description:
+			'Please briefly describe your question. What exactly are you interested in, the main goal, the most important criteria when choosing a program',
+		send: 'Send',
+		response:
+			'Thank you for contacting me!\nI will write or call you back shortly.',
+		field_is_required: 'This field is required',
+		invalid_phone: 'Invalid number',
+		invalid_email: 'Invalid Email',
+		description_min_max_length:
+			'Min length of your message - 50, max - 300',
+	},
+
 	detailed_prices: {
 		service_type: 'Type of service',
 		remark: 'The price for a second consultation may change if the initial package is changed',

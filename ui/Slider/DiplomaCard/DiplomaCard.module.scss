@@ -5,7 +5,7 @@
 	height: 564px;
 	background-color: #fff;
 	filter: drop-shadow(3px 5px 15px rgba(148, 180, 159, 0.2));
-
+	user-select: none;
 	> p {
 		@apply p-30 text-18 text-secondary;
 

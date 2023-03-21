@@ -30,7 +30,7 @@ export interface LanguageTemplate {
 		text_top: string
 		text_mid: string
 		text_bot: string
-		back_to_main: string 
+		back_to_main: string
 	}
 
 	contacts: {
@@ -123,6 +123,19 @@ export interface LanguageTemplate {
 
 		programs_and_checks: string
 		help_to_pick: string
+	}
+	help_to_pick: {
+		help_to_pick: string
+		your_name: string
+		phone: string
+		email: string
+		description: string
+		send: string
+		response: string
+		field_is_required: string
+		invalid_phone: string
+		invalid_email: string
+		description_min_max_length: string
 	}
 
 	detailed_prices: {

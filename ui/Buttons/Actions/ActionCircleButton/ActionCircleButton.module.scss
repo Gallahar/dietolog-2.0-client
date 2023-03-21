@@ -16,6 +16,9 @@
 	&:hover svg {
 		transform: translateX(10px);
 	}
+	&:disabled {
+		background-color: grey;
+	}
 	> svg {
 		transition: transform 0.3s ease;
 		position: absolute;

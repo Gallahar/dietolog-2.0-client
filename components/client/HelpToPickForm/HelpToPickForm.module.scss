@@ -1,0 +1,28 @@
+.helperForm {
+	@apply flex;
+
+	.inputsWrapper {
+		@apply flex flex-col;
+		width: 564px;
+		gap: 36px;
+		padding: 90px 72px 66px 72px;
+		> div {
+			> input {
+				width: 90%;
+			}
+			> textarea {
+				width: 90%;
+			}
+		}
+	}
+	.handlerWrapper {
+		@apply flex flex-col justify-between primary-gr;
+		box-sizing: border-box;
+		border-radius: 0 0px 50px 0px;
+		padding: 90px 117px 72px 72px;
+		> h2 {
+			font-size: 30px;
+			width: 220px;
+		}
+	}
+}
