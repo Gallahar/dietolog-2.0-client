@@ -68,8 +68,13 @@
 		}
 	}
 
-	.actionLink {
+	.actionButton {
 		margin-top: 108px;
+	}
+	.popup {
+		> div {
+			padding: 0;
+		}
 	}
 }
 

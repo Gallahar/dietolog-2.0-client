@@ -1,10 +1,9 @@
 .card {
 	@apply flex flex-col items-end justify-end relative;
-	transition: all 250ms ease-in-out;
-	width: 396px;
+	width: 398px;
 	height: 564px;
 	filter: drop-shadow(3px 5px 6px rgba(143, 63, 9, 0.2));
-
+	user-select: none;
 	.cardBlock {
 		border-radius: 0 360px 0 0;
 		border-left: 0.01px solid #fff;

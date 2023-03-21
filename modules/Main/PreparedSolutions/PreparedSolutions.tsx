@@ -6,35 +6,32 @@ import preparedImg from '@/assets/prepared_solutions/prepared-solutions-img.png'
 import parse from 'html-react-parser'
 import s from './PreparedSolutions.module.scss'
 import cn from 'classnames'
-import ActionLink from '@/ui/Buttons/Actions/ActionButton/ActionLink'
 import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 import Slider from '@/ui/Slider/Slider'
 import CardProgram from '@/ui/Slider/CardProgram/CardProgram'
 import { IProgram } from '@/shared/models/program.interface'
 import { FC, useState } from 'react'
-import DiplomaCard from '@/ui/Slider/DiplomaCard/DiplomCard'
+import DiplomaCard from '@/ui/Slider/DiplomaCard/DiplomaCard'
 import ReviewCard from '@/ui/Slider/ReviewCard/ReviewCard'
 import ConsultCard from '@/ui/Slider/ConsultCard/ConsultCard'
+import PopUp from '@/ui/PopUp/PopUp'
+import HelpToPickForm from '@/components/client/HelpToPickForm/HelpToPickForm'
+import ClosePopupButton from '@/ui/Buttons/Actions/ClosePopupButton/ClosePopupButton'
+import ClosePopupButtonFilled from '@/ui/Buttons/Actions/ClosePopupButtonFilled/ClosePopupButtonFilled'
+import ActionButton from '@/ui/Buttons/Actions/ActionButton/ActionButton'
 
 interface PreparedSolutionsProps {
 	programs: IProgram[]
 }
 
 const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
-	const [currentIndex, setCurrentIndex] = useState(0)
-	const [currentWidthX, setCurrentWidthX] = useState(0)
+	const [openPopup, setOpenPopup] = useState(false)
+	const [alertToggle, setAlertToggle] = useState(false)
+	const [alertText, setAlertText] = useState('')
 
-	const handleNext = () => {
-		if (currentIndex < 10 - 3) {
-			setCurrentIndex(currentIndex + 1)
-			setCurrentWidthX((prev) => prev - 475)
-		}
-	}
-	const handlePrev = () => {
-		if (currentIndex > 0) {
-			setCurrentIndex(currentIndex - 1)
-			setCurrentWidthX((prev) => prev + 475)
-		}
+	const alertHandler = (t: string) => {
+		setAlertText(t)
+		setAlertToggle(true)
 	}
 
 	const {
@@ -138,21 +135,36 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 			<div className="container">
 				<Heading text={programs_and_checks} />
 			</div>
-			<Slider setNext={handleNext} setPrev={handlePrev}>
+			<Slider dataLength={10}>
 				{Array.from({ length: 10 }, (_, i) => (
-					<CardProgram key={i} currentWidthX={currentWidthX} />
+					<CardProgram key={i} />
 					// <DiplomaCard />
 					// <ReviewCard />
 					// <ConsultCard />
 				))}
 			</Slider>
 			<div className="container">
-				<ActionLink
-					className={s.actionLink}
-					path="openPopup"
+				<ActionButton
+					onClick={() => setOpenPopup(true)}
+					className={s.actionButton}
 					text={help_to_pick}
 				/>
 			</div>
+			{openPopup && (
+				<PopUp className={s.popup} closePopup={setOpenPopup}>
+					<ClosePopupButton closePopup={setOpenPopup} />
+					<HelpToPickForm
+						alertHandler={alertHandler}
+						setOpenPopup={setOpenPopup}
+					/>
+				</PopUp>
+			)}
+			{alertToggle && (
+				<PopUp closePopup={setAlertToggle}>
+					<ClosePopupButtonFilled closePopup={setAlertToggle} />
+					<Description text={alertText} />
+				</PopUp>
+			)}
 		</section>
 	)
 }

@@ -6,7 +6,7 @@
 		padding: 0;
 		left: 200px;
 		top: 282px;
-		z-index: 99;
+		z-index: 3;
 
 		&:hover {
 			@apply link-animation;
@@ -21,7 +21,7 @@
 
 		right: 200px;
 		top: 282px;
-		z-index: 99;
+		z-index: 3;
 
 		&:hover {
 			@apply link-animation;
@@ -32,24 +32,23 @@
 	}
 
 	.sliderContainer {
-		transition: 0.2s ease-in-out;
+		touch-action: pan-y;
 		height: 564px;
 		position: relative;
 		overflow: hidden;
 		margin: 0 auto;
-		width: 1332px;
+		width: 1280px;
 		padding: 70px;
 
-		&:hover {
-			transform: translateY(-10px);
-		}
 		.slidesWrapper {
+			transition: all 0.3s ease-in-out;
 			position: absolute;
 			display: flex;
-			gap: 78px;
-			&:hover {
-				cursor: grab;
-			}
+			gap: 72px;
+			width: max-content;
+		}
+		.isSliding {
+			transition: none;
 		}
 	}
 }

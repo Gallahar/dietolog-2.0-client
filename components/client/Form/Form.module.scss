@@ -2,10 +2,8 @@
 	display: flex;
 	flex-flow: column;
 	gap: 36px;
+	width: 612px;
 	> button {
 		margin-top: 36px;
-		&:disabled {
-			background-color: grey;
-		}
 	}
 }

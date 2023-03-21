@@ -1,14 +1,19 @@
 import { useLanguage } from '@/hooks/useLanguage'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import ActionCircleButton from '@/ui/Buttons/Actions/ActionCircleButton/ActionCircleButton'
-import Input from '@/ui/Fields/Input/Input'
+import Input from '@/ui/Fields/Inputs/Input/Input'
 import s from './Form.module.scss'
 import { RecordService } from '@/services/record.service'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { IRecordCreate } from '@/shared/models/record.interface'
 
-const Form = () => {
+interface FormProps {
+	alertHandler: (v: string) => void
+}
+
+const Form: FC<FormProps> = ({ alertHandler }) => {
 	const {
+		response,
 		enroll,
 		your_name,
 		phone,
@@ -17,6 +22,7 @@ const Form = () => {
 		invalid_email,
 		invalid_phone,
 	} = useLanguage().sign_for_consult
+	const { error } = useLanguage().global
 	const [loading, setLoading] = useState(false)
 
 	const {
@@ -30,7 +36,9 @@ const Form = () => {
 		setLoading(true)
 		try {
 			await RecordService.create(dto)
+			alertHandler(response)
 		} catch (err) {
+			alertHandler(error)
 			console.log(err)
 		} finally {
 			setLoading(false)

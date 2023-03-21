@@ -1,0 +1,10 @@
+.leaveReview {
+	@apply flex flex-col;
+
+	gap: 36px;
+
+	width: 860px;
+	> button:disabled {
+		background: gray;
+	}
+}
