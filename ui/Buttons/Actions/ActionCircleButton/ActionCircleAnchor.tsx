@@ -14,8 +14,8 @@ const ActionCircleAnchor: FC<ActionCircleAnchor> = ({
 }) => {
 	return (
 		<a className={`${s.buttonCircle} ${className}`} {...rest}>
+			<p className={s.text}>{text}</p>
 			<ArrowRight />
-			{text}
 		</a>
 	)
 }

@@ -9,9 +9,9 @@ import { FC, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import s from './HelpToPickForm.module.scss'
 
-interface HelpChooseFormProps {
+export interface HelpChooseFormProps {
 	alertHandler: (v: string) => void
-	setOpenPopup: (v: boolean) => void
+	setOpenPopup: () => void
 }
 
 const HelpToPickForm: FC<HelpChooseFormProps> = ({
@@ -47,7 +47,6 @@ const HelpToPickForm: FC<HelpChooseFormProps> = ({
 	const onSubmit: SubmitHandler<IConsultHelpCreate> = async (dto, e) => {
 		e?.preventDefault()
 		setLoading(true)
-		console.log(dto)
 		try {
 			await ConsultHelpService.create(dto)
 			alertHandler(response)
@@ -56,7 +55,7 @@ const HelpToPickForm: FC<HelpChooseFormProps> = ({
 			console.log(err)
 		} finally {
 			setLoading(false)
-			setOpenPopup(false)
+			setOpenPopup()
 		}
 	}
 

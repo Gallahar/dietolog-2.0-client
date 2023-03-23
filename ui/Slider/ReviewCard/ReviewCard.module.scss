@@ -8,9 +8,9 @@
 	transition: all 250ms ease-in-out;
 	user-select: none;
 
-	line-height: 150%;
-
-	letter-spacing: 0.02em;
+	&:hover {
+		transform: translateY(-10px);
+	}
 
 	.cardTextWrapper {
 		@apply flex flex-col;
@@ -20,15 +20,24 @@
 
 		> h2 {
 			@apply text-text text-25;
+			line-height: 150%;
+
+			letter-spacing: 0.02em;
 		}
 
 		> p {
 			font-size: 18px;
+			line-height: 150%;
+
+			letter-spacing: 0.02em;
 		}
 		> span {
 			@apply text-secondary;
 
 			font-size: 20px;
+			line-height: 150%;
+
+			letter-spacing: 0.02em;
 		}
 	}
 }

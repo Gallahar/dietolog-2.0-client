@@ -1,0 +1,60 @@
+.reviews {
+	@apply overflow-hidden relative;
+
+	padding-top: 108px;
+	.heading {
+		margin-top: 108px;
+	}
+
+	.sliderSection {
+		position: relative;
+		display: flex;
+		flex-direction: row-reverse;
+
+		.imageWrapper {
+			> img {
+				position: absolute;
+				top: 70px;
+				left: 0;
+				border-radius: 0 50% 50% 0;
+			}
+			> .outline {
+				position: absolute;
+				top: 40px;
+				left: -30px;
+				border: 1px solid #ecb390;
+				width: 708px;
+				height: 788px;
+				border-radius: 0 50% 50% 0;
+			}
+		}
+
+		.sliderWrapper {
+			position: relative;
+			margin-top: 62px;
+			max-width: 1332px;
+			margin-right: -200px;
+		}
+	}
+
+	.links {
+		@apply flex justify-between;
+	}
+}
+
+.ellipse_1 {
+	right: 62px;
+	top: 230px;
+	background: rgba(68, 187, 109, 0.07);
+}
+.ellipse_2 {
+	bottom: 32px;
+	left: 563px;
+	background: rgba(254, 245, 228, 0.35);
+}
+
+.leaf_1 {
+	transform: matrix(-0.62, 0.78, 0.78, 0.62, 0, 0);
+	bottom: -345px;
+	right: -260px;
+}

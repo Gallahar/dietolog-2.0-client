@@ -4,13 +4,20 @@ import Input from '@/ui/Fields/Inputs/Input/Input'
 import TextArea from '@/ui/Fields/Inputs/TextArea/TextArea'
 import Heading from '@/ui/Headings/Heading/Heading'
 import { ReviewService } from '@/services/review.service'
-import { FormEvent, useRef, useState } from 'react'
+import { FC, FormEvent, useRef, useState } from 'react'
 import s from './LeaveReviewForm.module.scss'
+import { HelpChooseFormProps } from '../HelpToPickForm/HelpToPickForm'
 
-const LeaveReviewForm = () => {
+interface LeaveReviewFormProps extends HelpChooseFormProps {}
+
+const LeaveReviewForm: FC<LeaveReviewFormProps> = ({
+	alertHandler,
+	setOpenPopup,
+}) => {
 	const { your_review, your_name, review, send, review_min_max_length } =
 		useLanguage().leave_review
-	const { filed_is_required } = useLanguage().global
+	const { response } = useLanguage().reviews
+	const { error, filed_is_required } = useLanguage().global
 	const nameRef = useRef<HTMLInputElement>(null)
 	const reviewRef = useRef<HTMLTextAreaElement>(null)
 	const [nameError, setNameError] = useState('')
@@ -38,10 +45,13 @@ const LeaveReviewForm = () => {
 				name: nameRef.current.value,
 				text: reviewRef.current.value,
 			})
+			alertHandler(response)
 		} catch (e) {
+			alertHandler(error)
 			console.error(e)
 		} finally {
 			setLoading(false)
+			setOpenPopup()
 		}
 	}
 

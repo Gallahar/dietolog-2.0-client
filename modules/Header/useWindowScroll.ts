@@ -12,20 +12,22 @@ export const useWindowScroll = (): boolean[] | null[] => {
 	const [animated, setAnimated] = useState(false)
 	const [isStatic, setIsStatic] = useState(false)
 
-	const handleScroll = useCallback(() => {
+	const handleScroll = () => {
 		setLastScroll((w) => (w = window.scrollY))
 		if (lastScroll > 30) {
 			setAnimated(true)
-		} else if (lastScroll < 30) {
+		}
+		if (lastScroll < 30) {
 			setAnimated(false)
 		}
 
 		if (lastScroll > 250 && pathname === '/') {
 			setIsStatic(false)
-		} else if (lastScroll < 250 && pathname === '/') {
+		}
+		if (lastScroll < 250 && pathname === '/') {
 			setIsStatic(true)
 		}
-	}, [lastScroll])
+	}
 
 	useEffect(() => {
 		if (pathname === '/') {
@@ -35,12 +37,14 @@ export const useWindowScroll = (): boolean[] | null[] => {
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
-	}, [lastScroll])
+	}, [lastScroll, pathname])
 
 	useEffect(() => {
 		if (pathname === '/' && window.scrollY < 30) {
 			setIsStatic(true)
+			setAnimated(false)
 		}
+		
 	}, [pathname])
 
 	return [isStatic, animated]

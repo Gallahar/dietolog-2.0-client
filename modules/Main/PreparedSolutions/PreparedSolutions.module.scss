@@ -12,9 +12,13 @@
 
 			.descLeft {
 				@apply flex flex-col justify-between;
+
+				height: 231px;
 			}
 			.descRight {
-				@apply flex flex-col gap-3;
+				@apply flex flex-col justify-between;
+
+				height: 231px;
 			}
 		}
 	}
@@ -60,12 +64,25 @@
 			@apply flex flex-col;
 
 			gap: 10px;
+
+			> div {
+				white-space: normal;
+			}
 		}
 		.rightBlock {
 			@apply flex flex-col;
 
 			gap: 10px;
+
+			> div {
+				white-space: normal;
+			}
 		}
+	}
+
+	.sliderWrapper {
+		position: relative;
+		margin-top: 52px;
 	}
 
 	.actionButton {

@@ -6,7 +6,7 @@
 	width: 100vw;
 	position: fixed;
 	top: 0;
-	z-index: 4;
+	z-index: 110;
 	background-color: rgba(0, 0, 0, 0.6);
 
 	.popUp {
@@ -14,7 +14,7 @@
 
 		border-radius: 50px 0px 50px 50px;
 		background-color: #fff;
-		z-index: 6;
+		z-index: 100;
 		padding: 90px 72px 72px;
 	}
 }

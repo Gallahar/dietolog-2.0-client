@@ -1,29 +1,40 @@
 .buttonCircle {
-	@apply relative flex justify-center items-center border-none bg-secondary text-18;
-	color: #fff;
-	line-height: 150%;
-	letter-spacing: 0.02em;
-	font-weight: 700;
-	width: 180px;
+	@apply relative flex items-center;
+
+	width: 225px;
 	height: 180px;
-	border-radius: 50%;
-	text-align: center;
-	transition: all 0.2s ease-in-out;
+	transition: 0.3s ease;
+	.text {
+		@apply bg-secondary text-white text-18 items-center justify-center text-center flex;
+
+		width: 180px;
+		height: 180px;
+		padding: 5px;
+		border-radius: 50%;
+		font-weight: 700;
+		line-height: 150%;
+		letter-spacing: 0.02em;
+		z-index: 3;
+
+		&:hover {
+			cursor: pointer;
+			background: #63c485;
+		}
+
+		&:disabled {
+			background-color: grey;
+		}
+	}
+
 	&:hover {
-		cursor: pointer;
-		background: #63c485;
-	}
-	&:hover svg {
-		transform: translateX(10px);
-	}
-	&:disabled {
-		background-color: grey;
+		svg {
+			transform: translateX(10px);
+		}
 	}
 	> svg {
 		transition: transform 0.3s ease;
 		position: absolute;
-		right: -70px;
-		top: 78px;
-		z-index: -1;
+		right: -35px;
+		top: 77px;
 	}
 }

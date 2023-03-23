@@ -11,9 +11,6 @@ import Slider from '@/ui/Slider/Slider'
 import CardProgram from '@/ui/Slider/CardProgram/CardProgram'
 import { IProgram } from '@/shared/models/program.interface'
 import { FC, useState } from 'react'
-import DiplomaCard from '@/ui/Slider/DiplomaCard/DiplomaCard'
-import ReviewCard from '@/ui/Slider/ReviewCard/ReviewCard'
-import ConsultCard from '@/ui/Slider/ConsultCard/ConsultCard'
 import PopUp from '@/ui/PopUp/PopUp'
 import HelpToPickForm from '@/components/client/HelpToPickForm/HelpToPickForm'
 import ClosePopupButton from '@/ui/Buttons/Actions/ClosePopupButton/ClosePopupButton'
@@ -135,14 +132,13 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 			<div className="container">
 				<Heading text={programs_and_checks} />
 			</div>
-			<Slider dataLength={10}>
-				{Array.from({ length: 10 }, (_, i) => (
-					<CardProgram key={i} />
-					// <DiplomaCard />
-					// <ReviewCard />
-					// <ConsultCard />
-				))}
-			</Slider>
+			<div className={`${s.sliderWrapper} container`}>
+				<Slider buttonsType={false} slidesLength={10}>
+					{Array.from({ length: 10 }, (_, i) => (
+						<CardProgram key={i} />
+					))}
+				</Slider>
+			</div>
 			<div className="container">
 				<ActionButton
 					onClick={() => setOpenPopup(true)}
@@ -151,17 +147,22 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 				/>
 			</div>
 			{openPopup && (
-				<PopUp className={s.popup} closePopup={setOpenPopup}>
-					<ClosePopupButton closePopup={setOpenPopup} />
+				<PopUp
+					className={s.popup}
+					closePopup={() => setOpenPopup(false)}
+				>
+					<ClosePopupButton closePopup={() => setOpenPopup(false)} />
 					<HelpToPickForm
 						alertHandler={alertHandler}
-						setOpenPopup={setOpenPopup}
+						setOpenPopup={() => setOpenPopup(false)}
 					/>
 				</PopUp>
 			)}
 			{alertToggle && (
-				<PopUp closePopup={setAlertToggle}>
-					<ClosePopupButtonFilled closePopup={setAlertToggle} />
+				<PopUp closePopup={() => setAlertToggle(false)}>
+					<ClosePopupButtonFilled
+						closePopup={() => setAlertToggle(false)}
+					/>
 					<Description text={alertText} />
 				</PopUp>
 			)}

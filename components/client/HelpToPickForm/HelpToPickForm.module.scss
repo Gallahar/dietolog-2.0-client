@@ -1,19 +1,11 @@
 .helperForm {
 	@apply flex;
-
+	
 	.inputsWrapper {
 		@apply flex flex-col;
-		width: 564px;
+		width: 708px;
 		gap: 36px;
-		padding: 90px 72px 66px 72px;
-		> div {
-			> input {
-				width: 90%;
-			}
-			> textarea {
-				width: 90%;
-			}
-		}
+		padding: 90px 72px 64px 72px;
 	}
 	.handlerWrapper {
 		@apply flex flex-col justify-between primary-gr;

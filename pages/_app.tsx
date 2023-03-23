@@ -1,5 +1,4 @@
 import '@/assets/styles/globals.scss'
-import { IS_CLIENT } from '@/config/constants'
 import Footer from '@/modules/Footer/Footer'
 import Header from '@/modules/Header/Header'
 import type { AppProps } from 'next/app'

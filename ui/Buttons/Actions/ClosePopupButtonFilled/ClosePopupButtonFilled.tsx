@@ -5,7 +5,7 @@ import s from './ClosePopupButtonFilled.module.scss'
 export interface ClosePopupButtonFilledProps
 	extends HTMLAttributes<HTMLButtonElement> {
 	className?: string
-	closePopup: (val: boolean) => void
+	closePopup: () => void
 }
 
 const ClosePopupButtonFilled: FC<ClosePopupButtonFilledProps> = ({
@@ -15,7 +15,7 @@ const ClosePopupButtonFilled: FC<ClosePopupButtonFilledProps> = ({
 }) => {
 	return (
 		<button
-			onClick={() => closePopup(false)}
+			onClick={closePopup}
 			className={`${s.closePopUp} ${className}`}
 			{...rest}
 		>

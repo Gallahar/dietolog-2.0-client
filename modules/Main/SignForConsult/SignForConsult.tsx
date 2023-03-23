@@ -9,6 +9,7 @@ import PopUp from '@/ui/PopUp/PopUp'
 import CLosePopupButton from '@/ui/Buttons/Actions/ClosePopupButtonFilled/ClosePopupButtonFilled'
 import Description from '@/ui/Descriptions/Description/Description'
 import { useState } from 'react'
+import Ellipse from '@/ui/Backgrounds/Ellipse/Ellipse'
 
 const SignForConsult = () => {
 	const { sign_for_consult } = useLanguage().sign_for_consult
@@ -24,10 +25,11 @@ const SignForConsult = () => {
 			id="sign-for-consult"
 			className={`section ${s.signForConsultWrapper}`}
 		>
+			<Ellipse className={s.ellipse_1}/>
+			<Leaf className={s.leaf_1} />
 			<Image priority={true} src={signImg} alt="enrolling" />
 			<div className={s.outline} />
 			<div className="container">
-				<Leaf className={s.leaf} />
 				<div className={s.signForConsult}>
 					<div className={s.signWrapper}>
 						<Heading text={sign_for_consult} />
@@ -36,8 +38,8 @@ const SignForConsult = () => {
 				</div>
 			</div>
 			{open && (
-				<PopUp closePopup={setOpen}>
-					<CLosePopupButton closePopup={setOpen} />
+				<PopUp closePopup={() => setOpen(false)}>
+					<CLosePopupButton closePopup={() => setOpen(false)} />
 					<Description text={message} />
 				</PopUp>
 			)}

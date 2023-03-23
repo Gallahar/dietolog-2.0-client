@@ -15,8 +15,8 @@ const ActionCircleButton: FC<ActionCircleButtonProps> = ({
 }) => {
 	return (
 		<button className={`${s.buttonCircle} ${className}`} {...rest}>
-			<ArrowRight/>
-			{text}
+			<p className={s.text}>{text}</p>
+			<ArrowRight />
 		</button>
 	)
 }
