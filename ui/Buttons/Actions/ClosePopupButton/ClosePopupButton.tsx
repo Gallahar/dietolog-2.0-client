@@ -12,7 +12,7 @@ const ClosePopupButton: FC<ClosePopupButtonProps> = ({
 }) => {
 	return (
 		<button
-			onClick={() => closePopup(false)}
+			onClick={closePopup}
 			className={`${s.closePopUp} ${className}`}
 			{...rest}
 		>
