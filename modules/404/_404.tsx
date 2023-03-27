@@ -9,6 +9,7 @@ import _404image from '@/assets/images/404.png'
 import s from './_404.module.scss'
 import ActionLink from '@/ui/Buttons/Actions/ActionButton/ActionLink'
 import Description from '@/ui/Descriptions/Description/Description'
+import Ellipse from '@/ui/Backgrounds/Ellipse/Ellipse'
 
 const _404: FC = () => {
 	const { back_to_main, heading, text_bot, text_mid, text_top } =
@@ -17,7 +18,9 @@ const _404: FC = () => {
 	return (
 		<Meta title="404 - Page is not found">
 			<section className={s.section}>
-				<Leaf className={s.leaf} />
+				<Ellipse className={s.ellipse_1} />
+				<Ellipse className={s.ellipse_2} />
+
 				<div className={`container ${s.container}`}>
 					<div>
 						<Heading text={heading} className={s.heading} />

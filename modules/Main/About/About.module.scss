@@ -3,39 +3,33 @@
 	overflow: hidden;
 
 	.approachWrapper {
-		margin-top: 108px;
+		padding-top: 108px;
 
 		.approachTextBlock {
-			@apply mt-72 flex;
-
-			gap: 108px;
+			@apply mt-72 flex justify-between;
 		}
 	}
 
 	.forWhoWrapper {
-		@apply flex flex-row-reverse relative;
-
-		width: 1622px;
+		@apply flex justify-between relative;
 
 		.forWhoImageBlock {
+			@apply relative;
+
+			padding-top: 15px;
 
 			> img {
-				border-radius: 50% 0 0 50%;
-				transform: matrix(-1, 0, 0, 1, 0, 0);
-				position: absolute;
-				top: 40px;
-				left: 0px;
+				border-radius: 480px 480px 0px 0px;
 			}
 
 			.outline {
 				position: absolute;
-				left: -33px;
-				top: 10px;
-				width: 852px;
+				bottom: 25px;
+				right: 20px;
+				width: 612px;
 				height: 788px;
-				border-radius: 50% 0 0 50%;
+				border-radius: 480px 480px 0px 0px;
 				border: 1px solid #ecb390;
-				transform: rotate(-180deg);
 			}
 		}
 
@@ -44,6 +38,7 @@
 				@apply mt-72 flex flex-col;
 
 				gap: 39px;
+
 				.wrapperDescription {
 					position: relative;
 				}
@@ -57,12 +52,8 @@
 		gap: 108px;
 
 		.notSuitableBlock {
-			margin-top: 100px;
-
 			.notSuitableDescriptionWrapper {
-				@apply flex mt-72;
-
-				gap: 108px;
+				@apply flex mt-72 justify-between;
 
 				.notSuitableDescription1 {
 					position: relative;
@@ -82,9 +73,7 @@
 			}
 		}
 		.worthBlock {
-			@apply flex;
-
-			gap: 108px;
+			@apply flex justify-between;
 
 			.worthHeading {
 				@apply flex flex-row-reverse;
@@ -114,6 +103,7 @@
 
 				.worthDescription2 {
 					position: relative;
+
 					> div {
 						margin-top: 72px;
 					}
@@ -127,11 +117,6 @@
 					}
 				}
 			}
-		}
-		.actionLinksBlock {
-			@apply flex;
-
-			gap: 499px;
 		}
 	}
 }
@@ -148,13 +133,13 @@
 }
 .ellipse_1 {
 	background: rgba(254, 245, 228, 0.35);
-	left: 665px;
-	top: 10px;
+	right: -25px;
+	top: 40px;
 }
 .ellipse_2 {
 	background: rgba(254, 245, 228, 0.35);
-	right: -45px;
-	bottom: 500px;
+	left: 600px;
+	bottom: 83px;
 }
 
 .num_1 {

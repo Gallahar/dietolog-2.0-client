@@ -24,25 +24,25 @@
 	}
 
 	.constructorMenuWrapper {
-		@apply flex flex-row-reverse relative;
-
-		width: 1630px;
+		@apply flex justify-between;
 
 		.constructorImageWrapper {
+			@apply relative;
+
+			padding-top: 15px;
+
 			> img {
-				border-radius: 0 50% 50% 0;
-				position: absolute;
-				left: 0;
+				border-radius: 480px 480px 0 0;
 			}
 
 			.outline {
-				border-radius: 0 50% 50% 0;
+				border-radius: 480px 480px 0 0;
 				border: 1px solid #ecb390;
-				width: 852px;
-				height: 788px;
+				width: 612px;
+				height: 709px;
 				position: absolute;
-				top: -30px;
-				left: -30px;
+				bottom: 25px;
+				right: 25px;
 			}
 		}
 
@@ -83,6 +83,9 @@
 	.sliderWrapper {
 		position: relative;
 		margin-top: 52px;
+		width: 100%;
+		max-width: 1352px;
+		margin: 0 auto;
 	}
 
 	.actionButton {

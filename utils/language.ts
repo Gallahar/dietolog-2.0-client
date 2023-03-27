@@ -1,5 +1,5 @@
-import { useLanguage } from "@/hooks/useLanguage"
-import { ILanguagedString } from "languages/template"
+import { useLanguage } from '@/hooks/useLanguage'
+import { ILanguagedString } from 'languages/template'
 
 export const currentLanguage = (field: ILanguagedString): string => {
 	const mark = useLanguage().mark

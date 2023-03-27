@@ -98,6 +98,13 @@ export interface LanguageTemplate {
 		my_education: string
 		reviews: string
 	}
+	consults_and_rates: {
+		consults_and_rates: string
+		col_1_text_1: string
+		col_1_text_2: string
+		col_1_text_3: string
+		detailed_price: string
+	}
 
 	prepared_solutions: {
 		prepared_solutions: string

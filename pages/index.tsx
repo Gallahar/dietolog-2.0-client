@@ -7,16 +7,21 @@ import PreparedSolutions from '@/modules/Main/PreparedSolutions/PreparedSolution
 import SignForConsult from '@/modules/Main/SignForConsult/SignForConsult'
 import { programService } from '@/services/program.service'
 import { IProgram } from '@/shared/models/program.interface'
+import ConsultsAndRates from '@/modules/Main/ConsultsAndRates/ConsultsAndRates'
+import { IConsultation } from '@/shared/models/consultation.interface'
+import { consultationService } from '@/services/consultation.service'
 
 interface HomePageProps {
 	programs: IProgram[]
+	consults: IConsultation[]
 }
 
-const HomePage: NextPage<HomePageProps> = ({ programs }) => {
+const HomePage: NextPage<HomePageProps> = ({ programs, consults }) => {
 	return (
 		<>
 			<Main />
 			<About />
+			<ConsultsAndRates consults={consults ?? []} />
 			<SignForConsult />
 			<PreparedSolutions programs={programs ?? []} />
 			<Contacts />
@@ -27,9 +32,11 @@ const HomePage: NextPage<HomePageProps> = ({ programs }) => {
 export const getStaticProps: GetStaticProps = async () => {
 	try {
 		const { data: programs } = await programService.getAll()
+		const { data: consults } = await consultationService.getAll()
 		return {
 			props: {
 				programs,
+				consults,
 			},
 		}
 	} catch (e) {

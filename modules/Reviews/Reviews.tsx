@@ -37,16 +37,12 @@ const Reviews: FC<ReviewsProps> = ({ reviews }) => {
 			<Ellipse className={s.ellipse_1} />
 			<Ellipse className={s.ellipse_2} />
 			<Leaf className={s.leaf_1} />
-			<div className={`${s.heading} container`}>
+			<div className={`${s.heading} container section`}>
 				<Heading text={heading} />
 			</div>
 			<div className={`${s.sliderSection} section`}>
-				<div className={s.imageWrapper}>
-					<Image src={reviewImg} alt="review-img" />
-					<div className={s.outline} />
-				</div>
 				<div className={s.sliderWrapper}>
-					<Slider slidesLength={10} buttonsType={true}>
+					<Slider buttonsType={false}>
 						{Array.from({ length: 10 }).map((_, i) => (
 							<ReviewCard key={i} />
 						))}

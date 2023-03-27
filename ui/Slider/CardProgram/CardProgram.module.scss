@@ -5,6 +5,12 @@
 	filter: drop-shadow(3px 5px 6px rgba(143, 63, 9, 0.2));
 	margin: 20px 2px;
 	user-select: none;
+	transition: transform 0.3s ease-in-out;
+
+	&:hover {
+		transform: translateY(-10px);
+	}
+
 	.cardBlock {
 		border-radius: 0 360px 0 0;
 		border-left: 0.01px solid #fff;
@@ -14,6 +20,7 @@
 		width: 100%;
 		background: #fff;
 		position: relative;
+
 		> img {
 			bottom: 0;
 			position: absolute;
@@ -25,10 +32,12 @@
 			bottom: 36px;
 			right: 48px;
 			transition: 0.15s ease-in-out;
+
 			&:hover {
 				@apply link-animation;
 				cursor: pointer;
 			}
+
 			&:active {
 				transform: scale(1);
 			}
@@ -40,6 +49,7 @@
 			gap: 36px;
 			margin-top: 60px;
 			margin-left: 30px;
+
 			> span {
 				@apply text-secondary uppercase;
 

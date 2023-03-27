@@ -101,6 +101,16 @@ export const en: LanguageTemplate = {
 		my_education: 'My education',
 		reviews: 'Reviews',
 	},
+	consults_and_rates: {
+		consults_and_rates: 'consultations and rates',
+		col_1_text_1:
+			"What's the difference between a flexible meal plan and a menu builder?",
+		col_1_text_2:
+			"A flexible meal plan means that you don't need to count calories and protein/fat/carbohydrates. The scheme already has clear proportions of food and meals. In this case, you remain flexible in your diet, because you choose what you want right now and combine the products yourself.",
+		col_1_text_3:
+			'The Menu Builder retains the same flexibility, but I make different combinations of foods and dishes for you, taking into account your eating habits, lifestyle and state of health. All you have to do is to choose the option of breakfast, lunch, dinner, snacks, etc., taking into account your wishes and the availability of food in the fridge.',
+		detailed_price: 'Detailed price list',
+	},
 	prepared_solutions: {
 		prepared_solutions: 'Prepared solutions',
 		col_1_part_1:

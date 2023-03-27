@@ -7,33 +7,12 @@
 	}
 
 	.sliderSection {
-		position: relative;
-		display: flex;
-		flex-direction: row-reverse;
-
-		.imageWrapper {
-			> img {
-				position: absolute;
-				top: 70px;
-				left: 0;
-				border-radius: 0 50% 50% 0;
-			}
-			> .outline {
-				position: absolute;
-				top: 40px;
-				left: -30px;
-				border: 1px solid #ecb390;
-				width: 708px;
-				height: 788px;
-				border-radius: 0 50% 50% 0;
-			}
-		}
-
 		.sliderWrapper {
 			position: relative;
-			margin-top: 62px;
-			max-width: 1332px;
-			margin-right: -200px;
+
+			width: 100%;
+			max-width: 1352px;
+			margin: 0 auto;
 		}
 	}
 
@@ -43,14 +22,14 @@
 }
 
 .ellipse_1 {
-	right: 62px;
-	top: 230px;
-	background: rgba(68, 187, 109, 0.07);
+	left: 41px;
+	bottom: 64px;
+	background: rgba(254, 245, 228, 0.35);
 }
 .ellipse_2 {
-	bottom: 32px;
-	left: 563px;
-	background: rgba(254, 245, 228, 0.35);
+	right: 72px;
+	top: 143px;
+	background: rgba(68, 187, 109, 0.07);
 }
 
 .leaf_1 {

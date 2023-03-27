@@ -52,7 +52,7 @@ const About = () => {
 					<Description text={col_1_text_2} />
 				</div>
 			</div>
-			<div className={s.forWhoWrapper}>
+			<div className={`${s.forWhoWrapper} section container`}>
 				<div className={s.forWhoImageBlock}>
 					<div className={s.outline} />
 					<Image src={aboutImg} alt="about-img" />
@@ -102,7 +102,7 @@ const About = () => {
 							<Description text={worth_2} />
 							<ActionLink
 								className={s.education}
-								path="/education"
+								path="/certificates"
 								text={my_education}
 							/>
 						</div>

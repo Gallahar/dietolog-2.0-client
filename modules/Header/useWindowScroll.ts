@@ -1,14 +1,13 @@
 import { IS_CLIENT } from '@/config/constants'
-import { is } from 'immutable'
 import { useRouter } from 'next/router'
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState } from 'react'
 
 export const useWindowScroll = (): boolean[] | null[] => {
 	if (!IS_CLIENT) {
 		return [null, null]
 	}
 
-	const [lastScroll, setLastScroll] = useState(0)
+	const [lastScroll, setLastScroll] = useState(window.scrollY)
 	const { pathname } = useRouter()
 	const [animated, setAnimated] = useState(false)
 	const [isStatic, setIsStatic] = useState(false)
@@ -22,10 +21,10 @@ export const useWindowScroll = (): boolean[] | null[] => {
 			setAnimated(false)
 		}
 
-		if (lastScroll > 250 && pathname === '/') {
+		if (lastScroll > 250) {
 			setIsStatic(false)
 		}
-		if (lastScroll < 100 && pathname === '/') {
+		if (lastScroll < 100) {
 			setIsStatic(true)
 		}
 	}
@@ -34,7 +33,6 @@ export const useWindowScroll = (): boolean[] | null[] => {
 		if (pathname === '/') {
 			window.addEventListener('scroll', handleScroll)
 		}
-
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
 		}

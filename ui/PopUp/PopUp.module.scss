@@ -8,15 +8,15 @@
 	top: 0;
 	z-index: 110;
 	background-color: rgba(0, 0, 0, 0.6);
+}
 
-	.popUp {
-		@apply relative flex flex-col justify-center items-center;
+.popUp {
+	@apply relative flex flex-col justify-center items-center;
 
-		border-radius: 50px 0px 50px 50px;
-		background-color: #fff;
-		z-index: 100;
-		padding: 90px 72px 72px;
-	}
+	border-radius: 50px 0px 50px 50px;
+	background-color: #fff;
+	z-index: 100;
+	padding: 90px 72px 72px;
 }
 
 @keyframes appear {

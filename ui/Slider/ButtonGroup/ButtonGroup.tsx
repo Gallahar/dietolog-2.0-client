@@ -6,13 +6,9 @@ import SliderArrowR from '@/assets/icons/SliderArrowR'
 
 interface ButtonGroupProps extends ButtonsType {
 	buttonsType: boolean
-	currentSlide: number
-	slidesLength: number
 }
 
 const ButtonGroup: FC<ButtonGroupProps> = ({
-	slidesLength,
-	currentSlide,
 	buttonsType,
 	next,
 	previous,
@@ -23,7 +19,7 @@ const ButtonGroup: FC<ButtonGroupProps> = ({
 	if (!next || !previous || !carouselState) {
 		return null
 	}
-    const {} = carouselState
+	const { currentSlide, totalItems } = carouselState
 
 	return (
 		<div className={buttonsType ? s.buttonsNarrow : s.buttonsDefault}>
@@ -36,7 +32,7 @@ const ButtonGroup: FC<ButtonGroupProps> = ({
 			</button>
 
 			<button
-				disabled={currentSlide === slidesLength - 3}
+				disabled={currentSlide === totalItems - 3}
 				className={s.arrowRight}
 				onClick={() => next()}
 			>

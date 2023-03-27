@@ -6,16 +6,14 @@ import ButtonGroup from './ButtonGroup/ButtonGroup'
 
 interface SliderProps {
 	children: ReactNode
-	slidesLength: number
 	buttonsType: boolean
 }
 
-const Slider: FC<SliderProps> = ({ children, slidesLength, buttonsType }) => {
-	const [currentSlide, setCurrentSlide] = useState(0)
+const Slider: FC<SliderProps> = ({ children, buttonsType }) => {
 	const [isMoving, setIsMoving] = useState(false)
 	const responsive = {
 		desktop: {
-			breakpoint: { max: 1920, min: 1024 },
+			breakpoint: { max: 3000, min: 1024 },
 			items: 3,
 		},
 		tablet: {
@@ -30,17 +28,11 @@ const Slider: FC<SliderProps> = ({ children, slidesLength, buttonsType }) => {
 
 	return (
 		<Carousel
-			beforeChange={(currentSlide) => setCurrentSlide(currentSlide)}
+			
 			swipeable={true}
 			arrows={false}
 			renderButtonGroupOutside={true}
-			customButtonGroup={
-				<ButtonGroup
-					slidesLength={slidesLength}
-					buttonsType={buttonsType}
-					currentSlide={currentSlide}
-				/>
-			}
+			customButtonGroup={<ButtonGroup buttonsType={buttonsType} />}
 			draggable={true}
 			containerClass={s.slider}
 			responsive={responsive}

@@ -90,7 +90,9 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 					</div>
 				</div>
 			</div>
-			<div className={`section ${s.constructorMenuWrapper}`}>
+			<div
+				className={cn('section', 'container', s.constructorMenuWrapper)}
+			>
 				<div className={s.constructorImageWrapper}>
 					<Image src={preparedImg} alt="preparedImg" />
 					<div className={s.outline} />
@@ -132,10 +134,10 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 			<div className="container">
 				<Heading text={programs_and_checks} />
 			</div>
-			<div className={`${s.sliderWrapper} container`}>
-				<Slider buttonsType={false} slidesLength={10}>
-					{Array.from({ length: 10 }, (_, i) => (
-						<CardProgram key={i} />
+			<div className={s.sliderWrapper}>
+				<Slider buttonsType={false}>
+					{programs.map((program) => (
+						<CardProgram program={program} key={program._id} />
 					))}
 				</Slider>
 			</div>

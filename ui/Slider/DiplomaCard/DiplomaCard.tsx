@@ -1,21 +1,31 @@
 import s from './DiplomaCard.module.scss'
 import Image from 'next/image'
 import ArrowSvg from './ArrowSvg'
-import DiplomaImg from '@/assets/testSlide/Diploma.png'
+import { FC } from 'react'
+import { ICertificate } from '@/shared/models/certificate.interface'
+import { currentLanguage } from '@/utils/language'
 
-interface DiplomaCardProps {}
+interface DiplomaCardProps {
+	certificate: ICertificate
+	openPopup: () => void
+}
 
-const DiplomaCard = () => {
+const DiplomaCard: FC<DiplomaCardProps> = ({ certificate, openPopup }) => {
+	const { preview, title } = certificate
+
 	return (
 		<div className={s.card}>
-			<p>
-				Національний університет фізичного виховання і спорту України за
-				спеціалізацією “Спортивна дієтологія”
-			</p>
-			<Image draggable={false} src={DiplomaImg} alt="diploma" />
-			<div className={s.arrowWrapper}>
+			<p>{currentLanguage(title)}</p>
+			<Image
+				draggable={false}
+				width={396}
+				height={396}
+				src={preview}
+				alt="diploma"
+			/>
+			<button onClick={openPopup} className={s.arrowButton}>
 				<ArrowSvg />
-			</div>
+			</button>
 		</div>
 	)
 }

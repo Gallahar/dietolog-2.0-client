@@ -7,7 +7,9 @@ import { getKeys } from '@/utils/object'
 import { getAdminUrl } from '@/config/api'
 import { IEditCertificate } from '@/shared/models/certificate.interface'
 
-export const useEditCertificate = (setValue: UseFormSetValue<IEditCertificate>) => {
+export const useEditCertificate = (
+	setValue: UseFormSetValue<IEditCertificate>
+) => {
 	const { push, query } = useRouter()
 
 	const certificateId = String(query._id)
@@ -46,6 +48,7 @@ export const useEditCertificate = (setValue: UseFormSetValue<IEditCertificate>) 
 	const onSubmit: SubmitHandler<IEditCertificate> = async (
 		data: IEditCertificate
 	) => {
+		console.log(data)
 		await mutateAsync(data)
 	}
 

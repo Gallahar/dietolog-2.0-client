@@ -1,0 +1,129 @@
+.certificatesWrapper {
+	@apply relative;
+
+	.diplomasHeading {
+		padding-top: 215px;
+	}
+	.sliderWrapper {
+		position: relative;
+		padding-top: 52px;
+		padding-bottom: 78px;
+		width: 100%;
+		max-width: 1352px;
+		margin: 0 auto;
+	}
+
+	.skillsAndImagesWrapper {
+		@apply flex justify-between;
+
+		.imagesWrapper {
+			@apply relative;
+
+			padding-top: 20px;
+			display: grid;
+			grid-template:
+				't r' 350px
+				'b r' 475px / 271px
+				311px;
+			gap: 30px;
+
+			.t {
+				grid-area: t;
+				border-radius: 510px 0 0 0;
+			}
+
+			.r {
+				grid-area: r;
+				border-radius: 0 510px 0 0;
+			}
+
+			.b {
+				grid-area: b;
+			}
+
+			.outline {
+				@apply absolute;
+
+				border: 1px solid #ecb390;
+				width: 612px;
+				height: 855px;
+				border-radius: 510px 510px 0px 0px;
+				bottom: 25px;
+				right: 25px;
+			}
+		}
+
+		.skillsWrapper {
+			.skills {
+				@apply flex flex-col;
+
+				margin-top: 72px;
+				gap: 26px;
+
+				.skill {
+					@apply relative;
+				}
+			}
+		}
+	}
+	.linkContainer {
+		margin-top: 72px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 108px;
+		> a {
+			grid-column: 2/3;
+		}
+	}
+}
+
+.popUp {
+	> div {
+		padding: 110px 72px 72px 90px;
+	}
+}
+
+.hamilton {
+	font-family: 'mr_HamiltoneG';
+	font-weight: 400;
+	font-size: 360px;
+	line-height: 26px;
+	color: rgba(68, 187, 109, 0.15);
+	position: absolute;
+}
+
+.num_1 {
+	left: 62.83px;
+	top: 10px;
+}
+.num_2 {
+	left: 350px;
+	top: 10px;
+}
+
+.num_3 {
+	left: 127.98px;
+	top: 10px;
+}
+
+.num_4 {
+	left: 440px;
+	top: 12px;
+}
+
+.num_5 {
+	left: 175px;
+	top: 10px;
+}
+
+.ellipse_1 {
+	background: rgba(254, 245, 228, 0.35);
+	top: 50px;
+	right: 137px;
+}
+
+.ellipse_2 {
+	background: rgba(254, 245, 228, 0.35);
+	bottom: 54px;
+	right: 46px;
+}

@@ -1,0 +1,33 @@
+.consultsAndRatesWrapper {
+	@apply overflow-x-hidden;
+
+	.contentWrapper {
+		@apply flex;
+
+		gap: 50px;
+		padding-top: 108px;
+
+		.consultsTextWrapper {
+			@apply flex flex-col;
+
+			gap: 72px;
+			width: 408px;
+
+			.descriptionWrapper {
+				@apply flex flex-col;
+
+				gap: 10px;
+
+				> div {
+					width: 408px;
+				}
+			}
+		}
+
+		.sliderWrapper {
+			position: relative;
+			width: 1332px;
+			height: 100%;
+		}
+	}
+}

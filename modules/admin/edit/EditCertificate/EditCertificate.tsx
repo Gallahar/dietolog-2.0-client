@@ -86,6 +86,7 @@ const EditCertificate: FC = () => {
 								fontSize: '20px',
 							}}
 							text="Обновить"
+							isSubmit
 						/>
 					</>
 				)}

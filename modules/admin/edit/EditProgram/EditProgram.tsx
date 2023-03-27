@@ -140,7 +140,7 @@ const EditProgram: FC = () => {
 										onChange={onChange}
 										value={value}
 										error={error}
-										folder="certificates"
+										folder="programs"
 										placeholder="Фото программы"
 									/>
 								)}
@@ -160,7 +160,7 @@ const EditProgram: FC = () => {
 										onChange={onChange}
 										value={value}
 										error={error}
-										folder="certificates"
+										folder="programs"
 										placeholder="Превью программы"
 									/>
 								)}

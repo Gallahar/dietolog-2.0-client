@@ -1,10 +1,5 @@
 .section {
-	.leaf{
-		top: -75px;
-		left: -470px;
-		transform: matrix(0.19, -0.98, -0.98, -0.19, 0, 0);
-	}
-
+	@apply relative overflow-x-hidden;
 	.container {
 		@apply flex;
 		gap: 140px;
@@ -14,14 +9,14 @@
 			display: flex;
 			flex-flow: column;
 			gap: 80px;
-			.link{
-				width: 550px;
+			.link {
+				width: 507px;
 				text-align: left;
 				line-height: 150%;
 				margin-top: 10px;
 				padding-left: 0;
 			}
-			.description{
+			.description {
 				display: flex;
 				flex-flow: column;
 				gap: 18px;
@@ -29,9 +24,20 @@
 
 			.heading {
 				width: 486px;
-                margin-top: 213px;
+				margin-top: 213px;
 				white-space: break-spaces;
 			}
 		}
 	}
+}
+
+.ellipse_1 {
+	background: rgba(254, 245, 228, 0.35);
+	left: -50px;
+	bottom: 29px;
+}
+.ellipse_2 {
+	background: rgba(68, 187, 109, 0.07);
+	right: 294px;
+	bottom: 81px;
 }
