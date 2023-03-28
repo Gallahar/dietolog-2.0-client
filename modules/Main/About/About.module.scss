@@ -73,50 +73,33 @@
 			}
 		}
 		.worthBlock {
-			@apply flex justify-between;
-
-			.worthHeading {
-				@apply flex flex-row-reverse;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 72px 108px;
+			> h2 {
+				grid-column: 2;
 			}
+			.description1 {
+				@apply relative;
 
-			.worthDescriptionWrapper {
-				@apply flex;
-
-				gap: 108px;
-
-				.worthDescription1 {
-					position: relative;
-
-					.emptyBlock {
-						min-height: 130.5px;
-					}
-
-					> p {
-						left: 225px;
-						top: 130px;
-					}
-
-					.education {
-						margin-top: 108px;
-					}
-				}
-
-				.worthDescription2 {
-					position: relative;
-
-					> div {
-						margin-top: 72px;
-					}
-					> p {
-						top: 130px;
-						right: 3px;
-					}
-
-					.reviews {
-						margin-top: 108px;
-					}
+				> p {
+					left: 225px;
+					top: 0;
 				}
 			}
+			.description2 {
+				@apply relative;
+
+				> p {
+					top: 0;
+					right: 3px;
+				}
+			}
+		}
+		.linksBlock {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 108px;
 		}
 	}
 }

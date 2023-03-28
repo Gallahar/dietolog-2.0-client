@@ -9,10 +9,11 @@ export interface IOrder {
 	_id: string
 	program_title: string
 	params: IOrderParam[]
-	name: ILanguagedString
-	phone: ILanguagedString
-	email: ILanguagedString
+	name: string
+	phone: string
+	email: string
 	isConfirmed: boolean
 	createdAt: Date
 }
-export interface IOrderCreate extends Omit<IOrder, '_id' | 'createdAt'> {}
+export interface IOrderCreate
+	extends Omit<IOrder, '_id' | 'createdAt' | 'isConfirmed'> {}

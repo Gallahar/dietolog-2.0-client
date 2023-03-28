@@ -95,28 +95,19 @@ const About = () => {
 					</div>
 				</div>
 				<div className={s.worthBlock}>
-					<div className={s.worthDescriptionWrapper}>
-						<div className={s.worthDescription1}>
-							<div className={s.emptyBlock} />
-							<p className={s.hamilton}>10+</p>
-							<Description text={worth_2} />
-							<ActionLink
-								className={s.education}
-								path="/certificates"
-								text={my_education}
-							/>
-						</div>
-						<div className={s.worthDescription2}>
-							<Heading text={worth_1} />
-							<p className={s.hamilton}>1000+</p>
-							<Description text={worth_3} />
-							<ActionLink
-								className={s.reviews}
-								path="/reviews"
-								text={reviews}
-							/>
-						</div>
+					<Heading text={worth_1} />
+					<div className={s.description1}>
+						<p className={s.hamilton}>10+</p>
+						<Description text={worth_2} />
 					</div>
+					<div className={s.description2}>
+						<p className={s.hamilton}>1000+</p>
+						<Description text={worth_3} />
+					</div>
+				</div>
+				<div className={s.linksBlock}>
+					<ActionLink path="/certificates" text={my_education} />
+					<ActionLink path="/reviews" text={reviews} />
 				</div>
 			</div>
 		</section>

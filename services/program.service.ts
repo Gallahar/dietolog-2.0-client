@@ -6,12 +6,14 @@ export const programService = {
 	async getAll() {
 		return await defaultAxios.get<IProgram[]>(getProgramsUrl(''))
 	},
-
+	async getBySlug(slug: string) {
+		return await defaultAxios.get<IProgram>(
+			getProgramsUrl(`/by-slug/${slug}`)
+		)
+	},
 	// Admin
 	async getById(_id: string) {
-		return await adminAxios.get<IEditProgram>(
-			getProgramsUrl(`/${_id}`)
-		)
+		return await adminAxios.get<IEditProgram>(getProgramsUrl(`/${_id}`))
 	},
 
 	async create() {

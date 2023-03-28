@@ -64,7 +64,7 @@ const LeaveReviewForm: FC<LeaveReviewFormProps> = ({
 				ref={reviewRef}
 				placeholder={review}
 			/>
-			<ActionCircleButton disabled={loading} text={send} />
+			<ActionCircleButton type="submit" disabled={loading} text={send} />
 		</form>
 	)
 }

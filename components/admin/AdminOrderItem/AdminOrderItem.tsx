@@ -2,7 +2,6 @@ import { IOrder } from '@/shared/models/order.interface'
 import AdminButton from '@/ui/Buttons/AdminButton/AdminButton'
 import { formatDate } from '@/utils/date'
 import { FC } from 'react'
-import { currentLanguage } from '@/utils/language'
 
 import s from './AdminOrderItem.module.scss'
 import AdminOrderItemParam from './AdminOrderItemParam'
@@ -32,14 +31,14 @@ const AdminOrderItem: FC<AdminOrderItemProps> = ({
 	return (
 		<div className={s.order}>
 			<div className={s.date}>{formatDate(createdAt)}</div>
-			<div className={s.name}>Имя: {currentLanguage(name)}</div>
+			<div className={s.name}>Имя: {name}</div>
 			<div className={s.phone}>
 				<span>Телефон: </span>
-				{currentLanguage(phone)}
+				{phone}
 			</div>
 			<div className={s.email}>
 				<span>Email: </span>
-				{currentLanguage(email)}
+				{email}
 			</div>
 			<div className={s.phone}>
 				<span>Программа: </span>

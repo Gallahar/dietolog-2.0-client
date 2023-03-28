@@ -107,7 +107,11 @@ const HelpToPickForm: FC<HelpChooseFormProps> = ({
 			</div>
 			<div className={s.handlerWrapper}>
 				<Heading text={help_to_pick} />
-				<ActionCircleButton text={send} disabled={loading} />
+				<ActionCircleButton
+					type="submit"
+					text={send}
+					disabled={loading}
+				/>
 			</div>
 		</form>
 	)

@@ -11,6 +11,7 @@ export const useNotAppliedOrders = () => {
 		select: ({ data }) => data,
 	})
 
+
 	const { mutate: toggleOrder } = useMutation(
 		'toggle order',
 		(_id: string) => OrderService.toggleConfirmation(_id),

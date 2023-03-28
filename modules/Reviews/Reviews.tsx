@@ -43,8 +43,8 @@ const Reviews: FC<ReviewsProps> = ({ reviews }) => {
 			<div className={`${s.sliderSection} section`}>
 				<div className={s.sliderWrapper}>
 					<Slider buttonsType={false}>
-						{Array.from({ length: 10 }).map((_, i) => (
-							<ReviewCard key={i} />
+						{reviews.map((review, i) => (
+							<ReviewCard review={review} key={i} />
 						))}
 					</Slider>
 				</div>

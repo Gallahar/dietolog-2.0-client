@@ -8,12 +8,17 @@
 	user-select: none;
 	transition: transform 0.3s ease-in-out;
 	margin: 0 20px 0 20px;
+	z-index: 100;
 
 	&:hover {
 		transform: translateY(-10px);
+		cursor: pointer;
+		.arrowButton {
+			transform: scale(1.1);
+		}
 	}
 
-	> p {
+	p {
 		@apply p-30 text-18 text-secondary;
 
 		line-height: 150%;
@@ -21,7 +26,7 @@
 		white-space: pre-line;
 	}
 
-	> img {
+	img {
 		border-radius: 0 100% 0 0;
 	}
 
@@ -37,8 +42,5 @@
 		background: rgba(255, 255, 255, 0.35);
 		backdrop-filter: blur(10px);
 		transition: transform 0.3s ease-in-out;
-		&:hover {
-			transform: scale(1.1);
-		}
 	}
 }

@@ -1,0 +1,75 @@
+.form {
+	display: grid;
+	grid-template-columns: 672px 567px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+
+	.heading {
+		@apply text-text uppercase;
+
+		font-size: 30px;
+	}
+
+	.inputsWrapper {
+		padding: 90px 72px;
+		display: grid;
+		gap: 36px;
+		grid-template-columns: 1fr;
+
+		.title {
+			font-size: 25px;
+		}
+
+		.price {
+			@apply text-25 text-secondary;
+		}
+
+		.privacy {
+			@apply relative;
+
+			padding-left: 15px;
+			opacity: 0.5;
+			font-size: 16px;
+
+			&::before {
+				@apply absolute;
+
+				top: 5px;
+				left: 0;
+				font-size: 25px;
+				content: '*';
+			}
+		}
+	}
+
+	.checkListWrapper {
+		@apply primary-gr;
+
+		padding: 90px 72px;
+		display: grid;
+		gap: 36px;
+		grid-template-columns: 1fr;
+		> button {
+			margin-top: 20px;
+		}
+
+		.parametersWrapper {
+			display: grid;
+			grid-template-columns: max-content 1fr;
+			gap: 44px;
+			font-size: 19px;
+
+			.questions {
+				@apply flex flex-col;
+
+				gap: 16px;
+			}
+
+			.answers {
+				@apply flex flex-col;
+
+				gap: 16px;
+			}
+		}
+	}
+}

@@ -32,6 +32,10 @@
 
 		gap: 10px;
 
+		strong {
+			@apply text-text uppercase;
+		}
+
 		> p {
 			font-size: 17px;
 			line-height: 150%;

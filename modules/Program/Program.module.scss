@@ -1,0 +1,102 @@
+.programWrapper {
+	@apply relative;
+
+	.background {
+		@apply absolute;
+		left: 0;
+		bottom: 0;
+	}
+
+	.popup {
+		> div {
+			padding: 0;
+		}
+	}
+
+	.contentWrapper {
+		@apply flex flex-col;
+
+		gap: 36px;
+		width: 100%;
+		padding-top: 199px;
+		max-width: 912px;
+		margin-left: 37%;
+		font-size: 18px;
+		line-height: 150%;
+		letter-spacing: 0.02em;
+
+		.price {
+			@apply uppercase text-secondary;
+
+			font-size: 30px;
+		}
+
+		.description_list_Wrapper {
+			@apply flex flex-col;
+
+			gap: 18px;
+
+            .description{
+                strong{
+                    @apply text-text uppercase;
+                }
+            }
+
+			.includedList {
+				> li {
+					@apply relative;
+
+					padding-left: 25px;
+
+					&::before {
+						content: '•';
+						position: absolute;
+						left: 10px;
+						bottom: 1px;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+		.radiosSection {
+			@apply flex flex-col;
+
+			gap: 36px;
+
+			.radiosBlock {
+				@apply flex flex-col;
+
+				gap: 12px;
+
+				.answersWrapper {
+					display: grid;
+					grid-template-columns: repeat(
+						4,
+						minmax(min-content, max-content)
+					);
+					gap: 11px 28px;
+					.answerLong {
+						grid-column: span 2;
+					}
+				}
+			}
+		}
+		.submitButton {
+			margin-top: 36px;
+		}
+		.link {
+			margin-top: 72px;
+		}
+	}
+}
+
+.ellipse_1 {
+	background: rgba(254, 245, 228, 0.35);
+	top: 200px;
+	right: -226px;
+}
+.leaf_1 {
+	transform: matrix(-0.64, 0.77, 0.77, 0.64, 0, 0);
+	right: -400px;
+	bottom: 220px;
+}

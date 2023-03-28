@@ -14,19 +14,21 @@ const DiplomaCard: FC<DiplomaCardProps> = ({ certificate, openPopup }) => {
 	const { preview, title } = certificate
 
 	return (
-		<div className={s.card}>
-			<p>{currentLanguage(title)}</p>
-			<Image
-				draggable={false}
-				width={396}
-				height={396}
-				src={preview}
-				alt="diploma"
-			/>
-			<button onClick={openPopup} className={s.arrowButton}>
-				<ArrowSvg />
-			</button>
-		</div>
+		<button onClick={openPopup}>
+			<div className={s.card}>
+				<p>{currentLanguage(title)}</p>
+				<Image
+					draggable={false}
+					width={396}
+					height={396}
+					src={preview}
+					alt="diploma"
+				/>
+				<div className={s.arrowButton}>
+					<ArrowSvg />
+				</div>
+			</div>
+		</button>
 	)
 }
 export default DiplomaCard

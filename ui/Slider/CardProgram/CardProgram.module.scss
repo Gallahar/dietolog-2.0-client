@@ -1,5 +1,5 @@
 .card {
-	@apply flex flex-col items-end justify-end relative;
+	@apply flex flex-col items-end justify-end relative cursor-pointer;
 	width: 398px;
 	height: 564px;
 	filter: drop-shadow(3px 5px 6px rgba(143, 63, 9, 0.2));
@@ -9,6 +9,9 @@
 
 	&:hover {
 		transform: translateY(-10px);
+		svg {
+			@apply link-animation;
+		}
 	}
 
 	.cardBlock {
@@ -31,16 +34,7 @@
 			position: absolute;
 			bottom: 36px;
 			right: 48px;
-			transition: 0.15s ease-in-out;
-
-			&:hover {
-				@apply link-animation;
-				cursor: pointer;
-			}
-
-			&:active {
-				transform: scale(1);
-			}
+			transition: 0.2s ease-in-out;
 		}
 
 		.cardInfo {
@@ -69,7 +63,7 @@
 			p {
 				font-size: 20px;
 				line-height: 150%;
-
+				color: #1a0a00;
 				letter-spacing: 0.02em;
 			}
 		}

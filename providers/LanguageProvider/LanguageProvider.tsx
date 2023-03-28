@@ -1,4 +1,5 @@
 import { IS_CLIENT } from '@/config/constants'
+import { useLanguage } from '@/hooks/useLanguage'
 import { en } from 'languages/en'
 import { ru } from 'languages/ru'
 import { LanguageTemplate } from 'languages/template'
@@ -28,6 +29,11 @@ const LanguageProvider: FC<LanguageProviderProps> = ({ children }) => {
 			}
 		}
 	}, [])
+
+	useEffect(() => {
+		localStorage.setItem('lang', language.mark)
+	}, [language])
+
 	return (
 		<LanguageContext.Provider
 			value={{

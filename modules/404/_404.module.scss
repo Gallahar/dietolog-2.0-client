@@ -1,16 +1,14 @@
 .section {
 	@apply relative overflow-x-hidden;
 	.container {
-		@apply flex;
-		gap: 140px;
+		@apply flex justify-center;
 
 		> div {
-			width: 486px;
 			display: flex;
 			flex-flow: column;
 			gap: 80px;
+			overflow-wrap: break-word;
 			.link {
-				width: 507px;
 				text-align: left;
 				line-height: 150%;
 				margin-top: 10px;
