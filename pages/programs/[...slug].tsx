@@ -15,8 +15,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 	try {
 		const { data: programs } = await programService.getAll()
 		console.log(programs)
-		const paths = programs.map((p) => ({
-			params: { slug: [p.slug] },
+		const paths = programs.map(({ slug }) => ({
+			params: { slug: [slug] },
 		}))
 
 		return {

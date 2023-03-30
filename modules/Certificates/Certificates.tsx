@@ -48,6 +48,7 @@ const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 				<Slider buttonsType={false}>
 					{certificates.map((certificate) => (
 						<DiplomaCard
+							key={certificate._id}
 							openPopup={() => setCertificate(certificate.link)}
 							certificate={certificate}
 						/>

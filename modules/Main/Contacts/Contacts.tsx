@@ -9,13 +9,14 @@ import Instagram from './Icons/Instagram'
 import WhatsApp from './Icons/WhatsApp'
 import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 import Ellipse from '@/ui/Backgrounds/Ellipse/Ellipse'
+import Section from '@/ui/Backgrounds/Section/Section'
 
 const Contacts = () => {
 	const { my_contacts, addres_first_pt, addres_second_pt, name, speech } =
 		useLanguage().contacts
 
 	return (
-		<section id="contacts" className={`section ${s.contactsWrapper}`}>
+		<Section id="contacts" className={s.contactsWrapper}>
 			<Leaf className={s.leaf_1} />
 			<Leaf className={s.leaf_2} />
 			<Ellipse className={s.ellipse_1} />
@@ -55,7 +56,7 @@ const Contacts = () => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</Section>
 	)
 }
 export default Contacts

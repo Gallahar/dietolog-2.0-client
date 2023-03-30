@@ -8,6 +8,7 @@ import Slider from '@/ui/Slider/Slider'
 import s from './ConsultsAndRates.module.scss'
 import { IConsultation } from '@/shared/models/consultation.interface'
 import { FC } from 'react'
+import Section from '@/ui/Backgrounds/Section/Section'
 
 interface ConsultsAndRatesProps {
 	consults: IConsultation[]
@@ -23,10 +24,10 @@ const ConsultsAndRates: FC<ConsultsAndRatesProps> = ({ consults }) => {
 	} = useLanguage().consults_and_rates
 
 	return (
-		<section
+		<Section
 			style={{ background: `url(${consultImg.src}) bottom/cover` }}
 			id="consults_and_rates"
-			className={`${s.consultsAndRatesWrapper} section `}
+			className={s.consultsAndRatesWrapper}
 		>
 			<div className={`${s.contentWrapper} container`}>
 				<div className={`${s.consultsTextWrapper}`}>
@@ -51,7 +52,7 @@ const ConsultsAndRates: FC<ConsultsAndRatesProps> = ({ consults }) => {
 					</Slider>
 				</div>
 			</div>
-		</section>
+		</Section>
 	)
 }
 export default ConsultsAndRates

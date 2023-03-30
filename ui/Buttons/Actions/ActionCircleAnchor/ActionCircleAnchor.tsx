@@ -1,4 +1,4 @@
-import s from './ActionCircleButton.module.scss'
+import s from './ActionCircleAnchor.module.scss'
 import { AnchorHTMLAttributes, FC } from 'react'
 import ArrowRight from '@/assets/icons/ArrowRight'
 

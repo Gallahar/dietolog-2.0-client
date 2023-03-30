@@ -1,18 +1,18 @@
-import Header from '../Header/Header'
 import s from './Main.module.scss'
 import Image from 'next/image'
 import mainImg from '@/assets/main/main-img.png'
-import ActionCircleAnchor from '@/ui/Buttons/Actions/ActionCircleButton/ActionCircleAnchor'
+import ActionCircleAnchor from '@/ui/Buttons/Actions/ActionCircleAnchor/ActionCircleAnchor'
 import Description from '@/ui/Descriptions/Description/Description'
 import { useLanguage } from '@/hooks/useLanguage'
 import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
+import Section from '@/ui/Backgrounds/Section/Section'
 
 const Main = () => {
 	const { name, last_name, post_name, description, sign_for_consult } =
 		useLanguage().main
 
 	return (
-		<section id="main" className={`section ${s.mainWrapper}`}>
+		<Section id="main" className={s.mainWrapper}>
 			<Leaf className={s.leaf_1} />
 			<Leaf className={s.leaf_2} />
 			<Image
@@ -31,7 +31,7 @@ const Main = () => {
 					text={sign_for_consult}
 				/>
 			</div>
-		</section>
+		</Section>
 	)
 }
 export default Main

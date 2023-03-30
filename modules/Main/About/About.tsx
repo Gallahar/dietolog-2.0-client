@@ -7,6 +7,7 @@ import s from './About.module.scss'
 import ActionLink from '@/ui/Buttons/Actions/ActionButton/ActionLink'
 import Ellipse from '@/ui/Backgrounds/Ellipse/Ellipse'
 import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
+import Section from '@/ui/Backgrounds/Section/Section'
 
 const About = () => {
 	const {
@@ -40,7 +41,7 @@ const About = () => {
 	]
 
 	return (
-		<section id="about" className={`section ${s.aboutWrapper}`}>
+		<Section id="about" className={s.aboutWrapper}>
 			<Leaf className={s.leaf_1} />
 			<Leaf className={s.leaf_2} />
 			<Ellipse className={s.ellipse_1} />
@@ -110,7 +111,7 @@ const About = () => {
 					<ActionLink path="/reviews" text={reviews} />
 				</div>
 			</div>
-		</section>
+		</Section>
 	)
 }
 export default About

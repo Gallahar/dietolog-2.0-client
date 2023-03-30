@@ -16,6 +16,7 @@ import HelpToPickForm from '@/components/client/HelpToPickForm/HelpToPickForm'
 import ClosePopupButton from '@/ui/Buttons/Actions/ClosePopupButton/ClosePopupButton'
 import ClosePopupButtonFilled from '@/ui/Buttons/Actions/ClosePopupButtonFilled/ClosePopupButtonFilled'
 import ActionButton from '@/ui/Buttons/Actions/ActionButton/ActionButton'
+import Section from '@/ui/Backgrounds/Section/Section'
 
 interface PreparedSolutionsProps {
 	programs: IProgram[]
@@ -62,10 +63,7 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 	]
 
 	return (
-		<section
-			id="turnkey_solutions"
-			className={`section ${s.preparedSolutionsWrapper}`}
-		>
+		<Section id="turnkey_solutions" className={s.preparedSolutionsWrapper}>
 			<Leaf className={s.leaf_1} />
 			<Leaf className={s.leaf_2} />
 			<div className={cn('section', 'container', s.readyMadeWrapper)}>
@@ -168,7 +166,7 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 					<Description text={alertText} />
 				</PopUp>
 			)}
-		</section>
+		</Section>
 	)
 }
 export default PreparedSolutions

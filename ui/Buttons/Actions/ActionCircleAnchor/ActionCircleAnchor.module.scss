@@ -3,12 +3,10 @@
 
 	width: 225px;
 	height: 180px;
-	transition: all 0.3s ease;
-
+	transition: 0.3s ease;
 	.text {
-		@apply text-white text-18 items-center justify-center text-center flex;
+		@apply bg-secondary text-white text-18 items-center justify-center text-center flex;
 
-		background-color: lightgray;
 		width: 180px;
 		height: 180px;
 		padding: 5px;
@@ -17,22 +15,20 @@
 		line-height: 150%;
 		letter-spacing: 0.02em;
 		z-index: 3;
-		transition: all 0.3s ease;
-	}
 
-	&:enabled {
 		&:hover {
-			svg {
-				transform: translateX(10px);
-			}
-		}
-		.text {
-			@apply bg-secondary;
-		}
-
-		.text:hover {
 			cursor: pointer;
 			background: #63c485;
+		}
+
+		&:disabled {
+			background-color: grey;
+		}
+	}
+
+	&:hover {
+		svg {
+			transform: translateX(10px);
 		}
 	}
 	> svg {

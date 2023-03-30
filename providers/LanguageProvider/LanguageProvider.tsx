@@ -1,5 +1,4 @@
 import { IS_CLIENT } from '@/config/constants'
-import { useLanguage } from '@/hooks/useLanguage'
 import { en } from 'languages/en'
 import { ru } from 'languages/ru'
 import { LanguageTemplate } from 'languages/template'

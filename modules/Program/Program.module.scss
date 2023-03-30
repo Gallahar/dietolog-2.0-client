@@ -1,5 +1,5 @@
 .programWrapper {
-	@apply relative;
+	@apply overflow-x-hidden relative;
 
 	.background {
 		@apply absolute;
@@ -36,11 +36,11 @@
 
 			gap: 18px;
 
-            .description{
-                strong{
-                    @apply text-text uppercase;
-                }
-            }
+			.description {
+				strong {
+					@apply text-text uppercase;
+				}
+			}
 
 			.includedList {
 				> li {

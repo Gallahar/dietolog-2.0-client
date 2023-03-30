@@ -3,13 +3,14 @@ import { ua } from 'languages/ua'
 import { ru } from 'languages/ru'
 import { en } from 'languages/en'
 import { INavbarItem, ISwitchButton } from './data'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import s from './Header.module.scss'
 import { LanguageContext } from 'providers/LanguageProvider/LanguageProvider'
+import { SectionContext } from 'providers/SectionProvider/SectionProvider'
 
 const Nav = () => {
-	const [path, setPath] = useState('#main')
 	const { setLanguage } = useContext(LanguageContext)
+	const { currentSection } = useContext(SectionContext)
 	const { main, about, consults_and_rates, turnkey_solutions, contacts } =
 		useLanguage().header
 	const { mark } = useLanguage()
@@ -30,9 +31,10 @@ const Nav = () => {
 		<nav>
 			{data.map(({ title, href }: INavbarItem) => (
 				<a
-					className={s.default}
+					className={`${s.default} ${
+						currentSection === href.slice(1) ? s.filled : ''
+					} `}
 					key={href}
-					onClick={() => setPath(href)}
 					href={href}
 				>
 					{title}

@@ -18,7 +18,7 @@ import Description from '@/ui/Descriptions/Description/Description'
 import OrderProgramForm from '@/components/client/OrderProgramForm/OrderProgramForm'
 import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 
-export const checkAnswers = (arr: (string | null)[]) => {
+const checkAnswers = (arr: (string | null)[]) => {
 	return arr.every((a) => a !== null)
 }
 
@@ -46,7 +46,6 @@ const Program: FC<ProgramProps> = ({ program }) => {
 	}
 	const updateAnswersHandler = (idx: number, value: string) => {
 		setAnswers((prev) => prev.map((a, i) => (i === idx ? value : a)))
-		console.log(answers)
 	}
 
 	useEffect(() => {
