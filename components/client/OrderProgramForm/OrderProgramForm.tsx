@@ -9,7 +9,6 @@ import { IOrderParam } from '@/shared/models/order.interface'
 import { IProgram } from '@/shared/models/program.interface'
 import { currentLanguage } from '@/utils/language'
 import { IRecordCreate } from '@/shared/models/record.interface'
-import { checkAnswers } from '@/modules/Program/Program'
 
 interface OrderProgramFormProps {
 	alertHandler: (v: string) => void
@@ -24,8 +23,6 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 	program,
 	answers,
 }) => {
-	const checker = checkAnswers(answers)
-
 	const {
 		your_name,
 		phone,
