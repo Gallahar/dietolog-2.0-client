@@ -1,4 +1,4 @@
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import Description from '@/ui/Descriptions/Description/Description'
 import Heading from '@/ui/Headings/Heading/Heading'
 import Image from 'next/image'
@@ -53,7 +53,7 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 		constructor_col_2_part_3,
 		programs_and_checks,
 		help_to_pick,
-	} = useLanguage().prepared_solutions
+	} = useLanguageContext().prepared_solutions
 
 	const constructorData = [
 		constructor_1,

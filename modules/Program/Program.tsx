@@ -1,11 +1,11 @@
 import s from './Program.module.scss'
 import RadioButton from '@/ui/Fields/Inputs/RadioButton/RadioButton'
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import Heading from '@/ui/Headings/Heading/Heading'
 import parse from 'html-react-parser'
 import { IProgram } from '@/shared/models/program.interface'
 import { FC, useContext, useEffect, useState } from 'react'
-import { currentLanguage } from '@/utils/language'
+import { currentLanguage } from '@/utils/currentLanguage'
 import { LanguageContext } from 'providers/LanguageProvider/LanguageProvider'
 import ActionCircleButton from '@/ui/Buttons/Actions/ActionCircleButton/ActionCircleButton'
 import ActionLink from '@/ui/Buttons/Actions/ActionButton/ActionLink'
@@ -28,8 +28,9 @@ interface ProgramProps {
 
 const Program: FC<ProgramProps> = ({ program }) => {
 	const { _program, included_to_program, choose_radios, back_to_programs } =
-		useLanguage().program
-	const { apply } = useLanguage().global
+		useLanguageContext().program
+	const mark = useLanguageContext().mark
+	const { apply } = useLanguageContext().global
 	const { language } = useContext(LanguageContext)
 	const { title, price, description, included, radios, photo } = program
 	const [key, setKey] = useState(0)
@@ -68,16 +69,16 @@ const Program: FC<ProgramProps> = ({ program }) => {
 			<Ellipse className={s.ellipse_1} />
 			<Leaf className={s.leaf_1} />
 			<div className={s.contentWrapper}>
-				<Heading text={`${_program} ${currentLanguage(title)}`} />
+				<Heading text={`${_program} ${currentLanguage(title, mark)}`} />
 				<p className={s.price}>{`${price} ₴`}</p>
 				<div className={s.description_list_Wrapper}>
 					<div className={s.description}>
-						{parse(currentLanguage(description))}
+						{parse(currentLanguage(description, mark))}
 					</div>
 					{`${included_to_program} :`}
 					<ul className={s.includedList}>
 						{included.map((o) => (
-							<li key={o.en}>{currentLanguage(o)}</li>
+							<li key={o.en}>{currentLanguage(o, mark)}</li>
 						))}
 					</ul>
 					{choose_radios}
@@ -87,13 +88,9 @@ const Program: FC<ProgramProps> = ({ program }) => {
 						const { title, options } = radio
 						return (
 							<div key={title.en} className={s.radiosBlock}>
-								<p>{currentLanguage(title)}</p>
+								<p>{currentLanguage(title, mark)}</p>
 								<div className={s.answersWrapper}>
 									{options.map(({ answer, answer_short }) => {
-										const answerLong =
-											currentLanguage(answer)
-										const answerShort =
-											currentLanguage(answer_short)
 										return (
 											<RadioButton
 												onChange={(e) => {
@@ -104,8 +101,8 @@ const Program: FC<ProgramProps> = ({ program }) => {
 												}}
 												key={answer.en}
 												name={title.en + i}
-												answer={answerLong}
-												value={answerShort}
+												answer={answer}
+												value={answer_short}
 												className={
 													answer.ua ===
 													'потрібна допомога'

@@ -1,5 +1,5 @@
 import s from './OrderProgram.module.scss'
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import { FC, useState } from 'react'
 import ActionCircleButton from '@/ui/Buttons/Actions/ActionCircleButton/ActionCircleButton'
 import Input from '@/ui/Fields/Inputs/Input/Input'
@@ -7,7 +7,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { OrderService } from '@/services/order.service'
 import { IOrderParam } from '@/shared/models/order.interface'
 import { IProgram } from '@/shared/models/program.interface'
-import { currentLanguage } from '@/utils/language'
+import { currentLanguage } from '@/utils/currentLanguage'
 import { IRecordCreate } from '@/shared/models/record.interface'
 
 interface OrderProgramFormProps {
@@ -23,6 +23,7 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 	program,
 	answers,
 }) => {
+	const mark = useLanguageContext().mark
 	const {
 		your_name,
 		phone,
@@ -30,16 +31,16 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 		field_is_required,
 		invalid_email,
 		invalid_phone,
-	} = useLanguage().sign_for_consult
-	const { error, order, privacy } = useLanguage().global
-	const { success_program, _program } = useLanguage().program
-	const { chosen_params, your_order } = useLanguage().program_popup
+	} = useLanguageContext().sign_for_consult
+	const { error, order, privacy } = useLanguageContext().global
+	const { success_program, _program } = useLanguageContext().program
+	const { chosen_params, your_order } = useLanguageContext().program_popup
 	const { radios, title, price } = program
 	const [loading, setLoading] = useState(false)
 	const currentQuestions = radios.map(({ title_short }) =>
-		currentLanguage(title_short)
+		currentLanguage(title_short, mark)
 	)
-	const currentProgramTitle = currentLanguage(title)
+	const currentProgramTitle = currentLanguage(title, mark)
 
 	const {
 		register,
@@ -82,7 +83,8 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 			<div className={s.inputsWrapper}>
 				<p className={s.heading}>{`${chosen_params}:`}</p>
 				<p className={s.title}>{`${_program} ${currentLanguage(
-					title
+					title,
+					mark
 				)}`}</p>
 				<span className={s.price}>{`${price} ₴`}</span>
 				<Input
@@ -120,7 +122,7 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 					<div className={s.questions}>
 						{radios.map(({ title_short }) => (
 							<p key={title_short.en}>
-								{currentLanguage(title_short)}
+								{currentLanguage(title_short, mark)}
 							</p>
 						))}
 					</div>

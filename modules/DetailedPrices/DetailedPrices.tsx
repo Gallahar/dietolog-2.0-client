@@ -5,7 +5,7 @@ import PackageItem from '@/modules/DetailedPrices/PackageItem'
 import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 import Ellipse from '@/ui/Backgrounds/Ellipse/Ellipse'
 import Description from '@/ui/Descriptions/Description/Description'
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import ActionLink from '@/ui/Buttons/Actions/ActionButton/ActionLink'
 
 interface DetailedPricesProps {
@@ -13,7 +13,7 @@ interface DetailedPricesProps {
 }
 
 const DetailedPrices: FC<DetailedPricesProps> = ({ packages }) => {
-	const { global, detailed_prices } = useLanguage()
+	const { global, detailed_prices } = useLanguageContext()
 	const { _return } = global
 	const { remark } = detailed_prices
 

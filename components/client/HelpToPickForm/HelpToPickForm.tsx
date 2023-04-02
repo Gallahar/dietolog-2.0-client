@@ -1,4 +1,4 @@
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import { ConsultHelpService } from '@/services/consult-help.service'
 import { IConsultHelpCreate } from '@/shared/models/consult-help.interface'
 import ActionCircleButton from '@/ui/Buttons/Actions/ActionCircleButton/ActionCircleButton'
@@ -30,9 +30,9 @@ const HelpToPickForm: FC<HelpChooseFormProps> = ({
 		help_to_pick,
 		send,
 		response,
-	} = useLanguage().help_to_pick
+	} = useLanguageContext().help_to_pick
 
-	const { error } = useLanguage().global
+	const { error } = useLanguageContext().global
 	const [loading, setLoading] = useState(false)
 
 	const {

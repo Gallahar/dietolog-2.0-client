@@ -1,10 +1,10 @@
 import { IPackage } from '@/shared/models/package.interface'
-import { currentLanguage } from '@/utils/language'
+import { currentLanguage } from '@/utils/currentLanguage'
 import s from './DetailedPrices.module.scss'
 import { FC } from 'react'
 import HeadingSmall from '@/ui/Headings/HeadingSmall/HeadingSmall'
 import Heading from '@/ui/Headings/Heading/Heading'
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import Description from '@/ui/Descriptions/Description/Description'
 
 interface PackageItemProps {
@@ -12,8 +12,9 @@ interface PackageItemProps {
 }
 
 const PackageItem: FC<PackageItemProps> = ({ _package }) => {
+	const mark = useLanguageContext().mark
 	const { package: packageTitle, service_type } =
-		useLanguage().detailed_prices
+		useLanguageContext().detailed_prices
 
 	const {
 		title,
@@ -33,9 +34,9 @@ const PackageItem: FC<PackageItemProps> = ({ _package }) => {
 							title.ru !== 'Повторные консультации *'
 								? packageTitle
 								: ''
-						} ${currentLanguage(title)}`}
+						} ${currentLanguage(title, mark)}`}
 					/>
-					<Description text={currentLanguage(description)} />
+					<Description text={currentLanguage(description, mark)} />
 				</div>
 			</div>
 
@@ -43,18 +44,18 @@ const PackageItem: FC<PackageItemProps> = ({ _package }) => {
 				<div className={s.heading}>
 					<HeadingSmall text={service_type} />
 					<div>
-						<HeadingSmall text={currentLanguage(heading_1)} />
-						{currentLanguage(sub_heading_1) !== '-' ? (
+						<HeadingSmall text={currentLanguage(heading_1, mark)} />
+						{currentLanguage(sub_heading_1, mark) !== '-' ? (
 							<HeadingSmall
-								text={currentLanguage(sub_heading_1)}
+								text={currentLanguage(sub_heading_1, mark)}
 							/>
 						) : null}
 					</div>
 					<div>
-						<HeadingSmall text={currentLanguage(heading_2)} />
-						{currentLanguage(sub_heading_2) !== '-' ? (
+						<HeadingSmall text={currentLanguage(heading_2, mark)} />
+						{currentLanguage(sub_heading_2, mark) !== '-' ? (
 							<HeadingSmall
-								text={currentLanguage(sub_heading_2)}
+								text={currentLanguage(sub_heading_2, mark)}
 							/>
 						) : null}
 					</div>
@@ -63,7 +64,9 @@ const PackageItem: FC<PackageItemProps> = ({ _package }) => {
 					{services.map(({ title, price_1, price_2 }) => {
 						return (
 							<div key={title.ru} className={s.row}>
-								<Description text={currentLanguage(title)} />
+								<Description
+									text={currentLanguage(title, mark)}
+								/>
 								<p className="price">{price_1} ₴</p>
 								<p className="price">{price_2} ₴</p>
 							</div>

@@ -3,13 +3,13 @@ import Image from 'next/image'
 import mainImg from '@/assets/main/main-img.png'
 import ActionCircleAnchor from '@/ui/Buttons/Actions/ActionCircleAnchor/ActionCircleAnchor'
 import Description from '@/ui/Descriptions/Description/Description'
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 import Section from '@/ui/Backgrounds/Section/Section'
 
 const Main = () => {
 	const { name, last_name, post_name, description, sign_for_consult } =
-		useLanguage().main
+		useLanguageContext().main
 
 	return (
 		<Section id="main" className={s.mainWrapper}>

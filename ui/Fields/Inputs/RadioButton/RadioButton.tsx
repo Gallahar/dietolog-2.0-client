@@ -1,12 +1,15 @@
-import { ChangeEvent, FC, HtmlHTMLAttributes } from 'react'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
+import { currentLanguage } from '@/utils/currentLanguage'
+import { ILanguagedString } from 'languages/template'
+import { ChangeEvent, FC } from 'react'
 import s from './RadioButton.module.scss'
 
 interface RadioButtonProps {
 	className?: string
 	name: string
-	value: string
+	value: ILanguagedString
 	onChange: (e: ChangeEvent<HTMLInputElement>) => void
-	answer: string
+	answer: ILanguagedString
 }
 
 const RadioButton: FC<RadioButtonProps> = ({
@@ -16,10 +19,18 @@ const RadioButton: FC<RadioButtonProps> = ({
 	answer,
 	onChange,
 }) => {
+	const mark = useLanguageContext().mark
+	const answerLong = currentLanguage(answer, mark)
+	const answerShort = currentLanguage(value, mark)
 	return (
 		<label className={`${s.label} ${className}`}>
-			{answer}
-			<input name={name} value={value} onChange={onChange} type="radio" />
+			{answerLong}
+			<input
+				name={name}
+				value={answerShort}
+				onChange={onChange}
+				type="radio"
+			/>
 			<span className={s.checkBox}>
 				<span></span>
 			</span>

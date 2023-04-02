@@ -1,4 +1,4 @@
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import ActionCircleButton from '@/ui/Buttons/Actions/ActionCircleButton/ActionCircleButton'
 import Input from '@/ui/Fields/Inputs/Input/Input'
 import TextArea from '@/ui/Fields/Inputs/TextArea/TextArea'
@@ -15,9 +15,9 @@ const LeaveReviewForm: FC<LeaveReviewFormProps> = ({
 	setOpenPopup,
 }) => {
 	const { your_review, your_name, review, send, review_min_max_length } =
-		useLanguage().leave_review
-	const { response } = useLanguage().reviews
-	const { error, filed_is_required } = useLanguage().global
+		useLanguageContext().leave_review
+	const { response } = useLanguageContext().reviews
+	const { error, filed_is_required } = useLanguageContext().global
 	const nameRef = useRef<HTMLInputElement>(null)
 	const reviewRef = useRef<HTMLTextAreaElement>(null)
 	const [nameError, setNameError] = useState('')

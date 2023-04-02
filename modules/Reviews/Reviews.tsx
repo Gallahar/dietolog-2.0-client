@@ -1,4 +1,4 @@
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import ActionButton from '@/ui/Buttons/Actions/ActionButton/ActionButton'
 import ActionLink from '@/ui/Buttons/Actions/ActionButton/ActionLink'
 import Heading from '@/ui/Headings/Heading/Heading'
@@ -21,8 +21,8 @@ interface ReviewsProps {
 }
 
 const Reviews: FC<ReviewsProps> = ({ reviews }) => {
-	const { heading, add_review } = useLanguage().reviews
-	const { _return } = useLanguage().global
+	const { heading, add_review } = useLanguageContext().reviews
+	const { _return } = useLanguageContext().global
 	const [openPopup, setOpenPopup] = useState(false)
 	const [alertToggle, setAlertToggle] = useState(false)
 	const [alertText, setAlertText] = useState('')

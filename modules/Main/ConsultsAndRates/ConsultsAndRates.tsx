@@ -1,4 +1,4 @@
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import ActionLink from '@/ui/Buttons/Actions/ActionButton/ActionLink'
 import Description from '@/ui/Descriptions/Description/Description'
 import consultImg from '@/assets/consults_and_rates/consults_and_rates.png'
@@ -21,7 +21,7 @@ const ConsultsAndRates: FC<ConsultsAndRatesProps> = ({ consults }) => {
 		col_1_text_2,
 		col_1_text_3,
 		detailed_price,
-	} = useLanguage().consults_and_rates
+	} = useLanguageContext().consults_and_rates
 	const [isMoving, setIsMoving] = useState(false)
 
 	return (

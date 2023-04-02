@@ -1,4 +1,4 @@
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 import Heading from '@/ui/Headings/Heading/Heading'
 import Meta from '@/utils/meta/Meta'
@@ -13,7 +13,7 @@ import Ellipse from '@/ui/Backgrounds/Ellipse/Ellipse'
 
 const _404: FC = () => {
 	const { back_to_main, heading, text_bot, text_mid, text_top } =
-		useLanguage()._404
+		useLanguageContext()._404
 
 	return (
 		<Meta title="404 - Page is not found">

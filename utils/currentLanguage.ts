@@ -1,8 +1,9 @@
-import { useLanguage } from '@/hooks/useLanguage'
 import { ILanguagedString } from 'languages/template'
 
-export const currentLanguage = (field: ILanguagedString): string => {
-	const mark = useLanguage().mark
+export const currentLanguage = (
+	field: ILanguagedString,
+	mark: string
+): string => {
 	switch (mark) {
 		case 'ru':
 			return field.ru

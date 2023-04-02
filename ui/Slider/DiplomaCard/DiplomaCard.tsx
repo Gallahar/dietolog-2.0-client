@@ -3,7 +3,8 @@ import Image from 'next/image'
 import ArrowSvg from './ArrowSvg'
 import { FC } from 'react'
 import { ICertificate } from '@/shared/models/certificate.interface'
-import { currentLanguage } from '@/utils/language'
+import { currentLanguage } from '@/utils/currentLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 
 interface DiplomaCardProps {
 	certificate: ICertificate
@@ -11,12 +12,13 @@ interface DiplomaCardProps {
 }
 
 const DiplomaCard: FC<DiplomaCardProps> = ({ certificate, openPopup }) => {
+	const mark = useLanguageContext().mark
 	const { preview, title } = certificate
 
 	return (
 		<button onClick={openPopup}>
 			<div className={s.card}>
-				<p>{currentLanguage(title)}</p>
+				<p>{currentLanguage(title, mark)}</p>
 				<Image
 					draggable={false}
 					width={396}

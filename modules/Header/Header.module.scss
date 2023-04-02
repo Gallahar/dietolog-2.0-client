@@ -2,9 +2,7 @@
 	width: 100%;
 
 	.header {
-		@apply flex items-center;
-
-		gap: 214px;
+		@apply flex items-center justify-between;
 
 		> svg {
 			flex-shrink: 0;
@@ -63,7 +61,7 @@
 .fixed {
 	position: fixed;
 	background: linear-gradient(64.31deg, #fdf5e6 15.51%, #fdf5e6 50.43%);
-	z-index: 100;
+	z-index: 110;
 	transform: translateY(0);
 	opacity: 1;
 }

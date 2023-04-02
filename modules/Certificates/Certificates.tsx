@@ -1,6 +1,6 @@
 import parse from 'html-react-parser'
 import { FC, useState } from 'react'
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import { ICertificate } from '@/shared/models/certificate.interface'
 import imgTop from '@/assets/certificates/img_top.png'
 import imgRight from '@/assets/certificates/img_right.png'
@@ -23,7 +23,7 @@ interface CertificatesProps {
 const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 	const [certificate, setCertificate] = useState('')
 	const [isMoving, setIsMoving] = useState(false)
-	const { _return } = useLanguage().global
+	const { _return } = useLanguageContext().global
 	const {
 		diplomas_heading,
 		skills_heading,
@@ -33,7 +33,7 @@ const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 		skill_4,
 		skill_5,
 		skill_6,
-	} = useLanguage().certificates
+	} = useLanguageContext().certificates
 
 	const skillsData = [skill_1, skill_2, skill_3, skill_4, skill_5, skill_6]
 

@@ -1,4 +1,4 @@
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import { ua } from 'languages/ua'
 import { ru } from 'languages/ru'
 import { en } from 'languages/en'
@@ -7,13 +7,16 @@ import { useContext } from 'react'
 import s from './Header.module.scss'
 import { LanguageContext } from 'providers/LanguageProvider/LanguageProvider'
 import { SectionContext } from 'providers/SectionProvider/SectionProvider'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const Nav = () => {
+	const { pathname } = useRouter()
 	const { setLanguage } = useContext(LanguageContext)
 	const { currentSection } = useContext(SectionContext)
 	const { main, about, consults_and_rates, turnkey_solutions, contacts } =
-		useLanguage().header
-	const { mark } = useLanguage()
+		useLanguageContext().header
+	const { mark } = useLanguageContext()
 	const language: ISwitchButton[] = [
 		{ title: 'ua', button: ua },
 		{ title: 'ru', button: ru },
@@ -29,17 +32,29 @@ const Nav = () => {
 
 	return (
 		<nav>
-			{data.map(({ title, href }: INavbarItem) => (
-				<a
-					className={`${s.default} ${
-						currentSection === href.slice(1) ? s.filled : ''
-					} `}
-					key={href}
-					href={href}
-				>
-					{title}
-				</a>
-			))}
+			{data.map(({ title, href }: INavbarItem) =>
+				pathname === '/' ? (
+					<a
+						className={`${s.default} ${
+							currentSection === href.slice(1) ? s.filled : ''
+						} `}
+						key={href}
+						href={href}
+					>
+						{title}
+					</a>
+				) : (
+					<Link
+						key={href}
+						className={`${s.default} ${
+							currentSection === href.slice(1) ? s.filled : ''
+						} `}
+						href={`/${href}`}
+					>
+						{title}
+					</Link>
+				)
+			)}
 			<div className={s.buttons}>
 				{language.map(({ title, button }) => (
 					<button

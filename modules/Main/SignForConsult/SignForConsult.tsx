@@ -2,7 +2,7 @@ import s from './SignForConsult.module.scss'
 import signImg from '@/assets/sign_for_consult/consult-img.png'
 import Image from 'next/image'
 import Heading from '@/ui/Headings/Heading/Heading'
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import Form from '@/components/client/Form/Form'
 import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 import PopUp from '@/ui/PopUp/PopUp'
@@ -13,7 +13,7 @@ import Ellipse from '@/ui/Backgrounds/Ellipse/Ellipse'
 import Section from '@/ui/Backgrounds/Section/Section'
 
 const SignForConsult = () => {
-	const { sign_for_consult } = useLanguage().sign_for_consult
+	const { sign_for_consult } = useLanguageContext().sign_for_consult
 	const [open, setOpen] = useState(false)
 	const [message, setMessage] = useState('')
 

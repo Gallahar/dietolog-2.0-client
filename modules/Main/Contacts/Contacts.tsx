@@ -1,4 +1,4 @@
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import Heading from '@/ui/Headings/Heading/Heading'
 import avatar from '@/assets/contacts/contact-avatar.png'
 import Image from 'next/image'
@@ -13,7 +13,7 @@ import Section from '@/ui/Backgrounds/Section/Section'
 
 const Contacts = () => {
 	const { my_contacts, addres_first_pt, addres_second_pt, name, speech } =
-		useLanguage().contacts
+		useLanguageContext().contacts
 
 	return (
 		<Section id="contacts" className={s.contactsWrapper}>

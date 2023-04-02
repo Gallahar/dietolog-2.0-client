@@ -6,6 +6,7 @@ export const defaultAxios = axios.create({
 	baseURL: API_URL,
 	headers: {
 		language: IS_CLIENT && localStorage.getItem('language'),
+		'Access-Control-Allow-Origin': '*',
 	},
 })
 
@@ -14,5 +15,6 @@ export const adminAxios = axios.create({
 	baseURL: API_URL,
 	headers: {
 		hash: IS_CLIENT && localStorage.getItem('hash'),
+		'Access-Control-Allow-Origin': '*',
 	},
 })

@@ -1,4 +1,4 @@
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import aboutImg from '@/assets/about/about-img.png'
 import Image from 'next/image'
 import Description from '@/ui/Descriptions/Description/Description'
@@ -29,7 +29,7 @@ const About = () => {
 		worth_3,
 		my_education,
 		reviews,
-	} = useLanguage().about
+	} = useLanguageContext().about
 
 	const forWhoData: string[] = [
 		for_who_text_1,

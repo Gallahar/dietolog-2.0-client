@@ -1,4 +1,4 @@
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguageContext } from '@/hooks/useLanguageContext'
 import { FC, useState } from 'react'
 import ActionCircleButton from '@/ui/Buttons/Actions/ActionCircleButton/ActionCircleButton'
 import Input from '@/ui/Fields/Inputs/Input/Input'
@@ -21,8 +21,8 @@ const Form: FC<FormProps> = ({ alertHandler }) => {
 		field_is_required,
 		invalid_email,
 		invalid_phone,
-	} = useLanguage().sign_for_consult
-	const { error } = useLanguage().global
+	} = useLanguageContext().sign_for_consult
+	const { error } = useLanguageContext().global
 	const [loading, setLoading] = useState(false)
 
 	const {

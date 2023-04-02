@@ -18,4 +18,5 @@ const Input: FC<InputProps> = forwardRef(
 		)
 	}
 )
+Input.displayName = 'Input'
 export default Input
