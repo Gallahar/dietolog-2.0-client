@@ -1,7 +1,15 @@
-$baseGap: 108px;
-$baseMargin: 108px;
+$paddingMax: 108px;
+$paddingMid: 72px;
+$paddingMin: 36px;
 
-@media (max-width: 1080px) {
-	$baseMargin: 54px;
-	$baseGap: 54px;
+@media (max-width: 1680px) {
+	$paddingMax: 96px;
+	$paddingMid: 64px;
+	$paddingMin: 32px;
+}
+
+@media (max-width: 1600px) {
+	$paddingMax: 90px;
+	$paddingMid: 60px;
+	$paddingMin: 30px;
 }
