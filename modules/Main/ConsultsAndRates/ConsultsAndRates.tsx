@@ -7,7 +7,7 @@ import ConsultCard from '@/ui/Slider/ConsultCard/ConsultCard'
 import Slider from '@/ui/Slider/Slider'
 import s from './ConsultsAndRates.module.scss'
 import { IConsultation } from '@/shared/models/consultation.interface'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import Section from '@/ui/Backgrounds/Section/Section'
 
 interface ConsultsAndRatesProps {
@@ -22,6 +22,7 @@ const ConsultsAndRates: FC<ConsultsAndRatesProps> = ({ consults }) => {
 		col_1_text_3,
 		detailed_price,
 	} = useLanguage().consults_and_rates
+	const [isMoving, setIsMoving] = useState(false)
 
 	return (
 		<Section
@@ -40,7 +41,7 @@ const ConsultsAndRates: FC<ConsultsAndRatesProps> = ({ consults }) => {
 					<ActionLink path="/detailed-prices" text={detailed_price} />
 				</div>
 				<div className={s.sliderWrapper}>
-					<Slider buttonsType={true}>
+					<Slider setIsMoving={setIsMoving} buttonsType={true}>
 						{[
 							...consults,
 							...consults,

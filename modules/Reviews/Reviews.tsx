@@ -26,6 +26,7 @@ const Reviews: FC<ReviewsProps> = ({ reviews }) => {
 	const [openPopup, setOpenPopup] = useState(false)
 	const [alertToggle, setAlertToggle] = useState(false)
 	const [alertText, setAlertText] = useState('')
+	const [isMoving, setIsMoving] = useState(false)
 
 	const alertHandler = (t: string) => {
 		setAlertText(t)
@@ -42,7 +43,7 @@ const Reviews: FC<ReviewsProps> = ({ reviews }) => {
 			</div>
 			<div className={`${s.sliderSection} section`}>
 				<div className={s.sliderWrapper}>
-					<Slider buttonsType={false}>
+					<Slider setIsMoving={setIsMoving} buttonsType={false}>
 						{reviews.map((review, i) => (
 							<ReviewCard review={review} key={i} />
 						))}

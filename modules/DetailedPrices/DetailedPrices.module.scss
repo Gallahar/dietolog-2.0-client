@@ -4,8 +4,10 @@
 
 	.packageBlock {
 		@apply flex flex-col mt-108;
+
 		.wrapperDescription {
 			@apply flex flex-row;
+
 			.description {
 				@apply flex flex-col mb-72;
 				gap: 72px;

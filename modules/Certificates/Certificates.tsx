@@ -22,7 +22,7 @@ interface CertificatesProps {
 
 const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 	const [certificate, setCertificate] = useState('')
-
+	const [isMoving, setIsMoving] = useState(false)
 	const { _return } = useLanguage().global
 	const {
 		diplomas_heading,
@@ -45,11 +45,13 @@ const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 				<Heading text={diplomas_heading} />
 			</div>
 			<div className={s.sliderWrapper}>
-				<Slider buttonsType={false}>
+				<Slider setIsMoving={setIsMoving} buttonsType={false}>
 					{certificates.map((certificate) => (
 						<DiplomaCard
 							key={certificate._id}
-							openPopup={() => setCertificate(certificate.link)}
+							openPopup={() => {
+								if (!isMoving) setCertificate(certificate.link)
+							}}
 							certificate={certificate}
 						/>
 					))}
@@ -57,16 +59,31 @@ const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 			</div>
 			<div className={`${s.skillsAndImagesWrapper} container `}>
 				<div className={s.imagesWrapper}>
-					<Image src={imgTop} alt="img_top" className={s.t} />
-					<Image src={imgRight} alt="img_right" className={s.r} />
-					<Image src={imgBot} alt="img_bottom" className={s.b} />
+					<Image
+						priority
+						src={imgTop}
+						alt="img_top"
+						className={s.t}
+					/>
+					<Image
+						priority
+						src={imgRight}
+						alt="img_right"
+						className={s.r}
+					/>
+					<Image
+						priority
+						src={imgBot}
+						alt="img_bottom"
+						className={s.b}
+					/>
 					<div className={s.outline} />
 				</div>
 				<div className={s.skillsWrapper}>
 					<Heading text={skills_heading} />
 					<div className={s.skills}>
 						{skillsData.map((skill, i) => (
-							<div className={s.skill}>
+							<div key={skill} className={s.skill}>
 								<Description
 									className={i > 1 ? 'bold_description' : ''}
 									key={skill + i}

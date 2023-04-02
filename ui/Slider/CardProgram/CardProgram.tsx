@@ -9,13 +9,22 @@ import parse from 'html-react-parser'
 
 interface CardProgramProps {
 	program: IProgram
+	isMoving: boolean
 }
 
-const CardProgram: FC<CardProgramProps> = ({ program }) => {
+const CardProgram: FC<CardProgramProps> = ({ program, isMoving }) => {
 	const { photo_small, price, description_short, title, slug } = program
 
 	return (
-		<Link href={`/programs/${slug}`}>
+		<Link
+			draggable={false}
+			onClick={(e) => {
+				if (isMoving) {
+					e.preventDefault()
+				}
+			}}
+			href={`/programs/${slug}`}
+		>
 			<div className={s.card}>
 				<div className={s.cardBlock}>
 					<Image

@@ -26,6 +26,7 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 	const [openPopup, setOpenPopup] = useState(false)
 	const [alertToggle, setAlertToggle] = useState(false)
 	const [alertText, setAlertText] = useState('')
+	const [isMoving, setIsMoving] = useState(false)
 
 	const alertHandler = (t: string) => {
 		setAlertText(t)
@@ -133,10 +134,16 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 				<Heading text={programs_and_checks} />
 			</div>
 			<div className={s.sliderWrapper}>
-				<Slider buttonsType={false}>
-					{programs.map((program) => (
-						<CardProgram program={program} key={program._id} />
-					))}
+				<Slider setIsMoving={setIsMoving} buttonsType={false}>
+					{[...programs, ...programs, ...programs, ...programs].map(
+						(program) => (
+							<CardProgram
+								isMoving={isMoving}
+								program={program}
+								key={program._id}
+							/>
+						)
+					)}
 				</Slider>
 			</div>
 			<div className="container">

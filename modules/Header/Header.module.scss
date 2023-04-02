@@ -22,7 +22,7 @@
 				.default {
 					@apply text-dark;
 
-					transition: 0.15s ease-in;
+					transition: all 0.5s ease-in;
 					&:hover {
 						@apply text-secondary;
 					}
