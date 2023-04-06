@@ -61,7 +61,9 @@
 	}
 
 	.remark {
-		@apply mt-72;
+		@apply mt-72 text-18;
+		line-height: 150%;
+		letter-spacing: 0.02em;
 	}
 	.link {
 		@apply mt-108;

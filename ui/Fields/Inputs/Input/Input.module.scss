@@ -7,7 +7,7 @@
 	width: 100%;
 	p {
 		position: absolute;
-		color: #ff0009;
+		color: #e30b13;
 	}
 	> input {
 		@apply outline-border-none primary-gr text-dark;
@@ -19,5 +19,8 @@
 		font-size: 19px;
 		line-height: 150%;
 		letter-spacing: 0.02em;
+		&:focus {
+			box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.2/4);
+		}
 	}
 }

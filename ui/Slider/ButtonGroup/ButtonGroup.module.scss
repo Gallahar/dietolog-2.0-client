@@ -1,9 +1,11 @@
+@import '@/assets/styles/media.scss';
+
 .buttonsDefault {
 	@apply flex absolute justify-between;
 
 	top: 45%;
-	right: -35px;
-	width: 1440px;
+	right: -4.5%;
+	width: 110%;
 
 	.arrowRight,
 	.arrowLeft {
@@ -26,15 +28,15 @@
 .buttonsNarrow {
 	@apply flex absolute justify-between;
 	top: 45%;
-	left: 390px;
-	width: 546px;
+	left: 29%;
+	width: 42%;
 
 	.arrowRight,
 	.arrowLeft {
 		@apply outline-border-none transition-transform  cursor-pointer;
 
 		padding: 0;
-		z-index: 99;
+		z-index: 105;
 		&:hover:enabled {
 			@apply link-animation;
 		}

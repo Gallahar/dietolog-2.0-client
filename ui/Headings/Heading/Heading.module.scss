@@ -1,5 +1,12 @@
+@import '@/assets/styles/media.scss';
+
 .heading {
 	@apply text-text text-39 uppercase;
 	letter-spacing: 0.02em;
 	line-height: 150%;
+	white-space: break-spaces;
+
+	@include m-1920 {
+		font-size: 34px;
+	}
 }

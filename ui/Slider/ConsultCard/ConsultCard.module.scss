@@ -1,9 +1,17 @@
+@import '@/assets/styles/media.scss';
+
 .card {
 	@apply flex flex-col p-30;
 
 	gap: 32px;
 	width: 420px;
 	height: 826px;
+	@include m-1920 {
+		gap: 26px;
+		width: 367px;
+		height: 734px;
+		padding: 26px;
+	}
 
 	background: rgba(255, 255, 255, 0.88);
 	backdrop-filter: blur(10px);
@@ -17,6 +25,10 @@
 		letter-spacing: 0.02em;
 		line-height: 150%;
 		font-size: 24px;
+
+		@include m-1920 {
+			font-size: 21px;
+		}
 
 		.tittle {
 			@apply text-text;
@@ -43,6 +55,10 @@
 			padding-left: 20px;
 			position: relative;
 
+			@include m-1920 {
+				font-size: 15px;
+			}
+
 			&::before {
 				content: '•';
 				position: absolute;
@@ -59,5 +75,8 @@
 		line-height: 150%;
 		letter-spacing: 0.02em;
 		padding-bottom: 32px;
+		@include m-1920 {
+			font-size: 24px;
+		}
 	}
 }

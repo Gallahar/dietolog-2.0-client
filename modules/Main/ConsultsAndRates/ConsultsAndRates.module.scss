@@ -1,3 +1,6 @@
+@import '@/assets/styles/media.scss';
+@import '@/assets/styles/variables.scss';
+
 .consultsAndRatesWrapper {
 	@apply overflow-x-hidden;
 
@@ -5,13 +8,30 @@
 		@apply flex;
 
 		gap: 50px;
-		padding-top: 108px;
+		padding-top: $m1920Max;
+
+		@include m-1920 {
+			padding-top: $m1680Max;
+			gap: 44px;
+		}
+
+		@include m-1680 {
+			padding-top: $m1600Max;
+		}
 
 		.consultsTextWrapper {
 			@apply flex flex-col;
 
-			gap: 72px;
-			width: 408px;
+			gap: $m1920Mid;
+			max-width: 408px;
+
+			@include m-1920 {
+				gap: $m1680Mid;
+			}
+
+			@include m-1680 {
+				gap: $m1600Mid;
+			}
 
 			.descriptionWrapper {
 				@apply flex flex-col;
@@ -19,7 +39,11 @@
 				gap: 10px;
 
 				> div {
-					width: 408px;
+					min-width: 408px;
+
+					@include m-1920 {
+						min-width: 357px;
+					}
 				}
 			}
 		}
@@ -28,6 +52,14 @@
 			position: relative;
 			width: 1332px;
 			height: 100%;
+
+			@include m-1920 {
+				width: 1166px;
+			}
+
+			@include m-1680 {
+				gap: 1110px;
+			}
 		}
 	}
 }

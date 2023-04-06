@@ -1,15 +1,13 @@
-$paddingMax: 108px;
-$paddingMid: 72px;
-$paddingMin: 36px;
+$m1920Max: 108px;
+$m1920Mid: 72px;
+$m1920Min: 36px;
 
-@media (max-width: 1680px) {
-	$paddingMax: 96px;
-	$paddingMid: 64px;
-	$paddingMin: 32px;
-}
+$m1680Max: 96px;
+$m1680Mid: 64px;
+$m1680Min: 32px;
 
-@media (max-width: 1600px) {
-	$paddingMax: 90px;
-	$paddingMid: 60px;
-	$paddingMin: 30px;
-}
+$m1600Max: 90px;
+$m1600Mid: 60px;
+$m1600Min: 30px;
+
+

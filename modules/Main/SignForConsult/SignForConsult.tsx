@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Heading from '@/ui/Headings/Heading/Heading'
 import { useLanguageContext } from '@/hooks/useLanguageContext'
 import Form from '@/components/client/Form/Form'
-import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 import PopUp from '@/ui/PopUp/PopUp'
 import CLosePopupButton from '@/ui/Buttons/Actions/ClosePopupButtonFilled/ClosePopupButtonFilled'
 import Description from '@/ui/Descriptions/Description/Description'
@@ -24,14 +23,15 @@ const SignForConsult = () => {
 	return (
 		<Section id="sign-for-consult" className={s.signForConsultWrapper}>
 			<Ellipse className={s.ellipse_1} />
-			<Leaf className={s.leaf_1} />
-			<Image priority={true} src={signImg} alt="enrolling" />
-			<div className={s.outline} />
 			<div className="container">
 				<div className={s.signForConsult}>
 					<div className={s.signWrapper}>
 						<Heading text={sign_for_consult} />
 						<Form alertHandler={alertHandler} />
+					</div>
+					<div className={s.imageWrapper}>
+						<Image priority={true} src={signImg} alt="enrolling" />
+						<div className={s.outline} />
 					</div>
 				</div>
 			</div>

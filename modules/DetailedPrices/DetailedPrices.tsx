@@ -33,8 +33,12 @@ const DetailedPrices: FC<DetailedPricesProps> = ({ packages }) => {
 					<PackageItem key={_package._id} _package={_package} />
 				))}
 
-				<Description className={s.remark} text={`* ${remark}`} />
-				<ActionLink className={s.link} text={_return} path="/" />
+				<p className={s.remark}>{`* ${remark}`}</p>
+				<ActionLink
+					className={s.link}
+					text={_return}
+					path="/#consults_and_rates"
+				/>
 			</div>
 		</div>
 	)

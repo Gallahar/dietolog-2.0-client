@@ -1,3 +1,6 @@
+@import '@/assets/styles/variables.scss';
+@import '@/assets/styles/media.scss';
+
 .certificatesWrapper {
 	@apply relative;
 
@@ -6,15 +9,30 @@
 	}
 	.sliderWrapper {
 		position: relative;
-		padding-top: 52px;
-		padding-bottom: 78px;
-		width: 100%;
 		max-width: 1352px;
 		margin: 0 auto;
+		padding-top: 52px;
+
+		@include m-1920 {
+			max-width: 1186px;
+			padding-top: 44px;
+		}
+		@include m-1680 {
+			max-width: 1130px;
+			padding-top: 40px;
+		}
 	}
 
 	.skillsAndImagesWrapper {
 		@apply flex justify-between;
+		padding-top: $m1920Max;
+
+		@include m-1920 {
+			padding-top: $m1680Max;
+		}
+		@include m-1680 {
+			padding-top: $m1600Max;
+		}
 
 		.imagesWrapper {
 			@apply relative;
@@ -27,17 +45,32 @@
 				311px;
 			gap: 30px;
 
+			@include m-1920 {
+				grid-template:
+					't r' 316px
+					'b r' 416px / 237px
+					272px;
+				padding-top: 15px;
+				gap: 26px;
+			}
+
 			.t {
+				width: 100%;
+				height: 100%;
 				grid-area: t;
 				border-radius: 510px 0 0 0;
 			}
 
 			.r {
+				width: 100%;
+				height: 100%;
 				grid-area: r;
 				border-radius: 0 510px 0 0;
 			}
 
 			.b {
+				width: 100%;
+				height: 100%;
 				grid-area: b;
 			}
 
@@ -45,11 +78,11 @@
 				@apply absolute;
 
 				border: 1px solid #ecb390;
-				width: 612px;
-				height: 855px;
+				width: 100%;
+				height: 100%;
 				border-radius: 510px 510px 0px 0px;
-				bottom: 25px;
-				right: 25px;
+				bottom: 4%;
+				right: 3%;
 			}
 		}
 
@@ -57,8 +90,17 @@
 			.skills {
 				@apply flex flex-col;
 
-				margin-top: 72px;
+				margin-top: $m1920Mid;
 				gap: 26px;
+
+				@include m-1920 {
+					margin-top: $m1680Mid;
+					gap: 23px;
+				}
+				@include m-1680 {
+					margin-top: $m1600Mid;
+					gap: 20px;
+				}
 
 				.skill {
 					@apply relative;
@@ -70,9 +112,16 @@
 		margin-top: 72px;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 108px;
+		gap: $m1920Max;
 		> a {
 			grid-column: 2/3;
+		}
+
+		@include m-1920 {
+			gap: $m1680Max;
+		}
+		@include m-1680 {
+			gap: $m1600Max;
 		}
 	}
 }
@@ -81,15 +130,6 @@
 	> div {
 		padding: 110px 72px 72px 90px;
 	}
-}
-
-.hamilton {
-	font-family: 'mr_HamiltoneG';
-	font-weight: 400;
-	font-size: 360px;
-	line-height: 26px;
-	color: rgba(68, 187, 109, 0.15);
-	position: absolute;
 }
 
 .num_1 {

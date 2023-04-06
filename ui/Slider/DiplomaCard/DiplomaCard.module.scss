@@ -1,14 +1,19 @@
+@import '@/assets/styles/media.scss';
+
 .card {
 	@apply flex flex-col justify-between relative;
 
 	width: 396px;
 	height: 564px;
 	background-color: #fff;
-	filter: drop-shadow(3px 5px 15px rgba(148, 180, 159, 0.2));
+	filter: drop-shadow(3px 5px 8px rgba(148, 180, 159, 0.2));
 	user-select: none;
 	transition: transform 0.3s ease-in-out;
-	margin: 0 20px 0 20px;
-	z-index: 100;
+
+	@include m-1920 {
+		width: 346px;
+		height: 493px;
+	}
 
 	&:hover {
 		transform: translateY(-10px);
@@ -19,22 +24,34 @@
 	}
 
 	p {
-		@apply p-30 text-18 text-secondary;
+		@apply p-30 text-18 text-secondary text-left;
 
 		line-height: 150%;
 		letter-spacing: 0.02em;
 		white-space: pre-line;
+
+		@include m-1920 {
+			font-size: 16px;
+		}
 	}
 
-	img {
-		border-radius: 0 100% 0 0;
+	.imageWrapper {
+		height: 396px;
+
+		position: relative;
+		@include m-1920 {
+			height: 346px;
+		}
+		> img {
+			border-radius: 0 100% 0 0;
+		}
 	}
 
 	.arrowButton {
 		@apply flex items-center justify-center cursor-pointer;
 
-		bottom: 30px;
-		left: 30px;
+		bottom: 6%;
+		left: 6%;
 		width: 120px;
 		height: 120px;
 		position: absolute;
@@ -42,5 +59,10 @@
 		background: rgba(255, 255, 255, 0.25);
 		backdrop-filter: blur(10px);
 		transition: transform 0.3s ease-in-out;
+
+		@include m-1920 {
+			width: 105px;
+			height: 105px;
+		}
 	}
 }

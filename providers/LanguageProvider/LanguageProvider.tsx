@@ -1,4 +1,4 @@
-import { IS_CLIENT } from '@/config/constants'
+import { IS_CLIENT, IS_SERVER } from '@/config/constants'
 import { en } from 'languages/en'
 import { ru } from 'languages/ru'
 import { LanguageTemplate } from 'languages/template'

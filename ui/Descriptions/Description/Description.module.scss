@@ -1,13 +1,14 @@
 @import '@/assets/styles/media.scss';
 
 .description {
-	width: 612px;
+	max-width: 612px;
 	line-height: 150%;
 	letter-spacing: 0.02em;
 	font-size: 18px;
 	white-space: break-spaces;
 
 	@include m-1920 {
-		font-size: 13px;
+		font-size: 16px;
+		max-width: 535px;
 	}
 }

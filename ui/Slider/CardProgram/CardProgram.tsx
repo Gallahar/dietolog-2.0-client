@@ -31,8 +31,7 @@ const CardProgram: FC<CardProgramProps> = ({ program, isMoving }) => {
 				<div className={s.cardBlock}>
 					<Image
 						draggable={false}
-						width={396}
-						height={564}
+						fill
 						src={photo_small}
 						alt="programCard"
 					/>

@@ -1,45 +1,66 @@
+@import '@/assets/styles/media.scss';
+@import '@/assets/styles/variables.scss';
+
 .signForConsultWrapper {
 	position: relative;
 	overflow: hidden;
 
-	.outline {
-		border: 1px solid #ecb390;
-		position: absolute;
-		border-radius: 50%;
-		width: 662px;
-		height: 662px;
-		right: 170px;
-		bottom: 158px;
-	}
-
-	> img {
-		border-radius: 50%;
-		position: absolute;
-		right: 160px;
-		bottom: 118px;
-	}
-
 	.signForConsult {
-		position: relative;
-		display: flex;
-		padding-top: 108px;
+		@apply flex justify-between items-center;
+		padding-top: $m1920Max;
+
+		@include m-1920 {
+			padding-top: $m1680Max;
+		}
+		@include m-1680 {
+			padding-top: $m1600Max;
+		}
 
 		.signWrapper {
-			display: flex;
-			flex-flow: column;
-			gap: 72px;
+			@apply flex flex-col;
+
+			gap: $m1920Mid;
+
+			@include m-1920 {
+				gap: $m1680Mid;
+			}
+			@include m-1680 {
+				gap: $m1600Mid;
+			}
+		}
+		.imageWrapper {
+			@apply relative;
+
+			.outline {
+				border: 1px solid #ecb390;
+				position: absolute;
+				border-radius: 50%;
+				left: 5%;
+				bottom: 5%;
+				width: 561px;
+				height: 561px;
+				@include m-1920 {
+					max-width: 492px;
+					height: 492px;
+				}
+			}
+
+			> img {
+				border-radius: 50%;
+				max-width: 561px;
+				height: 561px;
+
+				@include m-1920 {
+					max-width: 492px;
+					height: 492px;
+				}
+			}
 		}
 	}
 }
 
-.leaf_1 {
-	transform: matrix(-0.38, -0.93, -0.93, 0.38, 0, 0);
-	left: -410px;
-	top: 55px;
-}
-
 .ellipse_1 {
 	background: rgba(68, 187, 109, 0.07);
-	top: 20px;
-	right: -95px;
+	top: 2%;
+	right: -5%;
 }

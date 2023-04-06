@@ -1,9 +1,30 @@
+@import '@/assets/styles/media.scss';
+@import '@/assets/styles/variables.scss';
+
 .form {
 	display: flex;
 	flex-flow: column;
-	gap: 36px;
+	gap: $m1920Min;
 	width: 612px;
+
+	@include m-1920 {
+		gap: $m1680Min;
+		width: 535px;
+	}
+
+	@include m-1680 {
+		gap: $m1600Min;
+	}
+
 	> button {
-		margin-top: 36px;
+		margin-top: $m1920Min;
+
+		@include m-1920 {
+			gap: $m1680Min;
+		}
+
+		@include m-1680 {
+			gap: $m1600Min;
+		}
 	}
 }

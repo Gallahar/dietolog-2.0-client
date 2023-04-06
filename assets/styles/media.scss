@@ -3,3 +3,9 @@
 		@content;
 	}
 }
+
+@mixin m-1680 {
+	@media (max-width: 1679px) {
+		@content;
+	}
+}

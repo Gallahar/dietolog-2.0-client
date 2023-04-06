@@ -1,24 +1,48 @@
+@import '@/assets/styles/variables.scss';
+@import '@/assets/styles/media.scss';
+
 .contactsWrapper {
 	@apply relative overflow-hidden;
 
 	.heading {
-		margin-top: 108px;
+		padding-top: $m1920Max;
+
+		@include m-1920 {
+			padding-top: $m1680Max;
+		}
+		@include m-1680 {
+			padding-top: $m1600Max;
+		}
 	}
 
 	.contactsContainer {
 		@apply flex justify-between;
 
-		margin-top: 72px;
+		margin-top: $m1920Mid;
+
+		@include m-1920 {
+			margin-top: $m1680Mid;
+		}
+		@include m-1680 {
+			margin-top: $m1600Mid;
+		}
 
 		.contacts {
 			@apply flex flex-col;
 
-			gap: 36px;
+			gap: $m1920Min;
 
-			p {
-				font-size: 23px;
-				line-height: 150%;
-				letter-spacing: 0.02em;
+			font-size: 23px;
+			line-height: 150%;
+			letter-spacing: 0.02em;
+
+			@include m-1920 {
+				gap: $m1680Min;
+				font-size: 20px;
+			}
+
+			@include m-1680 {
+				gap: $m1600Min;
 			}
 
 			.phones {
@@ -29,8 +53,7 @@
 
 			.email {
 				@apply text-secondary;
-
-				font-size: 23px;
+				font-weight: 500;
 			}
 
 			.address {
@@ -44,15 +67,16 @@
 
 				gap: 75px;
 
+				@include m-1920 {
+					gap: 67px;
+				}
+
 				svg {
-					opacity: 0.7;
 					transition: all 0.2s ease-in-out;
 
 					&:hover {
-						opacity: 1;
-						filter: drop-shadow(
-							0.22rem 0.23rem 0.5rem rgba(68, 187, 109, 0.4)
-						);
+						transform: scale(1.2);
+						filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.2));
 					}
 				}
 			}
@@ -67,6 +91,10 @@
 				border-radius: 120px;
 				border: 1px solid #ecb390;
 
+				@include m-1920 {
+					width: 521px;
+				}
+
 				> img {
 					border-radius: 50%;
 				}
@@ -77,10 +105,18 @@
 					padding-right: 60px;
 					gap: 24px;
 
+					@include m-1920 {
+						gap: 21px;
+						padding-right: 52px;
+					}
+
 					> h4 {
 						@apply text-text uppercase;
 
 						font-size: 20px;
+						@include m-1920 {
+							font-size: 17px;
+						}
 					}
 
 					> p {
@@ -89,6 +125,10 @@
 						line-height: 150%;
 						letter-spacing: 0.02em;
 						width: 167px;
+						@include m-1920 {
+							font-size: 16px;
+							width: 149px;
+						}
 					}
 				}
 			}
@@ -97,19 +137,19 @@
 }
 
 .leaf_1 {
-	top: -360px;
-	left: -450px;
-	transform: rotate(158.13deg);
+	top: -45%;
+	left: -25%;
+	transform: rotate(158deg);
 }
 
 .leaf_2 {
-	transform: matrix(-0.66, 0.75, 0.75, 0.66, 0, 0);
-	right: -280px;
-	bottom: -380px;
+	transform: matrix(-0.46, 0.89, 0.89, 0.46, 0, 0);
+	right: -24%;
+	bottom: -16%;
 }
 
 .ellipse_1 {
 	background: rgba(254, 245, 228, 0.35);
-	bottom: 10px;
-	left: 540px;
+	bottom: 1%;
+	left: 30%;
 }

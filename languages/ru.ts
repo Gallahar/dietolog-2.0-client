@@ -35,7 +35,7 @@ export const ru: LanguageTemplate = {
 		speech: 'Встретимся на консультации',
 	},
 	sign_for_consult: {
-		sign_for_consult: 'Записаться на консультацию',
+		sign_for_consult: 'Запись на консультацию',
 		your_name: 'Ваше имя',
 		phone: 'Телефон',
 		email: 'Электронная почта',

@@ -1,5 +1,12 @@
+@import '@/assets/styles/media.scss';
+
 .leaf {
 	@apply absolute -z-1;
 	width: 864px;
-	height: 969.64px;
+	height: 970px;
+
+	@include m-1920 {
+		width: 756px;
+		height: 848px;
+	}
 }

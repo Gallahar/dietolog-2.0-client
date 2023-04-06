@@ -1,11 +1,23 @@
+@import '@/assets/styles/variables.scss';
+@import '@/assets/styles/media.scss';
+
 .preparedSolutionsWrapper {
 	@apply prepared-gr overflow-hidden relative;
 
 	.readyMadeWrapper {
 		@apply flex flex-col;
 
-		padding-top: 108px;
-		gap: 72px;
+		padding-top: $m1920Max;
+		gap: $m1920Mid;
+
+		@include m-1920 {
+			padding-top: $m1680Max;
+			gap: $m1680Mid;
+		}
+		@include m-1680 {
+			padding-top: $m1600Max;
+			gap: $m1600Mid;
+		}
 
 		.descriptionWrapper {
 			@apply flex justify-between;
@@ -33,6 +45,10 @@
 
 			> img {
 				border-radius: 480px 480px 0 0;
+				@include m-1920 {
+					max-width: 535px;
+					height: 658px;
+				}
 			}
 
 			.outline {
@@ -41,18 +57,30 @@
 				width: 612px;
 				height: 709px;
 				position: absolute;
-				bottom: 25px;
-				right: 25px;
+				bottom: 4%;
+				right: 4%;
+				@include m-1920 {
+					max-width: 535px;
+					height: 658px;
+				}
 			}
 		}
 
 		.constructorTextWrapper {
-			> h2 {
-				width: 600px;
+			max-width: 612px;
+			@include m-1920 {
+				max-width: 535px;
 			}
 
 			.constructorDescriptionWrapper {
 				@apply flex flex-col gap-5 mt-72;
+
+				@include m-1920 {
+					margin-top: $m1680Mid;
+				}
+				@include m-1680 {
+					margin-top: $m1600Mid;
+				}
 			}
 		}
 	}
@@ -82,14 +110,30 @@
 
 	.sliderWrapper {
 		position: relative;
-		margin-top: 52px;
+		padding-top: 52px;
 		width: 100%;
 		max-width: 1352px;
 		margin: 0 auto;
+
+		@include m-1920 {
+			max-width: 1186px;
+			padding-top: 44px;
+		}
+		@include m-1680 {
+			max-width: 1130px;
+			padding-top: 40px;
+		}
 	}
 
 	.actionButton {
-		margin-top: 108px;
+		margin-top: $m1920Max;
+
+		@include m-1920 {
+			margin-top: $m1680Max;
+		}
+		@include m-1680 {
+			margin-top: $m1600Max;
+		}
 	}
 	.popup {
 		> div {

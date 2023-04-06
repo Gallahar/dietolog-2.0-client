@@ -5,7 +5,7 @@ import axios from 'axios'
 export const defaultAxios = axios.create({
 	baseURL: API_URL,
 	headers: {
-		language: IS_CLIENT && localStorage.getItem('language'),
+		language: IS_CLIENT && localStorage.getItem('lang'),
 	},
 })
 

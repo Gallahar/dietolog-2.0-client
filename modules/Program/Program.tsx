@@ -50,7 +50,7 @@ const Program: FC<ProgramProps> = ({ program }) => {
 	}
 
 	useEffect(() => {
-		setAnswers(radios.map((r) => null))
+		setAnswers(answers.map((r) => null))
 		setKey((prev) => prev + 1)
 	}, [language])
 
@@ -104,8 +104,8 @@ const Program: FC<ProgramProps> = ({ program }) => {
 												answer={answer}
 												value={answer_short}
 												className={
-													answer.ua ===
-													'потрібна допомога'
+													answer.ua.length > 9 &&
+													options.length > 3
 														? s.answerLong
 														: ''
 												}
@@ -125,7 +125,7 @@ const Program: FC<ProgramProps> = ({ program }) => {
 				/>
 				<ActionLink
 					className={s.link}
-					path="/"
+					path="/#turnkey_solutions"
 					text={back_to_programs}
 				/>
 			</div>

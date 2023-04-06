@@ -90,11 +90,7 @@ const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 									text={i > 1 ? parse(skill) : skill}
 								/>
 								{i !== 0 && (
-									<p
-										className={`${s[`num_${i}`]} ${
-											s.hamilton
-										}`}
-									>
+									<p className={`${s[`num_${i}`]} hamilton`}>
 										{i}
 									</p>
 								)}
@@ -104,7 +100,7 @@ const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 				</div>
 			</div>
 			<div className={` container ${s.linkContainer}`}>
-				<ActionLink path="/" text={_return} />
+				<ActionLink path="/#about" text={_return} />
 			</div>
 			{certificate && (
 				<PopUp

@@ -1,12 +1,32 @@
+@import '@/assets/styles/variables.scss';
+@import '@/assets/styles/media.scss';
+
 .aboutWrapper {
 	@apply relative;
 	overflow: hidden;
 
 	.approachWrapper {
-		padding-top: 108px;
+		padding-top: $m1920Max;
+
+		@include m-1920 {
+			padding-top: $m1680Max;
+		}
+
+		@include m-1680 {
+			padding-top: $m1600Max;
+		}
 
 		.approachTextBlock {
-			@apply mt-72 flex justify-between;
+			@apply flex justify-between;
+
+			margin-top: $m1920Mid;
+
+			@include m-1920 {
+				margin-top: $m1680Mid;
+			}
+			@include m-1680 {
+				margin-top: $m1600Mid;
+			}
 		}
 	}
 
@@ -17,9 +37,12 @@
 			@apply relative;
 
 			padding-top: 15px;
-
 			> img {
 				border-radius: 480px 480px 0px 0px;
+				@include m-1920 {
+					width: 535px;
+					height: 707px;
+				}
 			}
 
 			.outline {
@@ -30,14 +53,27 @@
 				height: 788px;
 				border-radius: 480px 480px 0px 0px;
 				border: 1px solid #ecb390;
+				@include m-1920 {
+					width: 535px;
+					height: 707px;
+				}
 			}
 		}
 
 		.forWhoTextWrapper {
 			.forWhoTextBlock {
-				@apply mt-72 flex flex-col;
+				@apply flex flex-col;
 
+				margin-top: $m1920Mid;
 				gap: 39px;
+				@include m-1920 {
+					margin-top: $m1680Mid;
+					gap: 32px;
+				}
+				@include m-1680 {
+					margin-top: $m1600Mid;
+					gap: 30px;
+				}
 
 				.wrapperDescription {
 					position: relative;
@@ -49,11 +85,27 @@
 	.bottomSideInfo {
 		@apply flex flex-col;
 
-		gap: 108px;
+		gap: $m1920Max;
+
+		@include m-1920 {
+			gap: $m1680Max;
+		}
+		@include m-1680 {
+			gap: $m1600Max;
+		}
 
 		.notSuitableBlock {
 			.notSuitableDescriptionWrapper {
-				@apply flex mt-72 justify-between;
+				@apply flex justify-between;
+
+				margin-top: $m1920Mid;
+
+				@include m-1920 {
+					margin-top: $m1680Mid;
+				}
+				@include m-1680 {
+					margin-top: $m1600Mid;
+				}
 
 				.notSuitableDescription1 {
 					position: relative;
@@ -74,8 +126,18 @@
 		}
 		.worthBlock {
 			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 72px 108px;
+			grid-template-columns: repeat(2, max-content);
+			justify-content: space-between;
+
+			gap: $m1920Mid 0;
+
+			@include m-1920 {
+				gap: $m1680Mid 0;
+			}
+			@include m-1680 {
+				gap: $m1600Mid 0;
+			}
+
 			> h2 {
 				grid-column: 2;
 			}
@@ -99,7 +161,14 @@
 		.linksBlock {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
-			gap: 108px;
+			gap: $m1920Max;
+
+			@include m-1920 {
+				gap: $m1680Max;
+			}
+			@include m-1680 {
+				gap: $m1600Max;
+			}
 		}
 	}
 }
@@ -154,11 +223,3 @@
 	top: 10px;
 }
 
-.hamilton {
-	font-family: 'mr_HamiltoneG';
-	font-weight: 400;
-	font-size: 360px;
-	line-height: 26px;
-	color: rgba(68, 187, 109, 0.15);
-	position: absolute;
-}

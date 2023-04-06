@@ -1,6 +1,7 @@
 @import 'reset.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import './media.scss';
+@import 'variables.scss';
 
 @font-face {
 	font-family: 'mr_HamiltoneG';
@@ -31,6 +32,9 @@ body {
 a {
 	text-decoration: none;
 }
+img {
+	object-fit: cover;
+}
 
 button {
 	@apply border-none bg-transparent;
@@ -43,15 +47,21 @@ button {
 	padding: 0 10px;
 
 	@include m-1920 {
-		max-width: 1166px;
+		max-width: 1186px;
+	}
+	@include m-1680 {
+		max-width: 1130px;
 	}
 }
 
 .section {
-	padding-bottom: 108px;
+	padding-bottom: $m1920Max;
 
 	@include m-1920 {
-		padding-bottom: 96px;
+		padding-bottom: $m1680Max;
+	}
+	@include m-1680 {
+		padding-bottom: $m1600Max;
 	}
 }
 
@@ -84,5 +94,20 @@ button {
 .bold_description {
 	b {
 		@apply text-text uppercase;
+	}
+}
+
+.hamilton {
+	font-family: 'mr_HamiltoneG';
+	font-weight: 400;
+	font-size: 360px;
+	line-height: 26px;
+	color: rgba(68, 187, 109, 0.15);
+	position: absolute;
+	@include m-1920 {
+		font-size: 315px;
+	}
+	@include m-1680 {
+		font-size: 300px;
 	}
 }

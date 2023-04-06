@@ -67,9 +67,9 @@ const About = () => {
 								className={s.wrapperDescription}
 							>
 								<p
-									className={`${s[`num_${index + 1}`]} ${
-										s.hamilton
-									}`}
+									className={`${
+										s[`num_${index + 1}`]
+									} hamilton`}
 								>
 									{index + 1}
 								</p>
@@ -86,11 +86,11 @@ const About = () => {
 					</div>
 					<div className={s.notSuitableDescriptionWrapper}>
 						<div className={s.notSuitableDescription1}>
-							<p className={s.hamilton}>1</p>
+							<p className="hamilton">1</p>
 							<Description text={not_suitable_text_1} />
 						</div>
 						<div className={s.notSuitableDescription2}>
-							<p className={s.hamilton}>2</p>
+							<p className="hamilton">2</p>
 							<Description text={not_suitable_text_2} />
 						</div>
 					</div>
@@ -98,11 +98,11 @@ const About = () => {
 				<div className={s.worthBlock}>
 					<Heading text={worth_1} />
 					<div className={s.description1}>
-						<p className={s.hamilton}>10+</p>
+						<p className="hamilton">10+</p>
 						<Description text={worth_2} />
 					</div>
 					<div className={s.description2}>
-						<p className={s.hamilton}>1000+</p>
+						<p className="hamilton">1000+</p>
 						<Description text={worth_3} />
 					</div>
 				</div>

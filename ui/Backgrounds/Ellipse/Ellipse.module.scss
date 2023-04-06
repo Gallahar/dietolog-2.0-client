@@ -1,6 +1,13 @@
+@import '@/assets/styles/media.scss';
+
 .ellipse {
 	@apply absolute -z-1;
 	width: 600px;
 	height: 600px;
 	filter: blur(75px);
+
+	@include m-1920 {
+		width: 525px;
+		height: 525px;
+	}
 }

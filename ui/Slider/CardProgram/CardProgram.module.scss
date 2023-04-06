@@ -1,11 +1,17 @@
+@import '@/assets/styles/media.scss';
+@import '@/assets/styles/variables.scss';
+
 .card {
 	@apply flex flex-col items-end justify-end relative cursor-pointer;
 	width: 398px;
 	height: 564px;
 	filter: drop-shadow(3px 5px 6px rgba(143, 63, 9, 0.2));
-	margin: 20px 2px;
 	user-select: none;
 	transition: transform 0.3s ease-in-out;
+	@include m-1920 {
+		width: 346px;
+		height: 494px;
+	}
 
 	&:hover {
 		transform: translateY(-10px);
@@ -22,7 +28,10 @@
 		height: 432px;
 		width: 100%;
 		background: #fff;
-		position: relative;
+
+		@include m-1920 {
+			height: 378px;
+		}
 
 		> img {
 			bottom: 0;
@@ -40,9 +49,16 @@
 		.cardInfo {
 			@apply flex flex-col;
 
-			gap: 36px;
+			gap: $m1920Min;
 			margin-top: 60px;
 			margin-left: 30px;
+
+			@include m-1920 {
+				gap: $m1680Min;
+			}
+			@include m-1680 {
+				gap: $m1600Min;
+			}
 
 			> span {
 				@apply text-secondary uppercase;
@@ -50,6 +66,10 @@
 				letter-spacing: 0.02em;
 				font-size: 30px;
 				line-height: 150%;
+
+				@include m-1920 {
+					font-size: 26px;
+				}
 			}
 
 			> h1 {
@@ -58,6 +78,10 @@
 				font-size: 30px;
 				line-height: 150%;
 				letter-spacing: 0.02em;
+
+				@include m-1920 {
+					font-size: 26px;
+				}
 			}
 
 			p {
@@ -65,6 +89,10 @@
 				line-height: 150%;
 				color: #1a0a00;
 				letter-spacing: 0.02em;
+
+				@include m-1920 {
+					font-size: 17px;
+				}
 			}
 		}
 	}

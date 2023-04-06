@@ -55,7 +55,7 @@ const Reviews: FC<ReviewsProps> = ({ reviews }) => {
 					onClick={() => setOpenPopup(true)}
 					text={add_review}
 				/>
-				<ActionLink path="/" text={_return} />
+				<ActionLink path="/#about" text={_return} />
 			</div>
 			{openPopup && (
 				<PopUp closePopup={() => setOpenPopup(false)}>

@@ -15,21 +15,30 @@ const Main = () => {
 		<Section id="main" className={s.mainWrapper}>
 			<Leaf className={s.leaf_1} />
 			<Leaf className={s.leaf_2} />
-			<Image
-				className={s.imgMain}
-				alt="main-img"
-				priority={true}
-				src={mainImg}
-			/>
-			<div className={s.outline} />
 			<div className={`container ${s.main}`}>
 				<h2>{`${name} ${last_name}`}</h2>
-				<h1>{post_name}</h1>
-				<Description className={s.description} text={description} />
-				<ActionCircleAnchor
-					href="#sign-for-consult"
-					text={sign_for_consult}
-				/>
+				<div className={`container ${s.contentWrapper}`}>
+					<div className={s.descriptionWrapper}>
+						<h1>{post_name}</h1>
+						<Description
+							className={s.description}
+							text={description}
+						/>
+						<ActionCircleAnchor
+							href="#sign-for-consult"
+							text={sign_for_consult}
+						/>
+					</div>
+					<div className={s.imageWrapper}>
+						<Image
+							className={s.imgMain}
+							alt="main-img"
+							priority={true}
+							src={mainImg}
+						/>
+						<div className={s.outline} />
+					</div>
+				</div>
 			</div>
 		</Section>
 	)

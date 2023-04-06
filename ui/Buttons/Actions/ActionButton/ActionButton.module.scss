@@ -1,9 +1,18 @@
+@import '@/assets/styles/media.scss';
+
 .actionButton {
 	@apply outline-border-none uppercase   text-secondary text-32 transition-transform cursor-pointer;
 	position: relative;
 	line-height: 150%;
 	padding: 0;
 	letter-spacing: 0.02em;
+	@include m-1920 {
+		font-size: 28px;
+	}
+	@include m-1680 {
+		font-size: 26px;
+	}
+
 	&:hover {
 		@apply link-animation;
 	}
