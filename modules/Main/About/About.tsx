@@ -105,8 +105,6 @@ const About = () => {
 						<p className="hamilton">1000+</p>
 						<Description text={worth_3} />
 					</div>
-				</div>
-				<div className={s.linksBlock}>
 					<ActionLink path="/certificates" text={my_education} />
 					<ActionLink path="/reviews" text={reviews} />
 				</div>

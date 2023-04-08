@@ -9,12 +9,12 @@ import { FC, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import s from './HelpToPickForm.module.scss'
 
-export interface HelpChooseFormProps {
+export interface HelpToPickFormProps {
 	alertHandler: (v: string) => void
 	setOpenPopup: () => void
 }
 
-const HelpToPickForm: FC<HelpChooseFormProps> = ({
+const HelpToPickForm: FC<HelpToPickFormProps> = ({
 	alertHandler,
 	setOpenPopup,
 }) => {

@@ -4,7 +4,7 @@ export const ru: LanguageTemplate = {
 	mark: 'ru',
 	global: {
 		error: 'Ошибка... Пожалуйста, попробуйте позже',
-		filed_is_required: 'Это обязательное поле',
+		field_is_required: 'Это обязательное поле',
 		_return: 'Вернуться',
 		apply: 'Подтвердить',
 		order: 'Заказать',

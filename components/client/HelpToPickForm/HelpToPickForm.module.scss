@@ -1,20 +1,41 @@
+@import '@/assets/styles/media.scss';
+@import '@/assets/styles/variables.scss';
+
 .helperForm {
 	@apply flex;
-	
+
 	.inputsWrapper {
 		@apply flex flex-col;
 		width: 708px;
-		gap: 36px;
-		padding: 90px 72px 64px 72px;
+		gap: $m1920Min;
+		padding: 90px 72px 72px;
+
+		@include m-1920 {
+			width: 622px;
+			gap: $m1680Min;
+			padding: 79px 64px 64px;
+		}
+		@include m-1680 {
+			gap: $m1600Min;
+			width: 590px;
+		}
 	}
 	.handlerWrapper {
 		@apply flex flex-col justify-between primary-gr;
-		box-sizing: border-box;
 		border-radius: 0 0px 50px 0px;
 		padding: 90px 117px 72px 72px;
+
+		@include m-1920 {
+			padding: 79px 124px 64px 64px;
+		}
 		> h2 {
 			font-size: 30px;
-			width: 220px;
+			max-width: 225px;
+
+			@include m-1920 {
+				font-size: 25px;
+				max-width: 176px;
+			}
 		}
 	}
 }

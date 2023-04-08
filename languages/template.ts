@@ -9,7 +9,7 @@ export interface LanguageTemplate {
 
 	global: {
 		error: string
-		filed_is_required: string
+		field_is_required: string
 		_return: string
 		apply: string
 		privacy: string

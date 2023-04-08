@@ -19,6 +19,7 @@ const CardProgram: FC<CardProgramProps> = ({ program, isMoving }) => {
 
 	return (
 		<Link
+			tabIndex={-1}
 			draggable={false}
 			onClick={(e) => {
 				if (isMoving) {

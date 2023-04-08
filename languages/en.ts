@@ -4,7 +4,7 @@ export const en: LanguageTemplate = {
 	mark: 'en',
 	global: {
 		error: 'Error... Please try later',
-		filed_is_required: 'This field is required',
+		field_is_required: 'This field is required',
 		_return: 'Return',
 		apply: 'Confirm',
 		order: 'Order',

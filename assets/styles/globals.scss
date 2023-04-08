@@ -86,8 +86,10 @@ button {
 	letter-spacing: 0.02em;
 	line-height: 150%;
 	@include m-1920 {
-		@apply text-22;
-		line-height: 27px;
+		font-size: 24px;
+	}
+	@include m-1680 {
+		font-size: 25px;
 	}
 }
 

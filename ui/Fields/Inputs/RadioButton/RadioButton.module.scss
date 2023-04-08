@@ -1,3 +1,5 @@
+@import '@/assets/styles/media.scss';
+
 .label {
 	@apply relative cursor-pointer;
 
@@ -9,6 +11,10 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+
+	@include m-1920 {
+		font-size: 16px;
+	}
 
 	.checkBox {
 		@apply absolute flex justify-center items-center;

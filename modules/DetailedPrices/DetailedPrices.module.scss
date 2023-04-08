@@ -1,118 +1,177 @@
+@import '@/assets/styles/media.scss';
+@import '@/assets/styles/variables.scss';
+
 .detailedPrices {
 	position: relative;
 	overflow-x: hidden;
 
-	.packageBlock {
-		@apply flex flex-col mt-108;
+	.packageWrapper {
+		padding-top: $m1920Max;
 
-		.wrapperDescription {
-			@apply flex flex-row;
-
-			.description {
-				@apply flex flex-col mb-72;
-				gap: 72px;
-			}
+		@include m-1920 {
+			padding-top: $m1680Max;
 		}
-		.table {
-			.heading {
-				@apply flex  items-center primary-gr;
 
-				text-align: center;
-				height: 140px;
-				> h5 {
-					width: 504px;
-				}
-				> div {
-					width: 414px;
-					> h5:nth-child(even) {
-						@apply text-secondary;
-					}
-				}
-			}
-			.rowWrapper {
-				.row {
-					@apply flex  items-center;
-
-					&:nth-child(even) {
-						@apply primary-gr;
-					}
-
-					height: 96px;
-					> div:first-child {
-						width: 504px;
-						padding-left: 30px;
-					}
-
-					p {
-						width: 414px;
-						text-align: center;
-					}
-				}
-			}
+		@include m-1680 {
+			padding-top: $m1600Max;
 		}
-	}
+		.packageBlock {
+			@apply flex flex-col mt-108;
 
-	.packageBlock {
-		&:nth-child(odd) {
+			@include m-1920 {
+				margin-top: $m1680Max;
+			}
+
+			@include m-1680 {
+				margin-top: $m1600Max;
+			}
+
+			&:nth-child(even) {
+				.wrapperDescription {
+					@apply flex flex-row-reverse;
+				}
+			}
+
 			.wrapperDescription {
-				@apply flex flex-row-reverse;
+				@apply flex flex-row;
+
+				.description {
+					@apply flex flex-col;
+
+					gap: $m1920Mid;
+
+					@include m-1920 {
+						gap: $m1680Mid;
+					}
+
+					@include m-1680 {
+						gap: $m1600Mid;
+					}
+				}
+			}
+			.table {
+				margin-top: $m1920Mid;
+
+				@include m-1920 {
+					margin-top: $m1680Mid;
+				}
+
+				@include m-1680 {
+					margin-top: $m1600Mid;
+				}
+
+				.heading {
+					@apply flex  items-center primary-gr;
+
+					text-align: center;
+					height: 140px;
+
+					> h5 {
+						width: 504px;
+					}
+
+					> div {
+						width: 414px;
+						> h5:nth-child(even) {
+							@apply text-secondary;
+						}
+					}
+				}
+				.rowWrapper {
+					.row {
+						@apply flex  items-center;
+
+						&:nth-child(even) {
+							@apply primary-gr;
+						}
+
+						height: 96px;
+						> div:first-child {
+							width: 504px;
+							padding-left: 30px;
+						}
+
+						p {
+							width: 414px;
+							text-align: center;
+						}
+					}
+				}
 			}
 		}
-	}
 
-	.remark {
-		@apply mt-72 text-18;
-		line-height: 150%;
-		letter-spacing: 0.02em;
-	}
-	.link {
-		@apply mt-108;
+		.remark {
+			@apply text-18;
+			line-height: 150%;
+			letter-spacing: 0.02em;
+			margin-top: $m1920Mid;
+
+			@include m-1920 {
+				margin-top: $m1680Mid;
+			}
+
+			@include m-1680 {
+				margin-top: $m1600Mid;
+			}
+		}
+
+		.link {
+			margin-top: $m1920Max;
+
+			@include m-1920 {
+				margin-top: $m1680Max;
+			}
+
+			@include m-1680 {
+				margin-top: $m1600Max;
+			}
+		}
 	}
 }
 
 .leaf_1 {
 	transform: rotate(-126.55deg);
-	top: -115px;
-	right: -340px;
+	top: -1%;
+	right: -18%;
 }
 .leaf_2 {
-	left: -200px;
-	top: 865px;
+	left: -20%;
+	top: 23%;
 	transform: matrix(-0.02, -1, -1, 0.02, 0, 0);
 }
 .leaf_3 {
-	right: -220px;
-	top: 1770px;
+	right: -18%;
+	top: 43%;
 	transform: rotate(-61.51deg);
 }
 .leaf_4 {
-	bottom: 420px;
-	left: -260px;
+	bottom: 10%;
+	left: -20%;
 	transform: rotate(118.49deg);
 }
 .ellipse_1 {
-	top: 322px;
-	left: 44px;
+	top: 6%;
+	left: 2%;
 	background: rgba(68, 187, 109, 0.07);
 }
 .ellipse_2 {
-	left: 1171px;
-	top: 680px;
+	right: 4%;
+	top: 18%;
 
 	background: rgba(254, 245, 228, 0.35);
 }
 .ellipse_3 {
-	left: 695px;
-	top: 1872px;
+	left: 35%;
+	top: 45%;
 	background: rgba(68, 187, 109, 0.07);
 }
 .ellipse_4 {
-	left: -221px;
-	top: 2231px;
+	left: -10%;
+	top: 50%;
 	background: rgba(254, 245, 228, 0.35);
 }
 .ellipse_5 {
-	left: 1520px;
-	top: 3120px;
+	right: -10%;
+	bottom: 15%;
 	background: rgba(68, 187, 109, 0.07);
 }

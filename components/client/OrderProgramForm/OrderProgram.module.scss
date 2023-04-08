@@ -1,27 +1,54 @@
+@import '@/assets/styles/media.scss';
+@import '@/assets/styles/variables.scss';
+
 .form {
 	display: grid;
 	grid-template-columns: 672px 567px;
 	line-height: 150%;
 	letter-spacing: 0.02em;
 
+	@include m-1920 {
+		grid-template-columns: 606px 517px;
+	}
 	.heading {
 		@apply text-text uppercase;
 
 		font-size: 30px;
+
+		@include m-1920 {
+			font-size: 26px;
+		}
 	}
 
 	.inputsWrapper {
 		padding: 90px 72px;
 		display: grid;
-		gap: 36px;
 		grid-template-columns: 1fr;
+		gap: $m1920Min;
+
+		@include m-1920 {
+			gap: $m1680Min;
+			padding: 79px 64px;
+		}
+
+		@include m-1680 {
+			gap: $m1600Min;
+		}
 
 		.title {
 			font-size: 25px;
+
+			@include m-1920 {
+				font-size: 22px;
+			}
 		}
 
 		.price {
 			@apply text-25 text-secondary;
+
+			@include m-1920 {
+				font-size: 22px;
+			}
 		}
 
 		.privacy {
@@ -31,6 +58,10 @@
 			opacity: 0.5;
 			font-size: 16px;
 
+			@include m-1920 {
+				font-size: 14px;
+			}
+
 			&::before {
 				@apply absolute;
 
@@ -38,6 +69,10 @@
 				left: 0;
 				font-size: 25px;
 				content: '*';
+
+				@include m-1920 {
+					font-size: 22px;
+				}
 			}
 		}
 	}
@@ -47,8 +82,18 @@
 
 		padding: 90px 72px;
 		display: grid;
-		gap: 36px;
 		grid-template-columns: 1fr;
+		gap: $m1920Min;
+
+		@include m-1920 {
+			gap: $m1680Min;
+			padding: 79px 64px;
+		}
+
+		@include m-1680 {
+			gap: $m1600Min;
+		}
+
 		> button {
 			margin-top: 20px;
 		}
@@ -59,16 +104,29 @@
 			gap: 44px;
 			font-size: 19px;
 
+			@include m-1920 {
+				gap: 38px;
+				font-size: 17px;
+			}
+
 			.questions {
 				@apply flex flex-col;
 
 				gap: 16px;
+
+				@include m-1920 {
+					font-size: 14px;
+				}
 			}
 
 			.answers {
 				@apply flex flex-col;
 
 				gap: 16px;
+
+				@include m-1920 {
+					font-size: 14px;
+				}
 			}
 		}
 	}

@@ -16,7 +16,11 @@ const DiplomaCard: FC<DiplomaCardProps> = ({ certificate, openPopup }) => {
 	const { preview, title } = certificate
 
 	return (
-		<button style={{ padding: 0, margin: 0 }} onClick={openPopup}>
+		<button
+			tabIndex={-1}
+			style={{ padding: 0, margin: 0 }}
+			onClick={openPopup}
+		>
 			<div className={s.card}>
 				<p>{currentLanguage(title, mark)}</p>
 				<div className={s.imageWrapper}>

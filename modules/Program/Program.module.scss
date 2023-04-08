@@ -1,10 +1,21 @@
+@import '@/assets/styles/media.scss';
+@import '@/assets/styles/variables.scss';
+
 .programWrapper {
-	@apply overflow-x-hidden relative;
+	@apply overflow-x-hidden relative flex;
+
+	gap: $m1920Max;
+
+	@include m-1920 {
+		gap: $m1680Max;
+	}
+
+	@include m-1680 {
+		gap: $m1600Max;
+	}
 
 	.background {
-		@apply absolute;
-		left: 0;
-		bottom: 0;
+		margin-top: 91px;
 	}
 
 	.popup {
@@ -14,21 +25,34 @@
 	}
 
 	.contentWrapper {
-		@apply flex flex-col;
+		@apply flex  flex-col;
 
 		gap: 36px;
 		width: 100%;
-		padding-top: 199px;
+		padding-top: $m1920Max;
 		max-width: 912px;
-		margin-left: 37%;
 		font-size: 18px;
 		line-height: 150%;
 		letter-spacing: 0.02em;
+
+		@include m-1920 {
+			font-size: 16px;
+			padding-top: $m1680Max;
+			max-width: 798px;
+		}
+		@include m-1680 {
+			padding-top: $m1600Max;
+			max-width: 750px;
+		}
 
 		.price {
 			@apply uppercase text-secondary;
 
 			font-size: 30px;
+
+			@include m-1920 {
+				font-size: 26px;
+			}
 		}
 
 		.description_list_Wrapper {
@@ -61,7 +85,15 @@
 		.radiosSection {
 			@apply flex flex-col;
 
-			gap: 36px;
+			gap: $m1920Min;
+
+			@include m-1920 {
+				gap: $m1680Min;
+			}
+
+			@include m-1680 {
+				gap: $m1600Min;
+			}
 
 			.radiosBlock {
 				@apply flex flex-col;
@@ -82,21 +114,35 @@
 			}
 		}
 		.submitButton {
-			margin-top: 36px;
+			margin-top: $m1920Mid;
+		}
+		@include m-1920 {
+			margin-top: $m1680Mid;
+		}
+
+		@include m-1680 {
+			margin-top: $m1600Mid;
 		}
 		.link {
-			margin-top: 72px;
+			margin-top: $m1920Max;
+		}
+		@include m-1920 {
+			margin-top: $m1680Max;
+		}
+
+		@include m-1680 {
+			margin-top: $m1600Max;
 		}
 	}
 }
 
 .ellipse_1 {
 	background: rgba(254, 245, 228, 0.35);
-	top: 200px;
-	right: -226px;
+	top: 10%;
+	right: -10%;
 }
 .leaf_1 {
 	transform: matrix(-0.64, 0.77, 0.77, 0.64, 0, 0);
-	right: -400px;
-	bottom: 220px;
+	right: -20%;
+	bottom: 20%;
 }

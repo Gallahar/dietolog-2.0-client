@@ -4,11 +4,13 @@ import Input from '@/ui/Fields/Inputs/Input/Input'
 import TextArea from '@/ui/Fields/Inputs/TextArea/TextArea'
 import Heading from '@/ui/Headings/Heading/Heading'
 import { ReviewService } from '@/services/review.service'
-import { FC, FormEvent, useRef, useState } from 'react'
+import { FC, useState } from 'react'
 import s from './LeaveReviewForm.module.scss'
-import { HelpChooseFormProps } from '../HelpToPickForm/HelpToPickForm'
+import { HelpToPickFormProps } from '../HelpToPickForm/HelpToPickForm'
+import { SubmitHandler, useForm } from 'react-hook-form'
+import { IReviewCreate } from '@/shared/models/review.interface'
 
-interface LeaveReviewFormProps extends HelpChooseFormProps {}
+interface LeaveReviewFormProps extends HelpToPickFormProps {}
 
 const LeaveReviewForm: FC<LeaveReviewFormProps> = ({
 	alertHandler,
@@ -17,38 +19,27 @@ const LeaveReviewForm: FC<LeaveReviewFormProps> = ({
 	const { your_review, your_name, review, send, review_min_max_length } =
 		useLanguageContext().leave_review
 	const { response } = useLanguageContext().reviews
-	const { error, filed_is_required } = useLanguageContext().global
-	const nameRef = useRef<HTMLInputElement>(null)
-	const reviewRef = useRef<HTMLTextAreaElement>(null)
-	const [nameError, setNameError] = useState('')
-	const [reviewError, setReviewError] = useState('')
+	const { error, field_is_required } = useLanguageContext().global
 	const [loading, setLoading] = useState(false)
 
-	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-		e.preventDefault()
-		setNameError('')
-		setReviewError('')
-		if (!nameRef.current?.value) {
-			return setNameError(filed_is_required)
-		}
-		if (
-			!reviewRef.current?.value ||
-			reviewRef.current?.value.length < 50 ||
-			reviewRef.current?.value.length > 300
-		) {
-			return setReviewError(review_min_max_length)
-		}
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<IReviewCreate>({
+		mode: 'onChange',
+		reValidateMode: 'onBlur',
+	})
 
+	const onSubmit: SubmitHandler<IReviewCreate> = async (dto, e) => {
+		e?.preventDefault()
+		setLoading(true)
 		try {
-			setLoading(true)
-			await ReviewService.create({
-				name: nameRef.current.value,
-				text: reviewRef.current.value,
-			})
+			await ReviewService.create(dto)
 			alertHandler(response)
-		} catch (e) {
+		} catch (err) {
 			alertHandler(error)
-			console.error(e)
+			console.log(err)
 		} finally {
 			setLoading(false)
 			setOpenPopup()
@@ -56,12 +47,32 @@ const LeaveReviewForm: FC<LeaveReviewFormProps> = ({
 	}
 
 	return (
-		<form onSubmit={handleSubmit} className={s.leaveReview}>
+		<form
+			autoComplete="on"
+			onSubmit={handleSubmit(onSubmit)}
+			className={s.leaveReview}
+		>
 			<Heading text={your_review} />
-			<Input error={nameError} ref={nameRef} placeholder={your_name} />
+			<Input
+				error={errors?.name?.message}
+				{...register('name', {
+					required: field_is_required,
+				})}
+				placeholder={your_name}
+			/>
 			<TextArea
-				error={reviewError}
-				ref={reviewRef}
+				error={errors?.text?.message}
+				{...register('text', {
+					required: review_min_max_length,
+					minLength: {
+						value: 50,
+						message: review_min_max_length,
+					},
+					maxLength: {
+						value: 300,
+						message: review_min_max_length,
+					},
+				})}
 				placeholder={review}
 			/>
 			<ActionCircleButton type="submit" disabled={loading} text={send} />

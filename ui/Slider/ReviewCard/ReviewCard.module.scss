@@ -1,12 +1,19 @@
+@import '@/assets/styles/media.scss';
+
 .card {
 	width: 420px;
-	height: 728px;
+	height: 680px;
 	background: rgba(255, 255, 255, 0.8);
 	box-shadow: 3px 5px 15px rgba(148, 180, 159, 0.2);
 	backdrop-filter: blur(10px);
 	border-radius: 0 0 300px 300px;
 	transition: all 250ms ease-in-out;
 	user-select: none;
+
+	@include m-1920 {
+		width: 366px;
+		height: 595px;
+	}
 
 	&:hover {
 		transform: translateY(-10px);
@@ -23,6 +30,13 @@
 			line-height: 150%;
 
 			letter-spacing: 0.02em;
+
+			@include m-1920 {
+				font-size: 22px;
+			}
+			@include m-1680 {
+				font-size: 23px;
+			}
 		}
 
 		> p {
@@ -30,6 +44,12 @@
 			line-height: 150%;
 			word-wrap: break-word;
 			letter-spacing: 0.02em;
+			@include m-1920 {
+				font-size: 16px;
+			}
+			@include m-1680 {
+				font-size: 17px;
+			}
 		}
 		> span {
 			@apply text-secondary;
@@ -38,6 +58,12 @@
 			line-height: 150%;
 
 			letter-spacing: 0.02em;
+			@include m-1920 {
+				font-size: 17px;
+			}
+			@include m-1680 {
+				font-size: 18px;
+			}
 		}
 	}
 }

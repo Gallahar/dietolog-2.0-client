@@ -12,33 +12,44 @@ import Description from '@/ui/Descriptions/Description/Description'
 import Ellipse from '@/ui/Backgrounds/Ellipse/Ellipse'
 
 const _404: FC = () => {
-	const { back_to_main, heading, text_bot, text_mid, text_top } =
+	const { back_to_main, heading, text_top, text_mid, text_bot } =
 		useLanguageContext()._404
 
 	return (
 		<Meta title="404 - Page is not found">
-			<section className={s.section}>
+			<section className={s.p404_Wrapper}>
 				<Ellipse className={s.ellipse_1} />
 				<Ellipse className={s.ellipse_2} />
-
-				<div className={`container ${s.container}`}>
-					<div>
-						<Heading text={heading} className={s.heading} />
-						<div className={`description ${s.description}`}>
+				<div className={`${s.contentWrapper} container`}>
+					<div className={s.textWrapper}>
+						<Heading text={heading} />
+						<div className={s.descriptionWrapper}>
 							<Description text={text_top} />
 							<Description text={text_mid} />
 							<Description text={text_bot} />
 						</div>
-						<ActionLink
-							path="/"
-							className={s.link}
-							text={back_to_main}
-						/>
 					</div>
-					<Image src={_404image} alt="404 error" />
+					<div className={s.imageWrapper}>
+						<p>4</p>
+						<Image priority src={_404image} alt="404-image" />
+						<p>4</p>
+					</div>
+				</div>
+				<div className="section container">
+					<ActionLink text={back_to_main} path="/" />
 				</div>
 			</section>
 		</Meta>
 	)
 }
 export default _404
+
+// <ActionLink
+// 							path="/"
+// 							className={s.link}
+// 							text={back_to_main}
+// 						/>
+
+{
+	/* <Image src={_404image} alt="404 error" /> */
+}

@@ -5,52 +5,58 @@
 	@apply relative;
 
 	.diplomasHeading {
-		padding-top: 215px;
+		padding-top: 199px;
 	}
 	.sliderWrapper {
 		position: relative;
 		max-width: 1352px;
 		margin: 0 auto;
-		padding-top: 52px;
+		padding-top: $m1920Mid;
 
 		@include m-1920 {
 			max-width: 1186px;
-			padding-top: 44px;
+			padding-top: $m1680Mid;
 		}
 		@include m-1680 {
 			max-width: 1130px;
-			padding-top: 40px;
+			padding-top: $m1600Mid;
 		}
 	}
 
 	.skillsAndImagesWrapper {
-		@apply flex justify-between;
-		padding-top: $m1920Max;
+		padding-top: 78px;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(min-content, max-content));
+		justify-content: space-between;
 
 		@include m-1920 {
-			padding-top: $m1680Max;
+			padding-top: 66px;
 		}
 		@include m-1680 {
-			padding-top: $m1600Max;
+			padding-top: 60px;
 		}
 
 		.imagesWrapper {
 			@apply relative;
 
-			padding-top: 20px;
 			display: grid;
 			grid-template:
-				't r' 350px
-				'b r' 475px / 271px
-				311px;
+				't r' minmax(min-content, max-content)
+				'b r' minmax(min-content, max-content) / minmax(
+					min-content,
+					max-content
+				)
+				minmax(min-content, max-content);
 			gap: 30px;
 
 			@include m-1920 {
 				grid-template:
-					't r' 316px
-					'b r' 416px / 237px
-					272px;
-				padding-top: 15px;
+					't r' minmax(min-content, 316px)
+					'b r' minmax(min-content, 416px) / minmax(
+						min-content,
+						237px
+					)
+					minmax(min-content, 272px);
 				gap: 26px;
 			}
 
@@ -81,8 +87,8 @@
 				width: 100%;
 				height: 100%;
 				border-radius: 510px 510px 0px 0px;
-				bottom: 4%;
-				right: 3%;
+				bottom: 3%;
+				right: 4%;
 			}
 		}
 
@@ -107,21 +113,15 @@
 				}
 			}
 		}
-	}
-	.linkContainer {
-		margin-top: 72px;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: $m1920Max;
 		> a {
+			margin-top: $m1920Mid;
 			grid-column: 2/3;
-		}
-
-		@include m-1920 {
-			gap: $m1680Max;
-		}
-		@include m-1680 {
-			gap: $m1600Max;
+			@include m-1920 {
+				margin-top: $m1680Mid;
+			}
+			@include m-1680 {
+				margin-top: $m1600Mid;
+			}
 		}
 	}
 }
@@ -129,6 +129,16 @@
 .popUp {
 	> div {
 		padding: 110px 72px 72px 90px;
+	}
+	.diplomaWrapper {
+		position: relative;
+		width: 882px;
+		height: 622px;
+
+		@include m-1920 {
+			width: 772px;
+			height: 544px;
+		}
 	}
 }
 

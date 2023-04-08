@@ -110,18 +110,18 @@
 
 	.sliderWrapper {
 		position: relative;
-		padding-top: 52px;
+		padding-top: $m1920Mid;
 		width: 100%;
 		max-width: 1352px;
 		margin: 0 auto;
 
 		@include m-1920 {
 			max-width: 1186px;
-			padding-top: 44px;
+			padding-top: $m1680Mid;
 		}
 		@include m-1680 {
 			max-width: 1130px;
-			padding-top: 40px;
+			padding-top: $m1600Mid;
 		}
 	}
 

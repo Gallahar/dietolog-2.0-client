@@ -4,7 +4,7 @@ export const ua: LanguageTemplate = {
 	mark: 'ua',
 	global: {
 		error: 'Помилка... Будь ласка, спробуйте пізніше',
-		filed_is_required: "Це поле обов'язкове",
+		field_is_required: "Це поле обов'язкове",
 		_return: 'Повернутися',
 		apply: 'Підтвердити',
 		order: 'Замовити',

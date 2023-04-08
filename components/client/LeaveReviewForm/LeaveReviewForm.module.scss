@@ -1,7 +1,26 @@
+@import '@/assets/styles/media.scss';
+
 .leaveReview {
 	@apply flex flex-col;
-
+	> h2 {
+		font-size: 30px;
+		@include m-1920 {
+			font-size: 26px;
+		}
+		@include m-1680 {
+			font-size: 28px;
+		}
+	}
 	gap: 36px;
 
 	width: 860px;
+
+	@include m-1920 {
+		width: 753px;
+		gap: 32px;
+	}
+	@include m-1680 {
+		width: 713px;
+		gap: 30px;
+	}
 }

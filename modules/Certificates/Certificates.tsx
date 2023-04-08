@@ -98,10 +98,9 @@ const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 						))}
 					</div>
 				</div>
-			</div>
-			<div className={` container ${s.linkContainer}`}>
 				<ActionLink path="/#about" text={_return} />
 			</div>
+			<div className={` container ${s.linkContainer}`}></div>
 			{certificate && (
 				<PopUp
 					className={s.popUp}
@@ -110,12 +109,13 @@ const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 					<ClosePopupButtonFilled
 						closePopup={() => setCertificate('')}
 					/>
-					<Image
-						width={950}
-						height={670}
-						src={certificate}
-						alt="certificate"
-					/>
+					<div className={s.diplomaWrapper}>
+						<Image
+							fill
+							src={certificate}
+							alt="certificate"
+						/>
+					</div>
 				</PopUp>
 			)}
 		</section>

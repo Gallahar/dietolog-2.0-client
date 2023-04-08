@@ -16,7 +16,7 @@
 	&:hover {
 		transform: translateY(-10px);
 		svg {
-			@apply link-animation;
+			transform: scale(1.2);
 		}
 	}
 

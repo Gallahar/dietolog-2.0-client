@@ -1,24 +1,39 @@
+@import '@/assets/styles/media.scss';
+
 .buttonCircle {
 	@apply relative flex items-center;
 
 	width: 225px;
 	height: 180px;
+	@include m-1920 {
+		width: 190px;
+		height: 157px;
+	}
 
 	.text {
 		@apply text-white text-18 items-center justify-center text-center flex;
 
-		background-color: lightgray;
+		background-color: rgb(175, 167, 167);
 		width: 180px;
 		height: 180px;
 		padding: 5px;
 		border-radius: 50%;
-		font-weight: 600;
+		font-weight: 500;
 		line-height: 150%;
 		letter-spacing: 0.02em;
 		z-index: 3;
 		transition: all 0.3s ease;
-	}
 
+		@include m-1920 {
+			font-size: 16px;
+			width: 157px;
+			height: 157px;
+		}
+		@include m-1680 {
+			font-weight: 600;
+			font-size: 16px;
+		}
+	}
 	&:enabled {
 		&:hover {
 			svg {
@@ -31,13 +46,14 @@
 
 		.text:hover {
 			cursor: pointer;
-			background: #63c485;
+			box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.2);
 		}
 	}
+
 	> svg {
 		transition: transform 0.3s ease;
 		position: absolute;
-		right: -35px;
-		top: 77px;
+		right: -15%;
+		top: 42%;
 	}
 }

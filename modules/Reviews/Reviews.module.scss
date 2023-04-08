@@ -1,18 +1,33 @@
+@import '@/assets/styles/media.scss';
+@import '@/assets/styles/variables.scss';
+
 .reviews {
 	@apply overflow-hidden relative;
 
-	padding-top: 108px;
 	.heading {
-		margin-top: 108px;
+		padding-top: 199px;
+
+		@include m-1920 {
+			padding-top: 187px;
+		}
+		@include m-1680 {
+			padding-top: 181px;
+		}
 	}
 
 	.sliderSection {
-		.sliderWrapper {
-			position: relative;
-
-			width: 100%;
-			max-width: 1352px;
-			margin: 0 auto;
+		position: relative;
+		padding-top: $m1920Mid;
+		width: 100%;
+		max-width: 1352px;
+		margin: 0 auto;
+		@include m-1920 {
+			max-width: 1186px;
+			padding-top: $m1680Mid;
+		}
+		@include m-1680 {
+			max-width: 1130px;
+			padding-top: $m1600Mid;
 		}
 	}
 
@@ -22,18 +37,12 @@
 }
 
 .ellipse_1 {
-	left: 41px;
-	bottom: 64px;
 	background: rgba(254, 245, 228, 0.35);
+	bottom: 2%;
+	left: 1%;
 }
 .ellipse_2 {
-	right: 72px;
-	top: 143px;
 	background: rgba(68, 187, 109, 0.07);
-}
-
-.leaf_1 {
-	transform: matrix(-0.62, 0.78, 0.78, 0.62, 0, 0);
-	bottom: -345px;
-	right: -260px;
+	right: 1.5%;
+	top: 15%;
 }

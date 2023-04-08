@@ -11,7 +11,7 @@
 	.arrowLeft {
 		@apply outline-border-none transition-transform  cursor-pointer;
 
-		z-index: 99;
+		z-index: 102;
 
 		&:hover:enabled {
 			@apply link-animation;
@@ -20,7 +20,7 @@
 			transform: scale(0.8);
 		}
 		&:disabled {
-			opacity: 0.5;
+			opacity: 0;
 		}
 	}
 }
@@ -36,16 +36,15 @@
 		@apply outline-border-none transition-transform  cursor-pointer;
 
 		padding: 0;
-		z-index: 105;
+		z-index: 102;
 		&:hover:enabled {
 			@apply link-animation;
 		}
 		&:active:enabled {
 			transform: scale(0.8);
 		}
-
 		&:disabled {
-			opacity: 0.5;
+			opacity: 0;
 		}
 	}
 }

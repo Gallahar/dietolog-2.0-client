@@ -1,6 +1,14 @@
-.headingSmall{
-    @apply text-25 text-text uppercase;
-    line-height: 150%;
-    letter-spacing: 0.02em;
-    font-weight: 400;
+@import '@/assets/styles/media.scss';
+
+.headingSmall {
+	@apply text-25 text-text uppercase;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	font-weight: 400;
+	@include m-1920 {
+		font-size: 22px;
+	}
+	@include m-1680 {
+		font-size: 23px;
+	}
 }

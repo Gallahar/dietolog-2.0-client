@@ -28,6 +28,7 @@ const Slider: FC<SliderProps> = ({ children, buttonsType, setIsMoving }) => {
 
 	return (
 		<Carousel
+			
 			keyBoardControl={true}
 			beforeChange={() => setIsMoving(true)}
 			afterChange={() => setIsMoving(false)}

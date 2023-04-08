@@ -1,10 +1,14 @@
+@import '@/assets/styles/media.scss';
+
 .textArea {
 	position: relative;
 	font-size: 19px;
 	line-height: 150%;
 	letter-spacing: 0.02em;
-	box-sizing: border-box;
 	width: 100%;
+	@include m-1920 {
+		font-size: 17px;
+	}
 	p {
 		position: absolute;
 		color: #e30b13;
@@ -19,5 +23,12 @@
 		line-height: 150%;
 		letter-spacing: 0.02em;
 		resize: none;
+		@include m-1920 {
+			font-size: 17px;
+			height: 221px;
+		}
+		&:focus {
+			box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.2/4);
+		}
 	}
 }

@@ -31,7 +31,7 @@
 	}
 
 	.forWhoWrapper {
-		@apply flex justify-between relative;
+		@apply flex justify-between ;
 
 		.forWhoImageBlock {
 			@apply relative;
@@ -126,7 +126,7 @@
 		}
 		.worthBlock {
 			display: grid;
-			grid-template-columns: repeat(2, max-content);
+			grid-template-columns: repeat(2, minmax(min-content, max-content));
 			justify-content: space-between;
 
 			gap: $m1920Mid 0;
@@ -157,17 +157,14 @@
 					right: 3px;
 				}
 			}
-		}
-		.linksBlock {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: $m1920Max;
-
-			@include m-1920 {
-				gap: $m1680Max;
-			}
-			@include m-1680 {
-				gap: $m1600Max;
+			> a {
+				margin-top: 36px;
+				@include m-1920 {
+					margin-top: 24px;
+				}
+				@include m-1680 {
+					margin-top: 18px;
+				}
 			}
 		}
 	}
@@ -222,4 +219,3 @@
 	left: 299.02px;
 	top: 10px;
 }
-

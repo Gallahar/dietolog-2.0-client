@@ -37,18 +37,17 @@ const Reviews: FC<ReviewsProps> = ({ reviews }) => {
 		<section className={`${s.reviews} section`}>
 			<Ellipse className={s.ellipse_1} />
 			<Ellipse className={s.ellipse_2} />
-			<Leaf className={s.leaf_1} />
-			<div className={`${s.heading} container section`}>
+			<div className={`${s.heading} container `}>
 				<Heading text={heading} />
 			</div>
 			<div className={`${s.sliderSection} section`}>
-				<div className={s.sliderWrapper}>
+				
 					<Slider setIsMoving={setIsMoving} buttonsType={false}>
 						{reviews.map((review, i) => (
 							<ReviewCard review={review} key={i} />
 						))}
 					</Slider>
-				</div>
+				
 			</div>
 			<div className={`${s.links} container`}>
 				<ActionButton

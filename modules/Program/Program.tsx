@@ -57,7 +57,7 @@ const Program: FC<ProgramProps> = ({ program }) => {
 	const allChosen = checkAnswers(answers)
 
 	return (
-		<section className={`${s.programWrapper} section`}>
+		<section className={`${s.programWrapper} `}>
 			<Image
 				className={s.background}
 				priority
