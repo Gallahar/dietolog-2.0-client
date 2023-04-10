@@ -175,6 +175,8 @@ export const en: LanguageTemplate = {
 		package: 'Package',
 	},
 	program: {
+		fields_required:
+			'To place your order - please select the corresponding items.',
 		included_to_program: 'This program includes',
 		choose_radios:
 			'Before ordering the program, select the appropriate items.',

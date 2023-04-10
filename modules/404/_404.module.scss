@@ -7,6 +7,12 @@
 	.contentWrapper {
 		@apply flex;
 		margin-top: 243px;
+		@include m-1920 {
+			margin-top: 231px;
+		}
+		@include m-1680 {
+			margin-top: 235px;
+		}
 
 		justify-content: space-between;
 
@@ -29,11 +35,17 @@
 		.imageWrapper {
 			display: flex;
 			align-items: center;
+			align-self: start;
 			position: relative;
+			@include m-1920 {
+				padding-top: 40px;
+			}
+			
 			> img {
-				max-width: 313px;
+				max-width: 100%;
+				height: auto;
 				@include m-1920 {
-					max-width: 274px;
+					max-width: 313px;
 				}
 			}
 			> p {
@@ -45,14 +57,23 @@
 				position: absolute;
 				z-index: -1;
 				&:first-child {
-					left: -35%;
+					left: -15%;
 				}
 				&:last-child {
-					right: -30%;
+					right: -15%;
 				}
 				@include m-1920 {
 					font-size: 630px;
 				}
+			}
+		}
+		.linkBlock {
+			padding-top: $m1920Max;
+			@include m-1920 {
+				padding-top: $m1680Max;
+			}
+			@include m-1680 {
+				padding-top: $m1600Max;
 			}
 		}
 	}

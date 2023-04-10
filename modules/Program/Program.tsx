@@ -27,8 +27,13 @@ interface ProgramProps {
 }
 
 const Program: FC<ProgramProps> = ({ program }) => {
-	const { _program, included_to_program, choose_radios, back_to_programs } =
-		useLanguageContext().program
+	const {
+		_program,
+		included_to_program,
+		choose_radios,
+		back_to_programs,
+		fields_required,
+	} = useLanguageContext().program
 	const mark = useLanguageContext().mark
 	const { apply } = useLanguageContext().global
 	const { language } = useContext(LanguageContext)
@@ -118,8 +123,11 @@ const Program: FC<ProgramProps> = ({ program }) => {
 					})}
 				</div>
 				<ActionCircleButton
-					onClick={() => setOpenPopup(true)}
-					disabled={!allChosen}
+					onClick={() => {
+						allChosen
+							? setOpenPopup(true)
+							: alertHandler(fields_required)
+					}}
 					className={s.submitButton}
 					text={apply}
 				/>

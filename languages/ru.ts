@@ -177,6 +177,8 @@ export const ru: LanguageTemplate = {
 		package: 'Пакет',
 	},
 	program: {
+		fields_required:
+			'Для оформления заказа  -  пожалуйста выберите соответствующие пункты.',
 		included_to_program: 'В программу входят',
 		choose_radios:
 			'Перед заказом программы выберите, пожалуйста, соответствующие пункты.',

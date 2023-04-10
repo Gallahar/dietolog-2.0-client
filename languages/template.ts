@@ -152,6 +152,7 @@ export interface LanguageTemplate {
 	}
 
 	program: {
+		fields_required: string
 		included_to_program: string
 		choose_radios: string
 		back_to_programs: string

@@ -18,4 +18,5 @@ const TextArea: FC<InputProps> = forwardRef(
 		)
 	}
 )
+TextArea.displayName = 'TextArea'
 export default TextArea

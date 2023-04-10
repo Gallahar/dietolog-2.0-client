@@ -1,5 +1,4 @@
 import { useLanguageContext } from '@/hooks/useLanguageContext'
-import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 import Heading from '@/ui/Headings/Heading/Heading'
 import Meta from '@/utils/meta/Meta'
 import Image from 'next/image'
@@ -28,6 +27,9 @@ const _404: FC = () => {
 							<Description text={text_mid} />
 							<Description text={text_bot} />
 						</div>
+						<div className={`${s.linkBlock} section container`}>
+							<ActionLink text={back_to_main} path="/" />
+						</div>
 					</div>
 					<div className={s.imageWrapper}>
 						<p>4</p>
@@ -35,21 +37,8 @@ const _404: FC = () => {
 						<p>4</p>
 					</div>
 				</div>
-				<div className="section container">
-					<ActionLink text={back_to_main} path="/" />
-				</div>
 			</section>
 		</Meta>
 	)
 }
 export default _404
-
-// <ActionLink
-// 							path="/"
-// 							className={s.link}
-// 							text={back_to_main}
-// 						/>
-
-{
-	/* <Image src={_404image} alt="404 error" /> */
-}

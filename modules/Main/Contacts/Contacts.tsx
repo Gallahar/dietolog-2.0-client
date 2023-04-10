@@ -30,7 +30,7 @@ const Contacts = () => {
 						</div>
 						<a
 							className={s.email}
-							href="mailto:dietolog.kirichenko@gmail.com?subject=ask about program body=hello i want to talk about program prices"
+							href="mailto:dietolog.kirichenko@gmail.com?subject=Program prices body=Hello, i want to talk about program prices"
 						>
 							dietolog.kirichenko@gmail.com
 						</a>

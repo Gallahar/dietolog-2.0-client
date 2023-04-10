@@ -180,6 +180,8 @@ export const ua: LanguageTemplate = {
 		package: 'Пакет',
 	},
 	program: {
+		fields_required:
+			'Для оформлення замовлення - будь ласка виберіть відповідні пункти.',
 		included_to_program: 'До програми входять',
 		choose_radios:
 			'Перед замовленням програми оберіть, будь ласка, відповідні пункти.',
