@@ -17,7 +17,6 @@
 			color: #8f3f09;
 			margin-left: -20px;
 			margin-bottom: -7px;
-			animation: opacity 2.7s ease-in;
 
 			@include m-1920 {
 				margin-top: 166px;
@@ -51,6 +50,7 @@
 						font-size: 17px;
 						width: 494px;
 					}
+
 					@include m-1680 {
 						margin-top: $m1600Mid;
 					}
@@ -58,9 +58,11 @@
 
 				> a {
 					margin-top: $m1920Max;
+
 					@include m-1920 {
 						margin-top: $m1680Max;
 					}
+
 					@include m-1680 {
 						margin-top: $m1600Max;
 					}
@@ -124,4 +126,8 @@
 	100% {
 		opacity: 1;
 	}
+}
+
+.delayFont {
+	animation: opacity 2.7s ease-in;
 }

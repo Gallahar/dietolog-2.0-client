@@ -34,7 +34,7 @@ const CardProgram: FC<CardProgramProps> = ({ program, isMoving }) => {
 						draggable={false}
 						fill
 						src={photo_small}
-						alt="programCard"
+						alt={`programCard${currentLanguage(title, mark)}`}
 					/>
 					<div className={s.cardInfo}>
 						<span className={s.price}>{price} ₴</span>

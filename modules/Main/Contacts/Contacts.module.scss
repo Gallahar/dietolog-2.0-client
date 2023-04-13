@@ -10,6 +10,7 @@
 		@include m-1920 {
 			padding-top: $m1680Max;
 		}
+
 		@include m-1680 {
 			padding-top: $m1600Max;
 		}
@@ -23,6 +24,7 @@
 		@include m-1920 {
 			margin-top: $m1680Mid;
 		}
+
 		@include m-1680 {
 			margin-top: $m1600Mid;
 		}
@@ -114,6 +116,7 @@
 						@apply text-text uppercase;
 
 						font-size: 20px;
+
 						@include m-1920 {
 							font-size: 17px;
 						}
@@ -125,6 +128,7 @@
 						line-height: 150%;
 						letter-spacing: 0.02em;
 						width: 167px;
+
 						@include m-1920 {
 							font-size: 16px;
 							width: 149px;
@@ -149,7 +153,7 @@
 }
 
 .ellipse_1 {
-	background: rgba(254, 245, 228, 0.35);
+	background: $ellipseBgCream;
 	bottom: 1%;
 	left: 30%;
 }

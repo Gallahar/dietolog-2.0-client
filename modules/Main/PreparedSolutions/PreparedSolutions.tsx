@@ -71,21 +71,12 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 				<Heading text={prepared_solutions} />
 				<div className={s.descriptionWrapper}>
 					<div className={s.descLeft}>
-						<Description
-							className="bold_description"
-							text={parse(col_1_part_1)}
-						/>
+						<Description text={parse(col_1_part_1)} />
 						<Description text={col_1_part_2} />
 					</div>
 					<div className={s.descRight}>
-						<Description
-							className="bold_description"
-							text={parse(col_2_part_1)}
-						/>
-						<Description
-							className="bold_description"
-							text={parse(col_2_part_2)}
-						/>
+						<Description text={parse(col_2_part_1)} />
+						<Description text={parse(col_2_part_2)} />
 					</div>
 				</div>
 			</div>
@@ -101,7 +92,6 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 					<div className={s.constructorDescriptionWrapper}>
 						{constructorData.map((block, index) => (
 							<Description
-								className="bold_description"
 								key={block}
 								text={index === 2 || 3 ? parse(block) : block}
 							/>
@@ -117,10 +107,7 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 				)}
 			>
 				<div className={s.leftBlock}>
-					<Description
-						className="bold_description"
-						text={parse(constructor_col_1_part_1)}
-					/>
+					<Description text={parse(constructor_col_1_part_1)} />
 					<Description text={constructor_col_1_part_2} />
 					<Description text={constructor_col_1_part_3} />
 				</div>

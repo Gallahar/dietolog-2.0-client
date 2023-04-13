@@ -37,12 +37,12 @@
 }
 
 .ellipse_1 {
-	background: rgba(254, 245, 228, 0.35);
+	background: $ellipseBgCream;
 	bottom: 2%;
 	left: 1%;
 }
 .ellipse_2 {
-	background: rgba(68, 187, 109, 0.07);
+	background: $ellipseBgGreen;
 	right: 1.5%;
 	top: 15%;
 }

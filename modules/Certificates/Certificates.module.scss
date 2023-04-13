@@ -7,6 +7,7 @@
 	.diplomasHeading {
 		padding-top: 199px;
 	}
+
 	.sliderWrapper {
 		position: relative;
 		max-width: 1352px;
@@ -17,6 +18,7 @@
 			max-width: 1186px;
 			padding-top: $m1680Mid;
 		}
+
 		@include m-1680 {
 			max-width: 1130px;
 			padding-top: $m1600Mid;
@@ -32,6 +34,7 @@
 		@include m-1920 {
 			padding-top: 66px;
 		}
+
 		@include m-1680 {
 			padding-top: 60px;
 		}
@@ -103,6 +106,7 @@
 					margin-top: $m1680Mid;
 					gap: 23px;
 				}
+
 				@include m-1680 {
 					margin-top: $m1600Mid;
 					gap: 20px;
@@ -116,9 +120,11 @@
 		> a {
 			margin-top: $m1920Mid;
 			grid-column: 2/3;
+
 			@include m-1920 {
 				margin-top: $m1680Mid;
 			}
+
 			@include m-1680 {
 				margin-top: $m1600Mid;
 			}
@@ -130,6 +136,7 @@
 	> div {
 		padding: 110px 72px 72px 90px;
 	}
+
 	.diplomaWrapper {
 		position: relative;
 		width: 882px;
@@ -167,13 +174,19 @@
 }
 
 .ellipse_1 {
-	background: rgba(254, 245, 228, 0.35);
+	background: $ellipseBgCream;
 	top: 50px;
 	right: 137px;
 }
 
 .ellipse_2 {
-	background: rgba(254, 245, 228, 0.35);
+	background: $ellipseBgGreen;
+	top: 30%;
+	left: 30%;
+}
+
+.ellipse_3 {
+	background: $ellipseBgCream;
 	bottom: 54px;
 	right: 46px;
 }

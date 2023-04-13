@@ -41,6 +41,7 @@ const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 		<section className={`${s.certificatesWrapper} section`}>
 			<Ellipse className={s.ellipse_1} />
 			<Ellipse className={s.ellipse_2} />
+			<Ellipse className={s.ellipse_3} />
 			<div className={`${s.diplomasHeading} container`}>
 				<Heading text={diplomas_heading} />
 			</div>
@@ -85,7 +86,6 @@ const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 						{skillsData.map((skill, i) => (
 							<div key={skill} className={s.skill}>
 								<Description
-									className={i > 1 ? 'bold_description' : ''}
 									key={skill + i}
 									text={i > 1 ? parse(skill) : skill}
 								/>

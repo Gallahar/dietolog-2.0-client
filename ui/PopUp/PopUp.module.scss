@@ -20,9 +20,16 @@
 	background-color: #fff;
 	z-index: 100;
 	padding: 90px 72px 72px;
+	> div {
+		font-size: 19px;
+	}
 
 	@include m-1920 {
 		padding: 80px 64px 64px;
+
+		> div {
+			font-size: 17px;
+		}
 	}
 	@include m-1680 {
 		padding: 75px 60px 60px;

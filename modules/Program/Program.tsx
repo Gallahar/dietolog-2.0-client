@@ -55,7 +55,7 @@ const Program: FC<ProgramProps> = ({ program }) => {
 	}
 
 	useEffect(() => {
-		setAnswers(answers.map((r) => null))
+		setAnswers(answers.map((_) => null))
 		setKey((prev) => prev + 1)
 	}, [language])
 
@@ -66,7 +66,7 @@ const Program: FC<ProgramProps> = ({ program }) => {
 			<Image
 				className={s.background}
 				priority
-				alt="programPhoto"
+				alt={`program-${currentLanguage(title, mark)}`}
 				width={606}
 				height={1985}
 				src={photo}

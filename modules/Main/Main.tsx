@@ -6,17 +6,22 @@ import Description from '@/ui/Descriptions/Description/Description'
 import { useLanguageContext } from '@/hooks/useLanguageContext'
 import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 import Section from '@/ui/Backgrounds/Section/Section'
+import { useIsFirstEntry } from './useIsFirstEntry'
 
 const Main = () => {
 	const { name, last_name, post_name, description, sign_for_consult } =
 		useLanguageContext().main
+
+	const firstEntry = useIsFirstEntry()
 
 	return (
 		<Section id="main" className={s.mainWrapper}>
 			<Leaf className={s.leaf_1} />
 			<Leaf className={s.leaf_2} />
 			<div className={`container ${s.main}`}>
-				<h2 className="customFont">{`${name} ${last_name}`}</h2>
+				<h2
+					className={`customFont ${!firstEntry ? s.delayFont : ''}`}
+				>{`${name} ${last_name}`}</h2>
 				<div className={s.contentWrapper}>
 					<div className={s.descriptionWrapper}>
 						<h1>{post_name}</h1>

@@ -12,6 +12,7 @@
 		@include m-1920 {
 			padding-top: $m1680Max;
 		}
+
 		@include m-1680 {
 			padding-top: $m1600Max;
 		}
@@ -24,6 +25,7 @@
 			@include m-1920 {
 				gap: $m1680Mid;
 			}
+
 			@include m-1680 {
 				gap: $m1600Mid;
 			}
@@ -39,6 +41,7 @@
 				bottom: 5%;
 				width: 561px;
 				height: 561px;
+
 				@include m-1920 {
 					max-width: 492px;
 					height: 492px;
@@ -60,7 +63,7 @@
 }
 
 .ellipse_1 {
-	background: rgba(68, 187, 109, 0.07);
+	background: $ellipseBgGreen;
 	top: 2%;
 	right: -5%;
 }

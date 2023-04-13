@@ -35,6 +35,7 @@ const _404: FC = () => {
 						<Image priority src={_404image} alt="404-image" />
 					</div>
 				</div>
+				<div className={s.svg}></div>
 			</section>
 		</Meta>
 	)

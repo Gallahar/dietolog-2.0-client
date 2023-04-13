@@ -14,6 +14,7 @@
 			padding-top: $m1680Max;
 			gap: $m1680Mid;
 		}
+
 		@include m-1680 {
 			padding-top: $m1600Max;
 			gap: $m1600Mid;
@@ -27,6 +28,7 @@
 
 				height: 231px;
 			}
+
 			.descRight {
 				@apply flex flex-col justify-between;
 
@@ -45,6 +47,7 @@
 
 			> img {
 				border-radius: 480px 480px 0 0;
+
 				@include m-1920 {
 					max-width: 535px;
 					height: 658px;
@@ -59,6 +62,7 @@
 				position: absolute;
 				bottom: 4%;
 				right: 4%;
+
 				@include m-1920 {
 					max-width: 535px;
 					height: 658px;
@@ -68,6 +72,7 @@
 
 		.constructorTextWrapper {
 			max-width: 612px;
+
 			@include m-1920 {
 				max-width: 535px;
 			}
@@ -78,6 +83,7 @@
 				@include m-1920 {
 					margin-top: $m1680Mid;
 				}
+
 				@include m-1680 {
 					margin-top: $m1600Mid;
 				}
@@ -97,6 +103,7 @@
 				white-space: normal;
 			}
 		}
+
 		.rightBlock {
 			@apply flex flex-col;
 
@@ -119,6 +126,7 @@
 			max-width: 1186px;
 			padding-top: $m1680Mid;
 		}
+
 		@include m-1680 {
 			max-width: 1130px;
 			padding-top: $m1600Mid;
@@ -131,6 +139,7 @@
 		@include m-1920 {
 			margin-top: $m1680Max;
 		}
+
 		@include m-1680 {
 			margin-top: $m1600Max;
 		}

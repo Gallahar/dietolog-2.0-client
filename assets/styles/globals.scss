@@ -29,6 +29,10 @@ button {
 	@apply border-none bg-transparent;
 }
 
+b {
+	@apply text-text uppercase;
+}
+
 .container {
 	width: 100%;
 	max-width: 1352px;
@@ -79,12 +83,6 @@ button {
 	}
 	@include m-1680 {
 		font-size: 25px;
-	}
-}
-
-.bold_description {
-	b {
-		@apply text-text uppercase;
 	}
 }
 

@@ -21,6 +21,7 @@
 					@apply text-dark;
 
 					transition: all 0.5s ease-in;
+
 					&:hover {
 						@apply text-secondary;
 					}
