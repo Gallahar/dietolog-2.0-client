@@ -49,7 +49,7 @@ export const en: LanguageTemplate = {
 		heading: 'Reviews',
 		add_review: 'Leave your feedback',
 		response:
-			'Thank you! Your review will appear in "reviews" section as soon as possbile.',
+			'Thank you! Your review will appear in "reviews" section as soon as possible.',
 	},
 	leave_review: {
 		your_review: 'Your review',
@@ -176,7 +176,7 @@ export const en: LanguageTemplate = {
 	},
 	program: {
 		fields_required:
-			'To place your order - please select the corresponding items.',
+			'To place your order - please select the appropriate items.',
 		included_to_program: 'This program includes',
 		choose_radios:
 			'Before ordering the program, select the appropriate items.',

@@ -111,6 +111,7 @@ const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 					/>
 					<div className={s.diplomaWrapper}>
 						<Image
+							priority
 							fill
 							src={certificate}
 							alt="certificate"

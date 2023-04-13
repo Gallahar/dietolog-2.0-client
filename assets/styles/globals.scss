@@ -3,11 +3,6 @@
 @import './media.scss';
 @import 'variables.scss';
 
-@font-face {
-	font-family: 'mr_HamiltoneG';
-	src: url('../../assets/fonts/mr_hamiltoneg.woff2') format('woff2');
-}
-
 * {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
@@ -94,7 +89,6 @@ button {
 }
 
 .hamilton {
-	font-family: 'mr_HamiltoneG';
 	font-weight: 400;
 	font-size: 360px;
 	line-height: 26px;
@@ -106,4 +100,7 @@ button {
 	@include m-1680 {
 		font-size: 300px;
 	}
+}
+
+.customFont {
 }

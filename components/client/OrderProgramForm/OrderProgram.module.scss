@@ -78,7 +78,7 @@
 
 	.checkListWrapper {
 		@apply primary-gr;
-
+		border-radius: 0 0 50px 0;
 		padding: 90px 72px;
 		display: grid;
 		grid-template-columns: 1fr;
@@ -98,34 +98,22 @@
 		}
 
 		.parametersWrapper {
-			display: grid;
-			grid-template-columns: max-content 1fr;
-			gap: 44px;
+			@apply flex flex-col;
+			gap: 16px;
 			font-size: 19px;
 
 			@include m-1920 {
-				gap: 38px;
+				gap: 14px;
 				font-size: 17px;
 			}
-
-			.questions {
-				@apply flex flex-col;
-
-				gap: 16px;
-
-				@include m-1920 {
-					font-size: 14px;
-				}
+			@include m-1680 {
+				gap: 12px;
+				font-size: 16px;
 			}
 
-			.answers {
-				@apply flex flex-col;
-
-				gap: 16px;
-
-				@include m-1920 {
-					font-size: 14px;
-				}
+			.parameter {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(min-content, 1fr));
 			}
 		}
 	}

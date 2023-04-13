@@ -18,7 +18,6 @@ const _404: FC = () => {
 		<Meta title="404 - Page is not found">
 			<section className={s.p404_Wrapper}>
 				<Ellipse className={s.ellipse_1} />
-				<Ellipse className={s.ellipse_2} />
 				<div className={`${s.contentWrapper} container`}>
 					<div className={s.textWrapper}>
 						<Heading text={heading} />
@@ -27,14 +26,13 @@ const _404: FC = () => {
 							<Description text={text_mid} />
 							<Description text={text_bot} />
 						</div>
-						<div className={`${s.linkBlock} section container`}>
+						<div className={`${s.linkBlock}`}>
 							<ActionLink text={back_to_main} path="/" />
 						</div>
 					</div>
 					<div className={s.imageWrapper}>
-						<p>4</p>
+						<Ellipse className={s.ellipse_2} />
 						<Image priority src={_404image} alt="404-image" />
-						<p>4</p>
 					</div>
 				</div>
 			</section>

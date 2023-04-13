@@ -119,18 +119,12 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 			<div className={s.checkListWrapper}>
 				<p className={s.heading}>{`${your_order}:`}</p>
 				<div className={s.parametersWrapper}>
-					<div className={s.questions}>
-						{radios.map(({ title_short }) => (
-							<p key={title_short.en}>
-								{currentLanguage(title_short, mark)}
-							</p>
-						))}
-					</div>
-					<div className={s.answers}>
-						{answers.map((a, i) => (
-							<p key={i}>{a}</p>
-						))}
-					</div>
+					{radios.map(({ title_short }, i) => (
+						<div key={title_short.en} className={s.parameter}>
+							<p>{currentLanguage(title_short, mark)}</p>
+							<p>{answers[i]}</p>
+						</div>
+					))}
 				</div>
 				<ActionCircleButton
 					disabled={loading}

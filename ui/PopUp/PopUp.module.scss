@@ -1,3 +1,5 @@
+@import '@/assets/styles/media.scss';
+
 .popUpWrapper {
 	@apply flex justify-center items-center;
 
@@ -5,6 +7,7 @@
 	height: 100vh;
 	width: 100vw;
 	position: fixed;
+	padding: 0 20px;
 	top: 0;
 	z-index: 110;
 	background-color: rgba(0, 0, 0, 0.6);
@@ -17,6 +20,13 @@
 	background-color: #fff;
 	z-index: 100;
 	padding: 90px 72px 72px;
+
+	@include m-1920 {
+		padding: 80px 64px 64px;
+	}
+	@include m-1680 {
+		padding: 75px 60px 60px;
+	}
 }
 
 @keyframes appear {

@@ -5,14 +5,30 @@
 
 	top: 24px;
 	right: 24px;
-	width: 65px;
-	height: 65px;
+	padding: 18px;
 	border-radius: 50%;
 	transition: all 0.2s ease-in;
+	> svg {
+		width: 30px;
+		height: 30px;
+	}
 
 	@include m-1920 {
-		width: 57px;
-		height: 57px;
+		padding: 16px;
+		top: 21px;
+		right: 21px;
+		> svg {
+			width: 26px;
+			height: 26px;
+		}
+	}
+	@include m-1680 {
+		top: 20px;
+		right: 20px;
+		> svg {
+			width: 24px;
+			height: 24px;
+		}
 	}
 
 	&:hover {

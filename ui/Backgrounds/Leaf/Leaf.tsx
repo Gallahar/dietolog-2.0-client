@@ -10,8 +10,8 @@ interface LeafProps {
 const Leaf: FC<LeafProps> = ({ className }) => {
 	return (
 		<Image
+			priority
 			src={leaf}
-			priority={true}
 			alt={'leaf-bg'}
 			className={`${s.leaf} ${className}`}
 		/>

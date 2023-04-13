@@ -13,9 +13,7 @@ const Header: FC = () => {
 	return (
 		<header
 			style={
-				pathname.startsWith('/manage')
-					? { position: 'relative' }
-					: undefined
+				pathname.startsWith('/manage') ? { position: 'relative' } : {}
 			}
 			className={cn(s.headerWrapper, {
 				[s.static]: isStatic,

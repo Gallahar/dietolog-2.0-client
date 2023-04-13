@@ -17,6 +17,7 @@
 			color: #8f3f09;
 			margin-left: -20px;
 			margin-bottom: -7px;
+			animation: opacity 2.7s ease-in;
 
 			@include m-1920 {
 				margin-top: 166px;
@@ -108,4 +109,19 @@
 	top: -460px;
 	right: -285px;
 	transform: rotate(-91.67deg);
+}
+
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	95% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

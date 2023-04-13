@@ -1,3 +1,12 @@
+@import '@/assets/styles/media.scss';
+@import '@/assets/styles/variables.scss';
+
 .block {
-	padding-bottom: 108px;
+	padding-bottom: $m1920Max;
+	@include m-1920 {
+		padding-bottom: $m1680Max;
+	}
+	@include m-1680 {
+		padding-bottom: $m1600Max;
+	}
 }
