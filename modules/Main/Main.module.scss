@@ -22,6 +22,10 @@
 				margin-top: 166px;
 				font-size: 109px;
 			}
+			@include m-1920 {
+				margin-top: 162px;
+				font-size: 104px;
+			}
 		}
 		.contentWrapper {
 			@apply flex justify-between;
@@ -33,8 +37,12 @@
 					line-height: 150%;
 					letter-spacing: 0.02em;
 
-					@include m-1680 {
+					@include m-1920 {
 						@apply text-25;
+					}
+
+					@include m-1680 {
+						font-size: 24px;
 					}
 				}
 
@@ -43,16 +51,18 @@
 
 					margin-top: $m1920Mid;
 					font-size: 20px;
-					width: 565px;
+					max-width: 565px;
 
 					@include m-1920 {
 						margin-top: $m1680Mid;
 						font-size: 17px;
-						width: 494px;
+						max-width: 494px;
 					}
 
 					@include m-1680 {
 						margin-top: $m1600Mid;
+						font-size: 16px;
+						max-width: 468px;
 					}
 				}
 
@@ -81,6 +91,11 @@
 						width: 425px;
 						height: 425px;
 					}
+
+					@include m-1680 {
+						width: 405px;
+						height: 405px;
+					}
 				}
 
 				.outline {
@@ -95,6 +110,11 @@
 					@include m-1920 {
 						width: 425px;
 						height: 425px;
+					}
+
+					@include m-1680 {
+						width: 405px;
+						height: 405px;
 					}
 				}
 			}
@@ -129,5 +149,5 @@
 }
 
 .delayFont {
-	animation: opacity 2.7s ease-in;
+	animation: opacity 1.5s ease-in;
 }

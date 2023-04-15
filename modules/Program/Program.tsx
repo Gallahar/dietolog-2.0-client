@@ -40,14 +40,14 @@ const Program: FC<ProgramProps> = ({ program }) => {
 	const { title, price, description, included, radios, photo } = program
 	const [key, setKey] = useState(0)
 	const [answers, setAnswers] = useState<(string | null)[]>(
-		radios.map((r) => null)
+		radios.map(() => null)
 	)
 	const [openPopup, setOpenPopup] = useState(false)
 	const [alertToggle, setAlertToggle] = useState(false)
 	const [alertText, setAlertText] = useState('')
 
-	const alertHandler = (t: string) => {
-		setAlertText(t)
+	const alertHandler = (alert: string) => {
+		setAlertText(alert)
 		setAlertToggle(true)
 	}
 	const updateAnswersHandler = (idx: number, value: string) => {
@@ -55,7 +55,7 @@ const Program: FC<ProgramProps> = ({ program }) => {
 	}
 
 	useEffect(() => {
-		setAnswers(answers.map((_) => null))
+		setAnswers(answers.map(() => null))
 		setKey((prev) => prev + 1)
 	}, [language])
 
@@ -63,14 +63,14 @@ const Program: FC<ProgramProps> = ({ program }) => {
 
 	return (
 		<section className={`${s.programWrapper} `}>
-			<Image
-				className={s.background}
-				priority
-				alt={`program-${currentLanguage(title, mark)}`}
-				width={606}
-				height={1985}
-				src={photo}
-			/>
+			<div className={s.background}>
+				<Image
+					priority
+					alt={`program-${currentLanguage(title, mark)}`}
+					fill
+					src={photo}
+				/>
+			</div>
 			<Ellipse className={s.ellipse_1} />
 			<Leaf className={s.leaf_1} />
 			<div className={s.contentWrapper}>
@@ -133,7 +133,7 @@ const Program: FC<ProgramProps> = ({ program }) => {
 				/>
 				<ActionLink
 					className={s.link}
-					path="/#turnkey_solutions"
+					path="/#programs"
 					text={back_to_programs}
 				/>
 			</div>

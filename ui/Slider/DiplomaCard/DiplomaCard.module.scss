@@ -15,6 +15,11 @@
 		height: 493px;
 	}
 
+	@include m-1680 {
+		width: 330px;
+		height: 470px;
+	}
+
 	&:hover {
 		transform: translateY(-10px);
 		cursor: pointer;
@@ -33,15 +38,25 @@
 		@include m-1920 {
 			font-size: 16px;
 		}
+
+		@include m-1680 {
+			font-size: 15px;
+		}
 	}
 
 	.imageWrapper {
 		height: 396px;
 
 		position: relative;
+
 		@include m-1920 {
 			height: 346px;
 		}
+
+		@include m-1680 {
+			height: 330px;
+		}
+
 		> img {
 			border-radius: 0 100% 0 0;
 		}
@@ -63,6 +78,21 @@
 		@include m-1920 {
 			width: 105px;
 			height: 105px;
+
+			> svg {
+				width: 42px;
+				height: 42px;
+			}
+		}
+
+		@include m-1680 {
+			width: 100px;
+			height: 100px;
+
+			> svg {
+				width: 40px;
+				height: 40px;
+			}
 		}
 	}
 }

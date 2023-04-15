@@ -7,6 +7,15 @@
 	height: calc(100vh - 150px);
 	padding-top: 91px;
 
+	@include m-1920 {
+		height: calc(100vh - 132px);
+		padding-top: 88px;
+	}
+
+	@include m-1680 {
+		padding-top: 86px;
+	}
+
 	.contentWrapper {
 		display: grid;
 		grid-template-columns: minmax(min-content, 507px) minmax(
@@ -18,7 +27,14 @@
 		@include m-1920 {
 			grid-template-columns: minmax(min-content, 480px) minmax(
 					min-content,
-					483px
+					453px
+				);
+		}
+
+		@include m-1680 {
+			grid-template-columns: minmax(min-content, 450px) minmax(
+					min-content,
+					453px
 				);
 		}
 
@@ -49,10 +65,19 @@
 					max-width: 483px;
 					height: auto;
 				}
+
+				@include m-1680 {
+					max-width: 453px;
+					height: auto;
+				}
 			}
 
 			@include m-1920 {
 				padding: 30px 0;
+			}
+
+			@include m-1680 {
+				padding: 26px 0;
 			}
 		}
 

@@ -16,27 +16,43 @@
 		p {
 			@apply text-white font-semibold;
 
-			font-size: 21px;
+			font-size: 20px;
 			line-height: 150%;
 			letter-spacing: 0.05em;
 
 			@include m-1920 {
 				font-size: 18px;
 			}
+
+			@include m-1680 {
+				font-size: 16px;
+			}
 		}
 
 		button {
 			@apply cursor-pointer transition-transform;
-			width: 34px;
-			height: 48px;
+
+			> svg {
+				width: 48px;
+				height: 72px;
+			}
 
 			&:hover {
 				@apply link-animation;
 			}
 
 			@include m-1920 {
-				width: 32px;
-				height: 42px;
+				> svg {
+					width: 43px;
+					height: 62px;
+				}
+			}
+
+			@include m-1680 {
+				> svg {
+					width: 40px;
+					height: 59px;
+				}
 			}
 		}
 	}

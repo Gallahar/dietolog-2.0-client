@@ -20,6 +20,7 @@ const LeaveReviewForm: FC<LeaveReviewFormProps> = ({
 		useLanguageContext().leave_review
 	const { response } = useLanguageContext().reviews
 	const { error, field_is_required } = useLanguageContext().global
+
 	const [loading, setLoading] = useState(false)
 
 	const {

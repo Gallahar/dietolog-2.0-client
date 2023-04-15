@@ -19,13 +19,11 @@ const LanguageProvider: FC<LanguageProviderProps> = ({ children }) => {
 	const [language, setLanguage] = useState<LanguageTemplate>(ua)
 
 	useEffect(() => {
-		if (IS_CLIENT) {
-			const langStorage = localStorage.getItem('lang')
-			if (langStorage === 'ru') {
-				setLanguage(ru)
-			} else if (langStorage === 'en') {
-				setLanguage(en)
-			}
+		const langStorage = localStorage.getItem('lang')
+		if (langStorage === 'ru') {
+			setLanguage(ru)
+		} else if (langStorage === 'en') {
+			setLanguage(en)
 		}
 	}, [])
 

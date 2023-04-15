@@ -9,7 +9,7 @@ const Footer = () => {
 	return (
 		<footer className={s.footer}>
 			<div className={`container ${s.container}`}>
-				<p>2022 © All rights reserved</p>
+				<p>2023 © All rights reserved</p>
 				<button onClick={scrollToTopHandler}>
 					<ArrowFooter />
 				</button>

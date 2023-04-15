@@ -9,6 +9,10 @@
 	@include m-1920 {
 		font-size: 17px;
 	}
+
+	@include m-1680 {
+		font-size: 16px;
+	}
 	p {
 		position: absolute;
 		color: #e30b13;
@@ -18,17 +22,21 @@
 
 		padding: 24px 30px;
 		width: 100%;
-		height: 251px;
-		font-size: 19px;
+		height: 237px;
 		line-height: 150%;
 		letter-spacing: 0.02em;
 		resize: none;
-		@include m-1920 {
-			font-size: 17px;
-			height: 221px;
-		}
+
 		&:focus {
 			box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.2/4);
+		}
+
+		@include m-1920 {
+			height: 207px;
+		}
+
+		@include m-1920 {
+			height: 197px;
 		}
 	}
 }

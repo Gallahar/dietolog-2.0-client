@@ -1,3 +1,5 @@
+@import '@/assets/styles/media.scss';
+
 .headerWrapper {
 	width: 100%;
 
@@ -6,21 +8,43 @@
 
 		> svg {
 			flex-shrink: 0;
+			width: 123px;
+			height: 81px;
+
+			@include m-1920 {
+				width: 108px;
+				height: 71px;
+			}
+
+			@include m-1680 {
+				width: 100px;
+				height: 66px;
+			}
 		}
 
 		.navWrapper {
 			> nav {
-				font-size: 18px;
-				line-height: 150%;
-				letter-spacing: 0.02em;
 				display: flex;
 				gap: 52px;
 				padding: 32px 0;
+				font-size: 18px;
+				line-height: 150%;
+				letter-spacing: 0.02em;
+
+				@include m-1920 {
+					gap: 45px;
+					font-size: 16px;
+				}
+
+				@include m-1680 {
+					gap: 43px;
+					font-size: 15px;
+				}
 
 				.default {
 					@apply text-dark;
 
-					transition: all 0.5s ease-in;
+					transition: color 0.4s ease-in;
 
 					&:hover {
 						@apply text-secondary;
@@ -35,9 +59,18 @@
 					display: flex;
 					gap: 10px;
 
-					> button {
-						@apply uppercase outline-border-none cursor-pointer text-18;
+					@include m-1920 {
+						gap: 9px;
+					}
 
+					@include m-1680 {
+						gap: 8px;
+					}
+
+					> button {
+						@apply uppercase outline-border-none cursor-pointer;
+
+						font-size: inherit;
 						padding: 0;
 						line-height: 150%;
 						letter-spacing: 0.02em;

@@ -4,11 +4,12 @@ import ActionButton, { ActionButtonProps } from './ActionButton'
 
 interface ActionLinkProps extends ActionButtonProps {
 	path: string
+	as?: string
 }
 
-const ActionLink: FC<ActionLinkProps> = ({ path, ...rest }) => {
+const ActionLink: FC<ActionLinkProps> = ({ path, as, ...rest }) => {
 	return (
-		<Link href={path}>
+		<Link as={as} href={path}>
 			<ActionButton {...rest} />
 		</Link>
 	)

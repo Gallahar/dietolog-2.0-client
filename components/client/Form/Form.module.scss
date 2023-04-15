@@ -14,17 +14,18 @@
 
 	@include m-1680 {
 		gap: $m1600Min;
+		width: 510px;
 	}
 
 	> button {
 		margin-top: $m1920Min;
 
 		@include m-1920 {
-			gap: $m1680Min;
+			margin-top: $m1680Min;
 		}
 
 		@include m-1680 {
-			gap: $m1600Min;
+			margin-top: $m1600Min;
 		}
 	}
 }

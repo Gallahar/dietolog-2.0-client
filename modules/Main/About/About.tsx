@@ -46,67 +46,69 @@ const About = () => {
 			<Leaf className={s.leaf_2} />
 			<Ellipse className={s.ellipse_1} />
 			<Ellipse className={s.ellipse_2} />
-			<div className={`section container ${s.approachWrapper}`}>
-				<Heading text={my_approach} />
-				<div className={s.approachTextBlock}>
-					<Description text={col_1_text_1} />
-					<Description text={col_1_text_2} />
+			<div className="container">
+				<div className={`${s.approachWrapper}`}>
+					<Heading text={my_approach} />
+					<div className={s.approachTextBlock}>
+						<Description text={col_1_text_1} />
+						<Description text={col_1_text_2} />
+					</div>
 				</div>
-			</div>
-			<div className={`${s.forWhoWrapper} section container`}>
-				<div className={s.forWhoImageBlock}>
-					<div className={s.outline} />
-					<Image src={aboutImg} alt="about-img" />
-				</div>
-				<div className={s.forWhoTextWrapper}>
-					<Heading text={for_who} />
-					<div className={s.forWhoTextBlock}>
-						{forWhoData.map((description, index) => (
-							<div
-								key={description}
-								className={s.wrapperDescription}
-							>
-								<p
-									className={`${
-										s[`num_${index + 1}`]
-									} hamilton`}
+				<div className={s.forWhoWrapper}>
+					<div className={s.forWhoImageBlock}>
+						<div className={s.outline} />
+						<Image src={aboutImg} alt="about-img" />
+					</div>
+					<div className={s.forWhoTextWrapper}>
+						<Heading text={for_who} />
+						<div className={s.forWhoTextBlock}>
+							{forWhoData.map((description, index) => (
+								<div
+									key={description}
+									className={s.wrapperDescription}
 								>
-									{index + 1}
-								</p>
-								<Description text={description} />
+									<p
+										className={`${
+											s[`num_${index + 1}`]
+										} hamilton`}
+									>
+										{index + 1}
+									</p>
+									<Description text={description} />
+								</div>
+							))}
+						</div>
+					</div>
+				</div>
+				<div id="backToLinks" className={s.bottomSideInfo}>
+					<div className={s.notSuitableBlock}>
+						<div className={s.notSuitableHeading}>
+							<Heading text={not_suitable} />
+						</div>
+						<div className={s.notSuitableDescriptionWrapper}>
+							<div className={s.notSuitableDescription1}>
+								<p className="hamilton">1</p>
+								<Description text={not_suitable_text_1} />
 							</div>
-						))}
-					</div>
-				</div>
-			</div>
-			<div className={` container ${s.bottomSideInfo}`}>
-				<div className={s.notSuitableBlock}>
-					<div className={s.notSuitableHeading}>
-						<Heading text={not_suitable} />
-					</div>
-					<div className={s.notSuitableDescriptionWrapper}>
-						<div className={s.notSuitableDescription1}>
-							<p className="hamilton">1</p>
-							<Description text={not_suitable_text_1} />
-						</div>
-						<div className={s.notSuitableDescription2}>
-							<p className="hamilton">2</p>
-							<Description text={not_suitable_text_2} />
+							<div className={s.notSuitableDescription2}>
+								<p className="hamilton">2</p>
+								<Description text={not_suitable_text_2} />
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className={s.worthBlock}>
-					<Heading text={worth_1} />
-					<div className={s.description1}>
-						<p className="hamilton">10+</p>
-						<Description text={worth_2} />
+					<div className={s.worthBlock}>
+						<Heading text={worth_1} />
+						<div className={s.description1}>
+							<p className="hamilton">10+</p>
+							<Description text={worth_2} />
+						</div>
+						<div className={s.description2}>
+							<p className="hamilton">1000+</p>
+							<Description text={worth_3} />
+						</div>
+						<ActionLink path="/certificates" text={my_education} />
+						<ActionLink path="/reviews" text={reviews} />
 					</div>
-					<div className={s.description2}>
-						<p className="hamilton">1000+</p>
-						<Description text={worth_3} />
-					</div>
-					<ActionLink path="/certificates" text={my_education} />
-					<ActionLink path="/reviews" text={reviews} />
 				</div>
 			</div>
 		</Section>

@@ -67,54 +67,55 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 		<Section id="turnkey_solutions" className={s.preparedSolutionsWrapper}>
 			<Leaf className={s.leaf_1} />
 			<Leaf className={s.leaf_2} />
-			<div className={cn('section', 'container', s.readyMadeWrapper)}>
-				<Heading text={prepared_solutions} />
-				<div className={s.descriptionWrapper}>
-					<div className={s.descLeft}>
-						<Description text={parse(col_1_part_1)} />
-						<Description text={col_1_part_2} />
-					</div>
-					<div className={s.descRight}>
-						<Description text={parse(col_2_part_1)} />
-						<Description text={parse(col_2_part_2)} />
-					</div>
-				</div>
-			</div>
-			<div
-				className={cn('section', 'container', s.constructorMenuWrapper)}
-			>
-				<div className={s.constructorImageWrapper}>
-					<Image src={preparedImg} alt="preparedImg" />
-					<div className={s.outline} />
-				</div>
-				<div className={s.constructorTextWrapper}>
-					<Heading text={constructor_heading} />
-					<div className={s.constructorDescriptionWrapper}>
-						{constructorData.map((block, index) => (
-							<Description
-								key={block}
-								text={index === 2 || 3 ? parse(block) : block}
-							/>
-						))}
+			<div className="container">
+				<div className={cn('section', s.readyMadeWrapper)}>
+					<Heading text={prepared_solutions} />
+					<div className={s.descriptionWrapper}>
+						<div className={s.descLeft}>
+							<Description text={parse(col_1_part_1)} />
+							<Description text={col_1_part_2} />
+						</div>
+						<div className={s.descRight}>
+							<Description text={parse(col_2_part_1)} />
+							<Description text={parse(col_2_part_2)} />
+						</div>
 					</div>
 				</div>
-			</div>
-			<div
-				className={cn(
-					'section',
-					'container',
-					s.constructorBottomWrapper
-				)}
-			>
-				<div className={s.leftBlock}>
-					<Description text={parse(constructor_col_1_part_1)} />
-					<Description text={constructor_col_1_part_2} />
-					<Description text={constructor_col_1_part_3} />
+				<div className={cn('section', s.constructorMenuWrapper)}>
+					<div className={s.constructorImageWrapper}>
+						<Image src={preparedImg} alt="preparedImg" />
+						<div className={s.outline} />
+					</div>
+					<div className={s.constructorTextWrapper}>
+						<Heading text={constructor_heading} />
+						<div className={s.constructorDescriptionWrapper}>
+							{constructorData.map((block, index) => (
+								<Description
+									key={block}
+									text={
+										index === 2 || index === 3
+											? parse(block)
+											: block
+									}
+								/>
+							))}
+						</div>
+					</div>
 				</div>
-				<div className={s.rightBlock}>
-					<Description text={constructor_col_2_part_1} />
-					<Description text={constructor_col_2_part_2} />
-					<Description text={constructor_col_2_part_3} />
+				<div
+					id="programs"
+					className={cn('section', s.constructorBottomWrapper)}
+				>
+					<div className={s.leftBlock}>
+						<Description text={parse(constructor_col_1_part_1)} />
+						<Description text={constructor_col_1_part_2} />
+						<Description text={constructor_col_1_part_3} />
+					</div>
+					<div className={s.rightBlock}>
+						<Description text={constructor_col_2_part_1} />
+						<Description text={constructor_col_2_part_2} />
+						<Description text={constructor_col_2_part_3} />
+					</div>
 				</div>
 			</div>
 			<div className="container">

@@ -6,7 +6,7 @@ import Description from '@/ui/Descriptions/Description/Description'
 import { useLanguageContext } from '@/hooks/useLanguageContext'
 import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 import Section from '@/ui/Backgrounds/Section/Section'
-import { useIsFirstEntry } from './useIsFirstEntry'
+import { useIsFirstEntry } from '@/hooks/useIsFirstEntry'
 
 const Main = () => {
 	const { name, last_name, post_name, description, sign_for_consult } =

@@ -11,7 +11,7 @@ import { currentLanguage } from '@/utils/currentLanguage'
 import { IRecordCreate } from '@/shared/models/record.interface'
 
 interface OrderProgramFormProps {
-	alertHandler: (v: string) => void
+	alertHandler: (alert: string) => void
 	setOpenPopup: () => void
 	program: IProgram
 	answers: string[]
@@ -32,11 +32,15 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 		invalid_email,
 		invalid_phone,
 	} = useLanguageContext().sign_for_consult
+
 	const { error, order, privacy } = useLanguageContext().global
 	const { success_program, _program } = useLanguageContext().program
 	const { chosen_params, your_order } = useLanguageContext().program_popup
-	const { radios, title, price } = program
+
 	const [loading, setLoading] = useState(false)
+
+	const { radios, title, price } = program
+
 	const currentQuestions = radios.map(({ title_short }) =>
 		currentLanguage(title_short, mark)
 	)
@@ -53,18 +57,15 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 		setLoading(true)
 
 		try {
-			const { email, phone, name } = dto
 			const params: IOrderParam[] = currentQuestions.map((title, i) => {
 				const value = answers[i]
 				return {
-					title: title,
-					value: value,
+					title,
+					value,
 				}
 			})
 			await OrderService.create({
-				name,
-				phone,
-				email,
+				...dto,
 				params,
 				program_title: currentProgramTitle,
 			})

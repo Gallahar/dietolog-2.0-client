@@ -9,4 +9,9 @@
 		width: 756px;
 		height: 848px;
 	}
+
+	@include m-1680 {
+		width: 720px;
+		height: 808px;
+	}
 }

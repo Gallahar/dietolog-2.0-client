@@ -24,18 +24,30 @@
 	.handlerWrapper {
 		@apply flex flex-col justify-between primary-gr;
 		border-radius: 0 0px 50px 0px;
-		padding: 90px 117px 72px 72px;
+		width: 414px;
+		padding: 90px 72px;
 
 		@include m-1920 {
-			padding: 79px 124px 64px 64px;
+			width: 364px;
+			padding: 79px 64px;
 		}
+
+		@include m-1680 {
+			width: 345px;
+			padding: 75px 60px;
+		}
+
 		> h2 {
 			font-size: 30px;
 			max-width: 225px;
 
 			@include m-1920 {
+				font-size: 26px;
+				max-width: 225px;
+			}
+
+			@include m-1680 {
 				font-size: 25px;
-				max-width: 176px;
 			}
 		}
 	}

@@ -8,7 +8,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { IRecordCreate } from '@/shared/models/record.interface'
 
 interface FormProps {
-	alertHandler: (v: string) => void
+	alertHandler: (alert: string) => void
 }
 
 const Form: FC<FormProps> = ({ alertHandler }) => {
@@ -22,6 +22,7 @@ const Form: FC<FormProps> = ({ alertHandler }) => {
 		invalid_email,
 		invalid_phone,
 	} = useLanguageContext().sign_for_consult
+
 	const { error } = useLanguageContext().global
 	const [loading, setLoading] = useState(false)
 

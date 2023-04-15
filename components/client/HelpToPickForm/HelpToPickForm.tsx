@@ -10,7 +10,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import s from './HelpToPickForm.module.scss'
 
 export interface HelpToPickFormProps {
-	alertHandler: (v: string) => void
+	alertHandler: (alert: string) => void
 	setOpenPopup: () => void
 }
 

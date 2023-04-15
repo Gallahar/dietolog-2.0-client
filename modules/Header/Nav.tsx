@@ -2,7 +2,7 @@ import { useLanguageContext } from '@/hooks/useLanguageContext'
 import { ua } from 'languages/ua'
 import { ru } from 'languages/ru'
 import { en } from 'languages/en'
-import { INavbarItem, ISwitchButton } from './data'
+import { INavbarItem, ISwitchButton } from './Header_types'
 import { useContext } from 'react'
 import s from './Header.module.scss'
 import { LanguageContext } from 'providers/LanguageProvider/LanguageProvider'
@@ -18,9 +18,9 @@ const Nav = () => {
 		useLanguageContext().header
 	const { mark } = useLanguageContext()
 	const language: ISwitchButton[] = [
-		{ title: 'ua', button: ua },
-		{ title: 'ru', button: ru },
-		{ title: 'en', button: en },
+		{ title: 'ua', language: ua },
+		{ title: 'ru', language: ru },
+		{ title: 'en', language: en },
 	]
 	const data: INavbarItem[] = [
 		{ title: main, href: '#main' },
@@ -56,11 +56,11 @@ const Nav = () => {
 				)
 			)}
 			<div className={s.buttons}>
-				{language.map(({ title, button }) => (
+				{language.map(({ title, language }) => (
 					<button
 						key={title}
 						className={title === mark ? s.filled : ''}
-						onClick={() => setLanguage(button)}
+						onClick={() => setLanguage(language)}
 					>
 						{title}
 					</button>

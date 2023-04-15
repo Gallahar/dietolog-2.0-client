@@ -45,6 +45,7 @@
 
 			@include m-1680 {
 				gap: $m1600Min;
+				font-size: 19px;
 			}
 
 			.phones {
@@ -73,6 +74,10 @@
 					gap: 67px;
 				}
 
+				@include m-1680 {
+					gap: 65px;
+				}
+
 				svg {
 					transition: all 0.2s ease-in-out;
 
@@ -97,8 +102,21 @@
 					width: 521px;
 				}
 
+				@include m-1680 {
+					width: 500px;
+				}
+
 				> img {
 					border-radius: 50%;
+
+					@include m-1920 {
+						width: 158px;
+						height: auto;
+					}
+
+					@include m-1680 {
+						width: 150px;
+					}
 				}
 
 				.nameBlock {
@@ -120,6 +138,10 @@
 						@include m-1920 {
 							font-size: 17px;
 						}
+
+						@include m-1680 {
+							font-size: 16px;
+						}
 					}
 
 					> p {
@@ -132,6 +154,11 @@
 						@include m-1920 {
 							font-size: 16px;
 							width: 149px;
+						}
+
+						@include m-1680 {
+							font-size: 15px;
+							width: 139px;
 						}
 					}
 				}

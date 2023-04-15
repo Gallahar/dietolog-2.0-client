@@ -6,13 +6,20 @@
 	line-height: 150%;
 	letter-spacing: 0.02em;
 	width: 100%;
+
 	@include m-1920 {
 		font-size: 17px;
 	}
+
+	@include m-1680 {
+		font-size: 16px;
+	}
+
 	p {
 		position: absolute;
 		color: #e30b13;
 	}
+
 	> input {
 		@apply outline-border-none primary-gr text-dark;
 
@@ -20,13 +27,20 @@
 		width: 100%;
 		height: 79px;
 		border-radius: 0 100px 100px 0;
-		font-size: 19px;
+
 		line-height: 150%;
 		letter-spacing: 0.02em;
+
 		@include m-1920 {
 			height: 69px;
-			font-size: 17px;
+			padding: 22px 26px;
 		}
+
+		@include m-1680 {
+			height: 66px;
+			padding: 21px 25px;
+		}
+
 		&:focus {
 			box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.2/4);
 		}

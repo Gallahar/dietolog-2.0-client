@@ -2,8 +2,6 @@ import { useLanguageContext } from '@/hooks/useLanguageContext'
 import ActionButton from '@/ui/Buttons/Actions/ActionButton/ActionButton'
 import ActionLink from '@/ui/Buttons/Actions/ActionButton/ActionLink'
 import Heading from '@/ui/Headings/Heading/Heading'
-import Image from 'next/image'
-import reviewImg from '@/assets/reviews/reviewImg.png'
 import s from './Reviews.module.scss'
 import { FC, useState } from 'react'
 import LeaveReviewForm from '@/components/client/LeaveReviewForm/LeaveReviewForm'
@@ -14,7 +12,6 @@ import { IReview } from '@/shared/models/review.interface'
 import Slider from '@/ui/Slider/Slider'
 import ReviewCard from '@/ui/Slider/ReviewCard/ReviewCard'
 import Ellipse from '@/ui/Backgrounds/Ellipse/Ellipse'
-import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 
 interface ReviewsProps {
 	reviews: IReview[]
@@ -28,8 +25,8 @@ const Reviews: FC<ReviewsProps> = ({ reviews }) => {
 	const [alertText, setAlertText] = useState('')
 	const [isMoving, setIsMoving] = useState(false)
 
-	const alertHandler = (t: string) => {
-		setAlertText(t)
+	const alertHandler = (alert: string) => {
+		setAlertText(alert)
 		setAlertToggle(true)
 	}
 
@@ -41,13 +38,11 @@ const Reviews: FC<ReviewsProps> = ({ reviews }) => {
 				<Heading text={heading} />
 			</div>
 			<div className={`${s.sliderSection} section`}>
-				
-					<Slider setIsMoving={setIsMoving} buttonsType={false}>
-						{reviews.map((review, i) => (
-							<ReviewCard review={review} key={i} />
-						))}
-					</Slider>
-				
+				<Slider setIsMoving={setIsMoving} buttonsType={false}>
+					{reviews.map((review, i) => (
+						<ReviewCard review={review} key={i} />
+					))}
+				</Slider>
 			</div>
 			<div className={`${s.links} container`}>
 				<ActionButton

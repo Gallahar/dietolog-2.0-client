@@ -92,6 +92,7 @@ b {
 	line-height: 26px;
 	color: rgba(68, 187, 109, 0.15);
 	position: absolute;
+
 	@include m-1920 {
 		font-size: 315px;
 	}

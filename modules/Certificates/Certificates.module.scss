@@ -6,6 +6,13 @@
 
 	.diplomasHeading {
 		padding-top: 199px;
+
+		@include m-1920 {
+			padding-top: 187px;
+		}
+		@include m-1680 {
+			padding-top: 181px;
+		}
 	}
 
 	.sliderWrapper {
@@ -60,7 +67,18 @@
 						237px
 					)
 					minmax(min-content, 272px);
-				gap: 26px;
+				gap: 28px;
+			}
+
+			@include m-1680 {
+				grid-template:
+					't r' minmax(min-content, 292px)
+					'b r' minmax(min-content, 407px) / minmax(
+						min-content,
+						226px
+					)
+					minmax(min-content, 259px);
+				gap: 27px;
 			}
 
 			.t {
@@ -146,31 +164,75 @@
 			width: 772px;
 			height: 544px;
 		}
+		@include m-1680 {
+			width: 735px;
+			height: 518px;
+		}
 	}
 }
 
 .num_1 {
-	left: 62.83px;
+	left: 80px;
 	top: 10px;
+
+	@include m-1920 {
+		left: 70px;
+	}
+
+	@include m-1680 {
+		left: 67px;
+	}
 }
 .num_2 {
-	left: 350px;
+	left: 363px;
 	top: 10px;
+
+	@include m-1920 {
+		left: 318px;
+	}
+
+	@include m-1680 {
+		left: 303px;
+	}
 }
 
 .num_3 {
-	left: 127.98px;
+	left: 129px;
 	top: 10px;
+
+	@include m-1920 {
+		left: 113px;
+	}
+
+	@include m-1680 {
+		left: 108px;
+	}
 }
 
 .num_4 {
-	left: 440px;
+	left: 441px;
 	top: 12px;
+
+	@include m-1920 {
+		left: 386px;
+	}
+
+	@include m-1680 {
+		left: 368px;
+	}
 }
 
 .num_5 {
 	left: 175px;
 	top: 10px;
+
+	@include m-1920 {
+		left: 153px;
+	}
+
+	@include m-1680 {
+		left: 146px;
+	}
 }
 
 .ellipse_1 {

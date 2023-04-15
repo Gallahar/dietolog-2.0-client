@@ -15,7 +15,22 @@
 	}
 
 	.background {
+		position: relative;
 		margin-top: 91px;
+		width: 606px;
+		height: 1985px;
+
+		@include m-1920 {
+			margin-top: 88px;
+			width: 530px;
+			height: 1778px;
+		}
+
+		@include m-1680 {
+			margin-top: 86px;
+			width: 505px;
+			height: 1673px;
+		}
 	}
 
 	.popup {
@@ -29,7 +44,7 @@
 
 		gap: 36px;
 		width: 100%;
-		padding-top: $m1920Max;
+		padding-top: $m1920Max + 91px;
 		max-width: 912px;
 		font-size: 18px;
 		line-height: 150%;
@@ -37,12 +52,14 @@
 
 		@include m-1920 {
 			font-size: 16px;
-			padding-top: $m1680Max;
-			max-width: 798px;
+			padding-top: $m1680Max + 88px;
+			max-width: 797px;
 		}
 		@include m-1680 {
-			padding-top: $m1600Max;
-			max-width: 750px;
+			gap: 30px;
+			font-size: 15px;
+			padding-top: $m1600Max + 86px;
+			max-width: 760px;
 		}
 
 		.price {
@@ -52,6 +69,10 @@
 
 			@include m-1920 {
 				font-size: 26px;
+			}
+
+			@include m-1680 {
+				font-size: 25px;
 			}
 		}
 
@@ -100,6 +121,10 @@
 
 				gap: 12px;
 
+				@include m-1920 {
+					gap: 10px;
+				}
+
 				.answersWrapper {
 					display: grid;
 					grid-template-columns: repeat(
@@ -107,6 +132,15 @@
 						minmax(min-content, max-content)
 					);
 					gap: 11px 28px;
+
+					@include m-1920 {
+						gap: 10px 24px;
+					}
+
+					@include m-1680 {
+						gap: 10px 22px;
+					}
+
 					.answerLong {
 						grid-column: span 2;
 					}
@@ -114,24 +148,27 @@
 			}
 		}
 		.submitButton {
-			margin-top: $m1920Mid;
-		}
-		@include m-1920 {
-			margin-top: $m1680Mid;
+			margin-top: $m1920Mid - 36px;
+
+			@include m-1920 {
+				margin-top: $m1680Mid - 36px;
+			}
+
+			@include m-1680 {
+				margin-top: $m1600Mid - 30px;
+			}
 		}
 
-		@include m-1680 {
-			margin-top: $m1600Mid;
-		}
 		.link {
-			margin-top: $m1920Max;
-		}
-		@include m-1920 {
-			margin-top: $m1680Max;
-		}
+			margin-top: $m1920Max - 36px;
 
-		@include m-1680 {
-			margin-top: $m1600Max;
+			@include m-1920 {
+				margin-top: $m1680Max - 36px;
+			}
+
+			@include m-1680 {
+				margin-top: $m1600Max - 30px;
+			}
 		}
 	}
 }

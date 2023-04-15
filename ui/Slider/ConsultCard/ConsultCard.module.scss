@@ -6,11 +6,19 @@
 	gap: 32px;
 	width: 420px;
 	height: 826px;
+
 	@include m-1920 {
 		gap: 26px;
 		width: 367px;
 		height: 734px;
 		padding: 26px;
+	}
+
+	@include m-1680 {
+		gap: 25px;
+		width: 340px;
+		height: 701px;
+		padding: 25px;
 	}
 
 	background: rgba(255, 255, 255, 0.88);
@@ -28,6 +36,10 @@
 
 		@include m-1920 {
 			font-size: 21px;
+		}
+
+		@include m-1680 {
+			font-size: 20px;
 		}
 
 		.tittle {
@@ -55,12 +67,24 @@
 				font-size: 15px;
 			}
 
+			@include m-1680 {
+				font-size: 14px;
+			}
+
 			&::before {
 				content: '•';
 				position: absolute;
 				left: 0;
 				top: 0;
 				font-size: 20px;
+
+				@include m-1920 {
+					font-size: 17px;
+				}
+
+				@include m-1680 {
+					font-size: 16px;
+				}
 			}
 		}
 	}
@@ -71,8 +95,13 @@
 		line-height: 150%;
 		letter-spacing: 0.02em;
 		padding-bottom: 32px;
+
 		@include m-1920 {
 			font-size: 24px;
+		}
+
+		@include m-1680 {
+			font-size: 22px;
 		}
 	}
 }

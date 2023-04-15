@@ -2,8 +2,7 @@
 @import '@/assets/styles/media.scss';
 
 .aboutWrapper {
-	@apply relative;
-	overflow: hidden;
+	@apply relative overflow-hidden;
 
 	.approachWrapper {
 		padding-top: $m1920Max;
@@ -34,6 +33,16 @@
 	.forWhoWrapper {
 		@apply flex justify-between;
 
+		padding-top: $m1920Max;
+
+		@include m-1920 {
+			padding-top: $m1680Max;
+		}
+
+		@include m-1680 {
+			padding-top: $m1600Max;
+		}
+
 		.forWhoImageBlock {
 			@apply relative;
 
@@ -45,6 +54,11 @@
 				@include m-1920 {
 					width: 535px;
 					height: 707px;
+				}
+
+				@include m-1680 {
+					width: 510px;
+					height: 672px;
 				}
 			}
 
@@ -60,6 +74,11 @@
 				@include m-1920 {
 					width: 535px;
 					height: 707px;
+				}
+
+				@include m-1680 {
+					width: 510px;
+					height: 672px;
 				}
 			}
 		}
@@ -92,13 +111,16 @@
 		@apply flex flex-col;
 
 		gap: $m1920Max;
+		padding-top: $m1920Max;
 
 		@include m-1920 {
 			gap: $m1680Max;
+			padding-top: $m1680Max;
 		}
 
 		@include m-1680 {
 			gap: $m1600Max;
+			padding-top: $m1600Max;
 		}
 
 		.notSuitableBlock {
@@ -209,28 +231,76 @@
 .num_1 {
 	left: 62.83px;
 	top: 10px;
+
+	@include m-1920 {
+		left: 55px;
+	}
+
+	@include m-1680 {
+		left: 52px;
+	}
 }
 .num_2 {
 	left: 306px;
 	top: 10px;
+
+	@include m-1920 {
+		left: 268px;
+	}
+
+	@include m-1680 {
+		left: 255px;
+	}
 }
 
 .num_3 {
-	left: 127.98px;
+	left: 128px;
 	top: 10px;
+
+	@include m-1920 {
+		left: 112px;
+	}
+
+	@include m-1680 {
+		left: 106px;
+	}
 }
 
 .num_4 {
-	left: 416.53px;
+	left: 417px;
 	top: 10px;
+
+	@include m-1920 {
+		left: 364px;
+	}
+
+	@include m-1680 {
+		left: 347px;
+	}
 }
 
 .num_5 {
-	left: 59.34px;
+	left: 59px;
 	top: 10px;
+
+	@include m-1920 {
+		left: 52px;
+	}
+
+	@include m-1680 {
+		left: 49px;
+	}
 }
 
 .num_6 {
-	left: 299.02px;
+	left: 299px;
 	top: 10px;
+
+	@include m-1920 {
+		left: 262px;
+	}
+
+	@include m-1680 {
+		left: 249px;
+	}
 }
