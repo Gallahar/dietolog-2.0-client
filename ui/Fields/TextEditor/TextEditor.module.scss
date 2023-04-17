@@ -26,7 +26,7 @@
 		.editor {
 			@apply border rounded-b-lg border-gray-700 px-4 text-gray-500 overflow-hidden bg-white h-40;
 
-			span[style*='font-weight:bold'] {
+			span[style*='font-weight: bold'] {
 				> span {
 					font-weight: 900;
 				}
