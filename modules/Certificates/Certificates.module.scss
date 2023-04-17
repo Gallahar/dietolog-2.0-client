@@ -33,17 +33,17 @@
 	}
 
 	.skillsAndImagesWrapper {
-		padding-top: 78px;
+		padding-top: $m1920Max - 30px;
 		display: grid;
 		grid-template-columns: repeat(2, minmax(min-content, max-content));
 		justify-content: space-between;
 
 		@include m-1920 {
-			padding-top: 66px;
+			padding-top: $m1680Max - 30px;
 		}
 
 		@include m-1680 {
-			padding-top: 60px;
+			padding-top: $m1600Max - 30px;
 		}
 
 		.imagesWrapper {

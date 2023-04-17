@@ -35,7 +35,9 @@ const ConsultsAndRates: FC<ConsultsAndRatesProps> = ({ consults }) => {
 					<Heading text={consults_and_rates} />
 					<div className={s.descriptionWrapper}>
 						<Description text={col_1_text_1} />
+						<br />
 						<Description text={col_1_text_2} />
+						<br />
 						<Description text={col_1_text_3} />
 					</div>
 					<ActionLink path="/detailed-prices" text={detailed_price} />

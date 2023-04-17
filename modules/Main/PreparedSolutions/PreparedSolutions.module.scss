@@ -22,18 +22,6 @@
 
 		.descriptionWrapper {
 			@apply flex justify-between;
-
-			.descLeft {
-				@apply flex flex-col justify-between;
-
-				height: 231px;
-			}
-
-			.descRight {
-				@apply flex flex-col justify-between;
-
-				height: 231px;
-			}
 		}
 	}
 
@@ -111,20 +99,12 @@
 		@apply flex justify-between;
 
 		.leftBlock {
-			@apply flex flex-col;
-
-			gap: 10px;
-
 			> div {
 				white-space: normal;
 			}
 		}
 
 		.rightBlock {
-			@apply flex flex-col;
-
-			gap: 10px;
-
 			> div {
 				white-space: normal;
 			}
@@ -150,14 +130,14 @@
 	}
 
 	.actionButton {
-		margin-top: $m1920Max;
+		margin-top: $m1920Max - 30px;
 
 		@include m-1920 {
-			margin-top: $m1680Max;
+			margin-top: $m1680Max - 30px;
 		}
 
 		@include m-1680 {
-			margin-top: $m1600Max;
+			margin-top: $m1600Max - 30px;
 		}
 	}
 	.popup {

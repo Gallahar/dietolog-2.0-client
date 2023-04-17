@@ -94,7 +94,7 @@
 				@apply flex items-center justify-around;
 
 				width: 600px;
-				height: 240px;
+				padding: 30px 20px;
 				border-radius: 120px;
 				border: 1px solid #ecb390;
 
@@ -122,12 +122,14 @@
 				.nameBlock {
 					@apply flex flex-col;
 
-					padding-right: 60px;
 					gap: 24px;
 
 					@include m-1920 {
 						gap: 21px;
-						padding-right: 52px;
+					}
+
+					@include m-1680 {
+						gap: 20px;
 					}
 
 					> h4 {

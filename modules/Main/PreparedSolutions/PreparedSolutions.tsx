@@ -73,10 +73,12 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 					<div className={s.descriptionWrapper}>
 						<div className={s.descLeft}>
 							<Description text={parse(col_1_part_1)} />
+							<br />
 							<Description text={col_1_part_2} />
 						</div>
 						<div className={s.descRight}>
 							<Description text={parse(col_2_part_1)} />
+							<br />
 							<Description text={parse(col_2_part_2)} />
 						</div>
 					</div>
@@ -108,12 +110,16 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 				>
 					<div className={s.leftBlock}>
 						<Description text={parse(constructor_col_1_part_1)} />
+						<br />
 						<Description text={constructor_col_1_part_2} />
+						<br />
 						<Description text={constructor_col_1_part_3} />
 					</div>
 					<div className={s.rightBlock}>
 						<Description text={constructor_col_2_part_1} />
+						<br />
 						<Description text={constructor_col_2_part_2} />
+						<br />
 						<Description text={constructor_col_2_part_3} />
 					</div>
 				</div>
@@ -134,10 +140,9 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 					)}
 				</Slider>
 			</div>
-			<div className="container">
+			<div className={`container ${s.actionButton}`}>
 				<ActionButton
 					onClick={() => setOpenPopup(true)}
-					className={s.actionButton}
 					text={help_to_pick}
 				/>
 			</div>

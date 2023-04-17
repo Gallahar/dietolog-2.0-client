@@ -33,6 +33,16 @@
 
 	.links {
 		@apply flex justify-between;
+
+		padding-top: $m1920Max - 30px;
+
+		@include m-1920 {
+			padding-top: $m1680Max - 30px;
+		}
+
+		@include m-1680 {
+			padding-top: $m1600Max - 30px;
+		}
 	}
 }
 
