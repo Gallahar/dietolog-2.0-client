@@ -11,11 +11,26 @@
 				> div {
 					@apply outline-border-none shadow-none transition-colors border-gray-500 bg-gray-500 hover:bg-gray-300 mx-1.5;
 				}
+				> div[aria-selected='true'] {
+					background-image: linear-gradient(
+						144deg,
+						#2a3f79,
+						#5b42f3 50%,
+						#00ddeb
+					);
+					box-shadow: 0 0 2px 2px rgba(36, 43, 48, 0.2);
+				}
 			}
 		}
 
 		.editor {
 			@apply border rounded-b-lg border-gray-700 px-4 text-gray-500 overflow-hidden bg-white h-40;
+
+			span[style*='font-weight:bold'] {
+				> span {
+					font-weight: 900;
+				}
+			}
 		}
 	}
 }

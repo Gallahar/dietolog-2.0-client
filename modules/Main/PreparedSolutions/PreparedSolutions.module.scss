@@ -38,16 +38,7 @@
 	}
 
 	.constructorMenuWrapper {
-		@apply flex;
-		gap: $m1920Max;
-
-		@include m-1920 {
-			gap: $m1680Max;
-		}
-
-		@include m-1680 {
-			gap: $m1600Max;
-		}
+		@apply flex justify-between;
 
 		.constructorImageWrapper {
 			@apply relative;
@@ -55,6 +46,8 @@
 			padding-top: 15px;
 
 			> img {
+				max-width: 612px;
+				height: 709px;
 				border-radius: 480px 480px 0 0;
 
 				@include m-1920 {
@@ -94,6 +87,10 @@
 
 			@include m-1920 {
 				max-width: 535px;
+			}
+
+			@include m-1680 {
+				max-width: 510px;
 			}
 
 			.constructorDescriptionWrapper {

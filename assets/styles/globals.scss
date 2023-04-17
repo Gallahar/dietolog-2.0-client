@@ -5,8 +5,8 @@
 
 * {
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
 	box-sizing: border-box;
+	font-weight: 400;
 }
 
 html {
@@ -29,7 +29,8 @@ button {
 	@apply border-none bg-transparent;
 }
 
-b {
+b,
+strong {
 	@apply text-text uppercase;
 }
 

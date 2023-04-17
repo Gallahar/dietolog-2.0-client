@@ -13,16 +13,6 @@ interface SectionProviderProps {
 
 const SectionProvider: FC<SectionProviderProps> = ({ children }) => {
 	const [currentSection, setCurrentSection] = useState('main')
-	const { push, pathname } = useRouter()
-
-	// useEffect(() => {
-	// 	const handler = () => {
-	// 		push('/', '', { shallow: true })
-	// 	}
-
-	// 	window.addEventListener('hashchange', handler)
-	// 	return () => window.removeEventListener('hashchange', handler)
-	// }, [pathname])
 
 	return (
 		<SectionContext.Provider

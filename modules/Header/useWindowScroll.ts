@@ -1,13 +1,7 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-import { IS_CLIENT } from '@/config/constants'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
-export const useWindowScroll = (): boolean[] | null[] => {
-	if (!IS_CLIENT) {
-		return [null, null]
-	}
-
+export const useWindowScroll = (): boolean[] => {
 	const { pathname } = useRouter()
 	const [animated, setAnimated] = useState(false)
 	const [isStatic, setIsStatic] = useState(false)
