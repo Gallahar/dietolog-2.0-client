@@ -15,10 +15,17 @@
 			gap: $m1680Min;
 			padding: 79px 64px 64px;
 		}
+
 		@include m-1680 {
 			gap: $m1600Min;
 			width: 590px;
 			padding: 74px 60px 60px;
+		}
+
+		@include m-1366 {
+			gap: $m1366Min;
+			width: 501px;
+			padding: 63px 50px 50px;
 		}
 	}
 	.handlerWrapper {
@@ -37,6 +44,11 @@
 			padding: 75px 60px;
 		}
 
+		@include m-1366 {
+			width: 292px;
+			padding: 63px 50px;
+		}
+
 		> h2 {
 			font-size: 30px;
 			max-width: 225px;
@@ -48,6 +60,10 @@
 
 			@include m-1680 {
 				font-size: 25px;
+			}
+
+			@include m-1366 {
+				font-size: 21px;
 			}
 		}
 	}

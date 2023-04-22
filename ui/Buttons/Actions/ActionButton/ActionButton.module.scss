@@ -6,11 +6,17 @@
 	line-height: 150%;
 	padding: 0;
 	letter-spacing: 0.02em;
+
 	@include m-1920 {
 		font-size: 28px;
 	}
+
 	@include m-1680 {
 		font-size: 26px;
+	}
+
+	@include m-1366 {
+		font-size: 23px;
 	}
 
 	&:hover {
@@ -26,5 +32,17 @@
 
 		border-width: 0 0 2px;
 		border-style: solid;
+
+		@include m-1920 {
+			bottom: 6px;
+		}
+
+		@include m-1680 {
+			bottom: 5px;
+		}
+
+		@include m-1366 {
+			bottom: 3px;
+		}
 	}
 }

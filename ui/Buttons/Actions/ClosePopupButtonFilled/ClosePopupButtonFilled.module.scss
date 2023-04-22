@@ -31,6 +31,16 @@
 		}
 	}
 
+	@include m-1366 {
+		padding: 13px;
+		top: 17px;
+		right: 17px;
+		> svg {
+			width: 21px;
+			height: 21px;
+		}
+	}
+
 	&:hover {
 		transform: scale(1.1);
 	}

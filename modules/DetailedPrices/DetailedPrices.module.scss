@@ -15,6 +15,11 @@
 		@include m-1680 {
 			padding-top: $m1600Max;
 		}
+
+		@include m-1366 {
+			padding-top: $m1366Max;
+		}
+
 		.packageBlock {
 			@apply flex flex-col mt-108;
 
@@ -24,6 +29,10 @@
 
 			@include m-1680 {
 				margin-top: $m1600Max;
+			}
+
+			@include m-1366 {
+				margin-top: $m1366Max;
 			}
 
 			&:nth-child(even) {
@@ -47,6 +56,10 @@
 					@include m-1680 {
 						gap: $m1600Mid;
 					}
+
+					@include m-1366 {
+						gap: $m1366Mid;
+					}
 				}
 			}
 			.table {
@@ -58,6 +71,10 @@
 
 				@include m-1680 {
 					margin-top: $m1600Mid;
+				}
+
+				@include m-1366 {
+					margin-top: $m1366Mid;
 				}
 
 				.heading {
@@ -114,6 +131,11 @@
 				font-size: 15px;
 				margin-top: $m1600Mid;
 			}
+
+			@include m-1366 {
+				font-size: 13px;
+				margin-top: $m1366Mid;
+			}
 		}
 
 		.link {
@@ -125,6 +147,10 @@
 
 			@include m-1680 {
 				margin-top: $m1600Max;
+			}
+
+			@include m-1366 {
+				margin-top: $m1366Max;
 			}
 		}
 	}

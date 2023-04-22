@@ -14,10 +14,17 @@
 
 	@include m-1920 {
 		font-size: 16px;
+		padding-left: 27px;
 	}
 
 	@include m-1680 {
 		font-size: 15px;
+		padding-left: 25px;
+	}
+
+	@include m-1366 {
+		font-size: 13px;
+		padding-left: 20px;
 	}
 
 	.checkBox {
@@ -55,6 +62,16 @@
 			> span {
 				width: 10px;
 				height: 10px;
+			}
+		}
+
+		@include m-1366 {
+			height: 17px;
+			width: 17px;
+
+			> span {
+				width: 9px;
+				height: 9px;
 			}
 		}
 	}

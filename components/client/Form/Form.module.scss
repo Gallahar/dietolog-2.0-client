@@ -17,15 +17,24 @@
 		width: 510px;
 	}
 
+	@include m-1366 {
+		gap: $m1366Min;
+		width: 436px;
+	}
+
 	> button {
-		margin-top: $m1920Min;
+		margin-top: $m1920Mid - $m1920Min;
 
 		@include m-1920 {
-			margin-top: $m1680Min;
+			margin-top: $m1680Mid - $m1600Min;
 		}
 
 		@include m-1680 {
-			margin-top: $m1600Min;
+			margin-top: $m1600Mid - $m1600Min;
+		}
+
+		@include m-1366 {
+			margin-top: $m1366Mid - $m1366Min;
 		}
 	}
 }

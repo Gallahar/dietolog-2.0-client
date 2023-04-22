@@ -92,14 +92,19 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 						<Heading text={constructor_heading} />
 						<div className={s.constructorDescriptionWrapper}>
 							{constructorData.map((block, index) => (
-								<Description
-									key={block}
-									text={
-										index === 2 || index === 3
-											? parse(block)
-											: block
-									}
-								/>
+								<>
+									<Description
+										key={block}
+										text={
+											index === 2 || index === 3
+												? parse(block)
+												: block
+										}
+									/>
+									{index !== constructorData.length - 1 && (
+										<br />
+									)}
+								</>
 							))}
 						</div>
 					</div>

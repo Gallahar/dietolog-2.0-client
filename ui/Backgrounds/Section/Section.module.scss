@@ -3,10 +3,16 @@
 
 .block {
 	padding-bottom: $m1920Max;
+
 	@include m-1920 {
 		padding-bottom: $m1680Max;
 	}
+
 	@include m-1680 {
 		padding-bottom: $m1600Max;
+	}
+
+	@include m-1366 {
+		padding-bottom: $m1366Max;
 	}
 }

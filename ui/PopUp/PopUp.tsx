@@ -12,7 +12,7 @@ const PopUp: FC<PopUpProps> = ({ children, closePopup, className }) => {
 	useOverflow()
 
 	return (
-		<div onClick={closePopup} className={`${s.popUpWrapper} ${className}`}>
+		<div onClick={closePopup} className={`${className} ${s.popUpWrapper}`}>
 			<div className={s.popUp} onClick={(e) => e.stopPropagation()}>
 				{children}
 			</div>

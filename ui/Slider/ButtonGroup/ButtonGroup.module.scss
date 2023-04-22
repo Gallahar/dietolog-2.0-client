@@ -3,9 +3,30 @@
 .buttonsDefault {
 	@apply flex absolute justify-between;
 
-	top: 50%;
+	top: 48%;
 	right: -4.5%;
 	width: 110%;
+
+	@include m-1920 {
+		svg {
+			width: 21px;
+			height: 42px;
+		}
+	}
+
+	@include m-1680 {
+		svg {
+			width: 20px;
+			height: 40px;
+		}
+	}
+
+	@include m-1366 {
+		svg {
+			width: 17px;
+			height: 34px;
+		}
+	}
 
 	.arrowRight,
 	.arrowLeft {
@@ -27,9 +48,30 @@
 
 .buttonsNarrow {
 	@apply flex absolute justify-between;
-	top: 50%;
+	top: 48%;
 	left: 29%;
 	width: 42%;
+
+	@include m-1920 {
+		svg {
+			width: 21px;
+			height: 42px;
+		}
+	}
+
+	@include m-1680 {
+		svg {
+			width: 20px;
+			height: 40px;
+		}
+	}
+
+	@include m-1366 {
+		svg {
+			width: 17px;
+			height: 34px;
+		}
+	}
 
 	.arrowRight,
 	.arrowLeft {

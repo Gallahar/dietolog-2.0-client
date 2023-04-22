@@ -10,8 +10,14 @@
 		width: 525px;
 		height: 525px;
 	}
+
 	@include m-1680 {
 		width: 500px;
 		height: 500px;
+	}
+
+	@include m-1366 {
+		width: 427px;
+		height: 427px;
 	}
 }

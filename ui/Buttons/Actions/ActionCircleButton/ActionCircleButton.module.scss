@@ -16,6 +16,11 @@
 		height: 150px;
 	}
 
+	@include m-1366 {
+		width: 150px;
+		height: 128px;
+	}
+
 	.text {
 		@apply text-white text-18 items-center justify-center text-center flex;
 
@@ -41,6 +46,12 @@
 			font-size: 15px;
 			width: 150px;
 			height: 150px;
+		}
+
+		@include m-1366 {
+			font-size: 13px;
+			width: 128px;
+			height: 128px;
 		}
 	}
 	&:enabled {
@@ -73,6 +84,11 @@
 		@include m-1680 {
 			width: 75px;
 			height: 20px;
+		}
+
+		@include m-1366 {
+			width: 64px;
+			height: 17px;
 		}
 	}
 }

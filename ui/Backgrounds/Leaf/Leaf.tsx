@@ -5,11 +5,13 @@ import { FC } from 'react'
 
 interface LeafProps {
 	className?: string
+	id?: string
 }
 
-const Leaf: FC<LeafProps> = ({ className }) => {
+const Leaf: FC<LeafProps> = ({ className, id }) => {
 	return (
 		<Image
+			id={id}
 			priority
 			src={leaf}
 			alt={'leaf-bg'}

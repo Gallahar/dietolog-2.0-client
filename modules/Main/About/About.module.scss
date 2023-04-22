@@ -2,7 +2,7 @@
 @import '@/assets/styles/media.scss';
 
 .aboutWrapper {
-	@apply relative overflow-hidden;
+	@apply relative overflow-x-hidden;
 
 	.approachWrapper {
 		padding-top: $m1920Max;
@@ -13,6 +13,10 @@
 
 		@include m-1680 {
 			padding-top: $m1600Max;
+		}
+
+		@include m-1366 {
+			padding-top: $m1366Max;
 		}
 
 		.approachTextBlock {
@@ -26,6 +30,10 @@
 
 			@include m-1680 {
 				margin-top: $m1600Mid;
+			}
+
+			@include m-1366 {
+				margin-top: $m1366Mid;
 			}
 		}
 	}
@@ -43,15 +51,19 @@
 			padding-top: $m1600Max;
 		}
 
+		@include m-1366 {
+			padding-top: $m1366Max;
+		}
+
 		.forWhoImageBlock {
 			@apply relative;
 
-			padding-top: 15px;
-
 			> img {
 				border-radius: 480px 480px 0px 0px;
+				margin-top: 20px;
 
 				@include m-1920 {
+					margin-top: 0;
 					width: 535px;
 					height: 707px;
 				}
@@ -60,12 +72,17 @@
 					width: 510px;
 					height: 672px;
 				}
+
+				@include m-1366 {
+					width: 436px;
+					height: 592px;
+				}
 			}
 
 			.outline {
 				position: absolute;
-				bottom: 25px;
-				right: 20px;
+				bottom: 3.5%;
+				right: 4%;
 				width: 612px;
 				height: 788px;
 				border-radius: 480px 480px 0px 0px;
@@ -79,6 +96,11 @@
 				@include m-1680 {
 					width: 510px;
 					height: 672px;
+				}
+
+				@include m-1366 {
+					width: 436px;
+					height: 592px;
 				}
 			}
 		}
@@ -100,6 +122,10 @@
 					gap: 30px;
 				}
 
+				@include m-1366 {
+					margin-top: $m1366Mid;
+					gap: 28px;
+				}
 				.wrapperDescription {
 					position: relative;
 				}
@@ -108,19 +134,18 @@
 	}
 
 	.bottomSideInfo {
-		@apply flex flex-col;
-
-		gap: $m1920Max;
 		padding-top: $m1920Max;
 
 		@include m-1920 {
-			gap: $m1680Max;
 			padding-top: $m1680Max;
 		}
 
 		@include m-1680 {
-			gap: $m1600Max;
 			padding-top: $m1600Max;
+		}
+
+		@include m-1366 {
+			padding-top: $m1366Max;
 		}
 
 		.notSuitableBlock {
@@ -137,12 +162,21 @@
 					margin-top: $m1600Mid;
 				}
 
+				@include m-1366 {
+					margin-top: $m1366Mid;
+				}
+
 				.notSuitableDescription1 {
 					position: relative;
 
 					> p {
 						left: 73px;
 						top: 68px;
+
+						@include m-1366 {
+							left: 52px;
+							top: 50px;
+						}
 					}
 				}
 
@@ -160,15 +194,22 @@
 			display: grid;
 			grid-template-columns: repeat(2, minmax(min-content, max-content));
 			justify-content: space-between;
-
 			gap: $m1920Mid 0;
+			padding-top: $m1920Max;
 
 			@include m-1920 {
 				gap: $m1680Mid 0;
+				padding-top: $m1680Max;
 			}
 
 			@include m-1680 {
 				gap: $m1600Mid 0;
+				padding-top: $m1600Max;
+			}
+
+			@include m-1366 {
+				gap: $m1366Mid 0;
+				padding-top: $m1366Max;
 			}
 
 			> h2 {
@@ -179,7 +220,7 @@
 				@apply relative;
 
 				> p {
-					left: 225px;
+					left: 34%;
 					top: 0;
 				}
 			}
@@ -196,27 +237,21 @@
 				margin-top: 36px;
 
 				@include m-1920 {
-					margin-top: 24px;
+					margin-top: 32px;
 				}
 
 				@include m-1680 {
-					margin-top: 18px;
+					margin-top: 30px;
+				}
+
+				@include m-1366 {
+					margin-top: 25px;
 				}
 			}
 		}
 	}
 }
 
-.leaf_1 {
-	right: -435px;
-	top: 30px;
-	transform: rotate(-61.51deg);
-}
-.leaf_2 {
-	bottom: -110px;
-	left: -445px;
-	transform: rotate(25.95deg);
-}
 .ellipse_1 {
 	background: $ellipseBgCream;
 	right: -25px;
@@ -239,6 +274,10 @@
 	@include m-1680 {
 		left: 52px;
 	}
+
+	@include m-1366 {
+		left: 45px;
+	}
 }
 .num_2 {
 	left: 306px;
@@ -250,6 +289,10 @@
 
 	@include m-1680 {
 		left: 255px;
+	}
+
+	@include m-1366 {
+		left: 218px;
 	}
 }
 
@@ -264,6 +307,10 @@
 	@include m-1680 {
 		left: 106px;
 	}
+
+	@include m-1366 {
+		left: 91px;
+	}
 }
 
 .num_4 {
@@ -276,6 +323,10 @@
 
 	@include m-1680 {
 		left: 347px;
+	}
+
+	@include m-1366 {
+		left: 296px;
 	}
 }
 
@@ -290,6 +341,10 @@
 	@include m-1680 {
 		left: 49px;
 	}
+
+	@include m-1366 {
+		left: 42px;
+	}
 }
 
 .num_6 {
@@ -302,5 +357,9 @@
 
 	@include m-1680 {
 		left: 249px;
+	}
+
+	@include m-1366 {
+		left: 212px;
 	}
 }

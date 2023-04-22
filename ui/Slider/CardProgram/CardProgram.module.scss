@@ -14,9 +14,15 @@
 		height: 494px;
 	}
 
-	@include m-1920 {
+	@include m-1680 {
 		width: 330px;
 		height: 468px;
+	}
+
+	@include m-1366 {
+		width: 282px;
+		height: 397px;
+		filter: drop-shadow(3px 5px 4px rgba(143, 63, 9, 0.2));
 	}
 
 	&:hover {
@@ -43,6 +49,10 @@
 			height: 358px;
 		}
 
+		@include m-1366 {
+			height: 303px;
+		}
+
 		> img {
 			bottom: 0;
 			position: absolute;
@@ -59,9 +69,13 @@
 				width: 42px;
 				height: auto;
 			}
+
 			@include m-1680 {
 				width: 40px;
-				height: auto;
+			}
+
+			@include m-1366 {
+				width: 34px;
 			}
 		}
 
@@ -75,8 +89,13 @@
 			@include m-1920 {
 				gap: $m1680Min;
 			}
+
 			@include m-1680 {
 				gap: $m1600Min;
+			}
+
+			@include m-1366 {
+				gap: $m1366Min;
 			}
 
 			> span {
@@ -92,6 +111,10 @@
 
 				@include m-1680 {
 					font-size: 25px;
+				}
+
+				@include m-1366 {
+					font-size: 21px;
 				}
 			}
 
@@ -109,6 +132,10 @@
 				@include m-1680 {
 					font-size: 25px;
 				}
+
+				@include m-1366 {
+					font-size: 21px;
+				}
 			}
 
 			p {
@@ -123,6 +150,10 @@
 
 				@include m-1680 {
 					font-size: 16px;
+				}
+
+				@include m-1366 {
+					font-size: 14px;
 				}
 			}
 		}

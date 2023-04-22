@@ -1,19 +1,25 @@
 @import '@/assets/styles/media.scss';
+@import '@/assets/styles/variables.scss';
 
 .leaveReview {
 	@apply flex flex-col;
 
-	gap: 36px;
+	gap: $m1920Min;
 	width: 860px;
 
 	@include m-1920 {
 		width: 753px;
-		gap: 32px;
+		gap: $m1680Min;
 	}
 
 	@include m-1680 {
 		width: 717px;
-		gap: 30px;
+		gap: $m1600Min;
+	}
+
+	@include m-1366 {
+		width: 612px;
+		gap: $m1366Min;
 	}
 
 	> h2 {
@@ -25,6 +31,10 @@
 
 		@include m-1680 {
 			font-size: 25px;
+		}
+
+		@include m-1366 {
+			font-size: 21px;
 		}
 	}
 }

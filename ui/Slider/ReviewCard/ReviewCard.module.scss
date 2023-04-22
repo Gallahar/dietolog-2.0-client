@@ -20,6 +20,11 @@
 		height: 573px;
 	}
 
+	@include m-1366 {
+		width: 298px;
+		height: 493px;
+	}
+
 	&:hover {
 		transform: translateY(-10px);
 	}
@@ -40,6 +45,11 @@
 			padding: 25px;
 		}
 
+		@include m-1366 {
+			gap: 21px;
+			padding: 21px;
+		}
+
 		> h2 {
 			@apply text-text text-25;
 			line-height: 150%;
@@ -53,6 +63,10 @@
 			@include m-1680 {
 				font-size: 21px;
 			}
+
+			@include m-1366 {
+				font-size: 18px;
+			}
 		}
 
 		> p {
@@ -64,8 +78,12 @@
 			@include m-1920 {
 				font-size: 16px;
 			}
+
 			@include m-1680 {
 				font-size: 15px;
+			}
+			@include m-1366 {
+				font-size: 13px;
 			}
 		}
 		> span {
@@ -75,11 +93,17 @@
 			line-height: 150%;
 
 			letter-spacing: 0.02em;
+
 			@include m-1920 {
 				font-size: 17px;
 			}
+
 			@include m-1680 {
 				font-size: 16px;
+			}
+
+			@include m-1366 {
+				font-size: 14px;
 			}
 		}
 	}

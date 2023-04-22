@@ -14,6 +14,10 @@
 		grid-template-columns: 560px 474px;
 	}
 
+	@include m-1366 {
+		grid-template-columns: 476px 405px;
+	}
+
 	.heading {
 		@apply text-text uppercase;
 
@@ -25,6 +29,10 @@
 
 		@include m-1680 {
 			font-size: 25px;
+		}
+
+		@include m-1366 {
+			font-size: 21px;
 		}
 	}
 
@@ -44,6 +52,11 @@
 			padding: 75px 60px;
 		}
 
+		@include m-1366 {
+			gap: $m1366Min;
+			padding: 63px 50px;
+		}
+
 		.title {
 			font-size: 25px;
 
@@ -53,6 +66,10 @@
 
 			@include m-1680 {
 				font-size: 21px;
+			}
+
+			@include m-1366 {
+				font-size: 18px;
 			}
 		}
 
@@ -65,6 +82,10 @@
 
 			@include m-1680 {
 				font-size: 21px;
+			}
+
+			@include m-1366 {
+				font-size: 18px;
 			}
 		}
 
@@ -83,6 +104,10 @@
 				font-size: 13px;
 			}
 
+			@include m-1366 {
+				font-size: 11px;
+			}
+
 			&::before {
 				@apply absolute;
 
@@ -94,17 +119,25 @@
 				@include m-1920 {
 					font-size: 22px;
 				}
+
+				@include m-1680 {
+					font-size: 21px;
+				}
+
+				@include m-1366 {
+					font-size: 18px;
+				}
 			}
 		}
 	}
 
 	.checkListWrapper {
 		@apply primary-gr;
-		border-radius: 0 0 50px 0;
-		padding: 90px 72px;
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: $m1920Min;
+		padding: 90px 72px;
+		border-radius: 0 0 50px 0;
 
 		@include m-1920 {
 			gap: $m1680Min;
@@ -114,6 +147,11 @@
 		@include m-1680 {
 			gap: $m1600Min;
 			padding: 75px 60px;
+		}
+
+		@include m-1366 {
+			gap: $m1366Min;
+			padding: 63px 50px;
 		}
 
 		> button {
@@ -126,6 +164,10 @@
 			@include m-1680 {
 				margin-top: 14px;
 			}
+
+			@include m-1366 {
+				margin-top: 10px;
+			}
 		}
 
 		.parametersWrapper {
@@ -137,9 +179,15 @@
 				gap: 14px;
 				font-size: 17px;
 			}
+
 			@include m-1680 {
 				gap: 13px;
 				font-size: 16px;
+			}
+
+			@include m-1366 {
+				gap: 11px;
+				font-size: 14px;
 			}
 
 			.parameter {

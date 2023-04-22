@@ -98,7 +98,7 @@ const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 						))}
 					</div>
 				</div>
-				<ActionLink path="/#about" text={_return} />
+				<ActionLink path="/#aboutLinks" text={_return} />
 			</div>
 			<div className={` container ${s.linkContainer}`}></div>
 			{certificate && (

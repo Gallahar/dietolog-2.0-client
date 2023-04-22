@@ -6,7 +6,6 @@ import Heading from '@/ui/Headings/Heading/Heading'
 import s from './About.module.scss'
 import ActionLink from '@/ui/Buttons/Actions/ActionButton/ActionLink'
 import Ellipse from '@/ui/Backgrounds/Ellipse/Ellipse'
-import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 import Section from '@/ui/Backgrounds/Section/Section'
 
 const About = () => {
@@ -42,12 +41,10 @@ const About = () => {
 
 	return (
 		<Section id="about" className={s.aboutWrapper}>
-			<Leaf className={s.leaf_1} />
-			<Leaf className={s.leaf_2} />
 			<Ellipse className={s.ellipse_1} />
 			<Ellipse className={s.ellipse_2} />
 			<div className="container">
-				<div className={`${s.approachWrapper}`}>
+				<div className={s.approachWrapper}>
 					<Heading text={my_approach} />
 					<div className={s.approachTextBlock}>
 						<Description text={col_1_text_1} />
@@ -80,7 +77,7 @@ const About = () => {
 						</div>
 					</div>
 				</div>
-				<div id="backToLinks" className={s.bottomSideInfo}>
+				<div id="aboutLinks" className={s.bottomSideInfo}>
 					<div className={s.notSuitableBlock}>
 						<div className={s.notSuitableHeading}>
 							<Heading text={not_suitable} />

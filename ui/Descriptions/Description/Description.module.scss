@@ -16,4 +16,9 @@
 		font-size: 15px;
 		max-width: 510px;
 	}
+
+	@include m-1366 {
+		font-size: 13px;
+		max-width: 436px;
+	}
 }

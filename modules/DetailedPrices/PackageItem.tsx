@@ -34,7 +34,7 @@ const PackageItem: FC<PackageItemProps> = ({ _package }) => {
 							title.ru !== 'Повторные консультации *'
 								? packageTitle
 								: ''
-						} ${currentLanguage(title, mark)}`}
+						}${currentLanguage(title, mark)}`}
 					/>
 					<Description text={currentLanguage(description, mark)} />
 				</div>

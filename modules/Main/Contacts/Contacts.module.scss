@@ -14,6 +14,10 @@
 		@include m-1680 {
 			padding-top: $m1600Max;
 		}
+
+		@include m-1366 {
+			padding-top: $m1366Max;
+		}
 	}
 
 	.contactsContainer {
@@ -27,6 +31,10 @@
 
 		@include m-1680 {
 			margin-top: $m1600Mid;
+		}
+
+		@include m-1366 {
+			margin-top: $m1366Mid;
 		}
 
 		.contacts {
@@ -48,10 +56,19 @@
 				font-size: 19px;
 			}
 
+			@include m-1366 {
+				gap: $m1366Min;
+				font-size: 16px;
+			}
+
 			.phones {
 				@apply flex flex-col;
 
 				gap: 15px;
+
+				@include m-1366 {
+					gap: 7px;
+				}
 			}
 
 			.email {
@@ -63,6 +80,10 @@
 				@apply flex flex-col;
 
 				gap: 15px;
+
+				@include m-1366 {
+					gap: 7px;
+				}
 			}
 
 			.icons {
@@ -72,15 +93,104 @@
 
 				@include m-1920 {
 					gap: 67px;
+
+					&:nth-child(1) {
+						svg {
+							width: 39px;
+							height: 39px;
+						}
+					}
+
+					&:nth-child(2) {
+						svg {
+							width: 40px;
+							height: 42px;
+						}
+					}
+
+					&:nth-child(3) {
+						svg {
+							width: 42px;
+							height: 42px;
+						}
+					}
+
+					&:nth-child(4) {
+						svg {
+							width: 39px;
+							height: 39px;
+						}
+					}
 				}
 
 				@include m-1680 {
 					gap: 65px;
+
+					&:nth-child(1) {
+						svg {
+							width: 37px;
+							height: 37px;
+						}
+					}
+
+					&:nth-child(2) {
+						svg {
+							width: 38px;
+							height: 40px;
+						}
+					}
+
+					&:nth-child(3) {
+						svg {
+							width: 40px;
+							height: 40px;
+						}
+					}
+
+					&:nth-child(4) {
+						svg {
+							width: 38px;
+							height: 38px;
+						}
+					}
+				}
+
+				@include m-1366 {
+					gap: 55px;
+
+					&:nth-child(1) {
+						svg {
+							width: 31px;
+							height: 31px;
+						}
+					}
+
+					&:nth-child(2) {
+						svg {
+							width: 32px;
+							height: 34px;
+						}
+					}
+
+					&:nth-child(3) {
+						svg {
+							width: 34px;
+							height: 34px;
+						}
+					}
+
+					&:nth-child(4) {
+						svg {
+							width: 32px;
+							height: 32px;
+						}
+					}
 				}
 
 				svg {
 					transition: all 0.2s ease-in-out;
-
+					width: 100%;
+					height: 100%;
 					&:hover {
 						transform: scale(1.2);
 						filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.2));
@@ -100,10 +210,17 @@
 
 				@include m-1920 {
 					width: 521px;
+					padding: 28px 18px;
 				}
 
 				@include m-1680 {
 					width: 500px;
+					padding: 25px 15px;
+				}
+
+				@include m-1366 {
+					width: 427px;
+					padding: 20px 10px;
 				}
 
 				> img {
@@ -116,6 +233,10 @@
 
 					@include m-1680 {
 						width: 150px;
+					}
+
+					@include m-1366 {
+						width: 128px;
 					}
 				}
 
@@ -132,6 +253,10 @@
 						gap: 20px;
 					}
 
+					@include m-1366 {
+						gap: 24px;
+					}
+
 					> h4 {
 						@apply text-text uppercase;
 
@@ -143,6 +268,10 @@
 
 						@include m-1680 {
 							font-size: 16px;
+						}
+
+						@include m-1366 {
+							font-size: 14px;
 						}
 					}
 
@@ -161,6 +290,11 @@
 						@include m-1680 {
 							font-size: 15px;
 							width: 139px;
+						}
+
+						@include m-1366 {
+							font-size: 13px;
+							width: 121px;
 						}
 					}
 				}

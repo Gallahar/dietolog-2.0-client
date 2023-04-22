@@ -14,6 +14,10 @@
 		gap: $m1600Max;
 	}
 
+	@include m-1366 {
+		gap: $m1366Max;
+	}
+
 	.background {
 		position: relative;
 		margin-top: 91px;
@@ -30,6 +34,12 @@
 			margin-top: 86px;
 			width: 505px;
 			height: 1673px;
+		}
+
+		@include m-1366 {
+			margin-top: 69px;
+			width: 433px;
+			height: 1434px;
 		}
 	}
 
@@ -55,11 +65,19 @@
 			padding-top: $m1680Max + 88px;
 			max-width: 797px;
 		}
+
 		@include m-1680 {
 			gap: 30px;
 			font-size: 15px;
 			padding-top: $m1600Max + 86px;
 			max-width: 760px;
+		}
+
+		@include m-1366 {
+			gap: 25px;
+			font-size: 13px;
+			padding-top: $m1366Max + 69px;
+			max-width: 649px;
 		}
 
 		.price {
@@ -74,31 +92,37 @@
 			@include m-1680 {
 				font-size: 25px;
 			}
+
+			@include m-1366 {
+				font-size: 21px;
+			}
 		}
 
 		.description_list_Wrapper {
-			@apply flex flex-col;
-
-			gap: 18px;
-
-			.description {
-				strong {
-					@apply text-text uppercase;
-				}
-			}
-
 			.includedList {
 				> li {
 					@apply relative;
 
-					padding-left: 25px;
+					padding-left: 15px;
 
 					&::before {
 						content: '•';
 						position: absolute;
-						left: 10px;
-						bottom: 1px;
+						left: 0;
+						top: 0;
 						font-size: 20px;
+
+						@include m-1920 {
+							font-size: 17px;
+						}
+
+						@include m-1680 {
+							font-size: 16px;
+						}
+
+						@include m-1366 {
+							font-size: 14px;
+						}
 					}
 				}
 			}
@@ -116,6 +140,10 @@
 				gap: $m1600Min;
 			}
 
+			@include m-1366 {
+				gap: $m1366Min;
+			}
+
 			.radiosBlock {
 				@apply flex flex-col;
 
@@ -123,6 +151,10 @@
 
 				@include m-1920 {
 					gap: 10px;
+				}
+
+				@include m-1366 {
+					gap: 8px;
 				}
 
 				.answersWrapper {
@@ -141,6 +173,10 @@
 						gap: 10px 22px;
 					}
 
+					@include m-1366 {
+						gap: 8px 23px;
+					}
+
 					.answerLong {
 						grid-column: span 2;
 					}
@@ -151,11 +187,15 @@
 			margin-top: $m1920Mid - 36px;
 
 			@include m-1920 {
-				margin-top: $m1680Mid - 36px;
+				margin-top: $m1680Mid - 30px;
 			}
 
 			@include m-1680 {
 				margin-top: $m1600Mid - 30px;
+			}
+
+			@include m-1366 {
+				margin-top: $m1366Mid - 25px;
 			}
 		}
 
@@ -163,11 +203,14 @@
 			margin-top: $m1920Max - 36px;
 
 			@include m-1920 {
-				margin-top: $m1680Max - 36px;
+				margin-top: $m1680Max - 30px;
 			}
 
 			@include m-1680 {
 				margin-top: $m1600Max - 30px;
+			}
+			@include m-1366 {
+				margin-top: $m1366Max - 25px;
 			}
 		}
 	}

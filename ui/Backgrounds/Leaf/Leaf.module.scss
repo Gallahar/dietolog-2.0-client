@@ -14,4 +14,9 @@
 		width: 720px;
 		height: 808px;
 	}
+
+	@include m-1366 {
+		width: 615px;
+		height: 690px;
+	}
 }

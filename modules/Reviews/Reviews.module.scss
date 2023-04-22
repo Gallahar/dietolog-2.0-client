@@ -5,13 +5,18 @@
 	@apply overflow-hidden relative;
 
 	.heading {
-		padding-top: 199px;
+		padding-top: $m1920Max + 91px;
 
 		@include m-1920 {
-			padding-top: 187px;
+			padding-top: $m1680Max + 84px;
 		}
+
 		@include m-1680 {
-			padding-top: 181px;
+			padding-top: $m1600Max + 80px;
+		}
+
+		@include m-1366 {
+			padding-top: $m1366Max + 69px;
 		}
 	}
 
@@ -21,13 +26,20 @@
 		width: 100%;
 		max-width: 1352px;
 		margin: 0 auto;
+
 		@include m-1920 {
 			max-width: 1186px;
 			padding-top: $m1680Mid;
 		}
+
 		@include m-1680 {
 			max-width: 1130px;
 			padding-top: $m1600Mid;
+		}
+
+		@include m-1366 {
+			max-width: 958px;
+			padding-top: $m1366Mid;
 		}
 	}
 
@@ -42,6 +54,10 @@
 
 		@include m-1680 {
 			padding-top: $m1600Max - 30px;
+		}
+
+		@include m-1366 {
+			padding-top: $m1366Max - 15px;
 		}
 	}
 }

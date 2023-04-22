@@ -1,5 +1,3 @@
-import s from './Icons.module.scss'
-
 const FaceBook = () => {
 	return (
 		<a href="/" target="blank">

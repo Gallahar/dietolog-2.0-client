@@ -43,8 +43,13 @@ strong {
 	@include m-1920 {
 		max-width: 1186px;
 	}
+
 	@include m-1680 {
 		max-width: 1130px;
+	}
+
+	@include m-1366 {
+		max-width: 968px;
 	}
 }
 
@@ -54,8 +59,13 @@ strong {
 	@include m-1920 {
 		padding-bottom: $m1680Max;
 	}
+
 	@include m-1680 {
 		padding-bottom: $m1600Max;
+	}
+
+	@include m-1366 {
+		padding-bottom: $m1366Max;
 	}
 }
 
@@ -65,25 +75,21 @@ strong {
 	min-height: calc(100vh - 20px);
 }
 
-.description {
-	@apply text-19 text-dark;
-	line-height: 150%;
-	letter-spacing: 0.02em;
-
-	@include m-1920 {
-		@apply text-17;
-	}
-}
-
 .price {
 	@apply text-secondary text-27 uppercase;
 	letter-spacing: 0.02em;
 	line-height: 150%;
+
 	@include m-1920 {
 		font-size: 24px;
 	}
+
 	@include m-1680 {
-		font-size: 25px;
+		font-size: 22px;
+	}
+
+	@include m-1366 {
+		font-size: 19px;
 	}
 }
 
@@ -97,8 +103,13 @@ strong {
 	@include m-1920 {
 		font-size: 315px;
 	}
+
 	@include m-1680 {
 		font-size: 300px;
+	}
+
+	@include m-1366 {
+		font-size: 256px;
 	}
 }
 

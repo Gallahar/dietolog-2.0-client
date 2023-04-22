@@ -20,6 +20,13 @@
 		height: 470px;
 	}
 
+	@include m-1366 {
+		width: 282px;
+		height: 404px;
+
+		filter: drop-shadow(3px 5px 3px rgba(148, 180, 159, 0.2));
+	}
+
 	&:hover {
 		transform: translateY(-10px);
 		cursor: pointer;
@@ -42,6 +49,10 @@
 		@include m-1680 {
 			font-size: 15px;
 		}
+
+		@include m-1366 {
+			font-size: 13px;
+		}
 	}
 
 	.imageWrapper {
@@ -57,6 +68,10 @@
 			height: 330px;
 		}
 
+		@include m-1366 {
+			height: 282px;
+		}
+
 		> img {
 			border-radius: 0 100% 0 0;
 		}
@@ -65,7 +80,7 @@
 	.arrowButton {
 		@apply flex items-center justify-center cursor-pointer;
 
-		bottom: 6%;
+		bottom: 4%;
 		left: 6%;
 		width: 120px;
 		height: 120px;
@@ -92,6 +107,16 @@
 			> svg {
 				width: 40px;
 				height: 40px;
+			}
+		}
+
+		@include m-1366 {
+			width: 85px;
+			height: 85px;
+
+			> svg {
+				width: 34px;
+				height: 34px;
 			}
 		}
 	}

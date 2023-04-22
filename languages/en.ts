@@ -157,7 +157,7 @@ export const en: LanguageTemplate = {
 		phone: 'Phone',
 		email: 'Email',
 		description:
-			'Please briefly describe your question. What exactly are you interested in, the main goal, the most important criteria when choosing a program',
+			'Please briefly describe your question. What exactly are you interested in, the main goal, the most important criteria when choosing a program.',
 		send: 'Send',
 		response:
 			'Thank you for contacting me!\nI will write or call you back shortly.',
@@ -176,7 +176,7 @@ export const en: LanguageTemplate = {
 	},
 	program: {
 		fields_required:
-			'To place your order - please select the appropriate items.',
+			'To order the program, please select the appropriate options.',
 		included_to_program: 'This program includes',
 		choose_radios:
 			'Before ordering the program, select the appropriate items.',

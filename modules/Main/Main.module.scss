@@ -22,9 +22,15 @@
 				margin-top: 166px;
 				font-size: 109px;
 			}
+
 			@include m-1920 {
 				margin-top: 162px;
 				font-size: 104px;
+			}
+
+			@include m-1366 {
+				margin-top: 129px;
+				font-size: 89px;
 			}
 		}
 		.contentWrapper {
@@ -43,6 +49,10 @@
 
 					@include m-1680 {
 						font-size: 24px;
+					}
+
+					@include m-1366 {
+						font-size: 21px;
 					}
 				}
 
@@ -64,6 +74,12 @@
 						font-size: 16px;
 						max-width: 468px;
 					}
+
+					@include m-1366 {
+						margin-top: $m1366Mid;
+						font-size: 14px;
+						max-width: 402px;
+					}
 				}
 
 				> a {
@@ -75,6 +91,10 @@
 
 					@include m-1680 {
 						margin-top: $m1600Max;
+					}
+
+					@include m-1366 {
+						margin-top: $m1366Max;
 					}
 				}
 			}
@@ -96,6 +116,11 @@
 						width: 405px;
 						height: 405px;
 					}
+
+					@include m-1366 {
+						width: 346px;
+						height: 346px;
+					}
 				}
 
 				.outline {
@@ -116,6 +141,11 @@
 						width: 405px;
 						height: 405px;
 					}
+
+					@include m-1366 {
+						width: 346px;
+						height: 346px;
+					}
 				}
 			}
 		}
@@ -123,13 +153,13 @@
 }
 
 .leaf_1 {
-	top: 45px;
-	left: -385px;
+	top: 2%;
+	left: -20%;
 	transform: matrix(-0.57, -0.82, -0.82, 0.57, 0, 0);
 }
 .leaf_2 {
-	top: -460px;
-	right: -285px;
+	top: -40%;
+	right: -20%;
 	transform: rotate(-91.67deg);
 }
 

@@ -13,4 +13,8 @@
 	@include m-1680 {
 		font-size: 32px;
 	}
+
+	@include m-1366 {
+		font-size: 28px;
+	}
 }

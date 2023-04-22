@@ -5,10 +5,16 @@
 	line-height: 150%;
 	letter-spacing: 0.02em;
 	font-weight: 400;
+
 	@include m-1920 {
 		font-size: 22px;
 	}
+
 	@include m-1680 {
-		font-size: 23px;
+		font-size: 21px;
+	}
+
+	@include m-1366 {
+		font-size: 18px;
 	}
 }

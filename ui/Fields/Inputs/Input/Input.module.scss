@@ -15,6 +15,9 @@
 		font-size: 16px;
 	}
 
+	@include m-1366 {
+		font-size: 14px;
+	}
 	p {
 		position: absolute;
 		color: #e30b13;
@@ -40,6 +43,10 @@
 		@include m-1680 {
 			height: 66px;
 			padding: 21px 25px;
+		}
+		@include m-1366 {
+			height: 56px;
+			padding: 18px 21px;
 		}
 
 		&:focus {

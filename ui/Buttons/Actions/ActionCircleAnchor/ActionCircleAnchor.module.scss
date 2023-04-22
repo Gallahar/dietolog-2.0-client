@@ -16,6 +16,11 @@
 		height: 150px;
 	}
 
+	@include m-1366 {
+		width: 150px;
+		height: 128px;
+	}
+
 	.text {
 		@apply bg-secondary text-white text-18 items-center justify-center text-center flex;
 
@@ -42,6 +47,12 @@
 			height: 150px;
 		}
 
+		@include m-1366 {
+			font-size: 13px;
+			width: 128px;
+			height: 128px;
+		}
+
 		&:hover {
 			cursor: pointer;
 			box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.2);
@@ -63,7 +74,6 @@
 		right: -15%;
 		top: 42%;
 
-		
 		@include m-1920 {
 			width: 79px;
 			height: 21px;
@@ -72,6 +82,11 @@
 		@include m-1680 {
 			width: 75px;
 			height: 20px;
+		}
+
+		@include m-1366 {
+			width: 64px;
+			height: 17px;
 		}
 	}
 }

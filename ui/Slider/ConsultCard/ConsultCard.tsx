@@ -20,8 +20,8 @@ const ConsultCard: FC<ConsultCardProps> = ({ consult }) => {
 				<h2 className={s.type}>{currentLanguage(type, mark)}</h2>
 			</div>
 			<div className={s.optionsWrapper}>
-				{options.map((option, i) => (
-					<Fragment key={i}>
+				{options.map((option) => (
+					<Fragment key={option.en}>
 						{parse(currentLanguage(option, mark))}
 					</Fragment>
 				))}

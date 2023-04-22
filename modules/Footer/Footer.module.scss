@@ -13,6 +13,14 @@
 			padding: 45px 0;
 		}
 
+		@include m-1680 {
+			padding: 43px 0;
+		}
+
+		@include m-1366 {
+			padding: 35px 0;
+		}
+
 		p {
 			@apply text-white font-semibold;
 
@@ -26,6 +34,10 @@
 
 			@include m-1680 {
 				font-size: 16px;
+			}
+
+			@include m-1366 {
+				font-size: 14px;
 			}
 		}
 
@@ -52,6 +64,12 @@
 				> svg {
 					width: 40px;
 					height: 59px;
+				}
+			}
+			@include m-1366 {
+				> svg {
+					width: 34px;
+					height: 50px;
 				}
 			}
 		}

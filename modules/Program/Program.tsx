@@ -80,13 +80,16 @@ const Program: FC<ProgramProps> = ({ program }) => {
 					<div className={s.description}>
 						{parse(currentLanguage(description, mark))}
 					</div>
-					{`${included_to_program} :`}
+					<br />
+					<p>{`${included_to_program} :`}</p>
+					<br />
 					<ul className={s.includedList}>
 						{included.map((o) => (
 							<li key={o.en}>{currentLanguage(o, mark)}</li>
 						))}
 					</ul>
-					{choose_radios}
+					<br />
+					<p>{choose_radios}</p>
 				</div>
 				<div key={key} className={s.radiosSection}>
 					{radios.map((radio, i) => {

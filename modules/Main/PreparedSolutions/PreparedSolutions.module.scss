@@ -20,6 +20,11 @@
 			gap: $m1600Mid;
 		}
 
+		@include m-1366 {
+			padding-top: $m1366Max;
+			gap: $m1366Mid;
+		}
+
 		.descriptionWrapper {
 			@apply flex justify-between;
 		}
@@ -30,8 +35,6 @@
 
 		.constructorImageWrapper {
 			@apply relative;
-
-			padding-top: 15px;
 
 			> img {
 				max-width: 612px;
@@ -46,6 +49,12 @@
 				@include m-1680 {
 					max-width: 510px;
 					height: 599px;
+				}
+
+				@include m-1366 {
+					margin-top: 8px;
+					max-width: 436px;
+					height: 538px;
 				}
 			}
 
@@ -67,6 +76,11 @@
 					max-width: 510px;
 					height: 599px;
 				}
+
+				@include m-1366 {
+					max-width: 436px;
+					height: 538px;
+				}
 			}
 		}
 
@@ -81,8 +95,12 @@
 				max-width: 510px;
 			}
 
+			@include m-1366 {
+				max-width: 436px;
+			}
+
 			.constructorDescriptionWrapper {
-				@apply flex flex-col gap-5 mt-72;
+				@apply flex flex-col  mt-72;
 
 				@include m-1920 {
 					margin-top: $m1680Mid;
@@ -90,6 +108,10 @@
 
 				@include m-1680 {
 					margin-top: $m1600Mid;
+				}
+
+				@include m-1366 {
+					margin-top: $m1366Mid;
 				}
 			}
 		}
@@ -119,13 +141,18 @@
 		margin: 0 auto;
 
 		@include m-1920 {
-			max-width: 1186px;
+			max-width: 1180px;
 			padding-top: $m1680Mid;
 		}
 
 		@include m-1680 {
 			max-width: 1130px;
 			padding-top: $m1600Mid;
+		}
+
+		@include m-1366 {
+			max-width: 958px;
+			padding-top: $m1366Mid;
 		}
 	}
 
@@ -138,6 +165,10 @@
 
 		@include m-1680 {
 			margin-top: $m1600Max - 30px;
+		}
+
+		@include m-1366 {
+			margin-top: $m1366Max - 15px;
 		}
 	}
 	.popup {
