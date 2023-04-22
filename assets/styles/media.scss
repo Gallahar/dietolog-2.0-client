@@ -11,7 +11,7 @@
 }
 
 @mixin m-1366 {
-	@media (max-width: 1365px) {
+	@media (max-width: 1366px) {
 		@content;
 	}
 }
