@@ -17,7 +17,7 @@ const Slider: FC<SliderProps> = ({ children, buttonsType, setIsMoving }) => {
 			items: 3,
 		},
 		tablet: {
-			breakpoint: { max: 1024, min: 464 },
+			breakpoint: { max: 768, min: 464 },
 			items: 2,
 		},
 		mobile: {

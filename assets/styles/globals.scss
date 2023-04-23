@@ -1,3 +1,11 @@
+@font-face {
+	font-family: 'mr_hamiltoneg';
+	src: url('/fonts/mr_hamiltoneg.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
 @import 'reset.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import './media.scss';
@@ -94,6 +102,7 @@ strong {
 }
 
 .hamilton {
+	font-family: 'mr_hamiltoneg';
 	font-weight: 400;
 	font-size: 360px;
 	line-height: 26px;
@@ -111,7 +120,4 @@ strong {
 	@include m-1366 {
 		font-size: 256px;
 	}
-}
-
-.customFont {
 }

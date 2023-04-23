@@ -10,7 +10,7 @@ import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
 import Slider from '@/ui/Slider/Slider'
 import CardProgram from '@/ui/Slider/CardProgram/CardProgram'
 import { IProgram } from '@/shared/models/program.interface'
-import { FC, useState } from 'react'
+import { FC, Fragment, useState } from 'react'
 import PopUp from '@/ui/PopUp/PopUp'
 import HelpToPickForm from '@/components/client/HelpToPickForm/HelpToPickForm'
 import ClosePopupButton from '@/ui/Buttons/Actions/ClosePopupButton/ClosePopupButton'
@@ -92,9 +92,8 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 						<Heading text={constructor_heading} />
 						<div className={s.constructorDescriptionWrapper}>
 							{constructorData.map((block, index) => (
-								<>
+								<Fragment key={block}>
 									<Description
-										key={block}
 										text={
 											index === 2 || index === 3
 												? parse(block)
@@ -104,7 +103,7 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 									{index !== constructorData.length - 1 && (
 										<br />
 									)}
-								</>
+								</Fragment>
 							))}
 						</div>
 					</div>

@@ -201,26 +201,26 @@
 
 		.avatarWrapper {
 			.outline {
-				@apply flex items-center justify-around;
+				@apply flex items-center justify-between;
 
 				width: 600px;
-				padding: 30px 20px;
+				padding: 30px 80px 30px 30px;
 				border-radius: 120px;
 				border: 1px solid #ecb390;
 
 				@include m-1920 {
 					width: 521px;
-					padding: 28px 18px;
+					padding: 26px 68px 26px 26px;
 				}
 
 				@include m-1680 {
 					width: 500px;
-					padding: 25px 15px;
+					padding: 25px 66px 25px 25px;
 				}
 
 				@include m-1366 {
 					width: 427px;
-					padding: 20px 10px;
+					padding: 21px 54px 21px 21px;
 				}
 
 				> img {

@@ -4,27 +4,24 @@
 .p404_Wrapper {
 	@apply relative overflow-hidden flex items-center;
 
-	height: calc(100vh - 179px);
+	height: 100vh;
 	padding-top: 91px;
 
 	@include m-1920 {
-		height: calc(100vh - 157px);
 		padding-top: 84px;
 	}
 
 	@include m-1680 {
-		height: calc(100vh - 150px);
 		padding-top: 80px;
 	}
 
 	@include m-1366 {
-		height: calc(100vh - 125px);
 		padding-top: 69px;
 	}
 
 	.contentWrapper {
 		display: grid;
-		grid-template-columns: minmax(min-content, 507px) minmax(
+		grid-template-columns: minmax(min-content, 515px) minmax(
 				min-content,
 				530px
 			);

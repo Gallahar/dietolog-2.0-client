@@ -65,7 +65,6 @@ const Program: FC<ProgramProps> = ({ program }) => {
 		<section className={`${s.programWrapper} `}>
 			<div className={s.background}>
 				<Image
-					priority
 					alt={`program-${currentLanguage(title, mark)}`}
 					fill
 					src={photo}

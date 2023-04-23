@@ -20,7 +20,7 @@ export const en: LanguageTemplate = {
 		contacts: 'Contacts',
 	},
 	_404: {
-		heading: 'Oops...\nSomething went wrong',
+		heading: 'Oops... Something\nwent wrong',
 		text_top: 'The page is not found or has been deleted.',
 		text_mid: 'Check your url for mistakes.',
 		text_bot: 'Use menu to navigate or press the button below',

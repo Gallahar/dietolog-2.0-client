@@ -10,6 +10,7 @@
 
 	.main {
 		> h2 {
+			font-family: 'mr_hamiltoneg';
 			margin-top: 178px;
 			font-size: 125px;
 			letter-spacing: 0.02em;
@@ -176,8 +177,4 @@
 	100% {
 		opacity: 1;
 	}
-}
-
-.delayFont {
-	animation: opacity 1.5s ease-in;
 }

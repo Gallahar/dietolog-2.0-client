@@ -131,6 +131,18 @@
 						> div:first-child {
 							width: 504px;
 							padding-left: 30px;
+
+							@include m-1920 {
+								padding-left: 26px;
+							}
+
+							@include m-1680 {
+								padding-left: 25px;
+							}
+
+							@include m-1366 {
+								padding-left: 21px;
+							}
 						}
 
 						p {
