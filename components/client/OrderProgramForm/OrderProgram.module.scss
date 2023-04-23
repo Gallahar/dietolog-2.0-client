@@ -155,19 +155,7 @@
 		}
 
 		> button {
-			margin-top: 20px;
-
-			@include m-1920 {
-				margin-top: 16px;
-			}
-
-			@include m-1680 {
-				margin-top: 14px;
-			}
-
-			@include m-1366 {
-				margin-top: 10px;
-			}
+			align-self: end;
 		}
 
 		.parametersWrapper {

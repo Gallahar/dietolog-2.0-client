@@ -65,28 +65,28 @@
 
 			display: grid;
 			grid-template:
-				't r' 350px
-				'b r' 475px / 271px 311px;
+				't r' auto
+				'b r' auto / 271px 311px;
 			gap: 30px;
 
 			@include m-1920 {
 				grid-template:
-					't r' 316px
-					'b r' 416px / 237px 272px;
+					't r' auto
+					'b r' auto / 237px 272px;
 				gap: 26px;
 			}
 
 			@include m-1680 {
 				grid-template:
-					't r' 292px
-					'b r' 407px / 226px 259px;
+					't r' auto
+					'b r' auto / 226px 259px;
 				gap: 34px 25px;
 			}
 
 			@include m-1366 {
 				grid-template:
-					't r' 249px
-					'b r' 352px / 194px 221px;
+					't r' auto
+					'b r' auto / 194px 221px;
 				gap: 21px;
 			}
 
