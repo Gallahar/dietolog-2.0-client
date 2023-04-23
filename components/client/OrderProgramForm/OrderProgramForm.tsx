@@ -82,7 +82,7 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={s.form}>
 			<div className={s.inputsWrapper}>
-				<p className={s.heading}>{`${chosen_params}:`}</p>
+				<p className={s.heading}>{`${your_order}:`}</p>
 				<p className={s.title}>{`${_program} ${currentLanguage(
 					title,
 					mark
@@ -118,7 +118,7 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 				<p className={s.privacy}>{privacy}</p>
 			</div>
 			<div className={s.checkListWrapper}>
-				<p className={s.heading}>{`${your_order}:`}</p>
+				<p className={s.heading}>{`${chosen_params}:`}</p>
 				<div className={s.parametersWrapper}>
 					{radios.map(({ title_short }, i) => (
 						<div key={title_short.en} className={s.parameter}>

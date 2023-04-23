@@ -7,7 +7,6 @@
 	box-shadow: 3px 5px 15px rgba(148, 180, 159, 0.2);
 	backdrop-filter: blur(10px);
 	border-radius: 0 0 300px 300px;
-	transition: all 250ms ease-in-out;
 	user-select: none;
 
 	@include m-1920 {
@@ -23,10 +22,6 @@
 	@include m-1366 {
 		width: 298px;
 		height: 493px;
-	}
-
-	&:hover {
-		transform: translateY(-10px);
 	}
 
 	.cardTextWrapper {

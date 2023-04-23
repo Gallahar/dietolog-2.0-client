@@ -23,7 +23,7 @@ export const en: LanguageTemplate = {
 		heading: 'Oops... Something\nwent wrong',
 		text_top: 'The page is not found or has been deleted.',
 		text_mid: 'Check your url for mistakes.',
-		text_bot: 'Use menu to navigate or press the button below',
+		text_bot: 'Use menu to navigate or press the button below.',
 		back_to_main: 'Go back to home page',
 	},
 	contacts: {
@@ -64,7 +64,7 @@ export const en: LanguageTemplate = {
 		post_name: 'certified dietitian-nutritionist',
 		description:
 			'I will become your mentor and assistant on the way to a long-term result through self-love and acceptance of your body',
-		sign_for_consult: 'Sign for a consult',
+		sign_for_consult: 'Sign for\na consult',
 	},
 	about: {
 		my_approach: 'My approach',
