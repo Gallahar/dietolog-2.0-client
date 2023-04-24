@@ -58,50 +58,34 @@
 		.forWhoImageBlock {
 			@apply relative;
 
+			display: grid;
+			grid-template-columns: 612px;
+			grid-template-rows: auto;
+
+			@include m-1920 {
+				grid-template-columns: 535px;
+			}
+
+			@include m-1680 {
+				grid-template-columns: 510px;
+			}
+
+			@include m-1366 {
+				grid-template-columns: 436px;
+			}
+
 			> img {
-				border-radius: 480px 480px 0px 0px;
-				margin-top: 20px;
-
-				@include m-1920 {
-					margin-top: 0;
-					width: 535px;
-					height: 707px;
-				}
-
-				@include m-1680 {
-					width: 510px;
-					height: 672px;
-				}
-
-				@include m-1366 {
-					width: 436px;
-					height: 592px;
-				}
+				border-radius: 480px 480px 0 0;
 			}
 
 			.outline {
 				position: absolute;
-				bottom: 3.5%;
-				right: 4%;
-				width: 612px;
-				height: 788px;
+				bottom: 4%;
+				right: 5%;
+				width: 100%;
+				height: 100%;
 				border-radius: 480px 480px 0px 0px;
 				border: 1px solid #ecb390;
-
-				@include m-1920 {
-					width: 535px;
-					height: 707px;
-				}
-
-				@include m-1680 {
-					width: 510px;
-					height: 672px;
-				}
-
-				@include m-1366 {
-					width: 436px;
-					height: 592px;
-				}
 			}
 		}
 
@@ -265,7 +249,7 @@
 
 .num_1 {
 	left: 62.83px;
-	top: 10px;
+	top: 1%;
 
 	@include m-1920 {
 		left: 55px;
@@ -281,7 +265,7 @@
 }
 .num_2 {
 	left: 306px;
-	top: 10px;
+	top: 1%;
 
 	@include m-1920 {
 		left: 268px;
@@ -298,7 +282,7 @@
 
 .num_3 {
 	left: 128px;
-	top: 10px;
+	top: 1%;
 
 	@include m-1920 {
 		left: 112px;
@@ -315,7 +299,7 @@
 
 .num_4 {
 	left: 417px;
-	top: 10px;
+	top: 1%;
 
 	@include m-1920 {
 		left: 364px;
@@ -332,7 +316,7 @@
 
 .num_5 {
 	left: 59px;
-	top: 10px;
+	top: 1%;
 
 	@include m-1920 {
 		left: 52px;
@@ -349,7 +333,7 @@
 
 .num_6 {
 	left: 299px;
-	top: 10px;
+	top: 1%;
 
 	@include m-1920 {
 		left: 262px;

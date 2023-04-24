@@ -53,8 +53,8 @@ const About = () => {
 				</div>
 				<div className={s.forWhoWrapper}>
 					<div className={s.forWhoImageBlock}>
+						<Image fill src={aboutImg} alt="about-img" />
 						<div className={s.outline} />
-						<Image src={aboutImg} alt="about-img" />
 					</div>
 					<div className={s.forWhoTextWrapper}>
 						<Heading text={for_who} />

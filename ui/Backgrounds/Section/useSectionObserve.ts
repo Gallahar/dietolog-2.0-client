@@ -1,5 +1,5 @@
 import { SectionContext } from 'providers/SectionProvider/SectionProvider'
-import { RefObject, useCallback, useContext, useEffect, useRef } from 'react'
+import { RefObject, useContext, useEffect, useRef } from 'react'
 
 export const useSectionObserver = (): RefObject<HTMLElement> => {
 	const sectionRef = useRef<null | HTMLElement>(null)

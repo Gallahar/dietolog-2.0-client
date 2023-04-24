@@ -85,7 +85,7 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 				</div>
 				<div className={cn('section', s.constructorMenuWrapper)}>
 					<div className={s.constructorImageWrapper}>
-						<Image src={preparedImg} alt="preparedImg" />
+						<Image fill src={preparedImg} alt="preparedImg" />
 						<div className={s.outline} />
 					</div>
 					<div className={s.constructorTextWrapper}>

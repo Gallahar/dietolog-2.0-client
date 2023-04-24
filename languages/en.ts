@@ -80,7 +80,7 @@ export const en: LanguageTemplate = {
 
 		for_who: 'Who it suits',
 		for_who_text_1:
-			'For sweet tooth and fast food lovers - lose weight, get healthier, build relationships with food and change lifestyle.',
+			'For sweet tooth and fast food lovers - lose weight, get healthier, build regular relationships with food and change lifestyle beyond recognition.',
 		for_who_text_2:
 			'You have completed many marathons, you have constant weight fluctuations - we are learning to balance nutrition without strict restrictions.',
 		for_who_text_3:
@@ -90,7 +90,7 @@ export const en: LanguageTemplate = {
 		for_who_text_5:
 			'You are concerned about exacerbations of chronic diseases - I prescribe therapeutic / preventive nutrition and dietary supplements in consultation with your doctor.',
 		for_who_text_6:
-			'Visit fitness clubs, increase muscle mass and body elasticity. Tired of increased fatigue and emotional instability. ',
+			'Visit fitness clubs, increase muscle mass and body elasticity. Tired of increased fatigue and / or emotional instability for long periods of time.',
 
 		not_suitable: "Who I don't work with",
 		not_suitable_text_1:
@@ -116,7 +116,7 @@ export const en: LanguageTemplate = {
 		col_1_part_1:
 			'<p>You can also choose and order a <b>prepared</b> nutrition program tailored to your goals and needs. This is a ready-made meal plan that will help you lose weight and teach you the basics of a balanced diet.</p>',
 		col_1_part_2:
-			'Suitable for people who do not have acute diseases or severe chronic diseases. In case of illness - only individual consultations.',
+			'Suitable for people who do not have acute diseases or severe chronic diseases. In case of illness, please, apply only for individual consultations.',
 		col_2_part_1:
 			'<p>The program consists of a <b>menu-builder</b>, up-to-date lifestyle recommendations (drinking, exercising, sleep, cheat meals, etc.), recipe examples and a list of allowed tasty dishes that are usually prohibited in strict diets.</p>',
 		col_2_part_2:
@@ -128,11 +128,11 @@ export const en: LanguageTemplate = {
 		constructor_2:
 			'The program is accompanied by a detailed explanation of the use of the designer and an example of compiling a menu for two days.',
 		constructor_3:
-			'<p>The main advantage of the menu-builder compared to the usual static menu is its <b>flexibility</b>, because you choose what you want right now (or taking into account the availability of food in the refrigerator), without linking the dish to a specific day.</p>',
+			'<p>The main advantage of the menu-builder compared to the usual static menu is its <b>flexibility</b>, with help of this opportunity you can choose what you want right now (or taking into account the availability of food in the refrigerator), without linking the dish to a specific day.</p>',
 		constructor_4:
 			'<p>This flexibility allows you to use the program for at least <b>1 month</b>, unlike standard ready-made menus that are designed for a certain number of days.</p>',
 		constructor_5:
-			'At the same time, your meals will be varied and unique due to combinations of options for breakfast, lunch and other meals.',
+			'You can be sure that your meals will be varied and unique due to combinations of options for breakfast, lunch and other meals at the same time.',
 
 		constructor_col_1_part_1:
 			'<p>Another feature of the program is its maximum <b>adaptation</b> to the client and his needs.</p>',
