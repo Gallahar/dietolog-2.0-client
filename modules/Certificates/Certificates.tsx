@@ -21,9 +21,6 @@ interface CertificatesProps {
 }
 
 const Certificates: FC<CertificatesProps> = ({ certificates }) => {
-	const [certificate, setCertificate] = useState('')
-	const [isMoving, setIsMoving] = useState(false)
-	const { _return } = useLanguageContext().global
 	const {
 		diplomas_heading,
 		skills_heading,
@@ -34,6 +31,11 @@ const Certificates: FC<CertificatesProps> = ({ certificates }) => {
 		skill_5,
 		skill_6,
 	} = useLanguageContext().certificates
+
+	const { _return } = useLanguageContext().global
+
+	const [certificate, setCertificate] = useState('')
+	const [isMoving, setIsMoving] = useState(false)
 
 	const skillsData = [skill_1, skill_2, skill_3, skill_4, skill_5, skill_6]
 

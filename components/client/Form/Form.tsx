@@ -24,6 +24,7 @@ const Form: FC<FormProps> = ({ alertHandler }) => {
 	} = useLanguageContext().sign_for_consult
 
 	const { error } = useLanguageContext().global
+
 	const [loading, setLoading] = useState(false)
 
 	const {
