@@ -1,6 +1,10 @@
 const FaceBook = () => {
 	return (
-		<a href="/" target="blank">
+		<a
+			href="https://www.facebook.com/profile.php?id=100010664207657"
+			target="blank"
+			rel="noopener noreferrer"
+		>
 			<svg
 				width="43"
 				height="43"

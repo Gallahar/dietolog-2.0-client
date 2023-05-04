@@ -3,8 +3,12 @@ import { getRecordsUrl } from '../config/api'
 import { IRecord, IRecordCreate } from '../shared/models/record.interface'
 
 export const RecordService = {
-	async create(dto: IRecordCreate) {
-		await defaultAxios.post(getRecordsUrl('/create'), dto)
+	async create(dto: IRecordCreate, lang: string | null) {
+		await defaultAxios.post(getRecordsUrl('/create'), dto, {
+			headers: {
+				language: lang,
+			},
+		})
 	},
 
 	// Admin

@@ -29,13 +29,13 @@ const CardProgram: FC<CardProgramProps> = ({ program, isMoving }) => {
 			href={`/programs/${slug}`}
 		>
 			<div className={s.card}>
+				<Image
+					draggable={false}
+					fill
+					src={photo_small}
+					alt={`programCard${currentLanguage(title, mark)}`}
+				/>
 				<div className={s.cardBlock}>
-					<Image
-						draggable={false}
-						fill
-						src={photo_small}
-						alt={`programCard${currentLanguage(title, mark)}`}
-					/>
 					<div className={s.cardInfo}>
 						<span className={s.price}>{price} ₴</span>
 						<h1>{currentLanguage(title, mark)}</h1>

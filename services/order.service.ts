@@ -3,8 +3,12 @@ import { getOrdersUrl } from '../config/api'
 import { IOrder, IOrderCreate } from '../shared/models/order.interface'
 
 export const OrderService = {
-	async create(dto: IOrderCreate) {
-		await defaultAxios.post(getOrdersUrl('/create'), dto)
+	async create(dto: IOrderCreate, lang: string | null) {
+		await defaultAxios.post(getOrdersUrl('/create'), dto, {
+			headers: {
+				language: lang,
+			},
+		})
 	},
 
 	// Admin

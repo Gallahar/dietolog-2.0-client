@@ -11,6 +11,7 @@ interface LeafProps {
 const Leaf: FC<LeafProps> = ({ className, id }) => {
 	return (
 		<Image
+			draggable={false}
 			id={id}
 			priority
 			src={leaf}

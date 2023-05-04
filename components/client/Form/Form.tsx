@@ -6,6 +6,7 @@ import s from './Form.module.scss'
 import { RecordService } from '@/services/record.service'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { IRecordCreate } from '@/shared/models/record.interface'
+import { IS_CLIENT } from '@/config/constants'
 
 interface FormProps {
 	alertHandler: (alert: string) => void
@@ -37,7 +38,10 @@ const Form: FC<FormProps> = ({ alertHandler }) => {
 		e?.preventDefault()
 		setLoading(true)
 		try {
-			await RecordService.create(dto)
+			await RecordService.create(
+				dto,
+				IS_CLIENT ? localStorage.getItem('lang') : 'ua'
+			)
 			alertHandler(response)
 		} catch (err) {
 			alertHandler(error)

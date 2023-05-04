@@ -8,6 +8,7 @@ import Heading from '@/ui/Headings/Heading/Heading'
 import { FC, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import s from './HelpToPickForm.module.scss'
+import { IS_CLIENT } from '@/config/constants'
 
 export interface HelpToPickFormProps {
 	alertHandler: (alert: string) => void
@@ -49,7 +50,10 @@ const HelpToPickForm: FC<HelpToPickFormProps> = ({
 		e?.preventDefault()
 		setLoading(true)
 		try {
-			await ConsultHelpService.create(dto)
+			await ConsultHelpService.create(
+				dto,
+				IS_CLIENT ? localStorage.getItem('lang') : 'ua'
+			)
 			alertHandler(response)
 		} catch (err) {
 			alertHandler(error)

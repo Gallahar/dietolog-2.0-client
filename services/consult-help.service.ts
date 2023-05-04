@@ -1,10 +1,17 @@
 import { adminAxios, defaultAxios } from '../api'
 import { getConsultHelpUrl } from '../config/api'
-import { IConsultHelp, IConsultHelpCreate } from '../shared/models/consult-help.interface'
+import {
+	IConsultHelp,
+	IConsultHelpCreate,
+} from '../shared/models/consult-help.interface'
 
 export const ConsultHelpService = {
-	async create(dto: IConsultHelpCreate) {
-		await defaultAxios.post(getConsultHelpUrl('/create'), dto)
+	async create(dto: IConsultHelpCreate, lang: string | null) {
+		await defaultAxios.post(getConsultHelpUrl('/create'), dto, {
+			headers: {
+				language: lang,
+			},
+		})
 	},
 
 	// Admin

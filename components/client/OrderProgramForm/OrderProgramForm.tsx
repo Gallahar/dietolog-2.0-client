@@ -9,6 +9,7 @@ import { IOrderParam } from '@/shared/models/order.interface'
 import { IProgram } from '@/shared/models/program.interface'
 import { currentLanguage } from '@/utils/currentLanguage'
 import { IRecordCreate } from '@/shared/models/record.interface'
+import { IS_CLIENT } from '@/config/constants'
 
 interface OrderProgramFormProps {
 	alertHandler: (alert: string) => void
@@ -64,11 +65,14 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 					value,
 				}
 			})
-			await OrderService.create({
-				...dto,
-				params,
-				program_title: currentProgramTitle,
-			})
+			await OrderService.create(
+				{
+					...dto,
+					params,
+					program_title: currentProgramTitle,
+				},
+				IS_CLIENT ? localStorage.getItem('lang') : 'ua'
+			)
 			alertHandler(success_program)
 		} catch (err) {
 			alertHandler(error)

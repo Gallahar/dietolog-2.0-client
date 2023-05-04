@@ -9,6 +9,12 @@
 	user-select: none;
 	transition: transform 0.3s ease-in-out;
 
+	> img {
+		bottom: 0;
+		position: absolute;
+		z-index: -1;
+	}
+
 	@include m-1920 {
 		width: 346px;
 		height: 494px;
@@ -34,9 +40,7 @@
 
 	.cardBlock {
 		border-radius: 0 360px 0 0;
-		border-left: 0.01px solid #fff;
-		border-bottom: 0.01px solid #fff;
-		border-right: 0.01px solid #fff;
+
 		height: 432px;
 		width: 100%;
 		background: #fff;
@@ -51,12 +55,6 @@
 
 		@include m-1366 {
 			height: 303px;
-		}
-
-		> img {
-			bottom: 0;
-			position: absolute;
-			z-index: -1;
 		}
 
 		> svg {

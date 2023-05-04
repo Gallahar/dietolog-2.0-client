@@ -1,6 +1,10 @@
 const WhatsApp = () => {
 	return (
-		<a href="/" target="blank">
+		<a
+			href="https://wa.me/380687767901"
+			target="blank"
+			rel="noopener noreferrer"
+		>
 			<svg
 				width="46"
 				height="49"

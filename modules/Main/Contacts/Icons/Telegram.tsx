@@ -1,6 +1,10 @@
 const Telegram = () => {
 	return (
-		<a href="/" target="blank">
+		<a
+			href="https://t.me/DIETOLOG7YA"
+			target="blank"
+			rel="noopener noreferrer"
+		>
 			<svg
 				width="48"
 				height="49"

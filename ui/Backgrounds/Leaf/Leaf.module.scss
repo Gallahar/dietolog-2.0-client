@@ -4,6 +4,7 @@
 	@apply absolute -z-1;
 	width: 864px;
 	height: 970px;
+	user-select: none;
 
 	@include m-1920 {
 		width: 756px;

@@ -1,6 +1,10 @@
 const Instagram = () => {
 	return (
-		<a href="/" target="blank">
+		<a
+			href="https://instagram.com/kateryna_kirichenko_?igshid=ZDdkNTZiNTM="
+			target="blank"
+			rel="noopener noreferrer"
+		>
 			<svg
 				width="45"
 				height="45"
