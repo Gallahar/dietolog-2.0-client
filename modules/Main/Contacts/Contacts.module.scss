@@ -89,111 +89,74 @@
 			.icons {
 				@apply flex items-center;
 
-				gap: 75px;
+				gap: $m1920Mid;
+
+				svg {
+					transition: all 0.2s ease-in-out;
+					cursor: pointer;
+
+					&:hover {
+						transform: scale(1.2);
+						filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.2));
+
+						~ span {
+							opacity: 1;
+						}
+					}
+				}
+
+				a {
+					@apply relative cursor-default;
+
+					span {
+						font-size: 17px;
+						line-height: 150%;
+						letter-spacing: 0.02em;
+						color: #44bb6d;
+						position: absolute;
+						bottom: -70%;
+						left: -40%;
+						opacity: 0;
+						transition: all 0.3s ease-in-out;
+
+						@include m-1920 {
+							font-size: 15px;
+						}
+
+						@include m-1680 {
+							font-size: 14px;
+						}
+
+						@include m-1366 {
+							font-size: 12px;
+						}
+					}
+				}
 
 				@include m-1920 {
-					gap: 67px;
+					gap: $m1680Mid;
 
-					&:nth-child(1) {
-						svg {
-							width: 39px;
-							height: 39px;
-						}
-					}
-
-					&:nth-child(2) {
-						svg {
-							width: 40px;
-							height: 42px;
-						}
-					}
-
-					&:nth-child(3) {
-						svg {
-							width: 42px;
-							height: 42px;
-						}
-					}
-
-					&:nth-child(4) {
-						svg {
-							width: 39px;
-							height: 39px;
-						}
+					svg {
+						width: 42px;
+						height: 42px;
 					}
 				}
 
 				@include m-1680 {
-					gap: 65px;
+					gap: $m1600Mid;
 
-					&:nth-child(1) {
-						svg {
-							width: 37px;
-							height: 37px;
-						}
-					}
-
-					&:nth-child(2) {
-						svg {
-							width: 38px;
-							height: 40px;
-						}
-					}
-
-					&:nth-child(3) {
-						svg {
-							width: 40px;
-							height: 40px;
-						}
-					}
-
-					&:nth-child(4) {
-						svg {
-							width: 38px;
-							height: 38px;
-						}
+					svg {
+						width: 40px;
+						height: 40px;
 					}
 				}
 
 				@include m-1366 {
-					gap: 55px;
+					gap: $m1366Mid;
 
-					&:nth-child(1) {
-						svg {
-							width: 31px;
-							height: 31px;
-						}
-					}
-
-					&:nth-child(2) {
-						svg {
-							width: 32px;
-							height: 34px;
-						}
-					}
-
-					&:nth-child(3) {
-						svg {
-							width: 34px;
-							height: 34px;
-						}
-					}
-
-					&:nth-child(4) {
-						svg {
-							width: 32px;
-							height: 32px;
-						}
-					}
-				}
-
-				svg {
-					transition: all 0.2s ease-in-out;
-					width: 100%;
-					height: 100%;
-					&:hover {
-						transform: scale(1.2);
-						filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.2));
+					svg {
+						width: 34px;
+						height: 34px;
 					}
 				}
 			}

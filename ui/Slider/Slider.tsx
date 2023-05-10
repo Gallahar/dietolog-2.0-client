@@ -1,5 +1,5 @@
 import s from './Slider.module.scss'
-import { FC, ReactNode, useState } from 'react'
+import { FC, ReactNode } from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import ButtonGroup from './ButtonGroup/ButtonGroup'
