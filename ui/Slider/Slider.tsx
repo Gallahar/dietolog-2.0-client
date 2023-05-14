@@ -13,7 +13,7 @@ interface SliderProps {
 const Slider: FC<SliderProps> = ({ children, buttonsType, setIsMoving }) => {
 	const responsive = {
 		desktop: {
-			breakpoint: { max: 3000, min: 1024 },
+			breakpoint: { max: 3000, min: 985 },
 			items: 3,
 		},
 		tablet: {

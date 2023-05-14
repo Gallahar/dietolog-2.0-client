@@ -7,18 +7,18 @@
 	.container {
 		@apply flex items-center justify-between;
 
-		padding: 51px 0;
+		padding: 51px 10px;
 
 		@include m-1920 {
-			padding: 45px 0;
+			padding: 45px 10px;
 		}
 
 		@include m-1680 {
-			padding: 43px 0;
+			padding: 43px 10px;
 		}
 
 		@include m-1366 {
-			padding: 35px 0;
+			padding: 35px 10px;
 		}
 
 		p {
@@ -43,6 +43,8 @@
 
 		button {
 			@apply cursor-pointer transition-transform;
+
+			padding: 0;
 
 			> svg {
 				width: 48px;

@@ -93,6 +93,10 @@
 				width: 948px;
 			}
 
+			@media (max-width: 1050px) {
+				max-width: 920px;
+			}
+
 			@include m-834 {
 				width: 630px;
 				margin: 0 auto;

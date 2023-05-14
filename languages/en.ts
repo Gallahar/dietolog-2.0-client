@@ -15,7 +15,7 @@ export const en: LanguageTemplate = {
 	header: {
 		main: 'Home',
 		about: 'About me',
-		consults_and_rates: 'Consultations',
+		consults_and_rates: 'Consultations and rates',
 		turnkey_solutions: 'Prepared solutions',
 		contacts: 'Contacts',
 	},

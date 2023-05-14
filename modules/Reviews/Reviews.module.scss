@@ -42,6 +42,10 @@
 			padding-top: $m1366Mid;
 		}
 
+		@media (max-width: 1050px) {
+			max-width: 900px;
+		}
+
 		@include m-834 {
 			max-width: 626px;
 		}

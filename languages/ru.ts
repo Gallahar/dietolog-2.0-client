@@ -15,7 +15,7 @@ export const ru: LanguageTemplate = {
 	header: {
 		main: 'Главная',
 		about: 'Обо мне',
-		consults_and_rates: 'Консультации',
+		consults_and_rates: 'Консультации и тарифы',
 		turnkey_solutions: 'Готовые решения',
 		contacts: 'Контакты',
 	},

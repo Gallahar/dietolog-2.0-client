@@ -15,7 +15,7 @@ export const ua: LanguageTemplate = {
 	header: {
 		main: 'Головна',
 		about: 'Про мене',
-		consults_and_rates: 'Консультації',
+		consults_and_rates: 'Консультації та тарифи',
 		turnkey_solutions: 'Готові рішення',
 		contacts: 'Контакти',
 	},
