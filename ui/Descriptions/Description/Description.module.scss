@@ -21,4 +21,8 @@
 		font-size: 13px;
 		max-width: 436px;
 	}
+
+	@include m-834 {
+		max-width: 520px;
+	}
 }

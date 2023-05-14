@@ -40,6 +40,9 @@
 			max-width: 958px;
 			padding-top: $m1366Mid;
 		}
+		@include m-834 {
+			max-width: 614px;
+		}
 	}
 
 	.skillsAndImagesWrapper {
@@ -90,11 +93,18 @@
 				gap: 21px;
 			}
 
+			@include m-834 {
+				grid-template: 'r' auto / 209px;
+			}
+
 			.t {
 				width: 100%;
 				height: 100%;
 				grid-area: t;
 				border-radius: 510px 0 0 0;
+				@include m-834 {
+					display: none;
+				}
 			}
 
 			.r {
@@ -102,12 +112,19 @@
 				height: 100%;
 				grid-area: r;
 				border-radius: 0 510px 0 0;
+
+				@include m-834 {
+					border-radius: 0 363px 0 0;
+				}
 			}
 
 			.b {
 				width: 100%;
 				height: 100%;
 				grid-area: b;
+				@include m-834 {
+					display: none;
+				}
 			}
 
 			.outline {
@@ -119,10 +136,20 @@
 				border-radius: 510px 510px 0px 0px;
 				bottom: 4%;
 				right: 5%;
+
+				@include m-834 {
+					border-radius: 0 363px 0 0;
+					bottom: -3%;
+					right: 9%;
+				}
 			}
 		}
 
 		.skillsWrapper {
+			@include m-834 {
+				max-width: 430px;
+			}
+
 			.skills {
 				@apply flex flex-col;
 
@@ -164,6 +191,10 @@
 			@include m-1366 {
 				margin-top: $m1366Mid;
 			}
+
+			@include m-834 {
+				grid-column: 1/2;
+			}
 		}
 	}
 }
@@ -190,6 +221,11 @@
 			width: 628px;
 			height: 443px;
 			margin-top: 17px;
+		}
+
+		@include m-834 {
+			width: 600px;
+			height: 423px;
 		}
 	}
 }

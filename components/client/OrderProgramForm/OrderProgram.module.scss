@@ -18,6 +18,10 @@
 		grid-template-columns: 476px 405px;
 	}
 
+	@include m-834 {
+		grid-template-columns: 360px 354px;
+	}
+
 	.heading {
 		@apply text-text uppercase;
 
@@ -55,6 +59,10 @@
 		@include m-1366 {
 			gap: $m1366Min;
 			padding: 63px 50px;
+		}
+
+		@include m-834 {
+			padding: 63px 25px 50px 50px;
 		}
 
 		.title {
@@ -95,6 +103,8 @@
 			padding-left: 15px;
 			opacity: 0.5;
 			font-size: 16px;
+			line-height: 150%;
+			letter-spacing: 0.02em;
 
 			@include m-1920 {
 				font-size: 14px;
@@ -152,6 +162,10 @@
 		@include m-1366 {
 			gap: $m1366Min;
 			padding: 63px 50px;
+		}
+
+		@include m-834 {
+			padding: 63px 50px 50px 25px;
 		}
 
 		> button {

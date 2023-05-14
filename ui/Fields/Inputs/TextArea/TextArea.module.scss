@@ -51,5 +51,9 @@
 			padding: 18px 21px;
 			height: 169px;
 		}
+
+		@include m-834 {
+			height: 204px;
+		}
 	}
 }

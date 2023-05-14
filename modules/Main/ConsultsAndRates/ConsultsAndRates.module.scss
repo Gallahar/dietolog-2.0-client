@@ -25,6 +25,14 @@
 			padding-top: $m1366Max;
 		}
 
+		@include m-834 {
+			@apply flex-col;
+			gap: 40px;
+			> a {
+				margin-top: 10px;
+			}
+		}
+
 		.consultsTextWrapper {
 			@apply flex flex-col justify-between;
 
@@ -42,11 +50,25 @@
 				min-width: 285px;
 			}
 
+			@include m-834 {
+				> a {
+					display: none;
+				}
+			}
+
 			.descriptionWrapper {
 				@include m-1366 {
 					> div {
 						font-size: 11px;
+
+						@include m-834 {
+							font-size: 13px;
+						}
 					}
+				}
+
+				@include m-834 {
+					margin-top: $m1366Mid;
 				}
 			}
 		}
@@ -69,6 +91,11 @@
 
 			@include m-1366 {
 				width: 948px;
+			}
+
+			@include m-834 {
+				width: 630px;
+				margin: 0 auto;
 			}
 		}
 	}

@@ -59,6 +59,10 @@ strong {
 	@include m-1366 {
 		max-width: 968px;
 	}
+
+	@include m-834 {
+		max-width: 734px;
+	}
 }
 
 .section {

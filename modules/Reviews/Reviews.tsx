@@ -67,7 +67,7 @@ const Reviews: FC<ReviewsProps> = ({ reviews }) => {
 					<ClosePopupButtonFilled
 						closePopup={() => setAlertToggle(false)}
 					/>
-					<Description text={alertText} />
+					<p>{alertText}</p>
 				</PopUp>
 			)}
 		</section>

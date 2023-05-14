@@ -41,6 +41,11 @@
 			width: 433px;
 			height: 1434px;
 		}
+
+		@include m-834 {
+			width: 220px;
+			height: 1570px;
+		}
 	}
 
 	.popup {
@@ -78,6 +83,10 @@
 			font-size: 13px;
 			padding-top: $m1366Max + 69px;
 			max-width: 649px;
+		}
+
+		@include m-834 {
+			max-width: 479px;
 		}
 
 		.price {

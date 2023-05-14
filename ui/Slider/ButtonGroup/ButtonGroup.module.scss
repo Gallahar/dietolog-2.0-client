@@ -73,6 +73,12 @@
 		}
 	}
 
+	@include m-834 {
+		top: 48%;
+		width: 110%;
+		left: -5%;
+	}
+
 	.arrowRight,
 	.arrowLeft {
 		@apply outline-border-none transition-transform  cursor-pointer;

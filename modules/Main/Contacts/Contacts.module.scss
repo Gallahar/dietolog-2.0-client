@@ -101,6 +101,7 @@
 
 						~ span {
 							opacity: 1;
+							visibility: visible;
 						}
 					}
 				}
@@ -116,6 +117,7 @@
 						position: absolute;
 						bottom: -70%;
 						left: -40%;
+						visibility: hidden;
 						opacity: 0;
 						transition: all 0.3s ease-in-out;
 
@@ -186,6 +188,12 @@
 					padding: 21px 54px 21px 21px;
 				}
 
+				@include m-834 {
+					width: 350px;
+					padding: 19px 30px 19px 19px;
+					margin-top: 20px;
+				}
+
 				> img {
 					border-radius: 50%;
 
@@ -200,6 +208,10 @@
 
 					@include m-1366 {
 						width: 128px;
+					}
+
+					@include m-834 {
+						width: 100px;
 					}
 				}
 
@@ -218,6 +230,10 @@
 
 					@include m-1366 {
 						gap: 24px;
+					}
+
+					@include m-834 {
+						gap: 11px;
 					}
 
 					> h4 {
@@ -270,12 +286,20 @@
 	top: -45%;
 	left: -25%;
 	transform: rotate(158deg);
+
+	@include m-834 {
+		left: -37%;
+	}
 }
 
 .leaf_2 {
 	transform: matrix(-0.46, 0.89, 0.89, 0.46, 0, 0);
 	right: -24%;
 	bottom: -16%;
+
+	@include m-834 {
+		right: -40%;
+	}
 }
 
 .ellipse_1 {

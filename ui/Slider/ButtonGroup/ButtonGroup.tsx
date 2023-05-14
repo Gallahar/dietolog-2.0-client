@@ -19,7 +19,8 @@ const ButtonGroup: FC<ButtonGroupProps> = ({
 	if (!next || !previous || !carouselState) {
 		return null
 	}
-	const { currentSlide, totalItems } = carouselState
+
+	const { currentSlide, totalItems, slidesToShow } = carouselState
 
 	return (
 		<div className={buttonsType ? s.buttonsNarrow : s.buttonsDefault}>
@@ -32,7 +33,7 @@ const ButtonGroup: FC<ButtonGroupProps> = ({
 			</button>
 
 			<button
-				disabled={currentSlide === totalItems - 3}
+				disabled={currentSlide === totalItems - slidesToShow}
 				className={s.arrowRight}
 				onClick={() => next()}
 			>

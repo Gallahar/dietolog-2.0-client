@@ -65,6 +65,14 @@
 					max-width: 396px;
 					height: 396px;
 				}
+
+				@include m-834 {
+					border-radius: 456px 0px 0px 0px;
+					max-width: 200px;
+					height: 488px;
+					left: 8%;
+					bottom: -3%;
+				}
 			}
 
 			> img {
@@ -85,6 +93,12 @@
 				@include m-1366 {
 					max-width: 396px;
 					height: 396px;
+				}
+
+				@include m-834 {
+					border-radius: 456px 0px 0px 0px;
+					max-width: 200px;
+					height: 488px;
 				}
 			}
 		}

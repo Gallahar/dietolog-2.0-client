@@ -197,21 +197,37 @@
 	transform: rotate(-126.55deg);
 	top: -1%;
 	right: -18%;
+
+	@include m-834 {
+		right: -42%;
+	}
 }
 .leaf_2 {
 	left: -20%;
 	top: 23%;
 	transform: matrix(-0.02, -1, -1, 0.02, 0, 0);
+
+	@include m-834 {
+		left: -36%;
+	}
 }
 .leaf_3 {
 	right: -18%;
 	top: 43%;
 	transform: rotate(-61.51deg);
+
+	@include m-834 {
+		right: -38%;
+	}
 }
 .leaf_4 {
 	bottom: 10%;
 	left: -20%;
 	transform: rotate(118.49deg);
+
+	@include m-834 {
+		left: -37%;
+	}
 }
 .ellipse_1 {
 	top: 6%;

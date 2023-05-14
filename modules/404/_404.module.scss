@@ -48,6 +48,11 @@
 				);
 		}
 
+		@include m-834 {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+
 		.textWrapper {
 			.descriptionWrapper {
 				display: grid;
@@ -68,6 +73,11 @@
 			padding: 40px 0;
 			position: relative;
 
+			@include m-834 {
+				margin: 0 auto;
+				padding: 0;
+			}
+
 			> img {
 				max-width: 530px;
 				height: auto;
@@ -81,6 +91,10 @@
 
 				@include m-1366 {
 					max-width: 373px;
+				}
+
+				@include m-834 {
+					max-width: 490px;
 				}
 			}
 		}

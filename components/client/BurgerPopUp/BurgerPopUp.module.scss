@@ -1,0 +1,88 @@
+.popUpWrapper {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	animation: appear 0.2s ease-in-out;
+	top: 0;
+	z-index: 110;
+	background: rgba(0, 0, 0, 0.08);
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 17px;
+
+	.popUp {
+		display: grid;
+		grid-template-columns: 1fr;
+		align-content: space-between;
+		justify-items: end;
+
+		max-height: 406px;
+
+		> button {
+			position: static;
+			width: 46px;
+			height: 46px;
+			animation: scale 0.4s ease-in-out;
+		}
+
+		> a {
+			@apply flex justify-center items-center;
+			background-color: #ffffff;
+			font-size: 14px;
+			line-height: 150%;
+			letter-spacing: 0.02em;
+			color: #1a0a00;
+			width: 300px;
+			height: 60px;
+			border-radius: 72px;
+			box-shadow: 2px 4px 8px rgba(143, 63, 9, 0.2);
+			animation: transform 0.4s ease-in;
+		}
+
+		.default {
+			@apply text-dark;
+
+			transition: color 0.4s ease-in;
+
+			&:hover {
+				@apply text-secondary;
+			}
+		}
+
+		.filled {
+			@apply text-secondary;
+		}
+	}
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes transform {
+	0% {
+		transform: translateX(60%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}

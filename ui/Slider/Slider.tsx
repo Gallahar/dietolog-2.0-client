@@ -17,7 +17,7 @@ const Slider: FC<SliderProps> = ({ children, buttonsType, setIsMoving }) => {
 			items: 3,
 		},
 		tablet: {
-			breakpoint: { max: 768, min: 464 },
+			breakpoint: { max: 985, min: 464 },
 			items: 2,
 		},
 		mobile: {
@@ -32,6 +32,7 @@ const Slider: FC<SliderProps> = ({ children, buttonsType, setIsMoving }) => {
 			beforeChange={() => setIsMoving(true)}
 			afterChange={() => setIsMoving(false)}
 			swipeable={true}
+			removeArrowOnDeviceType={'mobile'}
 			arrows={false}
 			renderButtonGroupOutside={true}
 			customButtonGroup={<ButtonGroup buttonsType={buttonsType} />}

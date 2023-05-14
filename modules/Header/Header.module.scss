@@ -54,6 +54,12 @@
 					font-size: 13px;
 				}
 
+				@include m-834 {
+					> a {
+						display: none;
+					}
+				}
+
 				.default {
 					@apply text-dark;
 
@@ -92,6 +98,19 @@
 						line-height: 150%;
 						letter-spacing: 0.02em;
 					}
+				}
+
+				.burgerButton {
+					display: none;
+					padding: 0;
+					cursor: pointer;
+					@include m-834 {
+						display: block;
+					}
+				}
+
+				.burgerClose {
+					visibility: hidden;
 				}
 			}
 		}

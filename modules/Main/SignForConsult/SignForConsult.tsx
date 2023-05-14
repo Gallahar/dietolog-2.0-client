@@ -38,7 +38,7 @@ const SignForConsult = () => {
 			{open && (
 				<PopUp closePopup={() => setOpen(false)}>
 					<CLosePopupButton closePopup={() => setOpen(false)} />
-					<Description text={message} />
+					<p>{message}</p>
 				</PopUp>
 			)}
 		</Section>

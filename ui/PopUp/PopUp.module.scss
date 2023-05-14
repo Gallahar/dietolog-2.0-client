@@ -21,31 +21,36 @@
 		background-color: #fff;
 		z-index: 100;
 		padding: 90px 72px 72px;
-		> div {
+		> p {
+			padding-top: 8px;
 			font-size: 19px;
+			max-width: 643px;
 		}
 
 		@include m-1920 {
 			padding: 80px 64px 64px;
 
-			> div {
+			> p {
 				font-size: 17px;
+				max-width: 563px;
 			}
 		}
 
 		@include m-1680 {
 			padding: 75px 60px 60px;
 
-			> div {
+			> p {
 				font-size: 16px;
+				max-width: 536px;
 			}
 		}
 
 		@include m-1366 {
 			padding: 63px 50px 50px;
 
-			> div {
+			> p {
 				font-size: 14px;
+				max-width: 457px;
 			}
 		}
 	}

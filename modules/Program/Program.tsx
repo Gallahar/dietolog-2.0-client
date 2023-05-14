@@ -111,8 +111,8 @@ const Program: FC<ProgramProps> = ({ program }) => {
 												answer={answer}
 												value={answer_short}
 												className={
-													answer.ua.length > 9 &&
-													options.length > 3
+													answer.ua.length > 15 &&
+													options.length >= 3
 														? s.answerLong
 														: ''
 												}
@@ -158,7 +158,7 @@ const Program: FC<ProgramProps> = ({ program }) => {
 					<ClosePopupButtonFilled
 						closePopup={() => setAlertToggle(false)}
 					/>
-					<Description text={alertText} />
+					<p>{alertText}</p>
 				</PopUp>
 			)}
 		</section>

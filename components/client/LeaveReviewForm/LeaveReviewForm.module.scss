@@ -22,6 +22,10 @@
 		gap: $m1366Min;
 	}
 
+	@include m-834 {
+		width: 520px;
+	}
+
 	> h2 {
 		font-size: 30px;
 

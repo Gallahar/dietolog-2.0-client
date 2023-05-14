@@ -167,7 +167,7 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 					<ClosePopupButtonFilled
 						closePopup={() => setAlertToggle(false)}
 					/>
-					<Description text={alertText} />
+					<p>{alertText}</p>
 				</PopUp>
 			)}
 		</Section>

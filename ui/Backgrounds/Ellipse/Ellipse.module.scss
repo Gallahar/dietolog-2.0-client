@@ -20,4 +20,9 @@
 		width: 427px;
 		height: 427px;
 	}
+
+	@include m-834 {
+		width: 370px;
+		height: 370px;
+	}
 }

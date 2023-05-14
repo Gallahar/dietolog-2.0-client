@@ -27,6 +27,11 @@
 
 		.descriptionWrapper {
 			@apply flex justify-between;
+
+			@include m-834 {
+				flex-direction: column;
+				gap: 12px;
+			}
 		}
 	}
 
@@ -54,8 +59,16 @@
 				grid-template-columns: 436px;
 			}
 
+			@include m-834 {
+				grid-template-columns: 209px;
+			}
+
 			> img {
 				border-radius: 480px 480px 0 0;
+
+				@include m-834 {
+					border-radius: 0px 342px 0 0;
+				}
 			}
 
 			.outline {
@@ -66,6 +79,14 @@
 				position: absolute;
 				bottom: 4%;
 				right: 5%;
+
+				@include m-834 {
+					@include m-834 {
+						border-radius: 0px 342px 0 0;
+						right: 8%;
+						bottom: -3%;
+					}
+				}
 			}
 		}
 
@@ -82,6 +103,10 @@
 
 			@include m-1366 {
 				max-width: 436px;
+			}
+
+			@include m-834 {
+				max-width: 430px;
 			}
 
 			.constructorDescriptionWrapper {
@@ -104,6 +129,10 @@
 
 	.constructorBottomWrapper {
 		@apply flex justify-between;
+
+		@include m-834 {
+			flex-direction: column;
+		}
 
 		.leftBlock {
 			> div {
@@ -139,6 +168,10 @@
 			max-width: 958px;
 			padding-top: $m1366Mid;
 		}
+
+		@include m-834 {
+			max-width: 614px;
+		}
 	}
 
 	.actionButton {
@@ -168,6 +201,10 @@
 	top: -3%;
 	right: -24%;
 	z-index: 0;
+
+	@include m-834 {
+		right: -35%;
+	}
 }
 
 .leaf_2 {
@@ -175,4 +212,9 @@
 	bottom: 9%;
 	right: -25%;
 	z-index: 0;
+
+	@include m-834 {
+		right: -40%;
+		bottom: 27%;
+	}
 }
