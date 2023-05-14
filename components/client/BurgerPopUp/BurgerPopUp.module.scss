@@ -9,6 +9,7 @@
 	display: flex;
 	justify-content: flex-end;
 	padding-top: 17px;
+	transition: 0.4s ease-in-out;
 
 	.popUp {
 		display: grid;
@@ -53,6 +54,21 @@
 
 		.filled {
 			@apply text-secondary;
+		}
+
+		.disappear {
+			transform: translateX(60%);
+			opacity: 0;
+		}
+	}
+}
+
+.hide {
+	opacity: 0;
+	.popUp {
+		> button {
+			transform: scale(0);
+			opacity: 0;
 		}
 	}
 }

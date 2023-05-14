@@ -1,6 +1,7 @@
 import { INavbarItem } from '@/modules/Header/Header_types'
-import { FC, useContext } from 'react'
+import { FC, useContext, useState } from 'react'
 import s from './BurgerPopUp.module.scss'
+import cn from 'classnames'
 import ClosePopupButton from '@/ui/Buttons/Actions/ClosePopupButton/ClosePopupButton'
 import { useOverflow } from '@/ui/PopUp/useOverflow'
 import Link from 'next/link'
@@ -16,22 +17,33 @@ export const BurgerPopUp: FC<BurgerPopUpProps> = ({ links, closePopUp }) => {
 	useOverflow()
 
 	const { pathname } = useRouter()
+
 	const { currentSection } = useContext(SectionContext)
 
+	const [close, setClose] = useState(false)
+
+	const handleClose = () => {
+		setClose(true)
+		setTimeout(() => {
+			closePopUp()
+		}, 400)
+	}
+
 	return (
-		<div className={s.popUpWrapper} onClick={closePopUp}>
-			<div
-				className={`container ${s.popUp}`}
-				onClick={(e) => e.stopPropagation()}
-			>
-				<ClosePopupButton closePopup={closePopUp} />
+		<div
+			className={cn(s.popUpWrapper, { [s.hide]: close })}
+			onClick={handleClose}
+		>
+			<div className={`container ${s.popUp}`}>
+				<ClosePopupButton closePopup={handleClose} />
 				{links.map(({ title, href }: INavbarItem) =>
 					pathname === '/' ? (
 						<a
-							onClick={closePopUp}
-							className={`${s.default} ${
-								currentSection === href.slice(1) ? s.filled : ''
-							} `}
+							onClick={handleClose}
+							className={cn(s.default, {
+								[s.disappear]: close,
+								[s.filled]: currentSection === href.slice(1),
+							})}
 							key={href}
 							href={href}
 						>
@@ -39,11 +51,12 @@ export const BurgerPopUp: FC<BurgerPopUpProps> = ({ links, closePopUp }) => {
 						</a>
 					) : (
 						<Link
-							onClick={closePopUp}
+							onClick={handleClose}
 							key={href}
-							className={`${s.default} ${
-								currentSection === href.slice(1) ? s.filled : ''
-							} `}
+							className={cn(s.default, {
+								[s.disappear]: close,
+								[s.filled]: currentSection === href.slice(1),
+							})}
 							href={`/${href}`}
 						>
 							{title}
