@@ -20,7 +20,10 @@ export const useSectionObserver = (): RefObject<HTMLElement> => {
 		})
 		if (!sectionRef.current) return
 		observer.observe(sectionRef.current)
-		return () => observer.disconnect()
+		return () => {
+			setCurrentSection('')
+			observer.disconnect()
+		}
 	}, [])
 
 	return sectionRef
