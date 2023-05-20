@@ -15,36 +15,65 @@ interface CardProgramProps {
 
 const CardProgram: FC<CardProgramProps> = ({ program, isMoving }) => {
 	const mark = useLanguageContext().mark
-	const { photo_small, price, description_short, title, slug } = program
+	const { photo_small, price, description_short, title, slug, isAvailable } =
+		program
 
 	return (
-		<Link
-			tabIndex={-1}
-			draggable={false}
-			onClick={(e) => {
-				if (isMoving) {
-					e.preventDefault()
-				}
-			}}
-			href={`/programs/${slug}`}
-		>
-			<div className={s.card}>
-				<Image
+		<>
+			{isAvailable ? (
+				<Link
+					className={`${s.card} ${s.link}`}
+					tabIndex={-1}
 					draggable={false}
-					fill
-					src={photo_small}
-					alt={`programCard${currentLanguage(title, mark)}`}
-				/>
-				<div className={s.cardBlock}>
-					<div className={s.cardInfo}>
-						<span className={s.price}>{price} ₴</span>
-						<h1>{currentLanguage(title, mark)}</h1>
-						{parse(currentLanguage(description_short, mark))}
+					onClick={(e) => {
+						if (isMoving) {
+							e.preventDefault()
+						}
+					}}
+					href={`/programs/${slug}`}
+				>
+					<div>
+						<Image
+							draggable={false}
+							fill
+							src={photo_small}
+							alt={`programCard${currentLanguage(title, mark)}`}
+						/>
+						<div className={s.cardBlock}>
+							<div className={s.cardInfo}>
+								<span className={s.price}>{price} ₴</span>
+								<h1>{currentLanguage(title, mark)}</h1>
+								{parse(
+									currentLanguage(description_short, mark)
+								)}
+							</div>
+							<ArrowCard />
+						</div>
 					</div>
-					<ArrowCard />
+				</Link>
+			) : (
+				<div className={s.card} tabIndex={-1} draggable={false}>
+					<div>
+						<Image
+							draggable={false}
+							fill
+							src={photo_small}
+							alt={`programCard${currentLanguage(title, mark)}`}
+						/>
+						<div className={s.cardBlock}>
+							<div className={s.cardInfo}>
+								<span className={s.price}>{price} ₴</span>
+								<h1>{currentLanguage(title, mark)}</h1>
+								{parse(
+									currentLanguage(description_short, mark)
+								)}
+							</div>
+							<ArrowCard />
+						</div>
+					</div>
 				</div>
-			</div>
-		</Link>
+			)}
+		</>
 	)
 }
 export default CardProgram

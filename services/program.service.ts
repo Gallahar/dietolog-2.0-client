@@ -3,8 +3,12 @@ import { getProgramsUrl } from '../config/api'
 import { IProgram, IEditProgram } from '../shared/models/program.interface'
 
 export const programService = {
-	async getAll() {
-		return await defaultAxios.get<IProgram[]>(getProgramsUrl(''))
+	async getAll(availableOnly?: boolean) {
+		return await defaultAxios.get<IProgram[]>(
+			getProgramsUrl(
+				availableOnly ? `?onlyAvailable=${availableOnly}` : ''
+			)
+		)
 	},
 	async getBySlug(slug: string) {
 		return await defaultAxios.get<IProgram>(

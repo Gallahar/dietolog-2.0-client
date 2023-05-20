@@ -13,7 +13,7 @@ const ProgramPage: NextPage<ProgramPageProps> = ({ program }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	try {
-		const { data: programs } = await programService.getAll()
+		const { data: programs } = await programService.getAll(true)
 		const paths = programs.map(({ slug }) => ({
 			params: { slug: [slug] },
 		}))

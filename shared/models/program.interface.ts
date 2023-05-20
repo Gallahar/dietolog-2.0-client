@@ -22,6 +22,7 @@ export interface IProgram {
 	description_short: ILanguagedString
 	included: ILanguagedString[]
 	radios: IProgramRadio[]
+	isAvailable: boolean
 }
 
 export interface IEditProgram extends Omit<IProgram, '_id'> {}

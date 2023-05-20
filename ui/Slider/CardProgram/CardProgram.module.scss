@@ -2,14 +2,14 @@
 @import '@/assets/styles/variables.scss';
 
 .card {
-	@apply flex flex-col items-end justify-end relative cursor-pointer;
+	@apply flex flex-col items-end justify-end relative;
 	width: 398px;
 	height: 564px;
 	filter: drop-shadow(3px 5px 6px rgba(143, 63, 9, 0.2));
 	user-select: none;
-	transition: transform 0.3s ease-in-out;
+	overflow-wrap: break-word;
 
-	> img {
+	img {
 		bottom: 0;
 		position: absolute;
 		z-index: -1;
@@ -31,32 +31,28 @@
 		filter: drop-shadow(3px 5px 4px rgba(143, 63, 9, 0.2));
 	}
 
-	&:hover {
-		transform: translateY(-10px);
-		svg {
-			transform: scale(1.2);
-		}
-	}
-
 	.cardBlock {
 		border-radius: 0 360px 0 0;
 
+		width: 398px;
 		height: 432px;
-		width: 100%;
 		background: #fff;
 		padding: 60px 48px 0 30px;
 
 		@include m-1920 {
+			width: 346px;
 			height: 378px;
 			padding: 52px 42px 0 26px;
 		}
 
 		@include m-1680 {
+			width: 330px;
 			height: 358px;
 			padding: 50px 40px 0 25px;
 		}
 
 		@include m-1366 {
+			width: 282px;
 			height: 303px;
 			padding: 42px 35px 0 21px;
 		}
@@ -124,6 +120,7 @@
 				font-size: 30px;
 				line-height: 150%;
 				letter-spacing: 0.02em;
+				max-width: 85%;
 
 				@include m-1920 {
 					font-size: 26px;
@@ -156,6 +153,17 @@
 					font-size: 14px;
 				}
 			}
+		}
+	}
+}
+
+.link {
+	transition: transform 0.3s ease-in-out;
+
+	&:hover {
+		transform: translateY(-10px);
+		svg {
+			transform: scale(1.2);
 		}
 	}
 }

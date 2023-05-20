@@ -1,6 +1,6 @@
 import AdminNavbar from '@/components/admin/AdminNavbar/AdminNavbar'
 import Meta from '@/utils/meta/Meta'
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import { Controller, useFieldArray, useForm } from 'react-hook-form'
 import { useEditProgram } from './useEditProgram'
 import s from './EditProgram.module.scss'
@@ -10,8 +10,6 @@ import AdminHeading from '@/ui/Headings/AdminHeading/AdminHeading'
 import UploadField from '@/ui/Fields/UploadField/UploadField'
 import { IEditProgram } from '@/shared/models/program.interface'
 import AdminField from '@/ui/Fields/AdminField/AdminField'
-import { ILanguagedString } from 'languages/template'
-import AdminEditOption from '@/components/admin/AdminEditOption/AdminEditOption'
 import SlugField from '@/ui/Fields/SlugField/SlugField'
 import { generateSlug } from '@/utils/string'
 import LanguagedTextEditor from '@/components/admin/LanguagedTextEditor/LanguagedTextEditor'
@@ -82,6 +80,15 @@ const EditProgram: FC = () => {
 				{isLoading ? null : (
 					<>
 						<div className={s.fields}>
+							<div className={s.availableFieldWrapper}>
+								<label>
+									Программа активна?
+									<input
+										{...register('isAvailable')}
+										type="checkbox"
+									/>
+								</label>
+							</div>
 							<LanguagedField
 								register={register}
 								field="title"
@@ -102,7 +109,6 @@ const EditProgram: FC = () => {
 								control={control}
 								name="description_short"
 							/>
-
 							<div style={{ width: '30%' }}>
 								<SlugField
 									register={register}
