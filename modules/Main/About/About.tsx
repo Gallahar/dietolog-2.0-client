@@ -88,7 +88,7 @@ const About = () => {
 						</div>
 					</div>
 				</div>
-				<div id="aboutLinks" className={s.bottomSideInfo}>
+				<div className={s.bottomSideInfo}>
 					<div className={s.notSuitableBlock}>
 						<div className={s.notSuitableHeading}>
 							<Heading text={not_suitable} />
@@ -112,7 +112,7 @@ const About = () => {
 						/>
 						<div />
 					</div>
-					<div className={s.worthBlock}>
+					<div id="aboutLinks" className={s.worthBlock}>
 						<Heading text={worth_1} />
 						<div className={s.description1}>
 							<p className="hamilton">10+</p>

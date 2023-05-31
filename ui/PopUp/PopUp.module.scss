@@ -1,7 +1,7 @@
 @import '@/assets/styles/media.scss';
 
 .popUpWrapper {
-	@apply flex justify-center items-center;
+	@apply flex justify-center items-center  overflow-y-auto;
 
 	animation: appear 0.25s ease-in;
 	height: 100vh;

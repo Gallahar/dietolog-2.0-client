@@ -112,10 +112,7 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 					<Image fill src={constructorImg} alt="constructor-img" />
 					<div />
 				</div>
-				<div
-					id="programs"
-					className={cn('section', s.constructorBottomWrapper)}
-				>
+				<div className={cn('section', s.constructorBottomWrapper)}>
 					<div className={s.leftBlock}>
 						<Description text={parse(constructor_col_1_part_1)} />
 						<br />
@@ -123,7 +120,7 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 						<br />
 						<Description text={constructor_col_1_part_3} />
 					</div>
-					<div className={s.rightBlock}>
+					<div id="programs" className={s.rightBlock}>
 						<Description text={constructor_col_2_part_1} />
 						<br />
 						<Description text={constructor_col_2_part_2} />
