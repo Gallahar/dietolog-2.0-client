@@ -18,6 +18,11 @@
 		gap: $m1366Max;
 	}
 
+	@include m-360 {
+		flex-direction: column;
+		gap: $m360Max;
+	}
+
 	.background {
 		position: relative;
 		margin-top: 91px;
@@ -45,6 +50,12 @@
 		@include m-834 {
 			width: 220px;
 			height: 1570px;
+		}
+
+		@include m-360 {
+			margin-top: 75px;
+			width: 360px;
+			height: 150px;
 		}
 	}
 
@@ -87,6 +98,13 @@
 
 		@include m-834 {
 			max-width: 479px;
+		}
+
+		@include m-360 {
+			gap: 20px;
+			max-width: 316px;
+			padding-top: 0;
+			margin: 0 auto;
 		}
 
 		.price {
@@ -153,6 +171,10 @@
 				gap: $m1366Min;
 			}
 
+			@include m-360 {
+				gap: $m360Min;
+			}
+
 			.radiosBlock {
 				@apply flex flex-col;
 
@@ -186,6 +208,13 @@
 						gap: 8px 23px;
 					}
 
+					@include m-360 {
+						grid-template-columns: repeat(
+							3,
+							minmax(min-content, max-content)
+						);
+					}
+
 					.answerLong {
 						grid-column: span 2;
 					}
@@ -206,9 +235,38 @@
 			@include m-1366 {
 				margin-top: $m1366Mid - 25px;
 			}
+
+			@include m-360 {
+				margin-top: $m360Min;
+			}
 		}
 
 		.link {
+			> button {
+				@apply outline-border-none uppercase underline  text-secondary text-32 transition-transform cursor-pointer;
+				line-height: 150%;
+				padding: 0;
+				letter-spacing: 0.02em;
+				text-align: left;
+				text-underline-position: under;
+
+				@include m-1920 {
+					font-size: 28px;
+				}
+
+				@include m-1680 {
+					font-size: 26px;
+				}
+
+				@include m-1366 {
+					font-size: 23px;
+				}
+
+				&:hover {
+					@apply link-animation;
+				}
+			}
+
 			margin-top: $m1920Max - 36px;
 
 			@include m-1920 {
@@ -220,6 +278,11 @@
 			}
 			@include m-1366 {
 				margin-top: $m1366Max - 25px;
+			}
+
+			@include m-360 {
+				margin-top: 40px;
+				margin-bottom: 60px;
 			}
 		}
 	}
@@ -237,5 +300,16 @@
 
 	@include m-834 {
 		right: -40%;
+	}
+
+	@include m-360 {
+		right: -65%;
+		bottom: 40%;
+	}
+}
+
+.mobileStep1 {
+	@include m-360 {
+		@apply bg-primary;
 	}
 }

@@ -18,6 +18,10 @@
 		@include m-1366 {
 			padding-top: $m1366Max;
 		}
+
+		@include m-360 {
+			padding-top: $m360Max;
+		}
 	}
 
 	.contactsContainer {
@@ -35,6 +39,11 @@
 
 		@include m-1366 {
 			margin-top: $m1366Mid;
+		}
+
+		@include m-360 {
+			margin-top: $m360Mid;
+			flex-direction: column;
 		}
 
 		.contacts {
@@ -59,6 +68,10 @@
 			@include m-1366 {
 				gap: $m1366Min;
 				font-size: 16px;
+			}
+
+			@include m-360 {
+				gap: $m360Min;
 			}
 
 			.phones {
@@ -161,10 +174,17 @@
 						height: 34px;
 					}
 				}
+
+				@include m-360 {
+					gap: 60px;
+				}
 			}
 		}
 
 		.avatarWrapper {
+			@include m-360 {
+				margin-top: 40px;
+			}
 			.outline {
 				@apply flex items-center justify-between;
 
@@ -192,6 +212,11 @@
 					width: 350px;
 					padding: 19px 30px 19px 19px;
 					margin-top: 20px;
+				}
+
+				@include m-360 {
+					width: 316px;
+					padding: 12px 25px 12px 12px;
 				}
 
 				> img {
@@ -252,6 +277,10 @@
 						@include m-1366 {
 							font-size: 14px;
 						}
+
+						@include m-360 {
+							font-size: 13px;
+						}
 					}
 
 					> p {
@@ -290,6 +319,11 @@
 	@include m-834 {
 		left: -37%;
 	}
+
+	@include m-360 {
+		top: -25%;
+		left: -60%;
+	}
 }
 
 .leaf_2 {
@@ -300,10 +334,21 @@
 	@include m-834 {
 		right: -40%;
 	}
+
+	@include m-360 {
+		right: -60%;
+		bottom: -8%;
+	}
 }
 
 .ellipse_1 {
 	background: $ellipseBgCream;
 	bottom: 1%;
 	left: 30%;
+
+	@include m-360 {
+		bottom: 0;
+		top: 1%;
+		right: -20%;
+	}
 }

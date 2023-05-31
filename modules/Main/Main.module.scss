@@ -9,15 +9,29 @@
 	z-index: 0;
 
 	.main {
-		> h2 {
-			font-family: 'mr_hamiltoneg';
+		> .fullName {
 			margin-top: 178px;
 			font-size: 125px;
 			letter-spacing: 0.02em;
 			line-height: 150%;
 			color: #8f3f09;
-			margin-left: -20px;
 			margin-bottom: -7px;
+			display: flex;
+			gap: 20px;
+
+			.name {
+				font-family: 'mr_hamiltoneg';
+				margin-left: -20px;
+			}
+
+			.lastName {
+				font-family: 'mr_hamiltoneg';
+
+				@include m-360 {
+					margin-left: 40px;
+					margin-top: -30px;
+				}
+			}
 
 			@include m-1920 {
 				margin-top: 166px;
@@ -32,6 +46,14 @@
 			@include m-1366 {
 				margin-top: 129px;
 				font-size: 89px;
+			}
+
+			@include m-360 {
+				margin-top: 91px;
+				flex-direction: column;
+				font-size: 70px;
+				gap: 0;
+				margin-bottom: 4px;
 			}
 		}
 
@@ -51,6 +73,10 @@
 
 			@include m-1366 {
 				font-size: 21px;
+			}
+
+			@include m-360 {
+				max-width: 280px;
 			}
 		}
 
@@ -87,6 +113,10 @@
 						max-width: 342px;
 						white-space: normal;
 					}
+
+					@include m-360 {
+						margin-top: $m360Mid;
+					}
 				}
 
 				> a {
@@ -102,6 +132,10 @@
 
 					@include m-1366 {
 						margin-top: $m1366Max;
+					}
+
+					@include m-360 {
+						margin-top: $m360Max;
 					}
 				}
 			}
@@ -135,6 +169,10 @@
 						width: 300px;
 						height: 300px;
 					}
+
+					@include m-360 {
+						display: none;
+					}
 				}
 
 				.outline {
@@ -165,6 +203,10 @@
 						width: 300px;
 						height: 300px;
 					}
+
+					@include m-360 {
+						display: none;
+					}
 				}
 			}
 		}
@@ -180,6 +222,11 @@
 		top: 15%;
 		left: -30%;
 	}
+
+	@include m-360 {
+		top: 42%;
+		left: -53%;
+	}
 }
 .leaf_2 {
 	top: -40%;
@@ -189,5 +236,10 @@
 	@include m-834 {
 		top: -45%;
 		right: -30%;
+	}
+
+	@include m-360 {
+		top: -13%;
+		right: -58%;
 	}
 }

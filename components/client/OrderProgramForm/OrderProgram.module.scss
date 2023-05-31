@@ -22,6 +22,10 @@
 		grid-template-columns: 360px 354px;
 	}
 
+	@include m-360 {
+		grid-template-columns: 316px;
+	}
+
 	.heading {
 		@apply text-text uppercase;
 
@@ -46,6 +50,10 @@
 		grid-template-columns: 1fr;
 		gap: $m1920Min;
 
+		.mobileSubmit {
+			display: none;
+		}
+
 		@include m-1920 {
 			gap: $m1680Min;
 			padding: 79px 64px;
@@ -63,6 +71,16 @@
 
 		@include m-834 {
 			padding: 63px 25px 50px 50px;
+		}
+
+		@include m-360 {
+			padding: 56px 20px 20px;
+			border-radius: 22px 0 22px 22px;
+			gap: 20px;
+
+			.mobileSubmit {
+				display: flex;
+			}
 		}
 
 		.title {
@@ -118,6 +136,10 @@
 				font-size: 11px;
 			}
 
+			@include m-360 {
+				display: none;
+			}
+
 			&::before {
 				@apply absolute;
 
@@ -149,6 +171,31 @@
 		padding: 90px 72px;
 		border-radius: 0 0 50px 0;
 
+		.privacyMobile {
+			display: none;
+			@apply relative;
+
+			padding-left: 11px;
+			opacity: 0.5;
+			font-size: 11px;
+			line-height: 150%;
+			letter-spacing: 0.02em;
+
+			&::before {
+				@apply absolute;
+
+				top: 5px;
+				left: 0;
+				font-size: 18px;
+				content: '*';
+			}
+		}
+
+		.buttonMobile {
+			align-self: end;
+			display: none;
+		}
+
 		@include m-1920 {
 			gap: $m1680Min;
 			padding: 79px 64px;
@@ -168,8 +215,26 @@
 			padding: 63px 50px 50px 25px;
 		}
 
-		> button {
+		@include m-360 {
+			padding: 56px 20px 20px;
+			border-radius: 22px 0 22px 22px;
+			gap: 20px;
+
+			.buttonMobile {
+				display: flex;
+			}
+
+			.privacyMobile {
+				display: block;
+			}
+		}
+
+		.buttonDefault {
 			align-self: end;
+
+			@include m-360 {
+				display: none;
+			}
 		}
 
 		.parametersWrapper {
@@ -195,7 +260,17 @@
 			.parameter {
 				display: grid;
 				grid-template-columns: repeat(2, minmax(min-content, 1fr));
+
+				@include m-360 {
+					grid-template-columns: 120px minmax(min-content, 1fr);
+				}
 			}
+		}
+	}
+
+	.hide {
+		@include m-360 {
+			display: none;
 		}
 	}
 }

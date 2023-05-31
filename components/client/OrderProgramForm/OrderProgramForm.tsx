@@ -16,6 +16,8 @@ interface OrderProgramFormProps {
 	setOpenPopup: () => void
 	program: IProgram
 	answers: string[]
+	proceed: boolean
+	setProceed: () => void
 }
 
 const OrderProgramForm: FC<OrderProgramFormProps> = ({
@@ -23,6 +25,8 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 	setOpenPopup,
 	program,
 	answers,
+	proceed,
+	setProceed,
 }) => {
 	const mark = useLanguageContext().mark
 	const {
@@ -34,9 +38,10 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 		invalid_phone,
 	} = useLanguageContext().sign_for_consult
 
-	const { error, order, privacy } = useLanguageContext().global
+	const { error, order, privacy, _continue } = useLanguageContext().global
 	const { success_program, _program } = useLanguageContext().program
-	const { chosen_params, your_order } = useLanguageContext().program_popup
+	const { chosen_params, your_order, privacy_mobile } =
+		useLanguageContext().program_popup
 
 	const [loading, setLoading] = useState(false)
 
@@ -85,7 +90,7 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={s.form}>
-			<div className={s.inputsWrapper}>
+			<div className={`${s.inputsWrapper} ${!proceed ? s.hide : ''}`}>
 				<p className={s.heading}>{`${your_order}:`}</p>
 				<p className={s.title}>{`${_program} ${currentLanguage(
 					title,
@@ -120,8 +125,14 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 					placeholder={email}
 				/>
 				<p className={s.privacy}>{privacy}</p>
+				<ActionCircleButton
+					className={s.mobileSubmit}
+					disabled={loading}
+					type="submit"
+					text={order}
+				/>
 			</div>
-			<div className={s.checkListWrapper}>
+			<div className={`${s.checkListWrapper} ${proceed ? s.hide : ''}`}>
 				<p className={s.heading}>{`${chosen_params}:`}</p>
 				<div className={s.parametersWrapper}>
 					{radios.map(({ title_short }, i) => (
@@ -132,9 +143,17 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 					))}
 				</div>
 				<ActionCircleButton
+					className={s.buttonDefault}
 					disabled={loading}
 					type="submit"
 					text={order}
+				/>
+				<p className={s.privacyMobile}>{privacy_mobile}</p>
+				<ActionCircleButton
+					onClick={setProceed}
+					className={s.buttonMobile}
+					type="button"
+					text={_continue}
 				/>
 			</div>
 		</form>

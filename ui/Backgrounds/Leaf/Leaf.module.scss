@@ -25,4 +25,9 @@
 		width: 530px;
 		height: 595px;
 	}
+
+	@include m-360 {
+		width: 400px;
+		height: 449px;
+	}
 }

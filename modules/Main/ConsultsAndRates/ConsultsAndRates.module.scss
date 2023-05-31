@@ -33,6 +33,11 @@
 			}
 		}
 
+		@include m-360 {
+			padding-top: $m360Max;
+			gap: 30px;
+		}
+
 		.consultsTextWrapper {
 			@apply flex flex-col justify-between;
 
@@ -70,6 +75,10 @@
 				@include m-834 {
 					margin-top: $m1366Mid;
 				}
+
+				@include m-360 {
+					margin-top: $m360Mid;
+				}
 			}
 		}
 
@@ -99,6 +108,11 @@
 
 			@include m-834 {
 				width: 630px;
+				margin: 0 auto;
+			}
+
+			@include m-360 {
+				width: 292px;
 				margin: 0 auto;
 			}
 		}

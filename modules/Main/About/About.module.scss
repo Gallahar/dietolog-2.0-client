@@ -19,6 +19,10 @@
 			padding-top: $m1366Max;
 		}
 
+		@include m-360 {
+			padding-top: $m360Max;
+		}
+
 		.approachTextBlock {
 			@apply flex justify-between;
 
@@ -40,6 +44,36 @@
 				flex-direction: column;
 				gap: 25px;
 			}
+
+			@include m-360 {
+				gap: 20px;
+			}
+		}
+
+		.approachImageWrapper {
+			display: none;
+
+			@include m-360 {
+				position: relative;
+				display: block;
+				width: 316px;
+				height: 200px;
+				margin-top: $m360Max;
+
+				.approachImage {
+					border-radius: 0 360px 360px 0;
+				}
+
+				.outlineApproach {
+					position: absolute;
+					border-radius: 0 360px 360px 0;
+					bottom: 12px;
+					right: 12px;
+					width: 100%;
+					height: 100%;
+					border: 1px solid #ecb390;
+				}
+			}
 		}
 	}
 
@@ -58,6 +92,11 @@
 
 		@include m-1366 {
 			padding-top: $m1366Max;
+		}
+
+		@include m-360 {
+			flex-direction: column-reverse;
+			padding-top: $m360Max;
 		}
 
 		.forWhoImageBlock {
@@ -83,11 +122,21 @@
 				grid-template-columns: 209px;
 			}
 
+			@include m-360 {
+				grid-template-columns: 316px;
+				grid-template-rows: 200px;
+				margin-top: $m360Max;
+			}
+
 			> img {
 				border-radius: 480px 480px 0 0;
 
 				@include m-834 {
 					border-radius: 0 342px 0 0;
+				}
+
+				@include m-360 {
+					border-radius: 360px 0 0 360px;
 				}
 			}
 
@@ -104,6 +153,12 @@
 					border-radius: 0 342px 0 0;
 					bottom: -3%;
 					right: 9%;
+				}
+
+				@include m-360 {
+					border-radius: 360px 0 0 360px;
+					bottom: 12px;
+					right: -12px;
 				}
 			}
 		}
@@ -129,6 +184,12 @@
 					margin-top: $m1366Mid;
 					gap: 28px;
 				}
+
+				@include m-360 {
+					margin-top: $m360Mid;
+					gap: 20px;
+				}
+
 				.wrapperDescription {
 					position: relative;
 
@@ -155,6 +216,10 @@
 			padding-top: $m1366Max;
 		}
 
+		@include m-360 {
+			padding-top: $m360Max;
+		}
+
 		.notSuitableBlock {
 			.notSuitableDescriptionWrapper {
 				@apply flex justify-between;
@@ -179,6 +244,11 @@
 					gap: 25px;
 				}
 
+				@include m-360 {
+					margin-top: $m360Mid;
+					gap: 20px;
+				}
+
 				.notSuitableDescription1 {
 					position: relative;
 
@@ -195,6 +265,10 @@
 							left: 93px;
 							top: 0;
 						}
+
+						@include m-360 {
+							left: 63px;
+						}
 					}
 				}
 
@@ -208,10 +282,41 @@
 						@include m-834 {
 							left: 280px;
 						}
+
+						@include m-360 {
+							left: 211px;
+						}
 					}
 				}
 			}
 		}
+
+		.notSuitableImgWrapper {
+			display: none;
+
+			@include m-360 {
+				position: relative;
+				display: block;
+				width: 316px;
+				height: 200px;
+				margin-top: $m360Max;
+
+				> img {
+					border-radius: 0 360px 360px 0;
+				}
+
+				> div {
+					position: absolute;
+					border-radius: 0 360px 360px 0;
+					bottom: 12px;
+					right: 12px;
+					width: 100%;
+					height: 100%;
+					border: 1px solid #ecb390;
+				}
+			}
+		}
+
 		.worthBlock {
 			display: grid;
 			grid-template-columns: repeat(2, minmax(min-content, max-content));
@@ -237,7 +342,17 @@
 			@include m-834 {
 				a[href='/reviews'] {
 					justify-self: end;
+
+					@include m-360 {
+						justify-self: start;
+					}
 				}
+			}
+
+			@include m-360 {
+				grid-template-columns: 1fr;
+				gap: $m360Mid 0;
+				padding-top: $m360Max;
 			}
 
 			> h2 {
@@ -261,6 +376,10 @@
 						left: 46px;
 						top: 0px;
 					}
+
+					@include m-360 {
+						left: 26px;
+					}
 				}
 			}
 
@@ -279,6 +398,11 @@
 						top: 20px;
 						left: 240px;
 					}
+
+					@include m-360 {
+						top: 15px;
+						left: 80px;
+					}
 				}
 			}
 			> a {
@@ -294,6 +418,9 @@
 
 				@include m-1366 {
 					margin-top: 25px;
+				}
+				@include m-360 {
+					grid-column: 1/3;
 				}
 			}
 		}
@@ -326,6 +453,10 @@
 	@include m-1366 {
 		left: 45px;
 	}
+
+	@include m-360 {
+		left: 30px;
+	}
 }
 .num_2 {
 	left: 306px;
@@ -341,6 +472,10 @@
 
 	@include m-1366 {
 		left: 218px;
+	}
+
+	@include m-360 {
+		left: 150px;
 	}
 }
 
@@ -359,6 +494,10 @@
 	@include m-1366 {
 		left: 91px;
 	}
+
+	@include m-360 {
+		left: 54px;
+	}
 }
 
 .num_4 {
@@ -375,6 +514,10 @@
 
 	@include m-1366 {
 		left: 296px;
+	}
+
+	@include m-360 {
+		left: 226px;
 	}
 }
 
@@ -393,6 +536,10 @@
 	@include m-1366 {
 		left: 42px;
 	}
+
+	@include m-360 {
+		left: 22px;
+	}
 }
 
 .num_6 {
@@ -409,5 +556,9 @@
 
 	@include m-1366 {
 		left: 212px;
+	}
+
+	@include m-360 {
+		left: 162px;
 	}
 }

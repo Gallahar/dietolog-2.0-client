@@ -25,4 +25,8 @@
 	@include m-834 {
 		max-width: 520px;
 	}
+	@include m-360 {
+		max-width: 316px;
+		white-space: initial;
+	}
 }

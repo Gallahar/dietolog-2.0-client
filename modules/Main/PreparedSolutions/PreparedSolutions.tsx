@@ -3,6 +3,7 @@ import Description from '@/ui/Descriptions/Description/Description'
 import Heading from '@/ui/Headings/Heading/Heading'
 import Image from 'next/image'
 import preparedImg from '@/assets/prepared_solutions/prepared-solutions-img.png'
+import constructorImg from '@/assets/prepared_solutions/constructor-img.png'
 import parse from 'html-react-parser'
 import s from './PreparedSolutions.module.scss'
 import cn from 'classnames'
@@ -15,7 +16,6 @@ import PopUp from '@/ui/PopUp/PopUp'
 import HelpToPickForm from '@/components/client/HelpToPickForm/HelpToPickForm'
 import ClosePopupButton from '@/ui/Buttons/Actions/ClosePopupButton/ClosePopupButton'
 import ClosePopupButtonFilled from '@/ui/Buttons/Actions/ClosePopupButtonFilled/ClosePopupButtonFilled'
-import ActionButton from '@/ui/Buttons/Actions/ActionButton/ActionButton'
 import Section from '@/ui/Backgrounds/Section/Section'
 
 interface PreparedSolutionsProps {
@@ -108,6 +108,10 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 						</div>
 					</div>
 				</div>
+				<div className={s.constructorBottomImgWrapper}>
+					<Image fill src={constructorImg} alt="constructor-img" />
+					<div />
+				</div>
 				<div
 					id="programs"
 					className={cn('section', s.constructorBottomWrapper)}
@@ -127,9 +131,10 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 						<Description text={constructor_col_2_part_3} />
 					</div>
 				</div>
-			</div>
-			<div className="container">
-				<Heading text={programs_and_checks} />
+				<Heading
+					className={s.sliderHeading}
+					text={programs_and_checks}
+				/>
 			</div>
 			<div className={s.sliderWrapper}>
 				<Slider setIsMoving={setIsMoving} buttonsType={false}>
@@ -145,10 +150,9 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 				</Slider>
 			</div>
 			<div className={`container ${s.actionButton}`}>
-				<ActionButton
-					onClick={() => setOpenPopup(true)}
-					text={help_to_pick}
-				/>
+				<button onClick={() => setOpenPopup(true)}>
+					{help_to_pick}
+				</button>
 			</div>
 			{openPopup && (
 				<PopUp

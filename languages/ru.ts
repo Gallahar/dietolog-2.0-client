@@ -2,6 +2,9 @@ import { LanguageTemplate } from './template'
 
 export const ru: LanguageTemplate = {
 	mark: 'ru',
+
+	accessibility: 'Скоро в продаже',
+
 	global: {
 		error: 'Ошибка... Пожалуйста, попробуйте позже',
 		field_is_required: 'Это обязательное поле',
@@ -190,6 +193,8 @@ export const ru: LanguageTemplate = {
 	program_popup: {
 		your_order: 'Ваш заказ',
 		chosen_params: 'параметры',
+		privacy_mobile:
+			'Нажимая кнопку "Далее", Вы соглашаетесь, что заказываете этот продукт для личного использования. Использование в коммерческих целях запрещено.',
 	},
 	certificates: {
 		diplomas_heading: 'Дипломы и сертификаты',

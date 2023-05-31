@@ -16,7 +16,10 @@ const Main = () => {
 			<Leaf className={s.leaf_1} />
 			<Leaf className={s.leaf_2} />
 			<div className={`container ${s.main}`}>
-				<h2>{`${name} ${last_name}`}</h2>
+				<div className={s.fullName}>
+					<h2 className={s.name}>{name}</h2>
+					<h2 className={s.lastName}>{last_name}</h2>
+				</div>
 				<h1>{post_name}</h1>
 				<div className={s.contentWrapper}>
 					<div className={s.descriptionWrapper}>

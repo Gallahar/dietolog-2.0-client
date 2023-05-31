@@ -55,5 +55,10 @@
 		@include m-834 {
 			height: 204px;
 		}
+
+		@include m-360 {
+			height: 170px;
+			padding: 15px;
+		}
 	}
 }

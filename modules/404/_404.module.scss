@@ -19,6 +19,10 @@
 		padding-top: 69px;
 	}
 
+	@include m-360 {
+		padding-top: 75px;
+	}
+
 	.contentWrapper {
 		display: grid;
 		grid-template-columns: minmax(min-content, 515px) minmax(
@@ -54,6 +58,12 @@
 		}
 
 		.textWrapper {
+			@include m-360 {
+				> h2 {
+					max-width: 270px;
+				}
+			}
+
 			.descriptionWrapper {
 				display: grid;
 				grid-template-columns: minmax(min-content, max-content);
@@ -66,6 +76,10 @@
 				@include m-1680 {
 					margin-top: $m1600Mid;
 					gap: 7px;
+				}
+
+				@include m-360 {
+					margin-top: $m360Mid;
 				}
 			}
 		}
@@ -96,11 +110,42 @@
 				@include m-834 {
 					max-width: 490px;
 				}
+
+				@include m-360 {
+					max-width: 316px;
+				}
 			}
 		}
 
 		.linkBlock {
 			padding-top: $m1920Max;
+
+			display: block;
+
+			> button {
+				@apply outline-border-none uppercase underline  text-secondary text-32 transition-transform cursor-pointer;
+				line-height: 150%;
+				padding: 0;
+				letter-spacing: 0.02em;
+				text-align: left;
+				text-underline-position: under;
+
+				@include m-1920 {
+					font-size: 28px;
+				}
+
+				@include m-1680 {
+					font-size: 26px;
+				}
+
+				@include m-1366 {
+					font-size: 23px;
+				}
+
+				&:hover {
+					@apply link-animation;
+				}
+			}
 
 			@include m-1920 {
 				padding-top: $m1680Max;
@@ -112,6 +157,11 @@
 
 			@include m-1366 {
 				padding-top: $m1366Max;
+			}
+
+			@include m-360 {
+				padding-top: $m360Max;
+				padding-bottom: $m360Max;
 			}
 		}
 	}

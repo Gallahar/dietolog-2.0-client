@@ -57,23 +57,65 @@
 			padding: 42px 35px 0 21px;
 		}
 
+		@include m-360 {
+			padding: 42px 35px 0 19px;
+		}
+
 		> svg {
 			position: absolute;
-			bottom: 36px;
 			right: 48px;
+			bottom: 36px;
 			transition: 0.2s ease-in-out;
 
 			@include m-1920 {
 				width: 42px;
 				height: auto;
+				right: 42px;
+				bottom: 32px;
 			}
 
 			@include m-1680 {
 				width: 40px;
+				right: 40px;
+				bottom: 30px;
 			}
 
 			@include m-1366 {
 				width: 34px;
+				right: 35px;
+				bottom: 25px;
+			}
+		}
+
+		.accessibility {
+			@apply text-secondary absolute;
+
+			font-size: 20px;
+			left: 30px;
+			bottom: 36px;
+			line-height: 150%;
+			letter-spacing: 0.02em;
+
+			@include m-1920 {
+				left: 26px;
+				bottom: 32px;
+				font-size: 17px;
+			}
+
+			@include m-1680 {
+				left: 25px;
+				bottom: 30px;
+				font-size: 16px;
+			}
+
+			@include m-1366 {
+				left: 21px;
+				bottom: 25px;
+				font-size: 14px;
+			}
+
+			@include m-360 {
+				left: 19px;
 			}
 		}
 

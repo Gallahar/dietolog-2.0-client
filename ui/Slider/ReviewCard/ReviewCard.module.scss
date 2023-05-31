@@ -24,6 +24,10 @@
 		height: 493px;
 	}
 
+	@include m-360 {
+		width: 280px;
+	}
+
 	.cardTextWrapper {
 		@apply flex flex-col;
 
@@ -43,6 +47,10 @@
 		@include m-1366 {
 			gap: 21px;
 			padding: 21px;
+		}
+
+		@include m-360 {
+			padding: 12px;
 		}
 
 		> h2 {

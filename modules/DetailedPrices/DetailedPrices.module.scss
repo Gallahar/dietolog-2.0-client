@@ -20,6 +20,10 @@
 			padding-top: $m1366Max;
 		}
 
+		@include m-360 {
+			padding-top: $m360Max;
+		}
+
 		.packageBlock {
 			@apply flex flex-col mt-108;
 
@@ -33,6 +37,10 @@
 
 			@include m-1366 {
 				margin-top: $m1366Max;
+			}
+
+			@include m-360 {
+				margin-top: $m360Max;
 			}
 
 			&:nth-child(even) {
@@ -60,6 +68,10 @@
 					@include m-1366 {
 						gap: $m1366Mid;
 					}
+
+					@include m-360 {
+						gap: $m360Mid;
+					}
 				}
 			}
 			.table {
@@ -75,6 +87,10 @@
 
 				@include m-1366 {
 					margin-top: $m1366Mid;
+				}
+
+				@include m-360 {
+					margin-top: $m360Mid;
 				}
 
 				.heading {
@@ -95,14 +111,35 @@
 						height: 100px;
 					}
 
+					@include m-360 {
+						> h5 {
+							display: none;
+						}
+
+						&::last-child {
+							display: none;
+						}
+					}
+
 					> h5 {
 						width: 504px;
 					}
 
-					> div {
+					.h1 {
 						width: 414px;
 						> h5:nth-child(even) {
 							@apply text-secondary;
+						}
+					}
+
+					.h2 {
+						width: 414px;
+						> h5:nth-child(even) {
+							@apply text-secondary;
+						}
+
+						@include m-360 {
+							display: none;
 						}
 					}
 				}
@@ -145,9 +182,21 @@
 							}
 						}
 
-						p {
+						.price1 {
 							width: 414px;
 							text-align: center;
+
+							@include m-360 {
+								max-width: 90px;
+							}
+						}
+
+						.price2 {
+							width: 414px;
+							text-align: center;
+							@include m-360 {
+								display: none;
+							}
 						}
 					}
 				}
@@ -173,6 +222,10 @@
 				font-size: 13px;
 				margin-top: $m1366Mid;
 			}
+
+			@include m-360 {
+				margin-top: $m360Mid;
+			}
 		}
 
 		.link {
@@ -189,6 +242,10 @@
 			@include m-1366 {
 				margin-top: $m1366Max;
 			}
+
+			@include m-360 {
+				margin-top: $m360Max;
+			}
 		}
 	}
 }
@@ -201,6 +258,11 @@
 	@include m-834 {
 		right: -42%;
 	}
+
+	@include m-360 {
+		top: 3%;
+		right: -65%;
+	}
 }
 .leaf_2 {
 	left: -20%;
@@ -209,6 +271,10 @@
 
 	@include m-834 {
 		left: -36%;
+	}
+
+	@include m-360 {
+		left: -60%;
 	}
 }
 .leaf_3 {
@@ -219,6 +285,11 @@
 	@include m-834 {
 		right: -38%;
 	}
+
+	@include m-360 {
+		right: -60%;
+		top: 44%;
+	}
 }
 .leaf_4 {
 	bottom: 10%;
@@ -227,6 +298,11 @@
 
 	@include m-834 {
 		left: -37%;
+	}
+
+	@include m-360 {
+		bottom: 22%;
+		left: -60%;
 	}
 }
 .ellipse_1 {

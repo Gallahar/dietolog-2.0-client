@@ -22,6 +22,10 @@
 		width: 436px;
 	}
 
+	@include m-360 {
+		width: 316px;
+	}
+
 	> button {
 		margin-top: $m1920Mid - $m1920Min;
 
@@ -35,6 +39,10 @@
 
 		@include m-1366 {
 			margin-top: $m1366Mid - $m1366Min;
+		}
+
+		@include m-360 {
+			margin-top: 14px;
 		}
 	}
 }

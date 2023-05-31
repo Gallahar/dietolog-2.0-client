@@ -63,6 +63,9 @@ strong {
 	@include m-834 {
 		max-width: 734px;
 	}
+	@include m-360 {
+		max-width: 336px;
+	}
 }
 
 .section {
@@ -78,6 +81,10 @@ strong {
 
 	@include m-1366 {
 		padding-bottom: $m1366Max;
+	}
+
+	@include m-360 {
+		padding-bottom: $m360Max;
 	}
 }
 

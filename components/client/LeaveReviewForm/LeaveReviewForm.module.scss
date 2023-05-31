@@ -26,6 +26,18 @@
 		width: 520px;
 	}
 
+	@include m-360 {
+		width: 276px;
+
+		gap: $m360Min;
+
+		> div {
+			> textarea {
+				height: 280px;
+			}
+		}
+	}
+
 	> h2 {
 		font-size: 30px;
 

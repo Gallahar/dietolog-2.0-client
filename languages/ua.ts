@@ -2,6 +2,9 @@ import { LanguageTemplate } from './template'
 
 export const ua: LanguageTemplate = {
 	mark: 'ua',
+
+	accessibility: 'Скоро  у продажі',
+
 	global: {
 		error: 'Помилка... Будь ласка, спробуйте пізніше',
 		field_is_required: "Це поле обов'язкове",
@@ -193,6 +196,8 @@ export const ua: LanguageTemplate = {
 	program_popup: {
 		your_order: 'Ваше замовлення',
 		chosen_params: 'Обранi параметри',
+		privacy_mobile:
+			'Натискаючи кнопку “Далі”, Ви погоджуєтеся, що замовляєте цей продукт для особистого використання. Використання в комерційних цілях заборонено.',
 	},
 	certificates: {
 		diplomas_heading: 'Дипломи та сертифікати',

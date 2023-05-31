@@ -21,6 +21,10 @@
 			padding-top: $m1366Max;
 		}
 
+		@include m-360 {
+			padding-top: $m360Max;
+		}
+
 		.signWrapper {
 			@apply flex flex-col;
 
@@ -37,10 +41,18 @@
 			@include m-1366 {
 				gap: $m1366Mid;
 			}
+
+			@include m-360 {
+				gap: $m360Mid;
+			}
 		}
 		.imageWrapper {
 			@apply relative;
 			align-self: flex-end;
+
+			@include m-360 {
+				display: none;
+			}
 
 			.outline {
 				border: 1px solid #ecb390;

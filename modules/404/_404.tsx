@@ -6,9 +6,9 @@ import { FC } from 'react'
 import _404image from '@/assets/images/404.png'
 
 import s from './_404.module.scss'
-import ActionLink from '@/ui/Buttons/Actions/ActionButton/ActionLink'
 import Description from '@/ui/Descriptions/Description/Description'
 import Ellipse from '@/ui/Backgrounds/Ellipse/Ellipse'
+import Link from 'next/link'
 
 const _404: FC = () => {
 	const { back_to_main, heading, text_top, text_mid, text_bot } =
@@ -26,9 +26,9 @@ const _404: FC = () => {
 							<Description text={text_mid} />
 							<Description text={text_bot} />
 						</div>
-						<div className={`${s.linkBlock}`}>
-							<ActionLink text={back_to_main} path="/" />
-						</div>
+						<Link className={s.linkBlock} href="/">
+							<button>{back_to_main}</button>
+						</Link>
 					</div>
 					<div className={s.imageWrapper}>
 						<Ellipse className={s.ellipse_2} />

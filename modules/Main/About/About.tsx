@@ -1,5 +1,7 @@
 import { useLanguageContext } from '@/hooks/useLanguageContext'
 import aboutImg from '@/assets/about/about-img.png'
+import notSuitableImg from '@/assets/sign_for_consult/consult-img.png'
+import approachImg from '@/assets/main/main-img.png'
 import Image from 'next/image'
 import Description from '@/ui/Descriptions/Description/Description'
 import Heading from '@/ui/Headings/Heading/Heading'
@@ -50,6 +52,15 @@ const About = () => {
 						<Description text={col_1_text_1} />
 						<Description text={col_1_text_2} />
 					</div>
+					<div className={s.approachImageWrapper}>
+						<Image
+							className={s.approachImage}
+							fill
+							src={approachImg}
+							alt="approach-img"
+						/>
+						<div className={s.outlineApproach} />
+					</div>
 				</div>
 				<div className={s.forWhoWrapper}>
 					<div className={s.forWhoImageBlock}>
@@ -92,6 +103,14 @@ const About = () => {
 								<Description text={not_suitable_text_2} />
 							</div>
 						</div>
+					</div>
+					<div className={s.notSuitableImgWrapper}>
+						<Image
+							src={notSuitableImg}
+							fill
+							alt="not-suitable-img"
+						/>
+						<div />
 					</div>
 					<div className={s.worthBlock}>
 						<Heading text={worth_1} />

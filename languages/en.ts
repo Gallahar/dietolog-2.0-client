@@ -2,6 +2,9 @@ import { LanguageTemplate } from './template'
 
 export const en: LanguageTemplate = {
 	mark: 'en',
+
+	accessibility: 'Available soon',
+
 	global: {
 		error: 'Error... Please try later',
 		field_is_required: 'This field is required',
@@ -188,6 +191,8 @@ export const en: LanguageTemplate = {
 	program_popup: {
 		your_order: 'Your order',
 		chosen_params: 'Chosen parameters',
+		privacy_mobile:
+			'By clicking the "Next" button, you agree that you are ordering this product for personal use. Commercial use is prohibited.',
 	},
 	certificates: {
 		diplomas_heading: 'Diplomas and certificates',

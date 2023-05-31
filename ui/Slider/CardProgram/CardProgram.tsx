@@ -14,7 +14,7 @@ interface CardProgramProps {
 }
 
 const CardProgram: FC<CardProgramProps> = ({ program, isMoving }) => {
-	const mark = useLanguageContext().mark
+	const {mark,accessibility} = useLanguageContext()
 	const { photo_small, price, description_short, title, slug, isAvailable } =
 		program
 
@@ -69,6 +69,7 @@ const CardProgram: FC<CardProgramProps> = ({ program, isMoving }) => {
 								)}
 							</div>
 							<ArrowCard />
+							<span className={s.accessibility}>{accessibility}</span>
 						</div>
 					</div>
 				</div>

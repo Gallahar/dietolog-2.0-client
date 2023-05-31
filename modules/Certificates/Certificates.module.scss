@@ -2,7 +2,7 @@
 @import '@/assets/styles/media.scss';
 
 .certificatesWrapper {
-	@apply relative;
+	@apply relative overflow-x-hidden;
 
 	.diplomasHeading {
 		padding-top: $m1920Max + 91px;
@@ -17,6 +17,10 @@
 
 		@include m-1366 {
 			padding-top: $m1366Max + 69px;
+		}
+
+		@include m-360 {
+			padding-top: $m360Max + 75px;
 		}
 	}
 
@@ -48,6 +52,11 @@
 		@include m-834 {
 			max-width: 614px;
 		}
+
+		@include m-360 {
+			max-width: 300px;
+			padding-top: $m360Mid;
+		}
 	}
 
 	.skillsAndImagesWrapper {
@@ -66,6 +75,12 @@
 
 		@include m-1366 {
 			padding-top: $m1366Max - 15px;
+		}
+
+		@include m-360 {
+			display: flex;
+			flex-direction: column-reverse;
+			gap: $m360Max;
 		}
 
 		.imagesWrapper {
@@ -102,6 +117,13 @@
 				grid-template: 'r' auto / 209px;
 			}
 
+			@include m-360 {
+				grid-template:
+					't r' 184px
+					'b r' 282px / 144px 160px;
+				gap: 12px;
+			}
+
 			.t {
 				width: 100%;
 				height: 100%;
@@ -109,6 +131,10 @@
 				border-radius: 510px 0 0 0;
 				@include m-834 {
 					display: none;
+				}
+
+				@include m-360 {
+					display: block;
 				}
 			}
 
@@ -130,6 +156,10 @@
 				@include m-834 {
 					display: none;
 				}
+
+				@include m-360 {
+					display: block;
+				}
 			}
 
 			.outline {
@@ -146,6 +176,12 @@
 					border-radius: 0 363px 0 0;
 					bottom: -3%;
 					right: 9%;
+				}
+
+				@include m-360 {
+					border-radius: 262px 262px 0 0;
+					bottom: 14px;
+					right: 14px;
 				}
 			}
 		}
@@ -176,6 +212,11 @@
 					gap: 18px;
 				}
 
+				@include m-360 {
+					margin-top: $m360Mid;
+					gap: 20px;
+				}
+
 				.skill {
 					@apply relative;
 				}
@@ -200,6 +241,19 @@
 			@include m-834 {
 				grid-column: 1/2;
 			}
+
+			@include m-360 {
+				display: none;
+			}
+		}
+	}
+
+	.linkContainer {
+		display: none;
+
+		@include m-360 {
+			display: block;
+			margin-top: $m360Max;
 		}
 	}
 }
@@ -232,6 +286,11 @@
 			width: 600px;
 			height: 423px;
 		}
+
+		@include m-360 {
+			width: 276px;
+			height: 195px;
+		}
 	}
 }
 
@@ -250,6 +309,10 @@
 	@include m-1366 {
 		left: 57px;
 	}
+
+	@include m-360 {
+		left: 84px;
+	}
 }
 .num_2 {
 	left: 363px;
@@ -265,6 +328,10 @@
 
 	@include m-1366 {
 		left: 259px;
+	}
+
+	@include m-360 {
+		left: 181px;
 	}
 }
 
@@ -283,6 +350,10 @@
 	@include m-1366 {
 		left: 92px;
 	}
+
+	@include m-360 {
+		left: 12px;
+	}
 }
 
 .num_4 {
@@ -299,6 +370,10 @@
 
 	@include m-1366 {
 		left: 314px;
+	}
+
+	@include m-360 {
+		left: 220px;
 	}
 }
 
@@ -317,6 +392,10 @@
 	@include m-1366 {
 		left: 124px;
 	}
+
+	@include m-360 {
+		left: 87px;
+	}
 }
 
 .ellipse_1 {
@@ -329,10 +408,19 @@
 	background: $ellipseBgGreen;
 	top: 30%;
 	left: 30%;
+
+	@include m-360 {
+		top: 20%;
+		left: -10%;
+	}
 }
 
 .ellipse_3 {
 	background: $ellipseBgCream;
 	bottom: 2%;
 	right: 2%;
+
+	@include m-360 {
+		bottom: 40%;
+	}
 }

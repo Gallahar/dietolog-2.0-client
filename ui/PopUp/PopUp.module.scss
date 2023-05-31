@@ -23,8 +23,11 @@
 		padding: 90px 72px 72px;
 		> p {
 			padding-top: 8px;
+			padding-bottom: 10px;
 			font-size: 19px;
 			max-width: 643px;
+			line-height: 150%;
+			letter-spacing: 0.02em;
 		}
 
 		@include m-1920 {
@@ -38,6 +41,7 @@
 
 		@include m-1680 {
 			padding: 75px 60px 60px;
+			border-radius: 42px 0px 42px 42px;
 
 			> p {
 				font-size: 16px;
@@ -47,10 +51,20 @@
 
 		@include m-1366 {
 			padding: 63px 50px 50px;
-
+			border-radius: 36px 0px 36px 36px;
 			> p {
 				font-size: 14px;
 				max-width: 457px;
+			}
+		}
+
+		@include m-360 {
+			padding: 56px 20px 20px;
+			border-radius: 22px 0px 22px 22px;
+
+			> p {
+				max-width: 276px;
+				padding-top: 0;
 			}
 		}
 	}

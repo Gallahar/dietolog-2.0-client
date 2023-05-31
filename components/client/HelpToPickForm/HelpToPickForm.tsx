@@ -67,6 +67,7 @@ const HelpToPickForm: FC<HelpToPickFormProps> = ({
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={s.helperForm}>
 			<div className={s.inputsWrapper}>
+				<Heading text={help_to_pick} />
 				<Input
 					error={errors?.name?.message}
 					{...register('name', { required: field_is_required })}
@@ -108,6 +109,11 @@ const HelpToPickForm: FC<HelpToPickFormProps> = ({
 						},
 					})}
 					placeholder={description}
+				/>
+				<ActionCircleButton
+					type="submit"
+					text={send}
+					disabled={loading}
 				/>
 			</div>
 			<div className={s.handlerWrapper}>

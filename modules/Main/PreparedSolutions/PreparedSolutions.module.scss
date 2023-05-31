@@ -24,6 +24,10 @@
 			padding-top: $m1366Max;
 			gap: $m1366Mid;
 		}
+		@include m-360 {
+			padding-top: $m360Max;
+			gap: $m360Mid;
+		}
 
 		.descriptionWrapper {
 			@apply flex justify-between;
@@ -39,6 +43,12 @@
 		display: grid;
 		grid-template-columns: repeat(2, minmax(min-content, max-content));
 		justify-content: space-between;
+
+		@include m-360 {
+			grid-template-columns: 1fr;
+			grid-template-rows: 200px max-content;
+			gap: $m360Max 0;
+		}
 
 		.constructorImageWrapper {
 			@apply relative;
@@ -69,6 +79,10 @@
 				@include m-834 {
 					border-radius: 0px 342px 0 0;
 				}
+
+				@include m-360 {
+					border-radius: 0 360px 360px 0;
+				}
 			}
 
 			.outline {
@@ -81,11 +95,15 @@
 				right: 5%;
 
 				@include m-834 {
-					@include m-834 {
-						border-radius: 0px 342px 0 0;
-						right: 8%;
-						bottom: -3%;
-					}
+					border-radius: 0px 342px 0 0;
+					right: 8%;
+					bottom: -3%;
+				}
+
+				@include m-360 {
+					border-radius: 0 360px 360px 0;
+					right: 12px;
+					bottom: 12px;
 				}
 			}
 		}
@@ -109,6 +127,13 @@
 				max-width: 430px;
 			}
 
+			@include m-360 {
+				max-width: 316px;
+				> h2 {
+					white-space: inherit;
+				}
+			}
+
 			.constructorDescriptionWrapper {
 				@apply flex flex-col  mt-72;
 
@@ -123,6 +148,31 @@
 				@include m-1366 {
 					margin-top: $m1366Mid;
 				}
+
+				@include m-360 {
+					margin-top: $m360Mid;
+				}
+			}
+		}
+	}
+
+	.constructorBottomImgWrapper {
+		display: none;
+
+		@include m-360 {
+			position: relative;
+			display: block;
+			width: 316px;
+			height: 200px;
+
+			> div {
+				position: absolute;
+				border-radius: 360px 0 0 360px;
+				bottom: 12px;
+				left: 12px;
+				width: 100%;
+				height: 100%;
+				border: 1px solid #ecb390;
 			}
 		}
 	}
@@ -144,6 +194,16 @@
 			> div {
 				white-space: normal;
 			}
+		}
+
+		@include m-360 {
+			margin-top: $m360Max;
+		}
+	}
+
+	.sliderHeading {
+		@include m-360 {
+			max-width: 300px;
 		}
 	}
 
@@ -176,6 +236,11 @@
 		@include m-834 {
 			max-width: 614px;
 		}
+
+		@include m-360 {
+			max-width: 300px;
+			padding-top: $m360Mid;
+		}
 	}
 
 	.actionButton {
@@ -192,10 +257,43 @@
 		@include m-1366 {
 			margin-top: $m1366Max - 15px;
 		}
+
+		> button {
+			@apply outline-border-none uppercase underline  text-secondary text-32 transition-transform cursor-pointer;
+			line-height: 150%;
+			padding: 0;
+			letter-spacing: 0.02em;
+			text-align: left;
+			text-underline-position: under;
+
+			@include m-1920 {
+				font-size: 28px;
+			}
+
+			@include m-1680 {
+				font-size: 26px;
+			}
+
+			@include m-1366 {
+				font-size: 23px;
+			}
+
+			&:hover {
+				@apply link-animation;
+			}
+		}
 	}
 	.popup {
 		> div {
 			padding: 0;
+		}
+
+		@include m-360 {
+			> div {
+				> button {
+					@apply bg-primary;
+				}
+			}
 		}
 	}
 }
@@ -209,6 +307,11 @@
 	@include m-834 {
 		right: -35%;
 	}
+
+	@include m-360 {
+		top: 0;
+		right: -62%;
+	}
 }
 
 .leaf_2 {
@@ -220,5 +323,9 @@
 	@include m-834 {
 		right: -40%;
 		bottom: 27%;
+	}
+
+	@include m-360 {
+		right: -48%;
 	}
 }

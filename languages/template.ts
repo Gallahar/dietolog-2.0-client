@@ -7,6 +7,8 @@ export interface ILanguagedString {
 export interface LanguageTemplate {
 	mark: string
 
+	accessibility: string
+
 	global: {
 		error: string
 		field_is_required: string
@@ -163,6 +165,7 @@ export interface LanguageTemplate {
 	program_popup: {
 		your_order: string
 		chosen_params: string
+		privacy_mobile: string
 	}
 
 	certificates: {

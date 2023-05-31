@@ -17,6 +17,7 @@ import ClosePopupButtonFilled from '@/ui/Buttons/Actions/ClosePopupButtonFilled/
 import Description from '@/ui/Descriptions/Description/Description'
 import OrderProgramForm from '@/components/client/OrderProgramForm/OrderProgramForm'
 import Leaf from '@/ui/Backgrounds/Leaf/Leaf'
+import Link from 'next/link'
 
 const checkAnswers = (arr: (string | null)[]) => {
 	return arr.every((a) => a !== null)
@@ -42,9 +43,18 @@ const Program: FC<ProgramProps> = ({ program }) => {
 	const [answers, setAnswers] = useState<(string | null)[]>(
 		radios.map(() => null)
 	)
+
+	const [proceed, setProceed] = useState(false)
+
 	const [openPopup, setOpenPopup] = useState(false)
 	const [alertToggle, setAlertToggle] = useState(false)
 	const [alertText, setAlertText] = useState('')
+
+
+	const closePopUpHandler = () => {
+		setProceed(false)
+		setOpenPopup(false)
+	}
 
 	const alertHandler = (alert: string) => {
 		setAlertText(alert)
@@ -133,22 +143,22 @@ const Program: FC<ProgramProps> = ({ program }) => {
 					className={s.submitButton}
 					text={apply}
 				/>
-				<ActionLink
-					className={s.link}
-					path="/#programs"
-					text={back_to_programs}
-				/>
+				<Link className={s.link} href="/#programs">
+					<button>{back_to_programs}</button>
+				</Link>
 			</div>
 			{openPopup && (
-				<PopUp
-					className={s.popup}
-					closePopup={() => setOpenPopup(false)}
-				>
-					<ClosePopupButton closePopup={() => setOpenPopup(false)} />
+				<PopUp className={s.popup} closePopup={closePopUpHandler}>
+					<ClosePopupButton
+						className={proceed ? s.mobileStep1 : ''}
+						closePopup={closePopUpHandler}
+					/>
 					<OrderProgramForm
+						proceed={proceed}
+						setProceed={() => setProceed(true)}
 						program={program}
 						answers={answers as string[]}
-						setOpenPopup={() => setOpenPopup(false)}
+						setOpenPopup={closePopUpHandler}
 						alertHandler={alertHandler}
 					/>
 				</PopUp>

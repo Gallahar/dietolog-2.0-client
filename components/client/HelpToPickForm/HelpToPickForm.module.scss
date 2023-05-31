@@ -10,6 +10,10 @@
 		gap: $m1920Min;
 		padding: 90px 72px 72px;
 
+		> h2 {
+			display: none;
+		}
+
 		@include m-1920 {
 			width: 622px;
 			gap: $m1680Min;
@@ -31,6 +35,17 @@
 		@include m-834 {
 			width: 422px;
 		}
+
+		@include m-360 {
+			gap: $m360Min;
+			width: 316px;
+			padding: 56px 20px 20px;
+
+			> h2 {
+				display: block;
+				font-size: 21px;
+			}
+		}
 	}
 	.handlerWrapper {
 		@apply flex flex-col justify-between primary-gr;
@@ -51,6 +66,10 @@
 		@include m-1366 {
 			width: 292px;
 			padding: 63px 50px;
+		}
+
+		@include m-360 {
+			display: none;
 		}
 
 		> h2 {

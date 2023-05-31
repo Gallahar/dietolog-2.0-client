@@ -28,6 +28,15 @@
 		}
 	}
 
+	@include m-360 {
+		width: 112%;
+		right: -5%;
+		svg {
+			width: 12px;
+			height: 24px;
+		}
+	}
+
 	.arrowRight,
 	.arrowLeft {
 		@apply outline-border-none transition-transform  cursor-pointer;
@@ -77,6 +86,13 @@
 		top: 48%;
 		width: 110%;
 		left: -5%;
+	}
+
+	@include m-360 {
+		svg {
+			width: 12px;
+			height: 24px;
+		}
 	}
 
 	.arrowRight,
