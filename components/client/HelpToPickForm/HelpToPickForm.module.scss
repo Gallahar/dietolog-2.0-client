@@ -10,7 +10,10 @@
 		gap: $m1920Min;
 		padding: 90px 72px 72px;
 
-		> h2 {
+		.headingMobile {
+			display: none;
+		}
+		.buttonMobile {
 			display: none;
 		}
 
@@ -41,7 +44,10 @@
 			width: 316px;
 			padding: 56px 20px 20px;
 
-			> h2 {
+			.buttonMobile {
+				display: flex;
+			}
+			.headingMobile {
 				display: block;
 				font-size: 21px;
 			}

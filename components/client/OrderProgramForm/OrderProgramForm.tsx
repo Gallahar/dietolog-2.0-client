@@ -1,4 +1,4 @@
-import s from './OrderProgram.module.scss'
+import s from './OrderProgramForm.module.scss'
 import { useLanguageContext } from '@/hooks/useLanguageContext'
 import { FC, useState } from 'react'
 import ActionCircleButton from '@/ui/Buttons/Actions/ActionCircleButton/ActionCircleButton'
@@ -91,7 +91,7 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={s.form}>
 			<div className={`${s.inputsWrapper} ${!proceed ? s.hide : ''}`}>
-				<p className={s.heading}>{`${your_order}:`}</p>
+				<h2 className={s.heading}>{`${your_order}:`}</h2>
 				<p className={s.title}>{`${_program} ${currentLanguage(
 					title,
 					mark
@@ -133,7 +133,7 @@ const OrderProgramForm: FC<OrderProgramFormProps> = ({
 				/>
 			</div>
 			<div className={`${s.checkListWrapper} ${proceed ? s.hide : ''}`}>
-				<p className={s.heading}>{`${chosen_params}:`}</p>
+				<h2 className={s.heading}>{`${chosen_params}:`}</h2>
 				<div className={s.parametersWrapper}>
 					{radios.map(({ title_short }, i) => (
 						<div key={title_short.en} className={s.parameter}>
