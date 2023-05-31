@@ -7,6 +7,23 @@
 	> img {
 		z-index: -1;
 	}
+
+	@include m-834 {
+		background: linear-gradient(
+			26.68deg,
+			rgba(255, 255, 255, 0.88) 1%,
+			rgba(255, 255, 255, 0) 50%
+		);
+	}
+
+	@include m-360 {
+		background: linear-gradient(
+			26.68deg,
+			rgba(255, 255, 255, 0.88) 10%,
+			rgba(255, 255, 255, 0) 50%
+		);
+	}
+
 	.contentWrapper {
 		@apply flex;
 

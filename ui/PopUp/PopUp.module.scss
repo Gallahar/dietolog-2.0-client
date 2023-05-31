@@ -1,7 +1,7 @@
 @import '@/assets/styles/media.scss';
 
 .popUpWrapper {
-	@apply flex justify-center items-center  overflow-y-auto;
+	@apply flex justify-center items-center;
 
 	animation: appear 0.25s ease-in;
 	height: 100vh;
@@ -11,6 +11,10 @@
 	top: 0;
 	z-index: 110;
 	background-color: rgba(0, 0, 0, 0.6);
+
+	@include m-360 {
+		overflow: auto;
+	}
 
 	.popUp {
 		@apply relative flex flex-col justify-center items-center;
@@ -61,6 +65,7 @@
 		@include m-360 {
 			padding: 56px 20px 20px;
 			border-radius: 22px 0px 22px 22px;
+			margin-bottom: 30px;
 
 			> p {
 				max-width: 276px;
