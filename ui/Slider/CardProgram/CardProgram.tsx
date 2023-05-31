@@ -14,7 +14,7 @@ interface CardProgramProps {
 }
 
 const CardProgram: FC<CardProgramProps> = ({ program, isMoving }) => {
-	const {mark,accessibility} = useLanguageContext()
+	const { mark, accessibility } = useLanguageContext()
 	const { photo_small, price, description_short, title, slug, isAvailable } =
 		program
 
@@ -32,45 +32,37 @@ const CardProgram: FC<CardProgramProps> = ({ program, isMoving }) => {
 					}}
 					href={`/programs/${slug}`}
 				>
-					<div>
-						<Image
-							draggable={false}
-							fill
-							src={photo_small}
-							alt={`programCard${currentLanguage(title, mark)}`}
-						/>
-						<div className={s.cardBlock}>
-							<div className={s.cardInfo}>
-								<span className={s.price}>{price} ₴</span>
-								<h1>{currentLanguage(title, mark)}</h1>
-								{parse(
-									currentLanguage(description_short, mark)
-								)}
-							</div>
-							<ArrowCard />
+					<Image
+						draggable={false}
+						fill
+						src={photo_small}
+						alt={`programCard${currentLanguage(title, mark)}`}
+					/>
+					<div className={s.cardBlock}>
+						<div className={s.cardInfo}>
+							<span className={s.price}>{price} ₴</span>
+							<h1>{currentLanguage(title, mark)}</h1>
+							{parse(currentLanguage(description_short, mark))}
 						</div>
+						<ArrowCard />
 					</div>
 				</Link>
 			) : (
 				<div className={s.card} tabIndex={-1} draggable={false}>
-					<div>
-						<Image
-							draggable={false}
-							fill
-							src={photo_small}
-							alt={`programCard${currentLanguage(title, mark)}`}
-						/>
-						<div className={s.cardBlock}>
-							<div className={s.cardInfo}>
-								<span className={s.price}>{price} ₴</span>
-								<h1>{currentLanguage(title, mark)}</h1>
-								{parse(
-									currentLanguage(description_short, mark)
-								)}
-							</div>
-							<ArrowCard />
-							<span className={s.accessibility}>{accessibility}</span>
+					<Image
+						draggable={false}
+						fill
+						src={photo_small}
+						alt={`programCard${currentLanguage(title, mark)}`}
+					/>
+					<div className={s.cardBlock}>
+						<div className={s.cardInfo}>
+							<span className={s.price}>{price} ₴</span>
+							<h1>{currentLanguage(title, mark)}</h1>
+							{parse(currentLanguage(description_short, mark))}
 						</div>
+						<ArrowCard />
+						<span className={s.accessibility}>{accessibility}</span>
 					</div>
 				</div>
 			)}

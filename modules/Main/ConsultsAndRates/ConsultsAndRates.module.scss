@@ -2,8 +2,11 @@
 @import '@/assets/styles/variables.scss';
 
 .consultsAndRatesWrapper {
-	@apply overflow-x-hidden;
+	@apply overflow-x-hidden relative;
 
+	> img {
+		z-index: -1;
+	}
 	.contentWrapper {
 		@apply flex;
 

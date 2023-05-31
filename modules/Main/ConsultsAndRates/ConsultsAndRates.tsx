@@ -1,7 +1,8 @@
 import { useLanguageContext } from '@/hooks/useLanguageContext'
 import ActionLink from '@/ui/Buttons/Actions/ActionButton/ActionLink'
 import Description from '@/ui/Descriptions/Description/Description'
-import consultImg from '@/assets/consults_and_rates/consults_and_rates.png'
+import consultImg1920 from '@/assets/consults_and_rates/consults-1920.png'
+import Image from 'next/image'
 import Heading from '@/ui/Headings/Heading/Heading'
 import ConsultCard from '@/ui/Slider/ConsultCard/ConsultCard'
 import Slider from '@/ui/Slider/Slider'
@@ -25,11 +26,8 @@ const ConsultsAndRates: FC<ConsultsAndRatesProps> = ({ consults }) => {
 	const [isMoving, setIsMoving] = useState(false)
 
 	return (
-		<Section
-			style={{ background: `url(${consultImg.src}) bottom/cover` }}
-			id="consults_and_rates"
-			className={s.consultsAndRatesWrapper}
-		>
+		<Section id="consults_and_rates" className={s.consultsAndRatesWrapper}>
+			<Image fill src={consultImg1920} alt="consults-background" />
 			<div className={`${s.contentWrapper} container`}>
 				<div className={`${s.consultsTextWrapper}`}>
 					<Heading text={consults_and_rates} />
