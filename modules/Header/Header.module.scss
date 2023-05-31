@@ -60,6 +60,10 @@
 					}
 				}
 
+				@include m-360 {
+					padding: 20px 0;
+				}
+
 				.default {
 					@apply text-dark;
 
