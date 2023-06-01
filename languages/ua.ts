@@ -62,7 +62,7 @@ export const ua: LanguageTemplate = {
 		review: 'Відгук',
 		send: 'Відправити',
 		review_min_max_length:
-			'Мінімальна довжина відгуку - 50, максимальна - 300',
+			'Мінімальна довжина відгуку - 50 символів, максимальна - 500',
 	},
 	main: {
 		name: 'Катерина',
@@ -173,7 +173,7 @@ export const ua: LanguageTemplate = {
 		invalid_phone: 'Невірний номер',
 		invalid_email: 'Невірний Email',
 		description_min_max_length:
-			'Мінімальна довжина вашого повідомлення - 50, максимальна - 300',
+			'Мінімальна довжина вашого повідомлення - 50 символів, максимальна - 300',
 	},
 
 	detailed_prices: {

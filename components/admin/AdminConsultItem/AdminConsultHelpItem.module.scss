@@ -1,5 +1,7 @@
 .consultHelp {
-	@apply mx-5 my-6 border-b border-solid pb-3;
+	@apply mx-5 my-6 border-b border-solid pb-3 flex flex-col;
+
+	gap: 5px;
 	.date {
 		@apply text-xs;
 	}
@@ -12,12 +14,12 @@
 		> span {
 			@apply font-semibold;
 		}
-		
 	}
 
 	.email {
 		@apply text-xs;
-
+		line-height: 130%;
+		word-break: break-all;
 		> span {
 			@apply font-semibold;
 		}

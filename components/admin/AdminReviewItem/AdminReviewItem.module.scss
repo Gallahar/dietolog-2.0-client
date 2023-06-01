@@ -1,5 +1,6 @@
 .review {
-	@apply mx-5 my-6 border-b border-solid pb-3;
+	@apply mx-5 my-6 border-b border-solid pb-3 flex flex-col;
+	gap: 5px;
 	.date {
 		@apply text-xs;
 	}
@@ -8,6 +9,8 @@
 	}
 	.text {
 		@apply mt-1;
+		line-height: 130%;
+		word-break: break-all;
 	}
 
 	.btn_wrapper {

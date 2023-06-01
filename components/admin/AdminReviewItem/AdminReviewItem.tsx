@@ -22,7 +22,7 @@ const AdminReviewItem: FC<AdminReviewItemProps> = ({
 		<div className={s.review}>
 			<div className={s.date}>{formatDate(createdAt)}</div>
 			<div className={s.name}>{name}</div>
-			<div className={s.text}>{text}</div>
+			<p className={s.text}>{text}</p>
 			<div className={s.btn_wrapper}>
 				<AdminButton
 					text="Подтвердить"

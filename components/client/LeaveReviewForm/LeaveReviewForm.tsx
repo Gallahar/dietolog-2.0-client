@@ -70,7 +70,7 @@ const LeaveReviewForm: FC<LeaveReviewFormProps> = ({
 						message: review_min_max_length,
 					},
 					maxLength: {
-						value: 300,
+						value: 500,
 						message: review_min_max_length,
 					},
 				})}

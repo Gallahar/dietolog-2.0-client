@@ -59,7 +59,8 @@ export const en: LanguageTemplate = {
 		your_name: 'Your name',
 		review: 'Review',
 		send: 'Send',
-		review_min_max_length: 'Min length of review - 50, max - 300',
+		review_min_max_length:
+			'Min length of review - 50 characters, max - 500',
 	},
 	main: {
 		name: 'Kateryna',
@@ -168,7 +169,7 @@ export const en: LanguageTemplate = {
 		invalid_phone: 'Invalid number',
 		invalid_email: 'Invalid Email',
 		description_min_max_length:
-			'Min length of your message - 50, max - 300',
+			'Min length of your message - 50 characters, max - 300',
 	},
 
 	detailed_prices: {

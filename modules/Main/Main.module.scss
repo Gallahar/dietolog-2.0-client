@@ -9,7 +9,7 @@
 	z-index: 0;
 
 	.main {
-		> .fullName {
+		.fullName {
 			margin-top: 178px;
 			font-size: 125px;
 			letter-spacing: 0.02em;
@@ -22,13 +22,16 @@
 			.name {
 				font-family: 'mr_hamiltoneg';
 				margin-left: -20px;
+				@include m-360 {
+					margin-left: 0;
+				}
 			}
 
 			.lastName {
 				font-family: 'mr_hamiltoneg';
 
 				@include m-360 {
-					margin-left: 40px;
+					margin-left: auto;
 					margin-top: -30px;
 				}
 			}

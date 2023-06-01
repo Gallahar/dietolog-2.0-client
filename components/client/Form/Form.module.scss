@@ -5,26 +5,7 @@
 	display: flex;
 	flex-flow: column;
 	gap: $m1920Min;
-	width: 612px;
-
-	@include m-1920 {
-		gap: $m1680Min;
-		width: 535px;
-	}
-
-	@include m-1680 {
-		gap: $m1600Min;
-		width: 510px;
-	}
-
-	@include m-1366 {
-		gap: $m1366Min;
-		width: 436px;
-	}
-
-	@include m-360 {
-		width: 316px;
-	}
+	width: 100%;
 
 	> button {
 		margin-top: $m1920Mid - $m1920Min;
