@@ -17,7 +17,7 @@ export const useSectionObserver = (): RefObject<HTMLElement> => {
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(handleIntersection, {
-			threshold: window.innerWidth < 500 ? 0.1 : 0.3,
+			threshold: window.innerWidth < 720 ? 0.1 : 0.3,
 		})
 
 		if (!sectionRef.current) return

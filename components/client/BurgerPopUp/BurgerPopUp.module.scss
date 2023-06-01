@@ -2,24 +2,25 @@
 
 .popUpWrapper {
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	position: fixed;
 	animation: appear 0.2s ease-in-out;
 	top: 0;
 	z-index: 110;
-	background: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.3);
 	display: flex;
 	justify-content: flex-end;
 	padding-top: 17px;
-	transition: 0.4s ease-in-out;
+	transition: opacity 0.4s ease-in-out;
 
 	.popUp {
+		overflow-y: auto;
 		display: grid;
-		grid-template-columns: 1fr;
-		align-content: space-between;
+		grid-template-columns: max-content;
+		grid-auto-rows: max-content;
+		justify-content: end;
 		justify-items: end;
-
-		max-height: 386px;
+		row-gap: 8px;
 
 		> button {
 			position: static;
