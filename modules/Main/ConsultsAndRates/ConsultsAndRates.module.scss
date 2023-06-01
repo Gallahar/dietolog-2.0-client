@@ -105,7 +105,6 @@
 		.sliderWrapper {
 			position: relative;
 			width: 1332px;
-
 			> div {
 				padding-bottom: 0;
 			}
@@ -134,6 +133,14 @@
 			@include m-360 {
 				width: 292px;
 				margin: 0 auto;
+			}
+		}
+
+		.mobileLink {
+			display: none;
+
+			@include m-834 {
+				display: block;
 			}
 		}
 	}

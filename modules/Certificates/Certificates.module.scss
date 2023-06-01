@@ -2,7 +2,7 @@
 @import '@/assets/styles/media.scss';
 
 .certificatesWrapper {
-	@apply relative overflow-x-hidden;
+	@apply relative overflow-hidden;
 
 	.diplomasHeading {
 		padding-top: $m1920Max + 91px;
@@ -20,7 +20,7 @@
 		}
 
 		@include m-360 {
-			padding-top: $m360Max + 75px;
+			padding-top: $m360Max + 65px;
 		}
 	}
 

@@ -7,6 +7,7 @@ export const useSectionObserver = (): RefObject<HTMLElement> => {
 	const handleIntersection = (entries: IntersectionObserverEntry[]) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
+				console.log(entry)
 				if (entry.target.id !== 'sign-for-consult') {
 					setCurrentSection(entry.target.id)
 				}
@@ -16,8 +17,9 @@ export const useSectionObserver = (): RefObject<HTMLElement> => {
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(handleIntersection, {
-			threshold: 0.3,
+			threshold: window.innerWidth < 500 ? 0.1 : 0.3,
 		})
+
 		if (!sectionRef.current) return
 		observer.observe(sectionRef.current)
 		return () => {

@@ -52,7 +52,7 @@ const ConsultsAndRates: FC<ConsultsAndRatesProps> = ({ consults }) => {
 						))}
 					</Slider>
 				</div>
-				<ActionLink path="/detailed-prices" text={detailed_price} />
+				<ActionLink className={s.mobileLink} path="/detailed-prices" text={detailed_price} />
 			</div>
 		</Section>
 	)

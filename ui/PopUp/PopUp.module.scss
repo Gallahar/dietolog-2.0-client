@@ -4,7 +4,7 @@
 	@apply flex justify-center items-center;
 
 	animation: appear 0.25s ease-in;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100vw;
 	position: fixed;
 	padding: 0 20px;
@@ -12,10 +12,7 @@
 	z-index: 110;
 	background-color: rgba(0, 0, 0, 0.6);
 
-	@include m-360 {
-		overflow: auto;
-	}
-
+	overflow-y: auto;
 	.popUp {
 		@apply relative flex flex-col justify-center items-center;
 

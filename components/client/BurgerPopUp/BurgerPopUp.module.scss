@@ -7,7 +7,7 @@
 	animation: appear 0.2s ease-in-out;
 	top: 0;
 	z-index: 110;
-	background: rgba(0, 0, 0, 0.08);
+	background: rgba(0, 0, 0, 0.2);
 	display: flex;
 	justify-content: flex-end;
 	padding-top: 17px;
@@ -19,7 +19,7 @@
 		align-content: space-between;
 		justify-items: end;
 
-		max-height: 406px;
+		max-height: 386px;
 
 		> button {
 			position: static;
@@ -37,7 +37,7 @@
 		> a {
 			@apply flex justify-center items-center;
 			background-color: #ffffff;
-			font-size: 14px;
+			font-size: 15px;
 			line-height: 150%;
 			letter-spacing: 0.02em;
 			color: #1a0a00;
