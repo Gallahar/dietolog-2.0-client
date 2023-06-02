@@ -1,42 +1,20 @@
 import { IPackage } from '@/shared/models/package.interface'
 import { currentLanguage } from '@/utils/currentLanguage'
 import s from './DetailedPrices.module.scss'
-import { FC, useEffect, useState } from 'react'
+import { FC } from 'react'
 import HeadingSmall from '@/ui/Headings/HeadingSmall/HeadingSmall'
 import Heading from '@/ui/Headings/Heading/Heading'
 import { useLanguageContext } from '@/hooks/useLanguageContext'
 import Description from '@/ui/Descriptions/Description/Description'
+import { useMobileResize } from '@/hooks/useMobileResize'
 
 interface PackageItemProps {
 	_package: IPackage
 }
 
 const PackageItem: FC<PackageItemProps> = ({ _package }) => {
-	const [mobile, setMobile] = useState(false)
-
-	useEffect(() => {
-		const handleResize = () => {
-			if (window.innerWidth <= 729 && !mobile) {
-				setMobile(true)
-			}
-			if (window.innerWidth >= 729 && mobile) {
-				setMobile(false)
-			}
-		}
-		if (window.innerWidth <= 729 && !mobile) {
-			setMobile(true)
-		}
-		if (window.innerWidth >= 729 && mobile) {
-			setMobile(false)
-		}
-
-		window.addEventListener('resize', handleResize)
-
-		return () => {
-			window.removeEventListener('resize', handleResize)
-		}
-	}, [mobile])
-
+	
+	const mobile = useMobileResize()
 	const mark = useLanguageContext().mark
 	const { package: packageTitle, service_type } =
 		useLanguageContext().detailed_prices
