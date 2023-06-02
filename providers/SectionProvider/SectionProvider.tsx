@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import { createContext, FC, ReactNode, useEffect, useState } from 'react'
 import { SectionContextInitialValue } from './section-provider.data'
 import { SectionContextProps } from './section-provider.interface'
