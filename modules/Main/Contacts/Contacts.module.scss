@@ -176,7 +176,8 @@
 				}
 
 				@include m-360 {
-					gap: 60px;
+					gap: 0;
+					justify-content: space-between;
 				}
 			}
 		}
@@ -215,8 +216,9 @@
 				}
 
 				@include m-360 {
-					width: 316px;
-					padding: 12px 25px 12px 12px;
+					width: 100%;
+					padding: 12px 20px 12px 12px;
+					gap: 10px;
 				}
 
 				> img {

@@ -120,7 +120,7 @@
 			@include m-360 {
 				grid-template:
 					't r' 184px
-					'b r' 282px / 144px 160px;
+					'b r' 282px / auto auto;
 				gap: 12px;
 			}
 

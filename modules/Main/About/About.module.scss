@@ -56,7 +56,7 @@
 			@include m-360 {
 				position: relative;
 				display: block;
-				width: 316px;
+				width: 100%;
 				height: 200px;
 				margin-top: $m360Max;
 
@@ -297,7 +297,7 @@
 			@include m-360 {
 				position: relative;
 				display: block;
-				width: 316px;
+				width: 100%;
 				height: 200px;
 				margin-top: $m360Max;
 

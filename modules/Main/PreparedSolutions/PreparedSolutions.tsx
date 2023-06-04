@@ -109,8 +109,8 @@ const PreparedSolutions: FC<PreparedSolutionsProps> = ({ programs }) => {
 					</div>
 				</div>
 				<div className={s.constructorBottomImgWrapper}>
-					<Image fill src={constructorImg} alt="constructor-img" />
-					<div />
+					<Image src={constructorImg} fill alt="constructor-img" />
+					<div className={s.outlineMobile} />
 				</div>
 				<div className={cn('section', s.constructorBottomWrapper)}>
 					<div className={s.leftBlock}>

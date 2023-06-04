@@ -161,11 +161,14 @@
 
 		@include m-360 {
 			position: relative;
-			display: block;
-			width: 316px;
-			height: 200px;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 200px;
+			> img {
+				border-radius: 360px 0 0 360px;
+			}
 
-			> div {
+			.outlineMobile {
 				position: absolute;
 				border-radius: 360px 0 0 360px;
 				bottom: 12px;
