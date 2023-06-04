@@ -22,6 +22,10 @@
 		justify-items: end;
 		row-gap: 8px;
 
+		@include m-360 {
+			grid-template-columns: 100%;
+		}
+
 		> button {
 			position: static;
 			animation: scale 0.4s ease-in-out;
@@ -49,7 +53,7 @@
 			animation: transform 0.4s ease-in;
 
 			@include m-360 {
-				width: 316px;
+				width: 100%;
 			}
 		}
 
