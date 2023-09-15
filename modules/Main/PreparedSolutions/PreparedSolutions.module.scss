@@ -268,6 +268,8 @@
 			letter-spacing: 0.02em;
 			text-align: left;
 			text-underline-position: under;
+			text-decoration-thickness: 2px;
+			text-underline-offset: -3px;
 
 			@include m-1920 {
 				font-size: 28px;
